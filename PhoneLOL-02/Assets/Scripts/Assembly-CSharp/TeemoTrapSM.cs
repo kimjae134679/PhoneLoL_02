@@ -1,0 +1,244 @@
+using EveEngine;
+
+public class TeemoTrapSM : HumanSM
+{
+	public virtual void BBGJFNIBBFG()
+	{
+		base.OnEnterSkill();
+	}
+
+	public virtual void BCGICPOKOHO()
+	{
+		base.Init();
+		LFNNHEEJNGP[1].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[0].FILHECEKNMK = 788f;
+		LFNNHEEJNGP[0].NEKKKLFLDOI = 449f;
+		LFNNHEEJNGP[1].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[1].NCBLBIBMNKH = 177f;
+		LFNNHEEJNGP[1].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[0].FILHECEKNMK = 1008f;
+		LFNNHEEJNGP[1].NEKKKLFLDOI = 1771f;
+		LFNNHEEJNGP[0].BELPBCDOPBA = 1;
+		LFNNHEEJNGP[1].NCBLBIBMNKH = 1031f;
+		LFNNHEEJNGP[6].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Immediate;
+		LFNNHEEJNGP[6].FILHECEKNMK = 317f;
+		LFNNHEEJNGP[6].NEKKKLFLDOI = 59f;
+		LFNNHEEJNGP[7].BELPBCDOPBA = 1;
+		LFNNHEEJNGP[1].NCBLBIBMNKH = 309f;
+		LFNNHEEJNGP[5].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Immediate;
+		LFNNHEEJNGP[5].FILHECEKNMK = 477f;
+		LFNNHEEJNGP[8].NEKKKLFLDOI = 485f;
+		LFNNHEEJNGP[4].BELPBCDOPBA = 1;
+		LFNNHEEJNGP[4].NCBLBIBMNKH = 1929f;
+	}
+
+	public virtual void PKHGHIPGIED(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnSerializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.PFAIBIMGAIB(component.m_elapsedTime);
+	}
+
+	public virtual void EAMNPEOOCPG(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnDeserializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.CAHACMKBJMI(out component.m_elapsedTime);
+	}
+
+	public override void OnEnterDeath()
+	{
+		ActorManager.get_Instance().RemoveActor(get_m_actor(), true);
+	}
+
+	public virtual void AOCEOIINNIE(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnDeserializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.CAHACMKBJMI(out component.m_elapsedTime);
+	}
+
+	public virtual void FMBPIGCKKEE(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		MLLBIGIODAF(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.PFAIBIMGAIB(component.m_elapsedTime);
+	}
+
+	public virtual void FJLKAIIJDKK(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		MLLBIGIODAF(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.PFAIBIMGAIB(component.m_elapsedTime);
+	}
+
+	public override void OnEnterSkill()
+	{
+		base.OnEnterSkill();
+	}
+
+	public virtual void GFBMKDOKHKP(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		MLLBIGIODAF(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.GBMJNFOEACC(component.m_elapsedTime);
+	}
+
+	public virtual void HGKNFFBKOPD(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		OOALFAKEMNL(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.GBMJNFOEACC(component.m_elapsedTime);
+	}
+
+	public virtual void OJGBPLFKPIJ()
+	{
+		base.Init();
+		LFNNHEEJNGP[0].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[0].FILHECEKNMK = 720f;
+		LFNNHEEJNGP[1].NEKKKLFLDOI = 432f;
+		LFNNHEEJNGP[1].BELPBCDOPBA = 1;
+		LFNNHEEJNGP[0].NCBLBIBMNKH = 897f;
+		LFNNHEEJNGP[1].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Immediate;
+		LFNNHEEJNGP[0].FILHECEKNMK = 1488f;
+		LFNNHEEJNGP[0].NEKKKLFLDOI = 62f;
+		LFNNHEEJNGP[0].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[0].NCBLBIBMNKH = 266f;
+		LFNNHEEJNGP[0].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[2].FILHECEKNMK = 1404f;
+		LFNNHEEJNGP[3].NEKKKLFLDOI = 1171f;
+		LFNNHEEJNGP[0].BELPBCDOPBA = 1;
+		LFNNHEEJNGP[7].NCBLBIBMNKH = 874f;
+		LFNNHEEJNGP[4].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Immediate;
+		LFNNHEEJNGP[3].FILHECEKNMK = 1271f;
+		LFNNHEEJNGP[7].NEKKKLFLDOI = 1548f;
+		LFNNHEEJNGP[7].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[7].NCBLBIBMNKH = 1548f;
+	}
+
+	public virtual void OFEPHFONEHL()
+	{
+		ActorManager.get_Instance().RemoveActor(get_m_actor());
+	}
+
+	public override void Init()
+	{
+		base.Init();
+		LFNNHEEJNGP[0].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[0].FILHECEKNMK = 0f;
+		LFNNHEEJNGP[0].NEKKKLFLDOI = 0f;
+		LFNNHEEJNGP[0].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[0].NCBLBIBMNKH = 0f;
+		LFNNHEEJNGP[1].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[1].FILHECEKNMK = 0f;
+		LFNNHEEJNGP[1].NEKKKLFLDOI = 0f;
+		LFNNHEEJNGP[1].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[1].NCBLBIBMNKH = 0f;
+		LFNNHEEJNGP[2].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[2].FILHECEKNMK = 0f;
+		LFNNHEEJNGP[2].NEKKKLFLDOI = 0f;
+		LFNNHEEJNGP[2].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[2].NCBLBIBMNKH = 0f;
+		LFNNHEEJNGP[3].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[3].FILHECEKNMK = 0f;
+		LFNNHEEJNGP[3].NEKKKLFLDOI = 0f;
+		LFNNHEEJNGP[3].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[3].NCBLBIBMNKH = 0f;
+	}
+
+	public override void OnDeserializeView(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnDeserializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.CAHACMKBJMI(out component.m_elapsedTime);
+	}
+
+	public virtual void HDCCMJNDPEL(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		OOALFAKEMNL(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.PFAIBIMGAIB(component.m_elapsedTime);
+	}
+
+	public virtual void AHKCEKKKMIA()
+	{
+		base.OnEnterSkill();
+	}
+
+	public virtual void GIAPAPFONAE()
+	{
+		ActorManager.GBFDGAFALIL().RemoveActor(get_m_actor(), true);
+	}
+
+	public virtual void LBKPCMNBGCP(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		OOALFAKEMNL(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.PFAIBIMGAIB(component.m_elapsedTime);
+	}
+
+	public virtual void LFPAGBDNGIG(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnDeserializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.CAHACMKBJMI(out component.m_elapsedTime);
+	}
+
+	public virtual void CPKEODFIJCL(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		MLLBIGIODAF(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.GBMJNFOEACC(component.m_elapsedTime);
+	}
+
+	public virtual void JIJBJJODDGK(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnSerializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.PFAIBIMGAIB(component.m_elapsedTime);
+	}
+
+	public override void OnSerializeView(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnSerializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.GBMJNFOEACC(component.m_elapsedTime);
+	}
+
+	public virtual void ILCHMGIKOKM()
+	{
+		ActorManager.get_Instance().RemoveActor(get_m_actor());
+	}
+
+	public virtual void ALLHCPCACGK(KCIGFAHFHCH OGJFDNEEDCP)
+	{
+		base.OnDeserializeView(OGJFDNEEDCP);
+		TeemoSkill3TrapAI component = GetComponent<TeemoSkill3TrapAI>();
+		OGJFDNEEDCP.CAHACMKBJMI(out component.m_elapsedTime);
+	}
+
+	public virtual void NFMBKJBLNLN()
+	{
+		base.Init();
+		LFNNHEEJNGP[0].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[1].FILHECEKNMK = 1614f;
+		LFNNHEEJNGP[0].NEKKKLFLDOI = 190f;
+		LFNNHEEJNGP[0].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[0].NCBLBIBMNKH = 1787f;
+		LFNNHEEJNGP[1].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[1].FILHECEKNMK = 405f;
+		LFNNHEEJNGP[0].NEKKKLFLDOI = 380f;
+		LFNNHEEJNGP[1].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[1].NCBLBIBMNKH = 1707f;
+		LFNNHEEJNGP[0].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Default;
+		LFNNHEEJNGP[0].FILHECEKNMK = 429f;
+		LFNNHEEJNGP[3].NEKKKLFLDOI = 1021f;
+		LFNNHEEJNGP[5].BELPBCDOPBA = 0;
+		LFNNHEEJNGP[6].NCBLBIBMNKH = 1302f;
+		LFNNHEEJNGP[0].AOKMPECBGND = CAJJEALKJMM.NNOCAHNPLCH.Immediate;
+		LFNNHEEJNGP[5].FILHECEKNMK = 612f;
+		LFNNHEEJNGP[7].NEKKKLFLDOI = 619f;
+		LFNNHEEJNGP[7].BELPBCDOPBA = 1;
+		LFNNHEEJNGP[3].NCBLBIBMNKH = 850f;
+	}
+}

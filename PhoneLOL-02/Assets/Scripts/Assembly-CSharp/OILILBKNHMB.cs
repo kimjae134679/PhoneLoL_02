@@ -1,0 +1,305 @@
+using System.Runtime.CompilerServices;
+using UnityEngine;
+
+public class OILILBKNHMB
+{
+	public global::MABNNPIGEPM<Vector3> HILIICKOOFH = new global::MABNNPIGEPM<Vector3>();
+
+	public global::MABNNPIGEPM<Vector2> MDBIEMHCFFO = new global::MABNNPIGEPM<Vector2>();
+
+	public global::MABNNPIGEPM<Color32> NAMIAMEOHAP = new global::MABNNPIGEPM<Color32>();
+
+	private global::MABNNPIGEPM<Vector3> GHBJCEDPICB = new global::MABNNPIGEPM<Vector3>();
+
+	private Vector3 DALAICMNNDP;
+
+	private Vector4 OEOBHKIGAIK;
+
+	public bool GMLJCNHIJLA
+	{
+		get
+		{
+			return NOGNPLFBAPG();
+		}
+	}
+
+	public bool AHEJPCANBFH
+	{
+		get
+		{
+			return PBEKCIDFELC();
+		}
+	}
+
+	public void GNANPDNLGMD()
+	{
+		HILIICKOOFH.PDCPMDCOLOD();
+		MDBIEMHCFFO.PDCPMDCOLOD();
+		NAMIAMEOHAP.PDCPMDCOLOD();
+		GHBJCEDPICB.PDCPMDCOLOD();
+	}
+
+	[SpecialName]
+	public bool GEHLPBLFOBK()
+	{
+		return HILIICKOOFH.POIJPKODPCK > 1;
+	}
+
+	public void HCKALCLPEJD()
+	{
+		HILIICKOOFH.PDCPMDCOLOD();
+		MDBIEMHCFFO.PDCPMDCOLOD();
+		NAMIAMEOHAP.PDCPMDCOLOD();
+		GHBJCEDPICB.PDCPMDCOLOD();
+	}
+
+	public void PDCPMDCOLOD()
+	{
+		HILIICKOOFH.PDCPMDCOLOD();
+		MDBIEMHCFFO.PDCPMDCOLOD();
+		NAMIAMEOHAP.PDCPMDCOLOD();
+		GHBJCEDPICB.PDCPMDCOLOD();
+	}
+
+	public void LDOGPMOIMBG(global::MABNNPIGEPM<Vector3> FCGJBBHEOFJ, global::MABNNPIGEPM<Vector2> KMFDLFDOELD, global::MABNNPIGEPM<Color32> CEMGPCOMLOP, global::MABNNPIGEPM<Vector3> JNLKGIHJHCF, global::MABNNPIGEPM<Vector4> FFMBLAOKAKN)
+	{
+		if (GHBJCEDPICB == null || GHBJCEDPICB.POIJPKODPCK <= 0)
+		{
+			return;
+		}
+		if (JNLKGIHJHCF == null)
+		{
+			for (int i = 0; i < GHBJCEDPICB.POIJPKODPCK; i++)
+			{
+				FCGJBBHEOFJ.GBFCKODJEGE(GHBJCEDPICB.EDMNHDBEPMC[i]);
+				KMFDLFDOELD.GBFCKODJEGE(MDBIEMHCFFO.EDMNHDBEPMC[i]);
+				CEMGPCOMLOP.GBFCKODJEGE(NAMIAMEOHAP.EDMNHDBEPMC[i]);
+			}
+			return;
+		}
+		for (int j = 0; j < GHBJCEDPICB.POIJPKODPCK; j++)
+		{
+			FCGJBBHEOFJ.GBFCKODJEGE(GHBJCEDPICB.EDMNHDBEPMC[j]);
+			KMFDLFDOELD.GBFCKODJEGE(MDBIEMHCFFO.EDMNHDBEPMC[j]);
+			CEMGPCOMLOP.GBFCKODJEGE(NAMIAMEOHAP.EDMNHDBEPMC[j]);
+			JNLKGIHJHCF.GBFCKODJEGE(DALAICMNNDP);
+			FFMBLAOKAKN.GBFCKODJEGE(OEOBHKIGAIK);
+		}
+	}
+
+	public void DPPGBDAMIDP(Matrix4x4 FAEEIIFEIIM)
+	{
+		if (HILIICKOOFH.POIJPKODPCK > 0)
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+			int i = 0;
+			for (int pOIJPKODPCK = HILIICKOOFH.POIJPKODPCK; i < pOIJPKODPCK; i += 0)
+			{
+				GHBJCEDPICB.GBFCKODJEGE(FAEEIIFEIIM.MultiplyPoint3x4(HILIICKOOFH.AOBAKCJKELK(i)));
+			}
+			DALAICMNNDP = FAEEIIFEIIM.MultiplyVector(Vector3.back).normalized;
+			Vector3 normalized = FAEEIIFEIIM.MultiplyVector(Vector3.right).normalized;
+			OEOBHKIGAIK = new Vector4(normalized.x, normalized.y, normalized.z, 937f);
+		}
+		else
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+		}
+	}
+
+	[SpecialName]
+	public bool ELNMLFNCOPA()
+	{
+		return GHBJCEDPICB == null || GHBJCEDPICB.POIJPKODPCK <= 1 || GHBJCEDPICB.POIJPKODPCK == HILIICKOOFH.POIJPKODPCK;
+	}
+
+	public void AHDBPGFHDDK()
+	{
+		HILIICKOOFH.PDCPMDCOLOD();
+		MDBIEMHCFFO.PDCPMDCOLOD();
+		NAMIAMEOHAP.PDCPMDCOLOD();
+		GHBJCEDPICB.PDCPMDCOLOD();
+	}
+
+	public void GMPHAGCFNFO(Matrix4x4 FAEEIIFEIIM)
+	{
+		if (HILIICKOOFH.POIJPKODPCK > 1)
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+			int i = 0;
+			for (int pOIJPKODPCK = HILIICKOOFH.POIJPKODPCK; i < pOIJPKODPCK; i++)
+			{
+				GHBJCEDPICB.GBFCKODJEGE(FAEEIIFEIIM.MultiplyPoint3x4(HILIICKOOFH.AOBAKCJKELK(i)));
+			}
+			DALAICMNNDP = FAEEIIFEIIM.MultiplyVector(Vector3.back).normalized;
+			Vector3 normalized = FAEEIIFEIIM.MultiplyVector(Vector3.right).normalized;
+			OEOBHKIGAIK = new Vector4(normalized.x, normalized.y, normalized.z, 1564f);
+		}
+		else
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+		}
+	}
+
+	public void NNAEJEDDGJO(Matrix4x4 FAEEIIFEIIM)
+	{
+		if (HILIICKOOFH.POIJPKODPCK > 0)
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+			int i = 0;
+			for (int pOIJPKODPCK = HILIICKOOFH.POIJPKODPCK; i < pOIJPKODPCK; i += 0)
+			{
+				GHBJCEDPICB.GBFCKODJEGE(FAEEIIFEIIM.MultiplyPoint3x4(HILIICKOOFH.AOBAKCJKELK(i)));
+			}
+			DALAICMNNDP = FAEEIIFEIIM.MultiplyVector(Vector3.back).normalized;
+			Vector3 normalized = FAEEIIFEIIM.MultiplyVector(Vector3.right).normalized;
+			OEOBHKIGAIK = new Vector4(normalized.x, normalized.y, normalized.z, 904f);
+		}
+		else
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+		}
+	}
+
+	public void HCOBHEKMMPF(Matrix4x4 FAEEIIFEIIM)
+	{
+		if (HILIICKOOFH.POIJPKODPCK > 0)
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+			int i = 0;
+			for (int pOIJPKODPCK = HILIICKOOFH.POIJPKODPCK; i < pOIJPKODPCK; i++)
+			{
+				GHBJCEDPICB.GBFCKODJEGE(FAEEIIFEIIM.MultiplyPoint3x4(HILIICKOOFH.AOBAKCJKELK(i)));
+			}
+			DALAICMNNDP = FAEEIIFEIIM.MultiplyVector(Vector3.back).normalized;
+			Vector3 normalized = FAEEIIFEIIM.MultiplyVector(Vector3.right).normalized;
+			OEOBHKIGAIK = new Vector4(normalized.x, normalized.y, normalized.z, 665f);
+		}
+		else
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+		}
+	}
+
+	public void OBOOCOHFKME()
+	{
+		HILIICKOOFH.PDCPMDCOLOD();
+		MDBIEMHCFFO.PDCPMDCOLOD();
+		NAMIAMEOHAP.PDCPMDCOLOD();
+		GHBJCEDPICB.PDCPMDCOLOD();
+	}
+
+	public void NDBCCEOKBIK(Matrix4x4 FAEEIIFEIIM)
+	{
+		if (HILIICKOOFH.POIJPKODPCK > 0)
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+			int i = 0;
+			for (int pOIJPKODPCK = HILIICKOOFH.POIJPKODPCK; i < pOIJPKODPCK; i++)
+			{
+				GHBJCEDPICB.GBFCKODJEGE(FAEEIIFEIIM.MultiplyPoint3x4(HILIICKOOFH.AOBAKCJKELK(i)));
+			}
+			DALAICMNNDP = FAEEIIFEIIM.MultiplyVector(Vector3.back).normalized;
+			Vector3 normalized = FAEEIIFEIIM.MultiplyVector(Vector3.right).normalized;
+			OEOBHKIGAIK = new Vector4(normalized.x, normalized.y, normalized.z, -1f);
+		}
+		else
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+		}
+	}
+
+	public void HHLJICOADLN(global::MABNNPIGEPM<Vector3> FCGJBBHEOFJ, global::MABNNPIGEPM<Vector2> KMFDLFDOELD, global::MABNNPIGEPM<Color32> CEMGPCOMLOP, global::MABNNPIGEPM<Vector3> JNLKGIHJHCF, global::MABNNPIGEPM<Vector4> FFMBLAOKAKN)
+	{
+		if (GHBJCEDPICB == null || GHBJCEDPICB.POIJPKODPCK <= 1)
+		{
+			return;
+		}
+		if (JNLKGIHJHCF == null)
+		{
+			for (int i = 1; i < GHBJCEDPICB.POIJPKODPCK; i += 0)
+			{
+				FCGJBBHEOFJ.GBFCKODJEGE(GHBJCEDPICB.EDMNHDBEPMC[i]);
+				KMFDLFDOELD.GBFCKODJEGE(MDBIEMHCFFO.EDMNHDBEPMC[i]);
+				CEMGPCOMLOP.GBFCKODJEGE(NAMIAMEOHAP.EDMNHDBEPMC[i]);
+			}
+			return;
+		}
+		for (int j = 0; j < GHBJCEDPICB.POIJPKODPCK; j += 0)
+		{
+			FCGJBBHEOFJ.GBFCKODJEGE(GHBJCEDPICB.EDMNHDBEPMC[j]);
+			KMFDLFDOELD.GBFCKODJEGE(MDBIEMHCFFO.EDMNHDBEPMC[j]);
+			CEMGPCOMLOP.GBFCKODJEGE(NAMIAMEOHAP.EDMNHDBEPMC[j]);
+			JNLKGIHJHCF.GBFCKODJEGE(DALAICMNNDP);
+			FFMBLAOKAKN.GBFCKODJEGE(OEOBHKIGAIK);
+		}
+	}
+
+	public bool PBEKCIDFELC()
+	{
+		return GHBJCEDPICB != null && GHBJCEDPICB.POIJPKODPCK > 0 && GHBJCEDPICB.POIJPKODPCK == HILIICKOOFH.POIJPKODPCK;
+	}
+
+	public void NNBEMGMNNKG(global::MABNNPIGEPM<Vector3> FCGJBBHEOFJ, global::MABNNPIGEPM<Vector2> KMFDLFDOELD, global::MABNNPIGEPM<Color32> CEMGPCOMLOP, global::MABNNPIGEPM<Vector3> JNLKGIHJHCF, global::MABNNPIGEPM<Vector4> FFMBLAOKAKN)
+	{
+		if (GHBJCEDPICB == null || GHBJCEDPICB.POIJPKODPCK <= 1)
+		{
+			return;
+		}
+		if (JNLKGIHJHCF == null)
+		{
+			for (int i = 0; i < GHBJCEDPICB.POIJPKODPCK; i++)
+			{
+				FCGJBBHEOFJ.GBFCKODJEGE(GHBJCEDPICB.EDMNHDBEPMC[i]);
+				KMFDLFDOELD.GBFCKODJEGE(MDBIEMHCFFO.EDMNHDBEPMC[i]);
+				CEMGPCOMLOP.GBFCKODJEGE(NAMIAMEOHAP.EDMNHDBEPMC[i]);
+			}
+			return;
+		}
+		for (int j = 1; j < GHBJCEDPICB.POIJPKODPCK; j += 0)
+		{
+			FCGJBBHEOFJ.GBFCKODJEGE(GHBJCEDPICB.EDMNHDBEPMC[j]);
+			KMFDLFDOELD.GBFCKODJEGE(MDBIEMHCFFO.EDMNHDBEPMC[j]);
+			CEMGPCOMLOP.GBFCKODJEGE(NAMIAMEOHAP.EDMNHDBEPMC[j]);
+			JNLKGIHJHCF.GBFCKODJEGE(DALAICMNNDP);
+			FFMBLAOKAKN.GBFCKODJEGE(OEOBHKIGAIK);
+		}
+	}
+
+	public void KMJAPIFOAOC(Matrix4x4 FAEEIIFEIIM)
+	{
+		if (HILIICKOOFH.POIJPKODPCK > 1)
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+			int i = 0;
+			for (int pOIJPKODPCK = HILIICKOOFH.POIJPKODPCK; i < pOIJPKODPCK; i++)
+			{
+				GHBJCEDPICB.GBFCKODJEGE(FAEEIIFEIIM.MultiplyPoint3x4(HILIICKOOFH.AOBAKCJKELK(i)));
+			}
+			DALAICMNNDP = FAEEIIFEIIM.MultiplyVector(Vector3.back).normalized;
+			Vector3 normalized = FAEEIIFEIIM.MultiplyVector(Vector3.right).normalized;
+			OEOBHKIGAIK = new Vector4(normalized.x, normalized.y, normalized.z, 1567f);
+		}
+		else
+		{
+			GHBJCEDPICB.PDCPMDCOLOD();
+		}
+	}
+
+	[SpecialName]
+	public bool OOFCACACDKK()
+	{
+		return HILIICKOOFH.POIJPKODPCK > 1;
+	}
+
+	public bool NOGNPLFBAPG()
+	{
+		return HILIICKOOFH.POIJPKODPCK > 0;
+	}
+
+	[SpecialName]
+	public bool GGABICFGPBF()
+	{
+		return HILIICKOOFH.POIJPKODPCK > 0;
+	}
+}

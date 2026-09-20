@@ -2,8 +2,12 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - GameMain
+  - GameMap
+  - Drag and Drop Root
+  - GameCamera
   layers:
   - Default
   - TransparentFX
@@ -13,6 +17,8 @@ TagManager:
   - UI
   - 
   - 
+  - EditOnly
+  - GameBackground
   - 
   - 
   - 
@@ -33,11 +39,41 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - BackgroundParticle
+  - ForegroundParticle
   m_SortingLayers:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 318195315
+    locked: 0
+  - name: Shadow
+    uniqueID: 2191030189
+    locked: 0
+  - name: BackParticle
+    uniqueID: 2403356367
+    locked: 0
+  - name: Actor
+    uniqueID: 1555304133
+    locked: 0
+  - name: ScreenEffect
+    uniqueID: 1333025317
+    locked: 0
+  - name: FrontParticle
+    uniqueID: 759126069
+    locked: 0
+  - name: Forground
+    uniqueID: 1349311587
+    locked: 0
+  - name: HUD
+    uniqueID: 2074897583
+    locked: 0
+  - name: Bones
+    uniqueID: 1043333109
+    locked: 0
+  - name: Controls
+    uniqueID: 4059384581
+    locked: 0
+  m_RenderingLayers:
+  - Default

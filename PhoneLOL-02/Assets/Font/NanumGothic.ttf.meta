@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: c3858b63696b9654f9c9fc177dd4dfe8
+timeCreated: 1789920189
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 2
+  name:
+  fontSize: 24
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames:
+  - NanumGothic
+  customCharacters:
+  fontRenderingMode: 0
+  output:
+    hasEmptyFontData: 0
+  userData:

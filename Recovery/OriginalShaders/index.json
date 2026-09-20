@@ -1,0 +1,387 @@
+[
+  {
+    "name": "ProjectT/DiffuseOpaque",
+    "file": "7fa2d383950b500c-a70959cad169.shader.txt",
+    "sha256": "a70959cad169c5aebba7e0eb361f4cf119aef291d26ddc00c53e2f8a91193887",
+    "sourceAsset": "4ce3739f77036dd40a27f8e9e12b38b8",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Premultiplied Colored 2",
+    "file": "a93d55c68802fa04-6f69922b56a3.shader.txt",
+    "sha256": "6f69922b56a38e53468fdb8426f64eae809a7363370c90a543913a4975e5404b",
+    "sourceAsset": "65ca32170bb371f459991a5d7696a9ba",
+    "pathID": 1
+  },
+  {
+    "name": "Mobile/Particles/Alpha Blended Color",
+    "file": "80460ab7ccbfbfc7-b7a13438050f.shader.txt",
+    "sha256": "b7a13438050fa580ba5e0b6d6cd5d5d7a8346b90d1e1f38dc1332de45cfc567e",
+    "sourceAsset": "d6a2e92d02af3f74e922f2a7e9c7ad38",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Colored (Gray) 1",
+    "file": "e27a567c7d512372-094254fcc2ee.shader.txt",
+    "sha256": "094254fcc2ee2d7a40ecdb463f24df5d392c07b90c33b09ff4761755e8b7565d",
+    "sourceAsset": "efd7735741609c14cbe17c9629cf0bbb",
+    "pathID": 1
+  },
+  {
+    "name": "Mobile/Particles/Additive Color",
+    "file": "43c0be4e6a760591-01cb2b1750fb.shader.txt",
+    "sha256": "01cb2b1750fbacc96949629ab5f1a1d10a79aec4051528f6516fbd1d2a154413",
+    "sourceAsset": "8d9bf37978f423f47955a2b3faa82a1f",
+    "pathID": 1
+  },
+  {
+    "name": "Custom/Sword-Light",
+    "file": "34bf042eb7cd562a-470c393573e1.shader.txt",
+    "sha256": "470c393573e1e66a4fd132110c4f96a37d124ee3aa3ddf92d5f7c1044e2c95c5",
+    "sourceAsset": "e926d881afce3ea4895f793eb73d67fb",
+    "pathID": 1
+  },
+  {
+    "name": "Custom/TristanaQWeapon",
+    "file": "5fac66ed90a45702-a34b73af9455.shader.txt",
+    "sha256": "a34b73af9455dc9f54490399b05f219edf9615dc3d618755ee0af57284e383ee",
+    "sourceAsset": "d664f249fe94a484d8b998e369b0759e",
+    "pathID": 1
+  },
+  {
+    "name": "Custom/Yasuo_3_W_Smoke",
+    "file": "ab6b8895c0a9ac8f-f25d768508ed.shader.txt",
+    "sha256": "f25d768508ed50744c65593624a2b04bc3c4b6028c4fc51625357f5d66aef1b5",
+    "sourceAsset": "57c810b04bbf6624581ebea4b72a6260",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Colored 1",
+    "file": "338f1e6bf17b685c-b7149b932540.shader.txt",
+    "sha256": "b7149b932540b05402672bc565e0fa168555021224e8cfb0d1f19576926ecf0a",
+    "sourceAsset": "cf9ebc36d43f657468fecb524763e3bc",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Packed 2",
+    "file": "10d4d5ce67d9c2cd-0313780a98d4.shader.txt",
+    "sha256": "0313780a98d46313d1dce55ee50d134228f38e5a767bcee94d8c0ea809b862ee",
+    "sourceAsset": "f4f0faf73e6bf89419cf29b611f29ade",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Text 2",
+    "file": "417115b79fad93f4-34d670b04a41.shader.txt",
+    "sha256": "34d670b04a41efeddcc1232b70fb04d132404451368b889940d730ad4ea50742",
+    "sourceAsset": "37590480333382341b5007dec2a032c6",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Packed 3",
+    "file": "cf73f7fb8bb4f9b7-099ee8dbab70.shader.txt",
+    "sha256": "099ee8dbab7065ff5d7ef8a1b0a65b29740b0975d761eb9de1dcb01db1ff9035",
+    "sourceAsset": "d1ba9e7ba321b2c4d97f6a19f1deab6a",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Premultiplied Colored 3",
+    "file": "731a82183cd2fe02-9fff2f36fd5d.shader.txt",
+    "sha256": "9fff2f36fd5d3a1420f17f02550b399fb163b9a926d79a493b39970bda50d0fb",
+    "sourceAsset": "5e82b392f79aa394fb1a579743600d5f",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Packed 1",
+    "file": "a012b9f612b3af4f-a202272c3ca8.shader.txt",
+    "sha256": "a202272c3ca88155eaafbf4cdc7a59f030cb0ff63c889ec0355e2f8e280b282b",
+    "sourceAsset": "182695e850938314fa6675a8926ad9ee",
+    "pathID": 1
+  },
+  {
+    "name": "Unlit/Premultiplied Colored",
+    "file": "cd5668e08f9ef31d-a3acc4fda8b7.shader.txt",
+    "sha256": "a3acc4fda8b7bdcf96d5c0010f917d9c5516ab18c651106d2fb40332cae542bd",
+    "sourceAsset": "ed5591596df551e4c8f4b05ce88a7a07",
+    "pathID": 1
+  },
+  {
+    "name": "Unlit/Text",
+    "file": "c753c263ae517848-3392ea012096.shader.txt",
+    "sha256": "3392ea012096c3ecd492c7284dad18e011e4fd19a4099f36152db16f44aac420",
+    "sourceAsset": "773417da4aa1b46409bd1e7574dcb251",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Premultiplied Colored 1",
+    "file": "e2944418f47c1478-364c9c1463a3.shader.txt",
+    "sha256": "364c9c1463a3006dac23175a585f3f929af506fb255a76b244680cfe25ed9063",
+    "sourceAsset": "93c84009f8f004b4f84697c8cb12dd63",
+    "pathID": 1
+  },
+  {
+    "name": "Unlit/Transparent Packed",
+    "file": "245314491d334f99-57485feb3361.shader.txt",
+    "sha256": "57485feb3361604253e40aa4651b7bb0d9d4590583269c3c969d4e1fd73815ca",
+    "sourceAsset": "f3fd145b191cf4040ac6b55cda352a53",
+    "pathID": 1
+  },
+  {
+    "name": "Particles/~Additive-Multiply",
+    "file": "6698be2976a443eb-03e75385b395.shader.txt",
+    "sha256": "03e75385b395f3066d589655a0bad4f96198ef76d9d28300ed56d9b6914e4336",
+    "sourceAsset": "0000000000000000f000000000000000",
+    "pathID": 3
+  },
+  {
+    "name": "Particles/Additive (Soft)",
+    "file": "6ad55b74eca45f1c-af5a86db4054.shader.txt",
+    "sha256": "af5a86db405421166047a296b607fe6f2eb019585a61a5ad9c7f49796bd67d43",
+    "sourceAsset": "0000000000000000f000000000000000",
+    "pathID": 4
+  },
+  {
+    "name": "Particles/Alpha Blended",
+    "file": "0241cf0724f338c3-02cdb2bace16.shader.txt",
+    "sha256": "02cdb2bace1696e74fce1735eee7d652988be00f942730a72a7306ea0118b01e",
+    "sourceAsset": "0000000000000000f000000000000000",
+    "pathID": 5
+  },
+  {
+    "name": "Particles/Alpha Blended Premultiply",
+    "file": "db30d10ece619d14-fc99eb79c074.shader.txt",
+    "sha256": "fc99eb79c074ccd24069602ee5da17d948ae02c1b773ea5e8372d6b90869adc4",
+    "sourceAsset": "0000000000000000f000000000000000",
+    "pathID": 6
+  },
+  {
+    "name": "Mobile/Particles/Alpha Blended",
+    "file": "390a895964633c99-976559a6c942.shader.txt",
+    "sha256": "976559a6c942594d43f50fcd0ac8a7ac0d342836805c82eb4b91ca689af330b0",
+    "sourceAsset": "0000000000000000f000000000000000",
+    "pathID": 7
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Colored 2",
+    "file": "e1abcf07359160b7-fa62bacc7e40.shader.txt",
+    "sha256": "fa62bacc7e40adf4edf9574d4a582070ba93e6e5252f4f6c9e06ffb1dfca8222",
+    "sourceAsset": "1682092270f88d04bb434756a984ea87",
+    "pathID": 1
+  },
+  {
+    "name": "ProjectT/DiffuseTransparent",
+    "file": "58c36aa7b88247a6-91f5a77f365c.shader.txt",
+    "sha256": "91f5a77f365c1818d6bdab95b8574966448b47551ae3712e987b9cc443fddfe1",
+    "sourceAsset": "7f8e3f285a095a04da0836e71b5b3f16",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Text 1",
+    "file": "f3651e12e7e4bb0d-d14e3a731326.shader.txt",
+    "sha256": "d14e3a731326ddc9359c5826a3a97c5578402af3bf9fa7a856b78fcc2502abec",
+    "sourceAsset": "9f39f1d1f2f3ee04bb793082eee05819",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Transparent Colored 3",
+    "file": "73232fec379e1c0e-84b41809c34a.shader.txt",
+    "sha256": "84b41809c34a530e4648801ea81f17b105e2cbc0c42ddeb2ca28cde8340c1a0c",
+    "sourceAsset": "7c0a1aa668787ad42a48d1a535825520",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/InternalErrorShader",
+    "file": "06f991fadffcda70-ec80770e12a7.shader.txt",
+    "sha256": "ec80770e12a74027278a97f74c46ce9b08ec3206838f067673c8fececd437a78",
+    "sourceAsset": "unity default resources",
+    "pathID": 17
+  },
+  {
+    "name": "Hidden/Shadow-ScreenBlur",
+    "file": "b41c6ef4cbe0cfe9-4840092f8574.shader.txt",
+    "sha256": "4840092f8574148366093d73fe017edd72d00df45f70eca9e07b88ee05b074b9",
+    "sourceAsset": "unity default resources",
+    "pathID": 60
+  },
+  {
+    "name": "Hidden/Camera-DepthTexture",
+    "file": "8673b1109885ec0d-62d5120950e3.shader.txt",
+    "sha256": "62d5120950e30c65adb2cfd507bc2edf54a435fd05f71e1335b511ae6ace0d8a",
+    "sourceAsset": "unity default resources",
+    "pathID": 61
+  },
+  {
+    "name": "Hidden/Camera-DepthNormalTexture",
+    "file": "59c6d6af0f10bb2d-08f737f98d0d.shader.txt",
+    "sha256": "08f737f98d0db5cf2e491d5f2492eb93f6f250348a010360048ba816bceae256",
+    "sourceAsset": "unity default resources",
+    "pathID": 62
+  },
+  {
+    "name": "Hidden/Internal-PrePassLighting",
+    "file": "67806b458591573c-6f424ca2e2d0.shader.txt",
+    "sha256": "6f424ca2e2d0a4d26bdbb8b2867eafbb3d3aecf975f602caa78d93e0ba3c9f62",
+    "sourceAsset": "unity default resources",
+    "pathID": 63
+  },
+  {
+    "name": "Hidden/Internal-PrePassCollectShadows",
+    "file": "74d9992a66ba88b1-87a5d9195b97.shader.txt",
+    "sha256": "87a5d9195b970b2d9fa86d5cc1d7de33ea683841a338ecd5060c06729b18fd04",
+    "sourceAsset": "unity default resources",
+    "pathID": 64
+  },
+  {
+    "name": "Hidden/Internal-CombineDepthNormals",
+    "file": "a408075e9e1f611e-e9dec1383661.shader.txt",
+    "sha256": "e9dec13836619335ab11f9982c7922aeeb7382a10736dbce4103069cff06aaed",
+    "sourceAsset": "unity default resources",
+    "pathID": 65
+  },
+  {
+    "name": "Hidden/BlitCopy",
+    "file": "6c190596f6255df1-244938e03f6f.shader.txt",
+    "sha256": "244938e03f6f3b3e32c13ea45de427349684c4a872f9d0e10953b0871cb2e6b6",
+    "sourceAsset": "unity default resources",
+    "pathID": 66
+  },
+  {
+    "name": "Hidden/Shadow-ScreenBlurRotated",
+    "file": "33fd6c530631a793-4323b1686bd8.shader.txt",
+    "sha256": "4323b1686bd8153254d0df6dad719d8600aa13c92873d220309e04c1548b7c05",
+    "sourceAsset": "unity default resources",
+    "pathID": 67
+  },
+  {
+    "name": "Hidden/InternalClear",
+    "file": "b63beb9173ef0d42-3f3843dda01f.shader.txt",
+    "sha256": "3f3843dda01fe66630e46a615a00f43f1ac9cc132221310e269152e4ec5bd4f6",
+    "sourceAsset": "unity default resources",
+    "pathID": 68
+  },
+  {
+    "name": "Hidden/Internal-Flare",
+    "file": "1c8ad4daaee3d27d-9f116da357a7.shader.txt",
+    "sha256": "9f116da357a71837df595ff492e062a25ee4c836bbec53bff767f09c02c3dfb9",
+    "sourceAsset": "unity default resources",
+    "pathID": 102
+  },
+  {
+    "name": "Hidden/Internal-Halo",
+    "file": "96765c5df2bcce87-5f66e92c6c8a.shader.txt",
+    "sha256": "5f66e92c6c8a0e40dddfbf93c76d3224617083f2d0e068931e53a0d1ebebe24f",
+    "sourceAsset": "unity default resources",
+    "pathID": 105
+  },
+  {
+    "name": "Hidden/Internal-GUITextureClip",
+    "file": "3d5985f6cc5d5aab-9c0bbef0fcc4.shader.txt",
+    "sha256": "9c0bbef0fcc43615a5e86c841c00bd872ade8803be063411e90430ed3bda9c18",
+    "sourceAsset": "unity default resources",
+    "pathID": 9000
+  },
+  {
+    "name": "Hidden/Internal-GUITextureClipText",
+    "file": "62d058199300f6f0-c4e8ccd55789.shader.txt",
+    "sha256": "c4e8ccd5578914fc9eac0a76d76fc1d54bfc39b4819fddc19ec1e8a4e1a198ef",
+    "sourceAsset": "unity default resources",
+    "pathID": 9001
+  },
+  {
+    "name": "Hidden/Internal-GUITexture",
+    "file": "2e5d620beb471005-565be39b54a2.shader.txt",
+    "sha256": "565be39b54a20b0fd4f3e0d9530fac81c1844074ebc2c3989b85ed3aa4f1878e",
+    "sourceAsset": "unity default resources",
+    "pathID": 9002
+  },
+  {
+    "name": "Hidden/Internal-GUITextureBlit",
+    "file": "5ac8fe5706e350b1-0a9b5a9e1428.shader.txt",
+    "sha256": "0a9b5a9e14280140ca252f70913a94f661987c93130242c55f336e357be76aaf",
+    "sourceAsset": "unity default resources",
+    "pathID": 9003
+  },
+  {
+    "name": "GUI/Text Shader",
+    "file": "c8270f804ac40b95-66e6e27c5009.shader.txt",
+    "sha256": "66e6e27c500957726c48c5c2b2d97bb83509a3936003263d7d100875e1eb27af",
+    "sourceAsset": "unity default resources",
+    "pathID": 10101
+  },
+  {
+    "name": "Sprites/Default",
+    "file": "b64456be685488e0-b5b4f95efc12.shader.txt",
+    "sha256": "b5b4f95efc12caca0dec959f791f77ff0e6b26e8206c7cb8cd37e9d81908d362",
+    "sourceAsset": "unity default resources",
+    "pathID": 10753
+  },
+  {
+    "name": "FXMaker/Mask Additive Tint",
+    "file": "18a4518e69ca44aa-0b2df49fce00.shader.txt",
+    "sha256": "0b2df49fce00d2cc9f83b41649969e1cfcdc542128fe9390f0dad59ec2529c6a",
+    "sourceAsset": "61911d6159b594c4981e33b8f50b7656",
+    "pathID": 1
+  },
+  {
+    "name": "Custom/Yasuo_3_W_Wall",
+    "file": "f400e4b8a9e6092d-50a9f5779f49.shader.txt",
+    "sha256": "50a9f5779f49786f2e945704a431be25fdd0954b042530f6fcc5ddef37ed85be",
+    "sourceAsset": "3bf1142d3339aaf499c38fe13516f6c9",
+    "pathID": 1
+  },
+  {
+    "name": "ProjectT/OnlyColor",
+    "file": "cb19543e7a15fea3-71f06a5042bc.shader.txt",
+    "sha256": "71f06a5042bcbc5b8b370f3f37a39ee774df6ed3ba8f0e3bb44efcf821806b87",
+    "sourceAsset": "445a359d5d215a2448c4d9e1f916970b",
+    "pathID": 1
+  },
+  {
+    "name": "FXMaker/Mask Additive",
+    "file": "ea68a60551fa897e-193fd2c6f550.shader.txt",
+    "sha256": "193fd2c6f550dddab999a18b0e30cdfcb50f653a8ca1303c2d74c687b338bfba",
+    "sourceAsset": "160484c59bf7ccb4fb1e7b830501e048",
+    "pathID": 1
+  },
+  {
+    "name": "Hidden/Unlit/Text 3",
+    "file": "f53885481362c2b0-25ca8157c957.shader.txt",
+    "sha256": "25ca8157c95797641ab97389329a6744241d8a779bab331681c5ae06e9f3051e",
+    "sourceAsset": "27275fc7df2ec0346ba12831e6a01345",
+    "pathID": 1
+  },
+  {
+    "name": "Custom/FizzW_MarkerL",
+    "file": "814e097c1d0cb462-91b756500417.shader.txt",
+    "sha256": "91b75650041742d538939dd7bf009f5f611941fb9b7ef70282cfd7e8e7ca91a7",
+    "sourceAsset": "ed95aad8848fdd44193d7d8c06593cf7",
+    "pathID": 1
+  },
+  {
+    "name": "VertexLit",
+    "file": "efb6dafb6cd40d55-8746ace6d57b.shader.txt",
+    "sha256": "8746ace6d57b48aa4f35d0a88f1a7c1dfbae3d763cad91dfa825de38c67aab5c",
+    "sourceAsset": "unity_builtin_extra",
+    "pathID": 6
+  },
+  {
+    "name": "Diffuse",
+    "file": "347fd578167c6bc8-b791dc647b85.shader.txt",
+    "sha256": "b791dc647b85d8097c83b0c3ba076f20f78cbcff20e8b164278b71760e081a9f",
+    "sourceAsset": "unity_builtin_extra",
+    "pathID": 7
+  },
+  {
+    "name": "UI/Default",
+    "file": "aa7762d10874227f-7336dada8fbe.shader.txt",
+    "sha256": "7336dada8fbe3bc2c0767c106ad28860445c111fde7ff571105b27fe90141e87",
+    "sourceAsset": "unity_builtin_extra",
+    "pathID": 10770
+  },
+  {
+    "name": "UI/Default Font",
+    "file": "a98f8dc1bf835b48-e41c3e0e08a7.shader.txt",
+    "sha256": "e41c3e0e08a745fbaecaa0d3da40d89bf933d45594b4df17eb2ddf7ceffe023a",
+    "sourceAsset": "unity_builtin_extra",
+    "pathID": 10782
+  }
+]

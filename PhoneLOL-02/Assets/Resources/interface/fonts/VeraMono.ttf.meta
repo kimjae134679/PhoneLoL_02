@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 285e50c75195cf440823ab0c29c2c931
+timeCreated: 1789920188
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 2
+  name:
+  fontSize: 11
+  forceTextureCase: -2
+  characterSpacing: 1
+  characterPadding: 0
+  includeFontData: 1
+  use2xBehaviour: 0
+  fontNames:
+  - Bitstream Vera Sans Mono
+  customCharacters:
+  fontRenderingMode: 0
+  output:
+    hasEmptyFontData: 0
+  userData:

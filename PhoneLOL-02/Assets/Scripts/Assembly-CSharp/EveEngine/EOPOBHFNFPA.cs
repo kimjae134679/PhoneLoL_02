@@ -1,0 +1,9 @@
+namespace EveEngine
+{
+	public interface EOPOBHFNFPA
+	{
+		void CFGEKKHOKKE(CMNIABEFLBJ EFDLFNPAKGO);
+
+		void JCOLMPJMMEB(PJEMPFEIOAK EFDLFNPAKGO);
+	}
+}
