@@ -1,28 +1,24 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-// Analytics are optional; an absent legacy Java SDK must not abort game startup.
 public static class LegacyAndroidServices
 {
-    private static bool checkedAnalytics;
-    private static bool analyticsAvailable;
-    public static bool AnalyticsAvailable
+    private static readonly Dictionary<string, bool> available = new Dictionary<string, bool>();
+    public static bool AnalyticsAvailable { get { return IsAvailable("com.igaworks.unity.plugin.IgaworksUnityPluginAos"); } }
+    public static bool IsAvailable(string className)
     {
-        get
-        {
-            if (checkedAnalytics) return analyticsAvailable;
-            checkedAnalytics = true;
+        bool value;
+        if (available.TryGetValue(className, out value)) return value;
 #if UNITY_ANDROID && !UNITY_EDITOR
-            try
-            {
-                using (var sdk = new AndroidJavaClass("com.igaworks.unity.plugin.IgaworksUnityPluginAos"))
-                    analyticsAvailable = sdk.GetRawClass() != System.IntPtr.Zero;
-            }
-            catch (AndroidJavaException)
-            {
-                Debug.LogWarning("Legacy Igaworks analytics SDK is absent; analytics startup is skipped.");
-            }
+        try {
+            using (var plugin = new AndroidJavaClass(className)) value = plugin.GetRawClass() != IntPtr.Zero;
+        } catch (AndroidJavaException) { value = false; }
+#else
+        value = false;
 #endif
-            return analyticsAvailable;
-        }
+        available[className] = value;
+        if (!value) PhoneLOLRealtimeLog.Record("OPTIONAL_SDK_UNAVAILABLE", className);
+        return value;
     }
 }

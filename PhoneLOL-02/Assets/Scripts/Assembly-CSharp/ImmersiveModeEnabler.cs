@@ -32,32 +32,9 @@ public class ImmersiveModeEnabler : MonoBehaviour
 
 	private void EIIMPEBLGJP()
 	{
-		lock (this)
-		{
-			using (HGLECEMPHON = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-			{
-				NFLIMHBFICB = HGLECEMPHON.GetStatic<AndroidJavaObject>("currentActivity");
-			}
-			if (NFLIMHBFICB == null)
-			{
-				return;
-			}
-			using (HGLECEMPHON = new AndroidJavaClass("com.rak24.androidimmersivemode.Main"))
-			{
-				if (HGLECEMPHON == null)
-				{
-					return;
-				}
-				IBMHONANFCJ = HGLECEMPHON.CallStatic<AndroidJavaObject>("instance", new object[0]);
-				if (IBMHONANFCJ != null)
-				{
-					NFLIMHBFICB.Call("runOnUiThread", (AndroidJavaRunnable)(() =>
-					{
-						IBMHONANFCJ.Call("EnableImmersiveMode", NFLIMHBFICB);
-					}));
-				}
-			}
-		}
+
+        // Unity owns the system bars on current Android and iOS.
+        Screen.fullScreen = true;
 	}
 
 	private void ALAPLECCHMN(bool OKMGCGIMDAI)

@@ -71,16 +71,19 @@ public class AdManager : MonoBehaviour
 
 	private void Start()
 	{
-		Plugin.Instance.init(false, string.Empty);
+		if (LegacyAndroidServices.IsAvailable("com.nas.unity.NasUnityPlugin")) Plugin.Instance.init(false, string.Empty);
 		if (Application.platform == RuntimePlatform.Android)
 		{
 			AndroidJNI.AttachCurrentThread();
 		}
-		TJPlacement.OnRequestSuccess += OnTapjoyRequestSuccess;
+		if (LegacyAndroidServices.IsAvailable("com.tapjoy.Tapjoy"))
+        {
+            TJPlacement.OnRequestSuccess += OnTapjoyRequestSuccess;
 		TJPlacement.OnRequestFailure += OnTapjoyRequestFailure;
 		TJPlacement.OnVideoComplete += OnTapjoyVideoComplete;
 		TJPlacement.OnVideoError += OnTapjoyVideoError;
 		TJPlacement.OnContentDismiss += OnTapjoyContentDismiss;
+        }
 	}
 
 	public void MMKNPGIJLIB(TJPlacement CJPEKCEFKFF)

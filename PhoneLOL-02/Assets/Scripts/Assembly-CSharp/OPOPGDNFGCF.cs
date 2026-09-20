@@ -1372,6 +1372,7 @@ public class OPOPGDNFGCF : EKACODPEIIO
 
 	private void HBBNJNPJEJI(PJEMPFEIOAK HMOAHNANKNE)
 	{
+        V096OriginalDiagnostics.GameReady();
 		PAJKLMHPDMA = HMOAHNANKNE.JCGKFEPEJPO();
 		if (PAJKLMHPDMA)
 		{
@@ -2257,6 +2258,7 @@ public class OPOPGDNFGCF : EKACODPEIIO
 
 		private void FLFONFOLDNP(PJEMPFEIOAK HMOAHNANKNE)
 		{
+            V096OriginalDiagnostics.GameProfileHandlerEnter();
 			if (HMOAHNANKNE.KFAGPDGHEBK() != 0)
 			{
 				FJPMFBBCBLB(OEOIIKMBGAG.ERROR);
@@ -2264,6 +2266,7 @@ public class OPOPGDNFGCF : EKACODPEIIO
 			}
 			GLPDLIDMHFA().JCOLMPJMMEB(HMOAHNANKNE);
 			NLHLBIJLOCJ(HMOAHNANKNE.JCGKFEPEJPO());
+            V096OriginalDiagnostics.GameProfileHandlerCompleted();
 		}
 
 		private void BFLHHLKMNOL(PJEMPFEIOAK HMOAHNANKNE)

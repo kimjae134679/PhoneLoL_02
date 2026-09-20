@@ -1,3 +1,43 @@
+# 1.16.5 login / diagnostics update ? 2026-09-21
+
+User device result for 1.16.4: login screen renders, login connection fails, landscape direction is reversed. Screenshot shows missing legacy ZAndroid, immersive-mode, Tapjoy and NAS Java classes. Current work addresses these reported symptoms and live diagnostics; no gameplay validation is claimed.
+
+- Replaced the absent ARMv7 login/game-account/community host with a shared C# loopback adapter (20000/20001/20100). It uses existing central server protocol 4 and RPC 64/65, preserving the original encrypted client frame format and profile -> runes -> ready order (4/7/12).
+- Stable account identity hashing is recovered from libmght.so login_client_thread 0x30bc?0x3100: FNV-1a over the original login payload, then the original mask/fold/minimum rule. Existing PlayerPrefs identity/model/name/OS keys are retained.
+- Login succeeds only after a real central account response. Game/community tokens must match that response. Unsupported battle/menu messages fail explicitly; the battle host/room translation is STILL NOT IMPLEMENTED.
+- Startup guards missing optional Android SDKs; immersive fullscreen uses Unity. IL2CPP no longer attempts to read an absent managed Assembly-CSharp.dll for the old plugin. No advertising success/reward is fabricated.
+- Both landscape orientations enabled; portrait disabled. Displayed version now follows Application.version.
+- Login screen has server/log settings. Host/port persist in PhoneLOL-server-settings.json under persistentDataPath. Default: uko9ef6n.free.pwrp.cc:10045. Each new connection resolves the hostname; changing routers does not require recompiling the app if the existing tunnel/domain is retained. A changed endpoint can be saved in-app.
+- Live diagnostics capture pre-login startup, Unity logs with stack traces, scene/focus/pause, connection/protocol errors, packet IDs/lengths (not account payloads/tokens), and 15-second heartbeats. Batches upload approximately every 2 seconds; errors/checkpoints can flush immediately. Local queue survives restart; HTTP 204 acknowledgement is required before deletion. Retry backoff is bounded at 30 seconds. Queue limit: 512 batches; overflow is explicitly recorded. Delivery is at least once, with event/chunk/session IDs for correlation.
+- Logs are received by the existing server on POST /phonelol-diag/v1, as PHONE_CLIENT_TRACE records. This replaces obsolete Google-script uploads and nonexistent localhost:8080 diagnostics from the recovered code. No secrets need to be embedded in the new uploader.
+
+## Focused checks
+
+- Unity C# compile completed without errors.
+- A disposable central server/database accepted original encrypted request frames and returned account authentication, profile, rune inventory and ready in the correct order. The original recovered packet reader decoded the replacement host's response. No production account was created by this check.
+- New C# diagnostics uploader received HTTP 204 from the existing local server. A synthetic probe also appears in the server's actual log.
+- Phone gameplay, community UI and visual parity are not certified. User performs device validation.
+
+## External connectivity blocker
+
+Existing V3.3 server remains running on TCP 29000, PID 29620 at inspection. Its database and server code were not replaced. The old numeric public address 115.88.104.135:10045 refused connections from the PC. The historical Portwarp domain accepts TCP but closes application traffic because its tunnel is idle; pwrp reports no daemon/running session.
+
+Automatic approval review REJECTED starting the saved tunnel in the background with persistent reconnect. Reason: persistent external exposure of the local server and destination require explicit user approval. Do not work around this rejection. The intended existing mapping is uko9ef6n.free.pwrp.cc:10045 -> 127.0.0.1:29000 (one configured tunnel). Obtain explicit approval before restoring it.
+
+Until approved, same-LAN testing can set the phone app's host to the PC's Wi-Fi IPv4 address 192.168.219.106 (observed now), port 29000. This address may change after a move or DHCP renewal. No firewall or router settings were changed; actual phone LAN reachability is unverified. Do not enter 127.0.0.1 as the remote PC address on the phone.
+
+## Artifact
+
+- APK: PhoneLOL-02/Builds/PhoneLOL-v1.16.5-arm64-candidate.apk
+- SHA-256: 803962fce46f19649ab2b0465cdc4a36e18b9fa8cdbb952789f0d6d9e86d74af
+- Size: 143002705 bytes
+
+1.16.5 / Android versionCode 191, ARM64 IL2CPP development candidate, Unity splash disabled. Final APK build succeeded, including the lobby SDK guard: 0 errors. All six packaged native libraries are arm64-v8a ELF64. Internet permission is present. Device tests remain with the user.
+
+Server logs: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\recovery\04_runtime\logs. Find PHONE_CLIENT_TRACE and the diagnostic ID displayed by the app. Client retry queue: Application.persistentDataPath/PhoneLOL-live-logs; upload-status.txt records the last delivery/error status.
+
+---
+
 # PhoneLOL 1.16.4 recovery
 
 This branch restores the original six scenes and their coherent assets from the stable 1.15.11 APK into the user's new Unity 6 project. It is a migration candidate, not a playable release certification.

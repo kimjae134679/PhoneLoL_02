@@ -493,6 +493,8 @@ namespace EveEngine
 				while (BKCMHAPLBDC.Count > 0)
 				{
 					PJEMPFEIOAK value = BKCMHAPLBDC.First.Value;
+                    // A login callback can close the connection and clear this queue.
+                    BKCMHAPLBDC.RemoveFirst();
 					try
 					{
 						GINOEGAMKHO(value);
@@ -501,7 +503,6 @@ namespace EveEngine
 					{
 						Debug.LogException(exception);
 					}
-					BKCMHAPLBDC.RemoveFirst();
 					value.CDPNLMMNNBD();
 				}
 				if (LOEHMFOCLIB && !NKKPEFMNFHE)

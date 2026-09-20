@@ -1563,7 +1563,7 @@ public class LoginMain : MonoBehaviour
 	private void Start()
 	{
 		V096OriginalDiagnostics.Initialize();
-		m_versionLabel.set_text(string.Format("Ver {0}", IHNBHPIDFID));
+		m_versionLabel.set_text("Ver " + Application.version);
 		m_testModeLabel.gameObject.SetActive(NetworkManager.get_Instance().m_testMode);
 		if (!NetworkManager.get_Instance().m_testMode)
 		{
@@ -1573,7 +1573,7 @@ public class LoginMain : MonoBehaviour
 		{
 			FMDDLHJALMI = "http://127.0.0.1:8080/d";
 		}
-		IgaworksUnityPluginAOS.AOAHAHMPIIP.AGDCEOGEIFG("login");
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.AOAHAHMPIIP.AGDCEOGEIFG("login");
 		if (PlayerPrefs.GetInt("PrivacyAgreement", 0) == 0)
 		{
 			m_privacyPanel.SetActive(true);

@@ -435,12 +435,19 @@ public class ZAndroid : MonoBehaviour
 
 	private void Awake()
 	{
-		UnityEngine.Object.DontDestroyOnLoad(base.gameObject);
-		AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-		BDHKIEBEFBI = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
-		NCDOMFKMNOL = new AndroidJavaClass("com.zestylife.zandroid.ZAndroidUnityPluginActivity");
-		NCDOMFKMNOL.CallStatic("Init", BDHKIEBEFBI);
-		StartCoroutine(EAEAEOFHBJO());
+
+        UnityEngine.Object.DontDestroyOnLoad(base.gameObject);
+        if (!LegacyAndroidServices.IsAvailable("com.zestylife.zandroid.ZAndroidUnityPluginActivity")) return;
+#if UNITY_ANDROID && !UNITY_EDITOR
+        using (var player = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+            BDHKIEBEFBI = player.GetStatic<AndroidJavaObject>("currentActivity");
+        NCDOMFKMNOL = new AndroidJavaClass("com.zestylife.zandroid.ZAndroidUnityPluginActivity");
+        NCDOMFKMNOL.CallStatic("Init", BDHKIEBEFBI);
+        // IL2CPP has no managed Assembly-CSharp.dll inside the APK.
+#if !ENABLE_IL2CPP
+        StartCoroutine(EAEAEOFHBJO());
+#endif
+#endif
 	}
 
 	public string PIBICHKFPAO()

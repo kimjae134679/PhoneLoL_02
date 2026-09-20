@@ -1,5 +1,5 @@
-UnityEditor.PlayerSettings.bundleVersion = "1.16.4";
-UnityEditor.PlayerSettings.Android.bundleVersionCode = 190;
+UnityEditor.PlayerSettings.bundleVersion = "1.16.5";
+UnityEditor.PlayerSettings.Android.bundleVersionCode = 191;
 UnityEditor.PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android, UnityEditor.ScriptingImplementation.IL2CPP);
 UnityEditor.PlayerSettings.Android.targetArchitectures = UnityEditor.AndroidArchitecture.ARM64;
 UnityEditor.PlayerSettings.SplashScreen.show = false;
@@ -57,7 +57,11 @@ UnityEditor.EditorBuildSettings.scenes = System.Array.ConvertAll(scenes, n => ne
 UnityEditor.PlayerSettings.companyName = "JCL";
 UnityEditor.PlayerSettings.productName = "멀티의신";
 UnityEditor.PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.Android, "com.jcl.lmulti");
-UnityEditor.PlayerSettings.defaultInterfaceOrientation = UnityEditor.UIOrientation.LandscapeRight;
+UnityEditor.PlayerSettings.defaultInterfaceOrientation = UnityEditor.UIOrientation.AutoRotation;
+UnityEditor.PlayerSettings.allowedAutorotateToPortrait = false;
+UnityEditor.PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;
+UnityEditor.PlayerSettings.allowedAutorotateToLandscapeLeft = true;
+UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
 UnityEditor.PlayerSettings.colorSpace = UnityEngine.ColorSpace.Gamma;
 UnityEditor.PlayerSettings.SetManagedStrippingLevel(UnityEditor.Build.NamedBuildTarget.Android, UnityEditor.ManagedStrippingLevel.Minimal);
 var player = new UnityEditor.SerializedObject(UnityEditor.AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/ProjectSettings.asset")[0]);

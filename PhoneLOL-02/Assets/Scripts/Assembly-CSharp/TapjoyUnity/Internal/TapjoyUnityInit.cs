@@ -71,6 +71,7 @@ namespace TapjoyUnity.Internal
 
 		private void Awake()
 		{
+            if (!LegacyAndroidServices.IsAvailable("com.tapjoy.Tapjoy")) return;
 			if (!JJJELGJJJPM)
 			{
 				JJJELGJJJPM = true;

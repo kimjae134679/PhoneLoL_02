@@ -675,7 +675,7 @@ public class LobbyMain : MonoBehaviour
 			m_trollLabel.set_text("[DDFFDD]당신은 굿매너 플레이어[-]");
 			m_trollLabel2.set_text("앞으로도 멋진 플레이 바란다");
 		}
-		IgaworksUnityPluginAOS.AOAHAHMPIIP.AGDCEOGEIFG("lobby");
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.AOAHAHMPIIP.AGDCEOGEIFG("lobby");
 	}
 
 	public void ShowGuild()
