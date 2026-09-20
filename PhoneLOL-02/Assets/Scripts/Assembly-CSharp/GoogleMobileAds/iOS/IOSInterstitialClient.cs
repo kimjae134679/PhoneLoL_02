@@ -1,3 +1,5 @@
+#if UNITY_IOS
+// iOS native advertising symbols must never be linked into Android.
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -141,3 +143,5 @@ namespace GoogleMobileAds.iOS
 		}
 	}
 }
+
+#endif

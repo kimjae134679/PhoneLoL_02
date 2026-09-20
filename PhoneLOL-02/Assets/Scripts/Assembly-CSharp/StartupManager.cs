@@ -51,8 +51,8 @@ public class StartupManager : Singleton<StartupManager>
 		catch
 		{
 		}
-		IgaworksUnityPluginAOS.InitPlugin();
-		IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.InitPlugin();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
 	}
 
 	public void PHLDFHMJLKA()
@@ -141,11 +141,11 @@ public class StartupManager : Singleton<StartupManager>
 	{
 		if (GMEELKDOLAM)
 		{
-			IgaworksUnityPluginAOS.LKLLDNCMKBH.GEGCIIKDGGO();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.GEGCIIKDGGO();
 			return;
 		}
-		IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
-		IgaworksUnityPluginAOS.AOAHAHMPIIP.OCDDNHEHHJF();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.AOAHAHMPIIP.OCDDNHEHHJF();
 	}
 
 	public void OnTimeHackDetected()
@@ -180,8 +180,8 @@ public class StartupManager : Singleton<StartupManager>
 		catch
 		{
 		}
-		IgaworksUnityPluginAOS.InitPlugin();
-		IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.InitPlugin();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
 	}
 
 	public void OnCheatDetected()
@@ -211,8 +211,8 @@ public class StartupManager : Singleton<StartupManager>
 		catch
 		{
 		}
-		IgaworksUnityPluginAOS.InitPlugin();
-		IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.InitPlugin();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
 	}
 
 	private static int AFINJOMNNHM()
@@ -244,8 +244,8 @@ public class StartupManager : Singleton<StartupManager>
 		catch
 		{
 		}
-		IgaworksUnityPluginAOS.InitPlugin();
-		IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.InitPlugin();
+		if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.CDIJJEHNBNL();
 	}
 
 	private void Start()
@@ -253,8 +253,8 @@ public class StartupManager : Singleton<StartupManager>
 		if (!CNPDHCJJPFL)
 		{
 			CNPDHCJJPFL = true;
-			IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
-			IgaworksUnityPluginAOS.AOAHAHMPIIP.EDLFCPCFGDN();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.AOAHAHMPIIP.EDLFCPCFGDN();
 			try
 			{
 				AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
@@ -323,8 +323,8 @@ public class StartupManager : Singleton<StartupManager>
 		if (!CNPDHCJJPFL)
 		{
 			CNPDHCJJPFL = false;
-			IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
-			IgaworksUnityPluginAOS.AOAHAHMPIIP.EDLFCPCFGDN();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.AOAHAHMPIIP.EDLFCPCFGDN();
 			try
 			{
 				AndroidJavaClass androidJavaClass = new AndroidJavaClass("attack_flying");
@@ -345,8 +345,8 @@ public class StartupManager : Singleton<StartupManager>
 		if (!CNPDHCJJPFL)
 		{
 			CNPDHCJJPFL = false;
-			IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
-			IgaworksUnityPluginAOS.AOAHAHMPIIP.EDLFCPCFGDN();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.LKLLDNCMKBH.ADBMLKJEHAO();
+			if (LegacyAndroidServices.AnalyticsAvailable) IgaworksUnityPluginAOS.AOAHAHMPIIP.EDLFCPCFGDN();
 			try
 			{
 				AndroidJavaClass androidJavaClass = new AndroidJavaClass("skill0_1");

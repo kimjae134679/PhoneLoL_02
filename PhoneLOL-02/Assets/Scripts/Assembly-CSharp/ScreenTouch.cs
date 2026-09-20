@@ -136,7 +136,7 @@ public class ScreenTouch : MonoBehaviour
 			gameObject.GetComponent<Renderer>().material.SetColor("C#: HandleViewDidClose, viewType: ", color);
 			gameObject2.GetComponent<Renderer>().material.SetColor("Mouse X", color);
 			gameObject.layer = 2;
-			UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, "Assets/Scripts/Assembly-CSharp/ScreenTouch.cs (139,4)", "UI/Lobby/RequestGuildMemberLabel");
+			LegacyUnityComponents.AddComponent(gameObject, "UI/Lobby/RequestGuildMemberLabel");
 			gameObject.GetComponent<Rigidbody>().mass = num;
 		}
 	}
@@ -183,7 +183,7 @@ public class ScreenTouch : MonoBehaviour
 			gameObject.GetComponent<Renderer>().material.SetColor("Circle", color);
 			gameObject2.GetComponent<Renderer>().material.SetColor("상급 대기시간감소 정수", color);
 			gameObject.layer = 0;
-			UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, "Assets/Scripts/Assembly-CSharp/ScreenTouch.cs (186,4)", "잘못된 쿠폰번호입니다.");
+			LegacyUnityComponents.AddComponent(gameObject, "잘못된 쿠폰번호입니다.");
 			gameObject.GetComponent<Rigidbody>().mass = num;
 		}
 	}
@@ -225,7 +225,7 @@ public class ScreenTouch : MonoBehaviour
 			gameObject.GetComponent<Renderer>().material.SetColor("Param1", color);
 			gameObject2.GetComponent<Renderer>().material.SetColor("TestKey1", color);
 			gameObject.layer = 6;
-			UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, "Assets/Scripts/Assembly-CSharp/ScreenTouch.cs (228,4)", "護甲穿透");
+			LegacyUnityComponents.AddComponent(gameObject, "護甲穿透");
 			gameObject.GetComponent<Rigidbody>().mass = num;
 		}
 	}
@@ -267,7 +267,7 @@ public class ScreenTouch : MonoBehaviour
 			gameObject.GetComponent<Renderer>().material.SetColor("CCCCFF", color);
 			gameObject2.GetComponent<Renderer>().material.SetColor("Mana per Level", color);
 			gameObject.layer = 3;
-			UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, "Assets/Scripts/Assembly-CSharp/ScreenTouch.cs (270,4)", "Lobby");
+			LegacyUnityComponents.AddComponent(gameObject, "Lobby");
 			gameObject.GetComponent<Rigidbody>().mass = num;
 		}
 	}
@@ -314,7 +314,7 @@ public class ScreenTouch : MonoBehaviour
 			gameObject.GetComponent<Renderer>().material.SetColor("중급 성장 마나 인장", color);
 			gameObject2.GetComponent<Renderer>().material.SetColor("skill1_loop", color);
 			gameObject.layer = 0;
-			UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject, "Assets/Scripts/Assembly-CSharp/ScreenTouch.cs (317,4)", "attack");
+			LegacyUnityComponents.AddComponent(gameObject, "attack");
 			gameObject.GetComponent<Rigidbody>().mass = num;
 		}
 	}

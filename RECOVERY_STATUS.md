@@ -31,10 +31,10 @@ No device gameplay tests, login success, multiplayer success, or visual parity a
 
 ## Remaining release blockers
 
-1. The old embedded libmght.so host is ARMv7-only. Its full native source is absent. The recovered client still addresses loopback ports 20002/20003. A real ARM64 or managed implementation is required; selecting ARM64 does not solve this.
-2. AssetRipper exported 54 dummy shaders. Original shader program recovery and shader migration are necessary before appearance can match the game.
+1. The old embedded libmght.so host is ARMv7-only. Its full native source is absent. The recovered client still addresses loopback login/game ports 20000/20001, additional service port 20100, and battle host ports 20002/20003. A real ARM64 or managed implementation is required; selecting ARM64 does not solve this.
+2. AssetRipper initially exported 54 dummy shaders. 55 original shader program records are now archived with hashes. 17 project shaders still contain dummy implementations; original visual parity remains incomplete.
 3. Old Android SDK Java/native integrations (Igaworks, Google Play Games, etc.) are not present as a complete modern Android plugin set. Startup code must guard optional services and replace required integrations.
-4. Compilation does not establish compatibility of old serialized scenes, native NavMesh data, shaders, or IL2CPP reflection. A build and device checks remain necessary.
+4. Compilation does not establish compatibility of old serialized scenes, native NavMesh data, shaders, or IL2CPP reflection. An ARM64 development APK has been built successfully. Device checks remain necessary.
 5. Server invitation fixes are recorded in the earlier PhoneLOL work branch. They have not been deployed to the live runtime. Do not modify the preserved live runtime/database casually.
 
 ## Working locations
@@ -53,3 +53,26 @@ Output: PhoneLOL-02/Builds/PhoneLOL-v1.16.4-arm64-candidate.apk (ignored by git)
 The build command fails explicitly on build errors and never labels the candidate a stable release.
 
 Unity CLI module reference: https://docs.unity.com/en-us/unity-cli/unity-cli-reference
+
+## 2026-09-20 continuation
+
+- Android player compile errors fixed: removed BB10 enum reference and replaced the Editor-only AddComponent updater calls with a runtime type resolver. Invalid obfuscated type names still report an error; no fabricated component is substituted.
+- Scoped three GoogleMobileAds iOS sources to UNITY_IOS, fixing Android IL2CPP linker failures for GADU symbols.
+- Ported 8 character/skill shaders and 6 particle shaders from archived original GLES equations. These cover base/effect passes; full shadow/additional-light and visual parity are not certified.
+- Added availability checks around optional Igaworks startup/pause calls so an absent Java SDK cannot abort those startup paths. This does not supply Google authentication or the missing native game host.
+- Final candidate rebuild including the analytics availability guard succeeded: 0 errors, 725 warnings. No device gameplay validation was performed.
+- Gameplay/phone testing intentionally remains with the user. No live server/database deployment was made.
+
+## Platform scope (user clarification, 2026-09-20)
+
+Android ARM64 is the current delivery target; iOS is also a required future target. Preserve iOS source and integration boundaries. UNITY_IOS guards isolate iOS native symbols from Android; they do not remove iOS support.
+
+Implement the replacement game/network host in shared managed code where possible. Keep native SDK integration, permissions, storage and platform startup behind separate Android/iOS adapters. Do not make an Android-only host architecture the permanent solution. Existing iOS plugin source is retained, but a working iOS build has not been established.
+
+## Candidate artifact (2026-09-20)
+
+- File: `PhoneLOL-02/Builds/PhoneLOL-v1.16.4-arm64-candidate.apk`
+- Size: 120569295 bytes
+- SHA-256: `6416365cf1d2c214ca8b6c8dfa56af220371cc1353f6e7b51bf61d03f8bc592b`
+- APK native libraries: 6; all arm64-v8a and ELF64: True.
+- Development candidate only. The missing legacy host remains a gameplay blocker.

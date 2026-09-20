@@ -364,7 +364,7 @@ public class UIInput : MonoBehaviour
 			LDNEFFHJNPL();
 		}
 		OIAEMPDJONN = 0;
-		if (Application.platform == RuntimePlatform.BB10Player)
+		if (Application.platform == ((RuntimePlatform)22))
 		{
 			ICENKPDOHBK = ICENKPDOHBK.Replace("\\b", "\b");
 		}
@@ -490,7 +490,7 @@ public class UIInput : MonoBehaviour
 			OJOPELFGKGB = ((!string.IsNullOrEmpty(mValue)) ? mValue.Length : 0);
 			OIAEMPDJONN = 0;
 			label.set_color(activeTextColor);
-			if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WP8Player || Application.platform == RuntimePlatform.BB10Player)
+			if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WP8Player || Application.platform == ((RuntimePlatform)22))
 			{
 				TouchScreenKeyboardType touchScreenKeyboardType;
 				string text;

@@ -1815,7 +1815,7 @@ public class UICamera : MonoBehaviour
 	{
 		CDFLLNKPGNJ = Screen.width;
 		KCPMALCLLCH = Screen.height;
-		if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.WP8Player || Application.platform == RuntimePlatform.BB10Player)
+		if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.WP8Player || Application.platform == ((RuntimePlatform)22))
 		{
 			useMouse = false;
 			useTouch = true;

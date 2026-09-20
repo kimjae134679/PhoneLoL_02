@@ -57,7 +57,7 @@ public class ObjectTouch : MonoBehaviour
 		{
 			GameObject gameObject2 = Object.Instantiate(Resources.Load("."), base.transform.position, Quaternion.identity) as GameObject;
 			gameObject2.transform.localScale = base.transform.localScale * 1583f;
-			UnityEngineInternal.APIUpdaterRuntimeServices.AddComponent(gameObject2, "Assets/Scripts/Assembly-CSharp/ObjectTouch.cs (60,4)", "중급 성장 마나 표식");
+			LegacyUnityComponents.AddComponent(gameObject2, "중급 성장 마나 표식");
 			gameObject2.GetComponent<Renderer>().material.SetColor("그럼 이제 마계 문을 열어볼까?", base.GetComponent<Renderer>().material.GetColor("CCFFCC"));
 			gameObject2.transform.parent = base.transform;
 			gameObject2.name = "\n";
