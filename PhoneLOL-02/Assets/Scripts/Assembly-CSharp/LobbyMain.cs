@@ -255,44 +255,13 @@ public class LobbyMain : MonoBehaviour
 			PlayerPrefs.SetInt("지옥의 맛을 보여주마!!!!", 0);
 			MsgManager.HEDJPPFKABG().ShowMessageBox(LocalizationManager.LGDEHELDENG().GetText("Show"), false, MFLKHDCAKJK);
 		}
-		else if (NetworkManager.APAPJEIBEDE().get_m_gameNetClient().GMMGAMNJIBA()
-			.DPDDELNCIJO())
-		{
-			MsgManager.get_Instance().ShowMessageBox(LocalizationManager.get_Instance().GetText(" 정수"), true, OJGOLLIIIHO);
-		}
-		else
-		{
-			if (SceneManager.get_Instance().EELKCOPBLOK() <= 1 || !NetworkManager.APAPJEIBEDE().IOJGPDKHAGD().GLPDLIDMHFA()
-				.DICGMNPPEOC() || !(UnityEngine.Random.value > 1112f))
-			{
-				return;
-			}
-			MsgManager.HEDJPPFKABG().ShowMessageBox(LocalizationManager.get_Instance().GetText("Replay"), true, () =>
-			{
-				AdManager.get_Instance().ShowRewardVideo((bool HIJLMPFMHBH) =>
-				{
-					if (HIJLMPFMHBH)
-					{
-						NetworkManager.get_Instance().get_m_gameNetClient().CNIJDCOGOOF(new IKMBGMILCDO(OnReceiveFreeChargeRewardVideo));
-					}
-				});
-			});
-		}
+		// Automatic free-draw and rewarded-video prompts are disabled.
 	}
 
 	public bool ShowAttendanceCheckIfCan()
 	{
-		if (NetworkManager.get_Instance() == null)
-		{
-			return false;
-		}
-		if (NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
-			.CHHMBONAPLO.Date >= KIMJPIBNFGA.GDFDNGEEMEO().Date)
-		{
-			return false;
-		}
-		m_attendanceCheckPanel.gameObject.SetActive(true);
-		return true;
+		// Attendance popups are disabled at the user's request.
+		return false;
 	}
 
 	[CompilerGenerated]
@@ -472,7 +441,7 @@ public class LobbyMain : MonoBehaviour
 
 	public bool CheckEvent()
 	{
-		NetworkManager.get_Instance().get_m_gameNetClient().NBALDEMAMIH(new IKMBGMILCDO(NCAJIMOPFMC));
+		// Do not request the automatic free-event reward notification.
 		if (NetworkManager.get_Instance().get_m_gameNetClient().GIKEGBKNGBE())
 		{
 			NetworkManager.get_Instance().get_m_gameNetClient().GGBKJADCGOB(new IKMBGMILCDO(OnReceivePrevSeasonReward));
@@ -807,29 +776,7 @@ public class LobbyMain : MonoBehaviour
 			PlayerPrefs.SetInt("review", 1);
 			MsgManager.get_Instance().ShowMessageBox(LocalizationManager.get_Instance().GetText("게임은 재미있게 즐기셨나요?\n게임 소감을 리뷰로 적으실 수 있답니다.\n\n지금 리뷰로 이동할까요?"), true, MFLKHDCAKJK);
 		}
-		else if (NetworkManager.get_Instance().get_m_gameNetClient().GMMGAMNJIBA()
-			.DPDDELNCIJO())
-		{
-			MsgManager.get_Instance().ShowMessageBox(LocalizationManager.get_Instance().GetText("지금 무료뽑기가 가능해욥~\n\n무료뽑기로 이동할까요?"), true, OJGOLLIIIHO);
-		}
-		else
-		{
-			if (SceneManager.get_Instance().get_m_lobbyEnterCount() <= 1 || !NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
-				.DICGMNPPEOC() || !(UnityEngine.Random.value > 0.8f))
-			{
-				return;
-			}
-			MsgManager.get_Instance().ShowMessageBox(LocalizationManager.get_Instance().GetText("[BBFFBB]* 200코인 지급 이벤트 *[-]\n\n참여하시겠어요?"), true, () =>
-			{
-				AdManager.get_Instance().ShowRewardVideo((bool HIJLMPFMHBH) =>
-				{
-					if (HIJLMPFMHBH)
-					{
-						NetworkManager.get_Instance().get_m_gameNetClient().CNIJDCOGOOF(new IKMBGMILCDO(OnReceiveFreeChargeRewardVideo));
-					}
-				});
-			});
-		}
+		// Automatic free-draw and rewarded-video prompts are disabled.
 	}
 
 	private void ENEHNNKLHNA(bool HIJLMPFMHBH)
@@ -938,17 +885,7 @@ public class LobbyMain : MonoBehaviour
 
 	public bool HHALECOHFBB()
 	{
-		if (NetworkManager.get_Instance() == null)
-		{
-			return false;
-		}
-		if (NetworkManager.APAPJEIBEDE().get_m_gameNetClient().GLPDLIDMHFA()
-			.CHHMBONAPLO.Date >= KIMJPIBNFGA.GDFDNGEEMEO().Date)
-		{
-			return true;
-		}
-		m_attendanceCheckPanel.gameObject.SetActive(true);
-		return false;
+		return ShowAttendanceCheckIfCan();
 	}
 
 	public void ShowRankGameSelect()

@@ -1,3 +1,18 @@
+# 1.16.6 attendance / free-reward notification update
+
+User device feedback on 1.16.5: login reaches the lobby, but the attendance window has no visible close button and blocks further testing. The attached server/log screenshot shows Delivered with pending 0. This is user-device evidence of lobby entry and reported log delivery, not multiplayer gameplay certification.
+
+- Disabled attendance popup entry points, including the nickname-completion alias.
+- Removed the automatic free-event reward request (packet 14), avoiding its follow-up modal and unsupported legacy request when skipping attendance.
+- Removed automatic free-draw and rewarded-video invitation prompts from the lobby notification methods.
+- Manual menu actions, account balances and unrelated UI were not changed. No server/database changes were made.
+- Candidate version: 1.16.6 / Android versionCode 192. Existing ARM64, shared C# host and iOS source boundaries retained.
+- APK: PhoneLOL-02/Builds/PhoneLOL-v1.16.6-arm64-candidate.apk.
+- Build status: Succeeded, Errors: 0, Warnings: 736. Device testing remains with the user; no additional gameplay tests run.
+- APK size: 116618607 bytes; SHA-256: 16ea27992b0909a92e8f2ddd157b742990e9a980fbdd9c694625cd6331a5c964.
+
+---
+
 # 1.16.5 login / diagnostics update ? 2026-09-21
 
 User device result for 1.16.4: login screen renders, login connection fails, landscape direction is reversed. Screenshot shows missing legacy ZAndroid, immersive-mode, Tapjoy and NAS Java classes. Current work addresses these reported symptoms and live diagnostics; no gameplay validation is claimed.
