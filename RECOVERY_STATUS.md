@@ -18,13 +18,29 @@ User device result for 1.16.4: login screen renders, login connection fails, lan
 - New C# diagnostics uploader received HTTP 204 from the existing local server. A synthetic probe also appears in the server's actual log.
 - Phone gameplay, community UI and visual parity are not certified. User performs device validation.
 
-## External connectivity blocker
+## External connectivity restored (2026-09-21)
 
-Existing V3.3 server remains running on TCP 29000, PID 29620 at inspection. Its database and server code were not replaced. The old numeric public address 115.88.104.135:10045 refused connections from the PC. The historical Portwarp domain accepts TCP but closes application traffic because its tunnel is idle; pwrp reports no daemon/running session.
+The user explicitly approved restoring the existing public tunnel and background operation, and requested future replacement support. The existing V3.3 server remains on TCP 29000; its code and database were not replaced.
 
-Automatic approval review REJECTED starting the saved tunnel in the background with persistent reconnect. Reason: persistent external exposure of the local server and destination require explicit user approval. Do not work around this rejection. The intended existing mapping is uko9ef6n.free.pwrp.cc:10045 -> 127.0.0.1:29000 (one configured tunnel). Obtain explicit approval before restoring it.
+- Mapping: uko9ef6n.free.pwrp.cc:10045 -> 127.0.0.1:29000. Only one tunnel was configured/enabled before connecting. Tunnel selector: 124fd86a.
+- Started the existing tunnel using pwrp connect --all --save --detach --local-host 127.0.0.1. The command reported "already starting", but the subsequent daemon status confirmed exactly one live session with local reachability OK. Do not treat the CLI exit alone as proof of failure or success.
+- A synthetic POST through the public hostname received HTTP/1.1 204 No Content. Marker V1165_PUBLIC_TUNNEL_PROBE_20260921T021939Z appeared in the live server log as PHONE_CLIENT_TRACE at 2026-09-21 11:19:39.918 (PC local time). This verifies the public diagnostic path, not phone gameplay.
+- The daemon continues after the terminal closes. Saved boot-all is on; OS autostart is disabled. Do not add unrelated enabled tunnels without reviewing this saved selection.
+- Automatic review previously blocked restoration until explicit approval; that approval was then supplied. A later attempt to install OS boot/login autostart was separately rejected because background approval did not explicitly cover system autostart. That rejected command was not executed; no bypass was attempted. Boot/login registration still needs explicit user approval.
 
-Until approved, same-LAN testing can set the phone app's host to the PC's Wi-Fi IPv4 address 192.168.219.106 (observed now), port 29000. This address may change after a move or DHCP renewal. No firewall or router settings were changed; actual phone LAN reachability is unverified. Do not enter 127.0.0.1 as the remote PC address on the phone.
+### Reconnect and replace later
+
+Manual reconnect in PowerShell (only this existing tunnel; no OS autostart registration):
+
+```powershell
+& 'C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\tools\portwarp\pwrp.exe' connect 124fd86a --detach --local-host 127.0.0.1
+```
+
+In the 1.16.5 app, open the server/log settings on the login screen, change the host and port, then save. Both game connections and diagnostic uploads use the current settings. For the restored tunnel use host uko9ef6n.free.pwrp.cc and port 10045. No APK rebuild is needed for an endpoint change.
+
+After a router change, retain the public domain/port and run the tunnel on the server PC; 127.0.0.1 remains the local destination on that PC. After moving to another PC/provider, first migrate the actual server and its account database safely, configure the new tunnel/domain, then update the app endpoint if necessary. The replacement server must implement the existing central protocol and diagnostic endpoint; editing the address alone does not migrate data or translate protocols. Keep credentials and account data out of git.
+
+Same-LAN fallback: use the server PC's current LAN IPv4 address with port 29000. The previously observed Wi-Fi address 192.168.219.106 can change. Never enter 127.0.0.1 as the remote PC address on the phone. No router/firewall settings were changed.
 
 ## Artifact
 
