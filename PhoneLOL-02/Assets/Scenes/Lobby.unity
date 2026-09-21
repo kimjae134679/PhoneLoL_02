@@ -45408,7 +45408,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: "닉네임은 변경하고 2주일 후에 다시 변경하실 수 있어요\r\n취소할 수 없으니 신중하게 변경 부탁드려요!"
+  mText: ''
   mFontSize: 12
   mFontStyle: 0
   mAlignment: 0
@@ -45755,7 +45755,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: '닉네임 변경 남은 시간 : 00일 00시간 00분'
+  mText: ''
   mFontSize: 14
   mFontStyle: 0
   mAlignment: 0
@@ -79054,7 +79054,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 10000
+  mText: 0
   mFontSize: 12
   mFontStyle: 0
   mAlignment: 0

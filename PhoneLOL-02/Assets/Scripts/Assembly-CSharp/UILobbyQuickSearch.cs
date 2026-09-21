@@ -1076,8 +1076,20 @@ public class UILobbyQuickSearch : MonoBehaviour
 		return aFOOLGCIENN;
 	}
 
+	private float connectionDeadline;
+
+	private void Update()
+	{
+		if (connectionDeadline <= 0f || Time.realtimeSinceStartup < connectionDeadline) return;
+		connectionDeadline = 0f;
+		PhoneLOLRealtimeLog.Record("BATTLE_CONNECT_TIMEOUT", "No room response within 30 seconds.");
+		OnClickCancelButton();
+		MsgManager.get_Instance().ShowMessageBox("\uB300\uC804 \uC11C\uBC84\uC5D0 \uC5F0\uACB0\uD558\uC9C0 \uBABB\uD588\uC5B4\uC694. \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694.", false, null);
+	}
+
 	private void OnEnable()
 	{
+		connectionDeadline = Time.realtimeSinceStartup + 30f;
 		V096OriginalDiagnostics.Write("대전상대를 찾는 중 (매칭)");
 		if (ZAndroid.get_Instance().CheckApp())
 		{

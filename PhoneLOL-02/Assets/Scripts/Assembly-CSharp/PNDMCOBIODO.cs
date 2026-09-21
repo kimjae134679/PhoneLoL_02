@@ -730,6 +730,7 @@ public class PNDMCOBIODO : EKACODPEIIO
 			HADMKAKPDDO(19, LPGDFOOPLEP);
 			HADMKAKPDDO(20, KAHCHIJOFBG);
 			HADMKAKPDDO(22, BAKOMJJIHMK);
+            HADMKAKPDDO(24, ReceiveManagedRoomSnapshot);
 			EveUnityNetwork.get_Instance().SetNetClient(this);
 		}
 
@@ -845,4 +846,10 @@ public class PNDMCOBIODO : EKACODPEIIO
 				IMKOGBNIJBO().AJJGLNHAPPF(OCPEALOGAIP.OEOIIKMBGAG.Blank);
 			}
 		}
-	}
+		private void ReceiveManagedRoomSnapshot(PJEMPFEIOAK packet)
+		{
+			packet.CAHACMKBJMI(GLPDLIDMHFA());
+			packet.CAHACMKBJMI(IMKOGBNIJBO());
+			UIRoot.Broadcast("Refresh");
+		}
+}

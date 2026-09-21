@@ -1,3 +1,28 @@
+# 1.16.7 battle / responsiveness / nickname / original icon update
+
+User feedback on 1.16.6: ranked, normal and friendly battle entry stalled; rune operations were slow; friend-list rebuilds interrupted input. Requested free unlimited nickname changes and the original application icon.
+
+- Added a shared C# battle listener on loopback 20002 and central 66/67 translation. Game prepare packet 25 now reaches the real server. The adapter uses real account tokens, existing room membership, champion checks, readiness, loading synchronization and in-room Eve packet relay. Game champion-list packet 5 now comes from the existing central bootstrap.
+- Reuse central connections for game/account/community requests instead of reconnecting and handshaking for every action. Persistent receive drains queued heartbeat frames within a time limit; battle keepalive reaches the server. This removes identified request overhead; phone rune latency has not been measured.
+- Suppress unchanged friend rosters. Defer changed-roster UI rebuilds while the friend-request panel, chat, text input or pointer press is active.
+- Nickname changes cost zero and have no cooldown on the server. Removed the remaining-time and two-week restriction labels and paid confirmation. Name length/character/uniqueness validation remains.
+- Restore the exact original app icon from stable APK res/drawable-xxxhdpi-v4/app_icon.png; asset SHA-256 850f5ab059f2be84cbdc7baaeecf0eeb68ca2ecae400b8816dde9037fea68703. Default and Android icon slots use this asset.
+- Bound unanswered battle entry to 30 seconds with an explicit retry message. Unsupported requests are logged rather than silently terminating the game-account connection.
+- Candidate 1.16.7 / Android versionCode 193, ARM64 IL2CPP, Unity splash disabled. Existing attendance/free-reward automatic-popup suppression is retained. Shared C# and iOS source boundaries remain.
+
+## Deployment and focused evidence
+
+- Patched the existing live V3.3 runtime with Automation/Server files, preserving inherited modules, launcher, account database and public tunnel.
+- Consistent SQLite and replaced-source backup: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\recovery\04_runtime\backups\before-v1167-20260921-233855.
+- Restarted only the identified server. TCP 29000 listener restored; POST /phonelol-diag/v1 acknowledged a synthetic deployment marker with HTTP 204.
+- Disposable-database checks passed: repeated free renames without balance loss; two authenticated accounts in one real room; champion/ready/start exchange; shared start identity and relayed battle packet. Original recovered Unity readers decoded the complete two-player snapshot with a trailing sentinel. No production test accounts were created.
+- Final Unity Android build: Succeeded, 0 errors, 745 warnings. APK: PhoneLOL-02/Builds/PhoneLOL-v1.16.7-arm64-candidate.apk.
+- APK size: 143707366 bytes. SHA-256: 5fc9b82f669ba5f3d2bf40d5bc7abeb0894e14d0e8eb02faf7ff9f8f1cd85140.
+
+Phone tests remain with the user. Battle entry/selection/start protocol checks do not certify full combat, results/rewards/rank settlement, every room-control action or disconnect/rejoin. Managed rooms are isolated from old-native clients and need at least two real connected players; no artificial opponent is inserted. See Automation/Server/README.md for coverage and code rollback. The older sections below describe earlier versions, not current battle-adapter status.
+
+---
+
 # 1.16.6 attendance / free-reward notification update
 
 User device feedback on 1.16.5: login reaches the lobby, but the attendance window has no visible close button and blocks further testing. The attached server/log screenshot shows Delivered with pending 0. This is user-device evidence of lobby entry and reported log delivery, not multiplayer gameplay certification.

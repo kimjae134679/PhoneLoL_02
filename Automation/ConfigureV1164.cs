@@ -1,5 +1,5 @@
-UnityEditor.PlayerSettings.bundleVersion = "1.16.6";
-UnityEditor.PlayerSettings.Android.bundleVersionCode = 192;
+UnityEditor.PlayerSettings.bundleVersion = "1.16.7";
+UnityEditor.PlayerSettings.Android.bundleVersionCode = 193;
 UnityEditor.PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Android, UnityEditor.ScriptingImplementation.IL2CPP);
 UnityEditor.PlayerSettings.Android.targetArchitectures = UnityEditor.AndroidArchitecture.ARM64;
 UnityEditor.PlayerSettings.SplashScreen.show = false;

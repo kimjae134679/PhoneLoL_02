@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class UILobbyFriendWindow : MonoBehaviour
 {
+	private bool pendingFriendRefresh;
 	private sealed class CPNCOKFMLGN : IDisposable, IEnumerator, IEnumerator<object>
 	{
 		internal int GOMFKPLCGNN;
@@ -841,6 +842,14 @@ public class UILobbyFriendWindow : MonoBehaviour
 
 	public void RefreshFriend()
 	{
+        // Preserve the active friend request/chat and selection while the roster changes.
+        if ((m_requestFriendPanel != null && m_requestFriendPanel.gameObject.activeInHierarchy) ||
+            (m_friendChatWindow != null && m_friendChatWindow.gameObject.activeInHierarchy) ||
+            UIInput.selection != null || Input.GetMouseButton(0)) {
+            pendingFriendRefresh = true;
+            return;
+        }
+        pendingFriendRefresh = false;
 		PDCPMDCOLOD();
 		GameObject gameObject = (GameObject)UnityEngine.Object.Instantiate(Resources.Load("UI/Lobby/FriendLabel"));
 		gameObject.transform.parent = m_friendGrid.transform;
@@ -882,4 +891,9 @@ public class UILobbyFriendWindow : MonoBehaviour
 		}
 		StartCoroutine(BKLCDPELPHM());
 	}
+    private void Update()
+    {
+        if (pendingFriendRefresh) RefreshFriend();
+    }
+
 }

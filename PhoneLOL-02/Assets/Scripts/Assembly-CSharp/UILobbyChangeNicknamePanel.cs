@@ -123,7 +123,7 @@ public class UILobbyChangeNicknamePanel : MonoBehaviour
 		}
 		else
 		{
-			MsgManager.get_Instance().ShowMessageBox("닉네임을 정말 변경하시겠습니까?\n\n[CCFFCC]10000코인[-]\n\n[FFCCCC]한번 변경하면 취소할 수 없습니다[-]", true, jKGFGBAGCLJ.BPNCBFDINPG);
+			jKGFGBAGCLJ.BPNCBFDINPG();
 		}
 	}
 
@@ -295,17 +295,8 @@ public class UILobbyChangeNicknamePanel : MonoBehaviour
 
 	private void Update()
 	{
-		DateTime dateTime = NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
-			.MCCHDPJBCEN + TimeSpan.FromDays(14.0);
-		TimeSpan timeSpan = dateTime - KIMJPIBNFGA.GDFDNGEEMEO();
-		if (timeSpan.Ticks > 0)
-		{
-			m_remainTimeLabel.set_text(string.Format("닉네임 변경 남은 시간 : {0}일 {1}시간 {2}분 {3}초", timeSpan.Days, timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds));
-		}
-		else
-		{
-			m_remainTimeLabel.set_text("지금 변경 가능");
-		}
+        if (m_remainTimeLabel != null && m_remainTimeLabel.gameObject.activeSelf)
+            m_remainTimeLabel.gameObject.SetActive(false);
 	}
 
 	[CompilerGenerated]

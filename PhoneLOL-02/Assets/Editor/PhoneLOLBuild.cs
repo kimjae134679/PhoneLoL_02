@@ -9,13 +9,22 @@ using UnityEngine;
 public static class PhoneLOLBuild
 {
     // This produces a migration candidate, not a validated replacement for 1.15.11.
-    [MenuItem("PhoneLOL/Build 1.16.6 ARM64 candidate")]
+    [MenuItem("PhoneLOL/Build 1.16.7 ARM64 candidate")]
     public static void BuildAndroidCandidate()
     {
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Android, BuildTarget.Android))
             throw new InvalidOperationException("Install this Editor's Android Build Support first.");
-        PlayerSettings.bundleVersion = "1.16.6";
-        PlayerSettings.Android.bundleVersionCode = 192;
+        var originalIcon = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Branding/OriginalAppIcon.png");
+        if (originalIcon == null) throw new FileNotFoundException("Original app icon is missing.");
+        PlayerSettings.SetIconsForTargetGroup(BuildTargetGroup.Unknown, new[] { originalIcon });
+        foreach (var kind in PlayerSettings.GetSupportedIconKindsForPlatform(BuildTargetGroup.Android)) {
+            var icons = PlayerSettings.GetPlatformIcons(NamedBuildTarget.Android, kind);
+            foreach (var icon in icons)
+                for (int layer = 0; layer < icon.minLayerCount; layer++) icon.SetTexture(originalIcon, layer);
+            PlayerSettings.SetPlatformIcons(NamedBuildTarget.Android, kind, icons);
+        }
+        PlayerSettings.bundleVersion = "1.16.7";
+        PlayerSettings.Android.bundleVersionCode = 193;
         PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.jcl.lmulti");
         PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
@@ -35,7 +44,7 @@ UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
         string[] scenes = names.Select(name => "Assets/Scenes/" + name + ".unity").ToArray();
         foreach (string scene in scenes)
             if (!File.Exists(scene)) throw new FileNotFoundException("Missing original scene", scene);
-        string output = Path.GetFullPath("Builds/PhoneLOL-v1.16.6-arm64-candidate.apk");
+        string output = Path.GetFullPath("Builds/PhoneLOL-v1.16.7-arm64-candidate.apk");
         Directory.CreateDirectory(Path.GetDirectoryName(output));
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
             scenes = scenes, locationPathName = output, target = BuildTarget.Android,

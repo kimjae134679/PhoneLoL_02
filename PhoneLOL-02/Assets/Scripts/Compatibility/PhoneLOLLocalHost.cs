@@ -16,19 +16,20 @@ public sealed class PhoneLOLLocalHost : IDisposable
     private readonly PhoneLOLServerSettings endpoint;
     private volatile bool stopped;
     private int nextSession;
+    private uint loggedInDevice;
 
     public PhoneLOLLocalHost(PhoneLOLServerSettings endpoint)
     {
         this.endpoint = endpoint;
         try {
-            foreach (int port in new[] { 20000, 20001, 20100 }) {
+            foreach (int port in new[] { 20000, 20001, 20002, 20100 }) {
                 var listener = new TcpListener(IPAddress.Loopback, port);
                 listener.Start(8);
                 listeners.Add(listener);
                 var thread = new Thread(() => Accept(listener, port)) { IsBackground = true };
                 thread.Start();
             }
-            PhoneLOLRealtimeLog.Record("HOST_READY", "login=20000 game=20001 community=20100 central=" + endpoint);
+            PhoneLOLRealtimeLog.Record("HOST_READY", "login=20000 game=20001 battle=20002 community=20100 central=" + endpoint);
         } catch { Dispose(); throw; }
     }
 
@@ -42,7 +43,14 @@ public sealed class PhoneLOLLocalHost : IDisposable
                     if (stopped || clients.Count >= 8) { client.Close(); continue; }
                     clients.Add(client);
                 }
-                ThreadPool.QueueUserWorkItem(_ => Serve(client, port));
+                ThreadPool.QueueUserWorkItem(_ => {
+                    if (port != 20002) { Serve(client, port); return; }
+                    try {
+                        uint device;
+                        lock (gate) device = loggedInDevice;
+                        PhoneLOLBattleTransport.Serve(client, endpoint, device);
+                    } finally { lock (gate) clients.Remove(client); }
+                });
             } catch (Exception ex) {
                 if (!stopped) PhoneLOLRealtimeLog.Record("HOST_ACCEPT_FAILED", ex.ToString());
                 return;
@@ -55,6 +63,8 @@ public sealed class PhoneLOLLocalHost : IDisposable
         int session = Interlocked.Increment(ref nextSession);
         uint device = 0;
         bool authorized = false, handshaken = false;
+        Central central = null;
+        byte[] lastFriends = null;
         try {
             using (client)
             using (var stream = client.GetStream()) {
@@ -77,7 +87,9 @@ public sealed class PhoneLOLLocalHost : IDisposable
                         if (frame.pid != 1 || frame.payload.Length < 10 || BitConverter.ToInt32(frame.payload, 0) != 24)
                             throw new InvalidDataException("Invalid login request.");
                         device = LegacyDeviceId(frame.payload);
-                        using (var central = new Central(endpoint, device)) {
+                        lock (gate) loggedInDevice = device;
+                        {
+                            if (central == null) central = new Central(endpoint, device);
                             byte[] account = central.Account();
                             long token = BitConverter.ToInt64(account, 5);
                             if (token == 0) throw new InvalidDataException("Central account has no authentication token.");
@@ -97,19 +109,21 @@ public sealed class PhoneLOLLocalHost : IDisposable
                             authorized = accounts.TryGetValue(device, out value) && value.token == token && value.expires > DateTime.UtcNow;
                         }
                         if (!authorized) throw new InvalidDataException("Service authentication has no matching login session.");
-                        using (var central = new Central(endpoint, device)) {
+                        {
+                            if (central == null) central = new Central(endpoint, device);
                             byte[] account = central.Account();
                             if (BitConverter.ToInt64(account, 5) != token)
                                 throw new InvalidDataException("Central account authentication changed.");
                             if (port == 20001) Reply(stream, session, frame, new byte[] { 0 });
-                            else Community(stream, session, frame, central);
+                            else Community(stream, session, frame, central, ref lastFriends);
                         }
                         continue;
                     }
                     if (!authorized) throw new InvalidDataException("Request before service login.");
-                    using (var central = new Central(endpoint, device)) {
+                    {
+                            if (central == null) central = new Central(endpoint, device);
                         if (port == 20001) Game(stream, session, frame, central);
-                        else Community(stream, session, frame, central);
+                        else Community(stream, session, frame, central, ref lastFriends);
                     }
                 }
             }
@@ -118,6 +132,7 @@ public sealed class PhoneLOLLocalHost : IDisposable
         } catch (Exception ex) {
             if (!stopped) PhoneLOLRealtimeLog.Record("SERVICE_FAILED", "port=" + port + " session=" + session + " endpoint=" + endpoint + " " + ex);
         } finally {
+            if (central != null) central.Dispose();
             client.Close();
             lock (gate) clients.Remove(client);
         }
@@ -154,26 +169,39 @@ public sealed class PhoneLOLLocalHost : IDisposable
             Reply(stream, session, frame, Body(w => { w.Write(false); w.Write(0); }));
             return;
         }
-        if (frame.pid == 7 || frame.pid == 17 || frame.pid == 38 || frame.pid == 39 || frame.pid == 40) {
+        if (frame.pid == 7 || frame.pid == 17 || frame.pid == 25 || frame.pid == 38 || frame.pid == 39 || frame.pid == 40) {
             byte[] response = central.Rpc(0, frame.pid, frame.payload);
             if (response.Length == 0 || response[0] == 255) throw new InvalidDataException("Account request rejected: " + frame.pid);
             Reply(stream, session, frame, response);
             return;
         }
-        // Battle room translation must be recovered separately; never return invented success.
-        throw new NotSupportedException("Legacy game message is not yet migrated: " + frame.pid);
+        if (frame.pid == 5) {
+            central.Send(50, new byte[0]);
+            byte[] bootstrap = central.Receive(51);
+            if (bootstrap.Length < 5 || bootstrap[0] != 0) throw new InvalidDataException("Champion inventory rejected.");
+            int length = BitConverter.ToUInt16(bootstrap, 1);
+            if (length > bootstrap.Length - 5) throw new InvalidDataException("Truncated champion inventory.");
+            byte[] heroes = new byte[length];
+            Buffer.BlockCopy(bootstrap, 5, heroes, 0, length);
+            Reply(stream, session, frame, heroes);
+            return;
+        }
+        PhoneLOLRealtimeLog.Record("GAME_REQUEST_UNSUPPORTED", "pid=" + frame.pid);
+        Reply(stream, session, frame, new byte[] { 255 });
     }
 
-    private static void Community(NetworkStream stream, int session, LegacyFrame frame, Central central)
+    private static void Community(NetworkStream stream, int session, LegacyFrame frame, Central central, ref byte[] lastFriends)
     {
-        if (frame.pid == 6) throw new NotSupportedException("Room invitation context requires the battle host.");
         byte[] reply = central.Rpc(1, frame.pid, frame.payload);
         if (reply.Length == 1 && reply[0] == 255) throw new InvalidDataException("Community request rejected.");
         if (reply.Length > 0) Reply(stream, session, frame, reply);
         if (frame.pid == 1 || frame.pid == 3 || frame.pid == 8 || frame.pid == 9 || frame.pid == 10 || frame.pid == 11) {
             byte[] friends = central.Rpc(1, 4, new byte[0]);
             if (friends.Length < 4) throw new InvalidDataException("Invalid friend roster.");
-            Reply(stream, session, new LegacyFrame { pid = 4 }, friends);
+            if (lastFriends == null || !System.Linq.Enumerable.SequenceEqual(lastFriends, friends)) {
+                Reply(stream, session, new LegacyFrame { pid = 4 }, friends);
+                lastFriends = friends;
+            }
         }
         byte[] events = central.Rpc(2, 0, new byte[0]);
         using (var reader = new BinaryReader(new MemoryStream(events))) {
