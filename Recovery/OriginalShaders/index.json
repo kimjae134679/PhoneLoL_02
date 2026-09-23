@@ -383,5 +383,152 @@
     "sha256": "e41c3e0e08a745fbaecaa0d3da40d89bf933d45594b4df17eb2ddf7ceffe023a",
     "sourceAsset": "unity_builtin_extra",
     "pathID": 10782
+  },
+  {
+    "name": "Unlit/Transparent Colored",
+    "file": "509ee700b93e6f56-980323d63da3.shader.txt",
+    "sha256": "980323d63da34346793d5b6c961b385adcbed94e9d2486612d2cb8c0e117ba3d",
+    "sourceAsset": "assets/bin/Data/sharedassets0.assets",
+    "pathID": 14
+  },
+  {
+    "name": "Unlit/Transparent Colored (Gray)",
+    "file": "044cae5f3e5d2473-50926614c2d1.shader.txt",
+    "sha256": "50926614c2d121109a2b3bff792f298e19cbd99a0908ba96baea08fc1db45e98",
+    "sourceAsset": "assets/bin/Data/sharedassets1.assets",
+    "pathID": 12
+  },
+  {
+    "name": "Particles/Additive",
+    "file": "6e21b15b1a854b4d-aa945069740c.shader.txt",
+    "sha256": "aa945069740c7b6ec766acc099536925d135c667afb400a3a79c39456a284a2d",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 91
+  },
+  {
+    "name": "Hidden/TerrainEngine/Details/Vertexlit",
+    "file": "d2bf3f1e917479db-84435bc296f0.shader.txt",
+    "sha256": "84435bc296f0585ef350d15f22a2348fd6521f43083f0391f6e0da4379abd371",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 92
+  },
+  {
+    "name": "Hidden/TerrainEngine/Details/WavingDoublePass",
+    "file": "66e01a8e2a30430f-82306e20fef5.shader.txt",
+    "sha256": "82306e20fef57630ee927f95d5b9170e7c8e409b278c95eb69a69c0dc435d900",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 93
+  },
+  {
+    "name": "Hidden/TerrainEngine/Details/BillboardWavingDoublePass",
+    "file": "0ea15cbdf034e3d0-ebdf48a82f9e.shader.txt",
+    "sha256": "ebdf48a82f9ef0162ca77d83d0067a2e7322984e9a9080f86e473c2ee5335756",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 94
+  },
+  {
+    "name": "Hidden/TerrainEngine/Splatmap/Lightmap-AddPass",
+    "file": "bf1bbf21350b1605-29e471d8ce9a.shader.txt",
+    "sha256": "29e471d8ce9a48c6dfd053aa8511bb3ba66a5be2f26ef9fdef27c83ae513edc7",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 95
+  },
+  {
+    "name": "Nature/Terrain/Diffuse",
+    "file": "b6de50411a05da02-9c202aa061a5.shader.txt",
+    "sha256": "9c202aa061a56b61676b433652ea67a1c3495d8a8ed3f1c748246b42136936ac",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 96
+  },
+  {
+    "name": "Hidden/TerrainEngine/BillboardTree",
+    "file": "db70e1f5724a72b4-ed4a875dd66a.shader.txt",
+    "sha256": "ed4a875dd66adfee13593705b357020e46c63265d9945de439b91a8d6ae0e740",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 97
+  },
+  {
+    "name": "Hidden/Nature/Tree Soft Occlusion Bark Rendertex",
+    "file": "b5dcb0df9ce17943-ec512ea76546.shader.txt",
+    "sha256": "ec512ea76546678ccb7051eec4ac05dc586a0e274412e576bacb9c60fc016685",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 98
+  },
+  {
+    "name": "Hidden/Nature/Tree Soft Occlusion Leaves Rendertex",
+    "file": "c3514844b9a2a387-bb4dfb835556.shader.txt",
+    "sha256": "bb4dfb835556a024cd040d220ca0addc471ca4798190948448f99c620337847b",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 99
+  },
+  {
+    "name": "Mobile/VertexLit",
+    "file": "c3e26c346eadd6ac-16b1b82913f2.shader.txt",
+    "sha256": "16b1b82913f2c4a10f94dd4f6faecfb49afbd2d21f4c4fff0c7c7c46410ce0b3",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 100
+  },
+  {
+    "name": "Mobile/Diffuse",
+    "file": "322686d13b82f0fd-ea6ca7908cd0.shader.txt",
+    "sha256": "ea6ca7908cd0897a3f3aa719d7915fc952707986683df61e3c453c2c83eb532a",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 101
+  },
+  {
+    "name": "Mobile/Unlit (Supports Lightmap)",
+    "file": "f25bb09f1673d342-230d82774ecd.shader.txt",
+    "sha256": "230d82774ecd2be340afc88e9c0ad4e97685cfddb28d4b6a0f449847adee85ce",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 102
+  },
+  {
+    "name": "Mobile/Particles/Additive",
+    "file": "0c054f50fb7addc7-472529711d91.shader.txt",
+    "sha256": "472529711d91240da2527f2942d3f72102c48c141655c109b4f68992339cdc81",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 103
+  },
+  {
+    "name": "PostEffect/Grayscale",
+    "file": "22fd81a7df255713-053a072db1b5.shader.txt",
+    "sha256": "053a072db1b5af9affb1835b97240f6ccfe071d13067fef1e82c4b7369161347",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 104
+  },
+  {
+    "name": "ProjectT/MapTransperant",
+    "file": "5fb1f7b3b6780a8c-80fb83eb8d98.shader.txt",
+    "sha256": "80fb83eb8d984a98d9ffd5840371cb48142ba0917590688abeaf20faf834c065",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 105
+  },
+  {
+    "name": "PostEffect/MotionBlur",
+    "file": "e4febf2ce39f8cee-d2438dde6fca.shader.txt",
+    "sha256": "d2438dde6fcadcaa40117822159ef552a586e70f2cda17f90305d739e51fb0cc",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 106
+  },
+  {
+    "name": "PostEffect/SepiaTone",
+    "file": "6d26d108a092c922-9bb0bed8b8fe.shader.txt",
+    "sha256": "9bb0bed8b8fed03828e6b051a1e8833bd3aa62929fc59a68ff9730c0a67b1b89",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 107
+  },
+  {
+    "name": "PostEffect/Twirl",
+    "file": "90bd052ad00a7511-da922b6cab6b.shader.txt",
+    "sha256": "da922b6cab6beccd7aeaad862076048fab42ff5ac4d16250337efdc534c0191c",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 108
+  },
+  {
+    "name": "ProjectT/MapOpaqueColor",
+    "file": "affec41e7ae0d239-4d757bb9ffc1.shader.txt",
+    "sha256": "4d757bb9ffc1c099a361a2bf13fecb28c1b66ff400d8d374c26cc7f364d8a1f1",
+    "sourceAsset": "assets/bin/Data/sharedassets3.assets",
+    "pathID": 109
   }
 ]

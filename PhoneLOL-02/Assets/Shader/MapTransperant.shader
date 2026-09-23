@@ -1,27 +1,33 @@
 Shader "ProjectT/MapTransperant" {
 Properties {
- _MainTex ("MainTex", 2D) = "white" {}
- _Color ("Color", Color) = (1,1,1,1)
-[HideInInspector]  _Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
+    _MainTex ("MainTex", 2D) = "white" {}
+    _Color ("Color", Color) = (1,1,1,1)
 }
-	//DummyShaderTextExporter
-	
-	SubShader{
-		Tags { "RenderType" = "Opaque" }
-		LOD 200
-		CGPROGRAM
-#pragma surface surf Lambert
-#pragma target 3.0
-		sampler2D _MainTex;
-		struct Input
-		{
-			float2 uv_MainTex;
-		};
-		void surf(Input IN, inout SurfaceOutput o)
-		{
-			float4 c = tex2D(_MainTex, IN.uv_MainTex);
-			o.Albedo = c.rgb;
-		}
-		ENDCG
-	}
+SubShader {
+    Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+    Pass {
+        Cull Back
+        ZWrite Off
+        Blend SrcAlpha OneMinusSrcAlpha
+        HLSLPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        #include "UnityCG.cginc"
+        // Port of the stable APK GLES equation, source SHA-256 prefix 80fb83eb8d98.
+        sampler2D _MainTex;
+        float4 _MainTex_ST, _Color;
+        struct Attributes { float4 position : POSITION; float2 uv : TEXCOORD0; };
+        struct Varyings { float4 position : SV_POSITION; float2 uv : TEXCOORD0; };
+        Varyings vert(Attributes input) {
+            Varyings output;
+            output.position = UnityObjectToClipPos(input.position);
+            output.uv = TRANSFORM_TEX(input.uv, _MainTex);
+            return output;
+        }
+        float4 frag(Varyings input) : SV_Target {
+            float4 sampled = tex2D(_MainTex, input.uv);
+            return sampled * _Color;
+        }
+        ENDHLSL
+    }
 }
