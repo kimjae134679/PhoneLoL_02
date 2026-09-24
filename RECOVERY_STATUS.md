@@ -1,3 +1,55 @@
+# 1.16.9 / 195 — 전투·조명·애니메이션 복구 및 모드대전 — 2026-09-24
+
+작성: [B계정] Nova / Codex Work. 사용자의 이어서 작업 요청으로 진행했다. 아래가 최신 상태이며, 아래쪽 버전 기록은 과거 이력이다. **실기기 전투·화면 확인은 사용자가 담당한다. 코드·계약 검사와 빌드가 실제 플레이 성공을 보증하지 않는다.**
+
+## 전달 상태
+
+- APK: `D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.16.9-arm64-candidate.apk`.
+- ARM64 / IL2CPP / com.jcl.lmulti / 1.16.9 / versionCode 195. Unity splash disabled; iOS source boundaries retained.
+- Build succeeded: 0 errors / 760 warnings, 401847 ms. APK 136944006 bytes; SHA-256 `8d8afbe292385af089a2fac69fbcb4241e2189e42e7ab2f9d9fbf17e3513788c`. All 6 packaged native libraries are arm64-v8a / ELF64. Build job e0101bfe351a48449205898ec2dfb423.
+- 멀티플레이 테스트에 참여하는 모든 기기는 1.16.9로 맞춘다. 모드대전 아이템 전송·결과가 8칸이므로 1.16.8과 혼합한 모드대전은 지원하지 않는다.
+
+## 전투와 방 이동
+
+- Previous WIP used `(native_session_key + 1) * 1000 + 1` for champion view IDs. Disposable-server verification found signed Int32 overflow because native session keys can be large. The WIP was never deployed in that state.
+- ManagedBattle now allocates unique bounded Eve session keys (1..2147481), independently of native transport sessions. The same key is used in player/roster/start/group registration and directed relay. Champion view IDs match Eve ownership decoding and cannot collide with scene IDs below 1000. Native sessions/accounts are unchanged.
+- Packet 61001 moves an unready player into a vacant opposite-team slot before countdown. It preserves actual membership and rune/role selection. Tests cover both directions, solo readiness and two-peer starts.
+- Original pre-baked walkable polygons were converted into Unity 6 NavMeshData for both maps; scene references now use m_NavMeshData. Main-lane connectivity and all sixteen mode-wave spawn points are checked. No visually guessed walkable geometry was substituted.
+- The existing 1v1 ping/null guard and managed world initialization remain. These are targeted fixes for observed blockers; full combat, reconnect and match completion on phones remain unverified.
+
+## 원본 조명과 애니메이션
+
+- Unity 4 scene lightmap records were not loaded by Unity 6. PhoneLOLLegacyLightmaps applies the original two baked textures per map and restores 296 MultiGame / 638 MtmGame renderer/terrain bindings at early Awake.
+- Recovered static-batch meshes already contain atlas-space UV2, so their lightmap transform is identity. Other original scale/offset values remain. The Mobile/Unlit lightmap shader uses the archived RGBM equation (`rgb * alpha * 8`) and per-renderer bindings in Gamma space. No full dynamic-light replacement or new light baking was introduced.
+- Rebuilt 44 original controllers from Recovery/OriginalControllers.json: 316 states / 178 transitions. The root controller must have m_ObjectHideFlags=0; prior WIP incorrectly hid the main asset. State sub-assets remain hidden. Unity read-back now finds all 316 states, with zero missing motions. There are 45 controller files total, including one existing empty controller.
+- Recovery scripts retain original GUIDs and the exact clip/state/transition data. Visual parity, animation poses and phone performance are not certified by import checks.
+
+## 모드대전 — 기존 일반대전(mode 10)에만 적용
+
+- Lobby buttons renamed to 모드대전. Ranked and friendly rules remain unchanged; mode comes from the authenticated server room snapshot, not a local toggle.
+- Item capacity 5 → 8. Constructor, peer serialization/deserialization, purchase duplicate restriction, HUD, shop, active item presses, scoreboard writer/reader and server result parser all use the mode capacity. Unique equipment can occupy separate slots; normal consumable stacking and shared item-ID cooldown behavior are retained.
+- Existing NGUI widgets are cloned and fitted within their original horizontal space. Shop/HUD/result icon scale is 0.625; all eight use buttons get their own press callback. Phone touch usability needs user feedback.
+- Passive automatic gold is doubled after the existing rune modifier: a normal tick of 4 becomes 8. Kill/sale/reward gold is unchanged.
+- Exactly 8 minions per team per mode wave (16 total), with unique host-allocated scene view IDs. Existing origins are retained. Cannon replaces a melee slot after wave 5; a super-minion buff replaces the first slot. Ranked/friendly wave progression remains original.
+- Jungle respawn delay is halved, including buffs/dragon/baron: 300→150, 360→180, 180→90 seconds. Initial spawn timing is unchanged.
+- Result inventory uses 8 UInt16 IDs for mode 10 and 5 otherwise. No fake rewards/history or ranking gains were added. Existing replacement Elo ranking policy remains documented below.
+
+## 검증과 운영 반영
+
+- `Automation/VerifyV1169.cs` / `Recovery/V1169Verification.txt`: mode isolation (0/10/20/101/102), inventory round-trip with sentinel, shop/HUD/use/result arrays, lightmap bindings, navigation spawn samples, all recovered animation motions.
+- `Automation/Server/check_managed_v1167.py`: disposable DB only; free renames, two real peers, bounded champion IDs, shared loading, broadcast/directed relay, both team-move directions, solo mode start/result with eight items, persisted rankings and duplicate settlement prevention.
+- `Recovery/V1169Deployment.txt`: backup location, diagnostic marker, observed process IDs. Only managed_battle_v1167.py and managed_results_v1168.py replaced in the existing runtime. Original launcher/port/tunnel/account DB retained.
+- Backup: `C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\recovery\04_runtime\backups\before-v1169-20260924-212259`. SQLite backup completed before deployment; source matched recorded 1.16.8 before replacement.
+- New server listening on 29000; local and public diagnostic POST returned HTTP 204. Public endpoint remains uko9ef6n.free.pwrp.cc:10045. Marker: V1169_DEPLOY_20260924T122454Z. This proves diagnostic reachability, not phone gameplay.
+- Rollback requires a matching old client/server pair. Restore backed-up source files and restart the existing launcher; do not restore the account DB just to roll back code.
+- No new programs installed. Existing user-selected D:\A_KJ\AI\PhoneLoL_02 project, Unity installation, Python311 and C:\TempPy13 server were reused. The AI default install-root policy did not require moving existing installations.
+- User's separate UnityConnectSettings.asset change is excluded from the commit and left untouched.
+
+## 다음 확인
+
+사용자는 1.16.9를 설치해 챔피언 조작·공격·애니메이션, 두 맵 조명/경계, 방 팀 이동, 모드대전 8칸 구매·사용·판매와 양 기기 동기화를 확인한다. 진단 ID/시각에 맞춰 PHONE_CLIENT_TRACE에서 남은 오류를 좁힌다. 출석/무료보상 알림 억제, 무료 닉네임, 친구 입력 보호와 원본 아이콘을 유지했다. 원본과 시각적으로 완전히 동일하거나 실전 플레이가 전부 해결됐다고 아직 선언하지 않는다.
+
+---
 # 1.16.8 / 194 — 복구본 빌드·서버 반영 — 2026-09-24
 
 사용자의 작업 재개 요청에 따라 이전 WIP를 이어서 수정했다. Unity Package Manager 오류도 해결했다. **아래가 현재 상태이며, 이전 인수인계와 버전별 구역은 과거 기록이다. 실기기 화면·플레이 검증은 사용자가 담당하며 정상 전투 전체를 인증한 것은 아니다.**

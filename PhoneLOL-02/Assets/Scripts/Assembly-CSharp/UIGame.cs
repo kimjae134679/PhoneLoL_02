@@ -240,6 +240,7 @@ public class UIGame : MonoBehaviour
 
 	private void Awake()
 	{
+        m_gameItemList = PhoneLOLModeRules.ExpandItems(m_gameItemList);
 		if (m_fpsLabel != null)
 		{
 			m_fpsLabel.gameObject.SetActive(false);

@@ -17,7 +17,19 @@ class ManagedBattle:
         self.contexts, self.prepared, self.loaded = {}, {}, {}
         self.started_at, self.result_frames = {}, {}
         self.lock = threading.RLock()
+        self.next_eve_session = 1
         self.catalog = json.loads(Path(__file__).with_name("managed_rune_catalog.json").read_text())
+    def session(self, peer):
+        return self.contexts[peer.peer_id]["eve_session"]
+    def allocate_session(self):
+        # Eve encodes ownership as (session + 1) * 1000 + local view ID.
+        used = {ctx["eve_session"] for ctx in self.contexts.values()}
+        for _ in range(2147481):
+            value = self.next_eve_session
+            self.next_eve_session = value % 2147481 + 1
+            if value not in used:
+                return value
+        raise RuntimeError("No free Eve session IDs")
     def send(self, peer, pid, body=b"", request=0):
         return self.raw_send(peer, RESPONSE, ENVELOPE.pack(pid, request)+body, peer.room_id, peer.peer_id)
     def prepare(self, device, payload):
@@ -46,7 +58,7 @@ class ManagedBattle:
         v = peer.visual
         ctx = self.contexts.get(peer.peer_id, {})
         return (struct.pack("<I",peer.device_id)+core.encode_text(a.nickname)+bytes((a.level,))+
-                struct.pack("<iBHBBBBIBI",peer.session_key,v.slot%2,v.hero_id,v.skin_id,
+                struct.pack("<iBHBBBBIBI",self.session(peer),v.slot%2,v.hero_id,v.skin_id,
                             v.slot,v.ready,ctx.get("lane",v.lane_role),0,ctx.get("page",0),0))
     def rune(self, peer):
         totals = [0.0]*28
@@ -80,8 +92,8 @@ class ManagedBattle:
             out += struct.pack("<BiB",a.level if a else 0,0,0)
             rune, checksum = self.rune(p)
             out += rune+struct.pack("<IHBiII",checksum,p.visual.hero_id if p else 0,
-                     p.visual.skin_id if p else 0,slot+1 if p else 0,
-                     p.session_key if p else 0,0)
+                     p.visual.skin_id if p else 0,(self.session(p)+1)*1000+1 if p else 0,
+                     self.session(p) if p else 0,0)
         return bytes(out)
     def publish(self, peer, force=False):
         with self.state.lock, self.lock:
@@ -117,17 +129,17 @@ class ManagedBattle:
             ctx["started"] = True
             self.started_at.setdefault(room.room_id,time.monotonic())
             members = self.members(room)
-            host = self.state.peers[room.host_peer].session_key
+            host = self.session(self.state.peers[room.host_peer])
             # Register self first so Eve creates the group before adding its other members.
             for p in [peer]+[x for x in members if x.peer_id != peer.peer_id]:
-                self.send(peer,60004,struct.pack("<iii",room.room_id,p.session_key,host)+ENDPOINT+ENDPOINT)
+                self.send(peer,60004,struct.pack("<iii",room.room_id,self.session(p),host)+ENDPOINT+ENDPOINT)
             by_slot = {p.visual.slot:p for p in members}
             data = bytearray(b"\x01")
             for slot in range(6):
                 p = by_slot.get(slot)
                 data += struct.pack("<HBii",p.visual.hero_id if p else 0,
-                                    p.visual.skin_id if p else 0,slot+1 if p else 0,
-                                    p.session_key if p else 0)
+                                    p.visual.skin_id if p else 0,(self.session(p)+1)*1000+1 if p else 0,
+                                    self.session(p) if p else 0)
             self.send(peer,18,bytes(data))
     def maybe_start_ready(self, peer):
         # Managed rooms allow solo play while retaining authenticated readiness.
@@ -163,7 +175,7 @@ class ManagedBattle:
                     return self.send(peer,1,b"\xff",request)
                 mode, operation, group, target, expires = prepared
                 self.contexts[peer.peer_id] = dict(mode=mode,operation=operation,group=group,
-                                                  target=target,lane=0,page=0)
+                                                  target=target,lane=0,page=0,eve_session=self.allocate_session())
             return self.send(peer,1,b"\0"+self.player(peer)+struct.pack("<i",-1),request)
         ctx = self.context(peer)
         if pid == 3: return self.send(peer,3,b"\0",request)
@@ -206,6 +218,23 @@ class ManagedBattle:
             self.publish_room(peer.room_id)
             self.maybe_start_ready(peer)
             return
+        if pid==61001:
+            if len(data)!=1:
+                raise ValueError("Invalid team movement")
+            with self.state.lock, self.lock:
+                if ctx.get("started") or room.room_id in self.state.starting_rooms:
+                    return
+                target = data[0]
+                if target >= room.capacity or target%2 == v.slot%2:
+                    return
+                if any(p.visual.slot == target for p in self.members(room)):
+                    self.publish(peer,True)
+                    return
+                # The client sends unready before moving; do not alter rune selection.
+                self.state.update_player_state(peer,core.PSTATE.pack(
+                    target,v.lane_role,0,v.skin_id,v.hero_id,0))
+                self.publish_room(peer.room_id)
+            return
         if pid==15:
             if len(data)!=1 or data[0]>1: raise ValueError("Invalid rune page")
             if ctx.get("started"): return
@@ -244,7 +273,7 @@ class ManagedBattle:
             target_session, original_pid = struct.unpack_from("<iH",data)
             if not 60014<=original_pid<=60018: raise ValueError("Invalid original battle packet")
             for target in self.members(room):
-                if target_session==-2 or (target_session==-1 and target!=peer) or target.session_key==target_session:
+                if target_session==-2 or (target_session==-1 and target!=peer) or self.session(target)==target_session:
                     if target.peer_id in self.contexts: self.send(target,original_pid,data[6:])
             return
         if pid==6:

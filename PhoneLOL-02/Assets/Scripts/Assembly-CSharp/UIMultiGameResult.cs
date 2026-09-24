@@ -851,7 +851,7 @@ public class UIMultiGameResult : MonoBehaviour
 						if (HMOAHNANKNE.JCGKFEPEJPO())
 						{
 							m_resultHeroInfos[b2].SetInfo(b2, HMOAHNANKNE.BMKOKHGAHEC(), HMOAHNANKNE.AJPFAAFLHEB(), HMOAHNANKNE.AFPCLLNMGJP(), HMOAHNANKNE.BMKOKHGAHEC(), HMOAHNANKNE.KFAGPDGHEBK(), HMOAHNANKNE.AJPFAAFLHEB(), HMOAHNANKNE.AJPFAAFLHEB(), HMOAHNANKNE.AJPFAAFLHEB(), HMOAHNANKNE.AJPFAAFLHEB(), HMOAHNANKNE.KFAGPDGHEBK());
-							for (int i = 0; i < 5; i++)
+							for (int i = 0; i < PhoneLOLModeRules.ItemSlots; i++)
 							{
 								m_resultHeroInfos[b2].SetItemInfo(i, HMOAHNANKNE.AJPFAAFLHEB());
 							}
@@ -872,7 +872,7 @@ public class UIMultiGameResult : MonoBehaviour
 					}
 					else if (gLAMMOFPCHP.EHCPMLKEBME < 20)
 					{
-						m_battleTypeLabel.set_text("일반 대전");
+						m_battleTypeLabel.set_text("모드대전");
 					}
 					else if (gLAMMOFPCHP.EHCPMLKEBME == 20)
 					{

@@ -2035,7 +2035,7 @@ public class MtmGameManager : GameManager
 				cMNIABEFLBJ.GBMJNFOEACC(nOBFFGBGCNA.ENLKLHEMPHA().get_AssistCount());
 				cMNIABEFLBJ.GBMJNFOEACC(nOBFFGBGCNA.ENLKLHEMPHA().get_MinionCount());
 				cMNIABEFLBJ.GBMJNFOEACC(nOBFFGBGCNA.FGPDJDPABGG);
-				for (int i = 0; i < 5; i++)
+				for (int i = 0; i < PhoneLOLModeRules.ItemSlots; i++)
 				{
 					if (nOBFFGBGCNA.ENLKLHEMPHA().get_m_gameItems().BHFIOMJAFBC()[i] != null)
 					{
@@ -2469,6 +2469,7 @@ public class MtmGameManager : GameManager
 
 	private void IKEKEAOGAAG()
 	{
+		if (NetworkManager.get_Instance().get_m_battleNetClient().JIPBIOELJHC() == null) return;
 		if (get_m_state() != OEOIIKMBGAG.Battle)
 		{
 			return;
@@ -2637,23 +2638,23 @@ public class MtmGameManager : GameManager
 		switch (FMADHAHOIDJ)
 		{
 		case 20000:
-			return 300f;
+			return PhoneLOLModeRules.Respawn(300f);
 		case 20001:
-			return 300f;
+			return PhoneLOLModeRules.Respawn(300f);
 		case 20002:
-			return 360f;
+			return PhoneLOLModeRules.Respawn(360f);
 		case 20003:
-			return 360f;
+			return PhoneLOLModeRules.Respawn(360f);
 		case 20004:
 		case 20005:
-			return 180f;
+			return PhoneLOLModeRules.Respawn(180f);
 		case 20006:
 		case 20007:
-			return 180f;
+			return PhoneLOLModeRules.Respawn(180f);
 		case 20008:
-			return 180f;
+			return PhoneLOLModeRules.Respawn(180f);
 		default:
-			return 600f;
+			return PhoneLOLModeRules.Respawn(600f);
 		}
 	}
 

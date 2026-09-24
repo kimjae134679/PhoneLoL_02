@@ -265,6 +265,7 @@ public class UIGameMultiResultHeroInfo : MonoBehaviour
 
 	public void SetItemInfo(int BEPBPAPIEHE, ushort CDLJHFICDDI)
 	{
+        m_items = PhoneLOLModeRules.ExpandResultItems(m_items);
 		m_items[BEPBPAPIEHE].set_spriteName(string.Format("{0}", CDLJHFICDDI));
 	}
 

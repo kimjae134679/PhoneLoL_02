@@ -281,7 +281,7 @@ public class KMNJPNBJACF
 
 	public void DFMCIOHFKOF(KCIGFAHFHCH OGJFDNEEDCP)
 	{
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < BHFIOMJAFBC().Count; i++)
 		{
 			bool flag = false;
 			if (BHFIOMJAFBC()[i] != null)
@@ -333,8 +333,8 @@ public class KMNJPNBJACF
 	public KMNJPNBJACF(Actor CDKMPAEODLA)
 	{
 		MEDAGKOPJMO = CDKMPAEODLA;
-		LKBOJCKEMOO(new List<DDHBIGNBFID>(5));
-		for (int i = 0; i < 5; i++)
+		LKBOJCKEMOO(new List<DDHBIGNBFID>(PhoneLOLModeRules.ItemSlots));
+		for (int i = 0; i < PhoneLOLModeRules.ItemSlots; i++)
 		{
 			BHFIOMJAFBC().Add(null);
 		}
@@ -463,7 +463,7 @@ public class KMNJPNBJACF
 
 	public void GJPFIPICBAM(KCIGFAHFHCH OGJFDNEEDCP)
 	{
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < BHFIOMJAFBC().Count; i++)
 		{
 			bool ICENKPDOHBK;
 			OGJFDNEEDCP.CAHACMKBJMI(out ICENKPDOHBK);
@@ -699,7 +699,7 @@ public class KMNJPNBJACF
 			HNGIHNOCCKJ.PGNKPIFFMJE(OIANGIEMBPM);
 		}
 		DDHBIGNBFID dDHBIGNBFID = HFIPKEOBOPK(OIANGIEMBPM);
-		if (dDHBIGNBFID != null)
+		if (dDHBIGNBFID != null && !(PhoneLOLModeRules.Enabled && dDHBIGNBFID.AGHCOCAJMCI().CIGEEDBPDDM))
 		{
 			if (dDHBIGNBFID.AGHCOCAJMCI().ONJCKKLOJIA() != PKCGCIEPDEM.ACPICCBBPHF.ChargeConsume && dDHBIGNBFID.PEIIGDBFGMK(AGJJOHLCJKF))
 			{

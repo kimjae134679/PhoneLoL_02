@@ -398,6 +398,7 @@ public class UIGameShop : MonoBehaviour
 
 			private void OnEnable()
 			{
+                m_gameItemList = PhoneLOLModeRules.ExpandItems(m_gameItemList);
 				SoundManager.get_Instance().PlaySound("ui_shop_open");
 				for (int i = 0; i < m_gameItemList.Length; i++)
 				{

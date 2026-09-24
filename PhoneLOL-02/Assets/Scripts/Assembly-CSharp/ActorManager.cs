@@ -466,6 +466,21 @@ public class ActorManager : MonoBehaviour
 	[JDLHECHNNDH]
 	public void CreateMultiModeMinionsRPC(int AGDMNGGPENK, byte HKBNNMECMOL, byte DDILAEMMCAJ, int[] HMNPPLAEPBF)
 	{
+        if (PhoneLOLModeRules.Enabled) {
+            if (HMNPPLAEPBF.Length != 16) throw new System.InvalidOperationException("Mode wave requires sixteen view IDs");
+            for (byte team = 0; team < 2; team++) for (int i = 0; i < 8; i++) {
+                int kind = i < 4 ? 0 : 1;
+                if (i == 3 && AGDMNGGPENK >= 5) kind = 2;
+                if (i == 0 && HKBNNMECMOL == team) kind = 3;
+                float direction = team == 0 ? 1f : -1f;
+                var origin = new Vector3(-28f * direction, 2f, -28f * direction);
+                float offset = (4f - i) * 0.75f * direction;
+                CreateMinionRpc(team, (ushort)(10000 + team * 10 + kind), origin,
+                    new Vector3(offset, 0f, offset), DDILAEMMCAJ, HMNPPLAEPBF[team * 8 + i]);
+            }
+            return;
+        }
+
 		int num = 0;
 		Vector3 zero = Vector3.zero;
 		zero = new Vector3(-28f, 2f, -28f);
@@ -1950,6 +1965,7 @@ public class ActorManager : MonoBehaviour
 		{
 			num++;
 		}
+		if (PhoneLOLModeRules.Enabled) num = 16;
 		int[] array = new int[num];
 		for (int j = 0; j < num; j++)
 		{

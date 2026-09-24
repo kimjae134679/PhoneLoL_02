@@ -273,6 +273,7 @@ public class UIGameItemUseButtons : MonoBehaviour
 
 	private void Awake()
 	{
+        PhoneLOLModeRules.ExpandUseButtons(this);
 		NDJHGEJIOOJ = new ushort[m_itemIconList.Length];
 	}
 

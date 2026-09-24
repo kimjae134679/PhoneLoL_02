@@ -51,7 +51,10 @@ internal static class V093CompatibilityFix
 			{
 				battleNetClient.DFPELPCDPGK();
 			}
-			battleNetClient.MEFOOGMOJKD((byte)num);
+			var packet = CMNIABEFLBJ.PEFJOMFAOJI();
+			packet.DGFDHOLDCDL(61001);
+			packet.GBMJNFOEACC((byte)num);
+			battleNetClient.FBAFKOCPFPG(packet);
 		}
 	}
 

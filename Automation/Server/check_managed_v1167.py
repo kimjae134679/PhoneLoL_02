@@ -69,13 +69,21 @@ def run():
                 c.legacy(12,struct.pack("<H",hero))
                 c.receive(67,24)
             for c in clients: c.legacy(16)
-            for c in clients: assert c.receive(67,18)[0]==1
+            for c in clients:
+                start = c.receive(67,18)
+                assert start[0] == 1
+                for p in peers:
+                    _,_,view_id,session = struct.unpack_from("<HBii", start, 1 + p.visual.slot * 11)
+                    assert view_id == (session+1)*1000+1 and view_id >= 1000
+            print("PASS: champion view IDs cannot collide with scene objects")
             print("PASS: real player selection and shared countdown")
             for c in clients: c.legacy(19,struct.pack("<i",100))
             starts=[c.receive(67,20) for c in clients]
             assert starts[0]==starts[1] and starts[0][0]==1
             a.legacy(60019,struct.pack("<iH",-1,60016)+b"managed-relay-probe")
             assert b.receive(67,60016)==b"managed-relay-probe"
+            a.legacy(60019,struct.pack("<iH",srv.state.managed_battle.session(peers[1]),60016)+b"directed-probe")
+            assert b.receive(67,60016)==b"directed-probe"
             print("PASS: both loading acknowledgements and shared battle packet relay")
             for c in clients:
                 c.legacy(21)
@@ -90,7 +98,8 @@ def run():
                     if p:
                         account=srv.state.accounts.get_or_create(p.device_id)
                         data+=struct.pack("<IH",p.device_id,p.visual.hero_id)+core.encode_text(account.nickname)
-                        data+=struct.pack("<IBHHHHB5H",0,5,3 if slot%2==0 else 1,1,0,4,0,0,0,0,0,0)
+                        items = [1001] * (8 if room.mode == 10 else 5)
+                        data+=struct.pack("<IBHHHHB"+str(len(items))+"H",0,5,3 if slot%2==0 else 1,1,0,4,0,*items)
                 return bytes(data)
             body=outcome(room,peers)
             host=next(c for c in clients if c.peer==room.host_peer)
@@ -114,6 +123,11 @@ def run():
             assert solo.rpc(0,25,bytes((10,0))+bytes(14))[0]==0
             solo.legacy(1,struct.pack("<iIq",79,solo.device,solo.token));assert solo.receive(67,1)[0]==0
             solo.legacy(4,bytes((10,0)));assert solo.receive(67,7)[0]==0
+            solo.legacy(61001,b"\x01");solo.legacy(3);assert solo.receive(67,3)==b"\0"
+            assert srv.state.peers[solo.peer].visual.slot == 1
+            solo.legacy(61001,b"\x00");solo.legacy(3);assert solo.receive(67,3)==b"\0"
+            assert srv.state.peers[solo.peer].visual.slot == 0
+            print("PASS: team movement in both directions preserves actual room membership")
             solo.legacy(12,struct.pack("<H",hero));solo.receive(67,24)
             solo.legacy(16);assert solo.receive(67,18)[0]==1
             solo.legacy(19,struct.pack("<i",100));assert solo.receive(67,20)[0]==1

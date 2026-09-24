@@ -1,10 +1,12 @@
-# Managed battle, results and rankings (1.16.8)
+# Managed battle, results and rankings (1.16.9)
 
 Patch the existing V3.3 runtime; this folder is not a standalone replacement for inherited server modules.
 
 Deploy the files listed in central_v33_runtime_files.json into the existing runtime. Updated managed files are server_central_authority_v33.py, account_services_v1158.py, managed_battle_v1167.py, managed_results_v1168.py and managed_rune_catalog.json. Keep the existing launcher, environment, database and public tunnel. Back up replaced sources/manifest and use SQLite backup before deployment.
 
 The current deployment and APK are recorded at the top of ../../RECOVERY_STATUS.md. Backup before this release: recovery/04_runtime/backups/before-v1168-20260924-170631. That backup contains a runtime unexpectedly reverted to pre-1.16.7 behavior; the cause is unknown. Prefer code-only rollback and do not restore the database just to roll back code.
+
+In 1.16.9, bounded Eve sessions are separate from native transport sessions to prevent champion view-ID collision and overflow. Team movement uses managed packet 61001. Mode 10 results carry eight item IDs per player; ranked/friendly results retain five. All mode participants must install 1.16.9. See Recovery/V1169Deployment.txt and the top of RECOVERY_STATUS.md for the current deployment and backup.
 
 Managed transport is central 66/67; account RPC is 64/65. Native client contracts and minimum-player policy remain unchanged. Managed rooms accept one or more actual authenticated ready players, without artificial opponents.
 

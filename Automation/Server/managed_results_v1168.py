@@ -58,6 +58,7 @@ WHERE s.mode=? ORDER BY s.points DESC,s.wins DESC,s.uid ASC LIMIT 100""", (paylo
             raise ValueError("Invalid match outcome")
         by_slot = {p.visual.slot: p for p in peers}
         cursor, entries = 9, []
+        item_count = 8 if room.mode == 10 else 5
         canonical = bytearray(struct.pack("<Bii", winner, kills0, kills1))
         for slot in range(room.capacity):
             if cursor >= len(payload) or payload[cursor] not in (0, 1):
@@ -75,13 +76,13 @@ WHERE s.mode=? ORDER BY s.points DESC,s.wins DESC,s.uid ASC LIMIT 100""", (paylo
             nickname, cursor = core.decode_text(payload, cursor)
             guild, level, kills, deaths, assists, minions, activity = struct.unpack_from("<IBHHHHB", payload, cursor)
             cursor += struct.calcsize("<IBHHHHB")
-            items = struct.unpack_from("<5H", payload, cursor)
-            cursor += 10
+            items = struct.unpack_from("<" + str(item_count) + "H", payload, cursor)
+            cursor += 2 * item_count
             if device != peer.device_id or hero != peer.visual.hero_id or level == 0:
                 raise ValueError("Result player identity does not match the room")
             account = self.store.get_or_create(device)
             canonical += struct.pack("<IH", device, hero) + core.encode_text(account.nickname)
-            canonical += struct.pack("<IBHHHHB5H", 0, level, kills, deaths, assists, minions, activity, *items)
+            canonical += struct.pack("<IBHHHHB" + str(item_count) + "H", 0, level, kills, deaths, assists, minions, activity, *items)
             entries.append((account.uid, hero, slot))
         if cursor != len(payload):
             raise ValueError("Unexpected result bytes")

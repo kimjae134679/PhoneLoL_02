@@ -2852,6 +2852,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	public void IncreaseAutoMoney(int JFILMHHIFGI)
 	{
 		JFILMHHIFGI = V093RuneBattleFix.ApplyAutoGold(JFILMHHIFGI, this);
+		if (PhoneLOLModeRules.Enabled) JFILMHHIFGI *= 2;
 		IJMKMDEBBAD((int)get_m_autoMoney() + JFILMHHIFGI);
 		NNCNGFFJHLM((int)get_m_money() + JFILMHHIFGI);
 	}

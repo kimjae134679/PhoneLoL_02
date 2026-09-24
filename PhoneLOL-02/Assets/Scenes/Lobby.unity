@@ -36740,7 +36740,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 일반 대전
+  mText: 모드대전
   mFontSize: 12
   mFontStyle: 0
   mAlignment: 0
@@ -51497,7 +51497,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 일반 대전
+  mText: 모드대전
   mFontSize: 18
   mFontStyle: 0
   mAlignment: 0
@@ -79178,7 +79178,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: "일반 대전은 [CCFFCC]랭크,MMR,승,패가 기록되지 않아[-] \r\n편하게 게임을 즐길 수 있어요\r\n\r\n[FFCCCC]단, 탈주 시에는 MMR 및 랭크가 차감될 수 있습니다[-]"
+  mText: "모드대전은 [CCFFCC]랭크,MMR,승,패가 기록되지 않아[-] \r\n편하게 게임을 즐길 수 있어요\r\n\r\n[FFCCCC]단, 탈주 시에는 MMR 및 랭크가 차감될 수 있습니다[-]"
   mFontSize: 14
   mFontStyle: 0
   mAlignment: 0
