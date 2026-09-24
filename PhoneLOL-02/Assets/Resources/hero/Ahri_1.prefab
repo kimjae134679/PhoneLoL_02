@@ -1529,26 +1529,26 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 170521}
   m_audioClips:
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
-  - {fileID: 8300000, guid: a07b5a0f6b6efa940ab9d7aa37aa73ff, type: 3}
-  - {fileID: 8300000, guid: df4e126d384955445b8b071425aab641, type: 3}
-  - {fileID: 8300000, guid: 2da60b26cc4622942bf9d456077306e7, type: 3}
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
-  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
-  - {fileID: 8300000, guid: 20f3828e1679ef94faf5b9662edc3869, type: 3}
-  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
-  - {fileID: 8300000, guid: 1feb1ff13dd1322448097d32a3ec01b0, type: 3}
-  - {fileID: 8300000, guid: 4522710d94aa7464ab6ec485cc8741e9, type: 3}
-  - {fileID: 8300000, guid: 0e96dea3c36e7ce49a11967a48c59c07, type: 3}
-  - {fileID: 8300000, guid: 33632180bf2f0ca44a9605f20386d266, type: 3}
-  - {fileID: 8300000, guid: 16c28e3bc4ebc5c4184ffbb18ff6c447, type: 3}
-  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
-  - {fileID: 8300000, guid: 1fd2db785d109e94989e6b40f946e0ea, type: 3}
-  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
-  - {fileID: 8300000, guid: 153e778e55c1b5a41a1bb1ab811f9b23, type: 3}
-  - {fileID: 8300000, guid: 7cf3410c9a1ad4944a8e29cab5433a0f, type: 3}
-  - {fileID: 8300000, guid: 6bb2adf1b34099a41b6685c6fa010f12, type: 3}
-  - {fileID: 8300000, guid: 4212d2082744e644db2c5bbb56e5339d, type: 3}
+  - {fileID: 8300000, guid: 5a769d69ef598df51eca03cc056468f2, type: 3}
+  - {fileID: 8300000, guid: adf9a3f9fc79c9ffbb7c6989207ea833, type: 3}
+  - {fileID: 8300000, guid: eed03b97255f033bddc3182ddde9167c, type: 3}
+  - {fileID: 8300000, guid: 22ceb1a33c41c4b2400c37fc2d9a4e16, type: 3}
+  - {fileID: 8300000, guid: 5c09e493eee4ab0aff500b5b5dcb7349, type: 3}
+  - {fileID: 8300000, guid: 745809f93d71fde95ff7a0faa6492930, type: 3}
+  - {fileID: 8300000, guid: b6c91cd30ce356ec90d637b19f687612, type: 3}
+  - {fileID: 8300000, guid: 0a1d231fe8d2d84d89e2f09beb6df35f, type: 3}
+  - {fileID: 8300000, guid: 9046dab4622c6d52c9853a8414335a71, type: 3}
+  - {fileID: 8300000, guid: 59a082e41d1dc9786ec4f4534fb95a79, type: 3}
+  - {fileID: 8300000, guid: b398e5e6284bd77032f2e79f8d3234d3, type: 3}
+  - {fileID: 8300000, guid: f2437ad0fe83fb4ada724ac0f20ca1a8, type: 3}
+  - {fileID: 8300000, guid: fcfa5da0b4861f19a22095079a4881d5, type: 3}
+  - {fileID: 8300000, guid: 34ec1243fe1f5b1ab03e6b04ab33b9f4, type: 3}
+  - {fileID: 8300000, guid: e5126efe5f22e2be22e84b5a46ca3db3, type: 3}
+  - {fileID: 8300000, guid: 3aa001209e531602210ef560b929f04a, type: 3}
+  - {fileID: 8300000, guid: 119f45a46ce7d103c434c14b6f558c3a, type: 3}
+  - {fileID: 8300000, guid: cfc2c868d0f385ff34380d3636ddf3d0, type: 3}
+  - {fileID: 8300000, guid: 043282383cbb193b01d0df17a067b772, type: 3}
+  - {fileID: 8300000, guid: 53a72acd9cae35f79fdfc915f5ce741c, type: 3}
 --- !u!195 &19599861
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3163,6 +3163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 55edb284d01d1fb449f9da04e2bf0585, type: 2}
+  - {fileID: 2100000, guid: 1d74d8d1964c1e8459241d33a1b421b9, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

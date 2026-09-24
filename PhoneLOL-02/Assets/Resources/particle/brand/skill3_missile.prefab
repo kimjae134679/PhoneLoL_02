@@ -141,7 +141,7 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 0}
   m_audioClips:
-  - {fileID: 8300000, guid: d3b86b65d5557b94d8d68ef28ca29470, type: 3}
+  - {fileID: 8300000, guid: aa5eb1fa326d2e182ee7c38619a3548e, type: 3}
 --- !u!114 &11443158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 3fb3291edf4a40e45babe841c5f9465c, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -490,6 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: f65f214b950425a4180380b9de5142ad, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

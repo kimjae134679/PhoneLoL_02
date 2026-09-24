@@ -27,7 +27,8 @@ float3 worldPos : TEXCOORD1; float3 worldNormal : TEXCOORD2; };
 v2f vert(appdata v) {
     v2f o; o.pos = UnityObjectToClipPos(v.vertex); o.color = v.color; o.uv = v.uv;
     o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-    o.worldNormal = mul(normalize(v.normal), (float3x3)unity_WorldToObject);
+    // Normalize after inverse-transpose so scaled character meshes do not overexpose.
+    o.worldNormal = UnityObjectToWorldNormal(v.normal);
     return o;
 }
 float4 frag(v2f i) : SV_Target {

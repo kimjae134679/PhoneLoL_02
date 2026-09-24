@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -321,6 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -414,6 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -507,6 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

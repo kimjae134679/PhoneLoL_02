@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 8b0279fb47ba0974aa00d3f91cc509c5, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -426,6 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -530,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -623,6 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -727,6 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 0}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

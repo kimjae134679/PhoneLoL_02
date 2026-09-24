@@ -63,6 +63,9 @@ MonoBehaviour:
   maps:
 """
     extra+="".join("  - "+m+"\n" for m in maps)
+    lights=[m[1] for m in re.finditer(r"(?ms)^--- !u!108 &(\d+)\r?\n(.*?)(?=^---|\Z)",text)
+            if "  m_Lightmapping: 2" in m[2] and "  m_ActuallyLightmapped: 1" in m[2]]
+    extra+="  bakedLights:\n"+"".join("  - {fileID: "+obj+"}\n" for obj in lights)
     extra+="  bindings:\n"+"\n".join(bindings)+"\n"
     path.write_text(text.rstrip()+"\n"+extra,encoding="utf-8")
     print(name,"lightmaps",len(maps),"bindings",len(bindings)//4)

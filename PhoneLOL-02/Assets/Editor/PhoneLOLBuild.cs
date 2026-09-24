@@ -9,7 +9,7 @@ using UnityEngine;
 public static class PhoneLOLBuild
 {
     // This produces a migration candidate, not a validated replacement for 1.15.11.
-    [MenuItem("PhoneLOL/Build 1.16.9 ARM64 candidate")]
+    [MenuItem("PhoneLOL/Build 1.16.10 ARM64 candidate")]
     public static void BuildAndroidCandidate()
     {
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Android, BuildTarget.Android))
@@ -23,8 +23,8 @@ public static class PhoneLOLBuild
                 for (int layer = 0; layer < icon.minLayerCount; layer++) icon.SetTexture(originalIcon, layer);
             PlayerSettings.SetPlatformIcons(NamedBuildTarget.Android, kind, icons);
         }
-        PlayerSettings.bundleVersion = "1.16.9";
-        PlayerSettings.Android.bundleVersionCode = 195;
+        PlayerSettings.bundleVersion = "1.16.10";
+        PlayerSettings.Android.bundleVersionCode = 196;
         PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.jcl.lmulti");
         PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
@@ -44,7 +44,7 @@ UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
         string[] scenes = names.Select(name => "Assets/Scenes/" + name + ".unity").ToArray();
         foreach (string scene in scenes)
             if (!File.Exists(scene)) throw new FileNotFoundException("Missing original scene", scene);
-        string output = Path.GetFullPath("Builds/PhoneLOL-v1.16.9-arm64-candidate.apk");
+        string output = Path.GetFullPath("Builds/PhoneLOL-v1.16.10-arm64-candidate.apk");
         Directory.CreateDirectory(Path.GetDirectoryName(output));
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
             scenes = scenes, locationPathName = output, target = BuildTarget.Android,

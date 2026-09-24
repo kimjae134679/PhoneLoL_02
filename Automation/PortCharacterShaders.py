@@ -32,7 +32,8 @@ lighting="""float4 sampled = tex2D(_MainTex, i.uv * _MainTex_ST.xy + _MainTex_ST
 {cutout}
 float diffuse = max(0, dot(i.worldNormal, normalize(_WorldSpaceLightPos0.xyz)));
 float rim = pow(1 - max(0, dot(i.worldNormal, normalize(_WorldSpaceCameraPos - i.worldPos))), 3);
-float3 rgb = (0.5 * sampled.rgb + sampled.rgb * diffuse * _LightColor0.rgb * 2 + float3(0.3, 0.3, 0.4) * rim) * _Color.rgb;
+// Unity upgrades legacy light intensities by two; do not multiply them again.
+float3 rgb = (0.5 * sampled.rgb + sampled.rgb * diffuse * _LightColor0.rgb + float3(0.3, 0.3, 0.4) * rim) * _Color.rgb;
 return float4(rgb, {alpha});"""
 formulas["ProjectT/DiffuseOpaque"]=lighting.format(cutout="clip(sampled.a - 0.5);",alpha="1")
 formulas["ProjectT/DiffuseTransparent"]=lighting.format(cutout="",alpha="sampled.a * _Color.a")
@@ -53,7 +54,7 @@ float3 worldPos : TEXCOORD1; float3 worldNormal : TEXCOORD2; };
 v2f vert(appdata v) {
     v2f o; o.pos = UnityObjectToClipPos(v.vertex); o.color = v.color; o.uv = v.uv;
     o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-    o.worldNormal = mul(normalize(v.normal), (float3x3)unity_WorldToObject);
+    o.worldNormal = UnityObjectToWorldNormal(v.normal);
     return o;
 }
 float4 frag(v2f i) : SV_Target {

@@ -1510,21 +1510,21 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 170521}
   m_audioClips:
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
-  - {fileID: 8300000, guid: f2dfa8b65be023e438f11e1192c97af8, type: 3}
-  - {fileID: 8300000, guid: c9c73f23255b8d646b924651c8f6726e, type: 3}
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
-  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
-  - {fileID: 8300000, guid: 708754aa0c8e0064ab2115eae887e189, type: 3}
-  - {fileID: 8300000, guid: 37cd40b1f6663a148b883e7c744b8733, type: 3}
-  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
-  - {fileID: 8300000, guid: 2f56c2545aa085f4bbbeeef4eb2bbe24, type: 3}
-  - {fileID: 8300000, guid: 4522710d94aa7464ab6ec485cc8741e9, type: 3}
-  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
-  - {fileID: 8300000, guid: 60d3cd7e43041064b8618eade99ad975, type: 3}
-  - {fileID: 8300000, guid: 92af783013a298f478566aadb3096652, type: 3}
-  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
-  - {fileID: 8300000, guid: 4212d2082744e644db2c5bbb56e5339d, type: 3}
+  - {fileID: 8300000, guid: a3ca700bf3b0e5b4299b81c4fe3661d7, type: 3}
+  - {fileID: 8300000, guid: 3335d42f1d625797cf6fad1145fad536, type: 3}
+  - {fileID: 8300000, guid: dfe922eeaf141195adfd9f0675bbe4dd, type: 3}
+  - {fileID: 8300000, guid: 3fc404509c0bb345a804d2979f3acdd9, type: 3}
+  - {fileID: 8300000, guid: c9e8fb55537f3e06709d09b1b6e2e6b1, type: 3}
+  - {fileID: 8300000, guid: 8fdc4bd76710068767f5294198f29f4c, type: 3}
+  - {fileID: 8300000, guid: 38b08aa347329581898f777bfb92bfc3, type: 3}
+  - {fileID: 8300000, guid: a3658ca5d5035431def77038631d11fb, type: 3}
+  - {fileID: 8300000, guid: 0e047f3a318aa0d3f14752a5dfe4bbaa, type: 3}
+  - {fileID: 8300000, guid: efa369add163a161f42fda698f8d290b, type: 3}
+  - {fileID: 8300000, guid: 0f8e9d3545d3fab73a0f0d00b3e2c427, type: 3}
+  - {fileID: 8300000, guid: 33a4afe3fd3780494247b066558237f5, type: 3}
+  - {fileID: 8300000, guid: 4a427c7b5b62d0331d45e81a05fc6547, type: 3}
+  - {fileID: 8300000, guid: 2d031b1d23964a90952892ce624cbe92, type: 3}
+  - {fileID: 8300000, guid: 53a72acd9cae35f79fdfc915f5ce741c, type: 3}
 --- !u!195 &19517017
 NavMeshAgent:
   m_ObjectHideFlags: 0

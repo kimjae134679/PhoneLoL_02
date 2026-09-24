@@ -1,0 +1,4079 @@
+{
+  "clips": {
+    "sharedassets3.assets:145": {
+      "guid": "01112ff5ffe9fc94a2fed753f377cf2f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/01112ff5ffe9fc94a2fed753f377cf2f/attack.mp3",
+      "name": "attack",
+      "sha256": "772e38b9481aa2b89760ce1669f606e9ef06c11c85d355360dc105113201b167"
+    },
+    "a7f145be255fa3848ac7d1dd5c6717c9:1": {
+      "guid": "5a769d69ef598df51eca03cc056468f2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5a769d69ef598df51eca03cc056468f2/attack.mp3",
+      "name": "attack",
+      "sha256": "4f9116a6877a3abbf060cee3eb47f2e858da9c58a7274b4be6eae0920172eaa5"
+    },
+    "badc06a7e012e684abdd8ca97a8bffac:1": {
+      "guid": "adf9a3f9fc79c9ffbb7c6989207ea833",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/adf9a3f9fc79c9ffbb7c6989207ea833/attack2.mp3",
+      "name": "attack2",
+      "sha256": "24fcb2f0acafe40f782af09ea5de0f730f018453b69f36a82c7a50ca146c2e29"
+    },
+    "4a2c8c70936646445919701a47a2a657:1": {
+      "guid": "eed03b97255f033bddc3182ddde9167c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/eed03b97255f033bddc3182ddde9167c/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "118a319712e25a19018c4349a29740070cf55d7e34304fa803ea30ec7171b092"
+    },
+    "52b8985e8bb82524fabd86d667e31591:1": {
+      "guid": "22ceb1a33c41c4b2400c37fc2d9a4e16",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/22ceb1a33c41c4b2400c37fc2d9a4e16/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "e3f7a08443d679ec338a6f18dc0ed9f68dda7e25dbe96f2b2c2a09e011228cf6"
+    },
+    "f776780ba1cd70a408d2a6f5479eeffb:1": {
+      "guid": "5c09e493eee4ab0aff500b5b5dcb7349",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5c09e493eee4ab0aff500b5b5dcb7349/death.mp3",
+      "name": "death",
+      "sha256": "1b80b09cfd80a4d2da73fcd224bbdaf192a4214703fb5c7d1c663959f312ef46"
+    },
+    "7587140d22458694d97c840d3b6862f6:1": {
+      "guid": "745809f93d71fde95ff7a0faa6492930",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/745809f93d71fde95ff7a0faa6492930/hit.mp3",
+      "name": "hit",
+      "sha256": "7eb20f76f84d5d9f97c145264a3944f50097a100025b1e7232685d90bd2366b3"
+    },
+    "0c8fdbea4688b4645ab54dd5cdb4181e:1": {
+      "guid": "b6c91cd30ce356ec90d637b19f687612",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b6c91cd30ce356ec90d637b19f687612/hit2.mp3",
+      "name": "hit2",
+      "sha256": "80ab2b33c29383719e0b7ebc50560dc4eed3e52294d986a1a3ed1863a312c160"
+    },
+    "2362160b4511f974bba279b33f9acd61:1": {
+      "guid": "0a1d231fe8d2d84d89e2f09beb6df35f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0a1d231fe8d2d84d89e2f09beb6df35f/skill0.mp3",
+      "name": "skill0",
+      "sha256": "62a8c9b27a07db0e126f9d44ab70f32bc1cbf14c638ed96133994f032fa1b0cf"
+    },
+    "e1a8967c84152024e899d11ed0d94953:1": {
+      "guid": "9046dab4622c6d52c9853a8414335a71",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9046dab4622c6d52c9853a8414335a71/skill0_missile_hit.mp3",
+      "name": "skill0_missile_hit",
+      "sha256": "97d5675282b10c6739c97451c80bcabe1ab523aba9d0ab9b4bd88644ad21eafe"
+    },
+    "a1cc8aa6ec2325a47bc7caf06d55aefc:1": {
+      "guid": "59a082e41d1dc9786ec4f4534fb95a79",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/59a082e41d1dc9786ec4f4534fb95a79/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "9adc8064b6338ee21f26aa15d4287febb2c3edc7df52e23fdbe1aafd08e073fa"
+    },
+    "4039521c3e6cac245851ab555cf5b1e6:1": {
+      "guid": "b398e5e6284bd77032f2e79f8d3234d3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b398e5e6284bd77032f2e79f8d3234d3/skill1.mp3",
+      "name": "skill1",
+      "sha256": "4edf5af210b9fef881262307289dc0e047dee4112837ddc257089df146be49ef"
+    },
+    "31aae358f73701f4ba30d25c03a4455f:1": {
+      "guid": "f2437ad0fe83fb4ada724ac0f20ca1a8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f2437ad0fe83fb4ada724ac0f20ca1a8/skill1_missile_start.mp3",
+      "name": "skill1_missile_start",
+      "sha256": "f49fc1870fce2f4011269d466d65933ad3864c32f5b471e482a79d23e8d6542c"
+    },
+    "815bed9e148726d4f9704b67b2c84cc5:1": {
+      "guid": "fcfa5da0b4861f19a22095079a4881d5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fcfa5da0b4861f19a22095079a4881d5/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "5cd944d5e40ac1c42f150c8c5ec93029d016f29422733e9f6db0efc7f9429fcd"
+    },
+    "fe76a64d8666b2d4ca402758b9f5f2e2:1": {
+      "guid": "34ec1243fe1f5b1ab03e6b04ab33b9f4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/34ec1243fe1f5b1ab03e6b04ab33b9f4/skill2.mp3",
+      "name": "skill2",
+      "sha256": "c7e03c17d2b65477bd7d5d90a39e755d45da32fd84879c6af3a788b2a1f1c852"
+    },
+    "f68fe44671086974bb57f773c315022c:1": {
+      "guid": "e5126efe5f22e2be22e84b5a46ca3db3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e5126efe5f22e2be22e84b5a46ca3db3/skill2_missile_hit.mp3",
+      "name": "skill2_missile_hit",
+      "sha256": "8a65af93bb6ce869ef6a606deebf1c1a61b9cc578f9a579d09386bc664be125d"
+    },
+    "b0e3b7da4fa3b5a4a8d49cfda5fe964e:1": {
+      "guid": "3aa001209e531602210ef560b929f04a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3aa001209e531602210ef560b929f04a/skill3.mp3",
+      "name": "skill3",
+      "sha256": "ab3a0f886c2a3830924501e523e14e99f4b72de7f9e46929effe3bf333486d13"
+    },
+    "3d7b17f705c11a94b9f6932e304e5434:1": {
+      "guid": "119f45a46ce7d103c434c14b6f558c3a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/119f45a46ce7d103c434c14b6f558c3a/skill3_missile.mp3",
+      "name": "skill3_missile",
+      "sha256": "2e8e536806365379517e04529a9c553004c7afa8601f2ea6468ba39672e54cd2"
+    },
+    "59b81f50b370ad74d9e6169ae1c09173:1": {
+      "guid": "cfc2c868d0f385ff34380d3636ddf3d0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cfc2c868d0f385ff34380d3636ddf3d0/skill3_missile_hit.mp3",
+      "name": "skill3_missile_hit",
+      "sha256": "530010392e108017e40510566336f57c7ae2c2b18b1c1bef6c95ad0beca64522"
+    },
+    "9c248cca77c78f54e883be1957607c4e:1": {
+      "guid": "043282383cbb193b01d0df17a067b772",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/043282383cbb193b01d0df17a067b772/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "db8fabfdc28ee252b209f36f1afaebb3f168e2127fbd53c3c786a4a3a9ff5167"
+    },
+    "sharedassets3.assets:148": {
+      "guid": "53a72acd9cae35f79fdfc915f5ce741c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/53a72acd9cae35f79fdfc915f5ce741c/flash.mp3",
+      "name": "flash",
+      "sha256": "e1c7e010621b8b32441c040bd88c03b014fff896768367cbe054b5f7c4ed7521"
+    },
+    "30a55b706c81262479c936838284b3a8:1": {
+      "guid": "dc61bb073ebe0453a4cd315e06d01d26",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/dc61bb073ebe0453a4cd315e06d01d26/attack.mp3",
+      "name": "attack",
+      "sha256": "7a79756ab1c4035053bdc6fa75356433ddfa256ad72df0c9b47b10f3187c694a"
+    },
+    "864e8b6392d0ad24eb94d20d7b215605:1": {
+      "guid": "d1cde94f9eb8247008c316a01deb1e8a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d1cde94f9eb8247008c316a01deb1e8a/attack2.mp3",
+      "name": "attack2",
+      "sha256": "8c9209cb329a546de4089b1371fe706c58118595269bac69986336dc4ef19559"
+    },
+    "b1a49f2977bb0dd4a9558ab661697aa1:1": {
+      "guid": "6477e563ae5ea45bdd502bebb92a22f7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6477e563ae5ea45bdd502bebb92a22f7/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "e364157a67525cca1b3e80ad4c200fbbbe47ffa18ef325712ac2a9b84eaea4de"
+    },
+    "b8e7e3bd5a6833341a360cf5014ac885:1": {
+      "guid": "eb8a31aaf062af463e3f29bf270f2210",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/eb8a31aaf062af463e3f29bf270f2210/death.mp3",
+      "name": "death",
+      "sha256": "afe144d98f6eb77ccdadfd862a83a4a16c1cfd69c531ed4f00d08ec9ab78d924"
+    },
+    "a0de15a5ffcea61469366e4695ae4b15:1": {
+      "guid": "9b107323b341fff413f4c43b41ed5cb5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9b107323b341fff413f4c43b41ed5cb5/hit.mp3",
+      "name": "hit",
+      "sha256": "97aa57f821b30a5980e7d91455327a659da85610139f444afe28109538f12999"
+    },
+    "54d796a510bd30a4f98d75771afb300f:1": {
+      "guid": "4d3b4547e4d2c77fec7f3d7b2f58b31f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4d3b4547e4d2c77fec7f3d7b2f58b31f/skill0.mp3",
+      "name": "skill0",
+      "sha256": "6a56d8ee358a2b34c089bf771ca329a888d809209bfe28bca2c83f99a4b69fa2"
+    },
+    "ac0b644ecaedfda4695990447ca89ba1:1": {
+      "guid": "f1d16a9cfa2dfe383dc8d248c16662dd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f1d16a9cfa2dfe383dc8d248c16662dd/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "93d331b71dac0af1714bd5874dab21325349a7d2099c30ef374917d12a3c5606"
+    },
+    "a6c00ec2004be5443b8a03c70dc1cba6:1": {
+      "guid": "771209ca1470e6c5ea56b809c63e8458",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/771209ca1470e6c5ea56b809c63e8458/skill1.mp3",
+      "name": "skill1",
+      "sha256": "cc03f15678681166a0376b5a10d958ba0fdb901cf728c91c3f541f3cbcefb4f9"
+    },
+    "1e11fcb86e941854f8deff7ff82f8a93:1": {
+      "guid": "229f2d4f2a74fb51e4dbea8b1e5c5e12",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/229f2d4f2a74fb51e4dbea8b1e5c5e12/skill1_hit.mp3",
+      "name": "skill1_hit",
+      "sha256": "92522e08dc3d1862be191449994fdb22916bc4e7b6ef54b3eb599341bbe1c1dc"
+    },
+    "c55509ec42b332244be8578b8aa4b913:1": {
+      "guid": "783f0d6129d32e834094f9b03865af32",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/783f0d6129d32e834094f9b03865af32/skill2.mp3",
+      "name": "skill2",
+      "sha256": "9facc25e76200b80cf5af9dee0dd1e66f711bf5be1b996467a2ee15957b9e58a"
+    },
+    "a8273dd049049164ebab9d3899f3e376:1": {
+      "guid": "9a980c1c775ade2ae5c5ec7cd5d51aaa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9a980c1c775ade2ae5c5ec7cd5d51aaa/skill3.mp3",
+      "name": "skill3",
+      "sha256": "b15889b823c7710bd8e600c9b9420f208670f891d6deca5282ce2e8f723bb654"
+    },
+    "006bdb2dbc984ef448ecb746054b6264:1": {
+      "guid": "83b80bb59da9be8a3069f0c9afd5af72",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/83b80bb59da9be8a3069f0c9afd5af72/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "559b482ae8fa38167949b294c24448d4b5c3dc4a59e2b4e52a12f5f7d2c4d6ff"
+    },
+    "05318b676bb902142b34d06b618830dc:1": {
+      "guid": "b3d2c78ea779cead8af653a6d10d2c06",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b3d2c78ea779cead8af653a6d10d2c06/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "dcdb9c4fde203f3818b376ea3872c63bb901811369df03b9ddcce729c4a01600"
+    },
+    "4b2419da6b22d6745853b776884eace1:1": {
+      "guid": "e9754ede980a86119b9e13484c8d4499",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e9754ede980a86119b9e13484c8d4499/attack.mp3",
+      "name": "attack",
+      "sha256": "ee906f09e5589f1e79db85ccd08529805d284121944847d7d89a4c60d787b8fe"
+    },
+    "67b052ecb15b47642b09216c262a4f73:1": {
+      "guid": "9d2430eea0577bdd348af08b1aa2c0e9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9d2430eea0577bdd348af08b1aa2c0e9/attack2.mp3",
+      "name": "attack2",
+      "sha256": "a910689b18733ff96444700f75ab91f1c031bd6c00bb5ef2af34a3b68b500870"
+    },
+    "143e73dd8698e324f81ae1dbc5fe9231:1": {
+      "guid": "4016dd31e84c85bec1f43ed2f0c13178",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4016dd31e84c85bec1f43ed2f0c13178/death.mp3",
+      "name": "death",
+      "sha256": "460721eefcee5887660fb26dfcd75587e480fa1d203743aef61ed766e9585475"
+    },
+    "4bb583728d32be5458c696a4049bad4d:1": {
+      "guid": "09e168cf364b954935d3b5a4847b26fc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/09e168cf364b954935d3b5a4847b26fc/hit.mp3",
+      "name": "hit",
+      "sha256": "2787dc524b2a123eb7d9e093a78213e26234915d705e6ebd4729843e687ee47d"
+    },
+    "b0b95763781551f4aa5d549392973a09:1": {
+      "guid": "faa62fc601c8900afa72a2154eed76e4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/faa62fc601c8900afa72a2154eed76e4/hit2.mp3",
+      "name": "hit2",
+      "sha256": "deccd960f3c7063fb3e9f823635de2e2075478dfa8961c78a6d80e63b8b8d640"
+    },
+    "fa065d9b13257f34c804703f287abbcc:1": {
+      "guid": "915db2392b08d96575f0200ca431afd4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/915db2392b08d96575f0200ca431afd4/laugh.mp3",
+      "name": "laugh",
+      "sha256": "035df310e609cdbe5d45973113b9407e432443bb9ddc923296261b544fd0988e"
+    },
+    "b254262aa7c08334daa095d8c23dfdad:1": {
+      "guid": "b6ba0b50b0f6b384bcfd94fac807a244",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b6ba0b50b0f6b384bcfd94fac807a244/shield.mp3",
+      "name": "shield",
+      "sha256": "e4eea59da4bf0f9b4e1d67d4912c36b3b9fd9785bb24d73d03c5c9fd9f2780c8"
+    },
+    "7de0d8ce8a398d94699b9f01bdf7e256:1": {
+      "guid": "ab539ab13bae7bddf894cd1972ecdeaf",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ab539ab13bae7bddf894cd1972ecdeaf/shield2.mp3",
+      "name": "shield2",
+      "sha256": "c5dc465e2afb4bc4fbaad317e1263a7f802c1316cedc81bb59673b6f3fa318a0"
+    },
+    "9c3acea1059d7f746bbf1ac5e75643e6:1": {
+      "guid": "108300d94a8c2ad9cea17f951f6b41d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/108300d94a8c2ad9cea17f951f6b41d9/skill0.mp3",
+      "name": "skill0",
+      "sha256": "a8f8881a8e5a52a0e0f6209537d41248f71ebd327f82984436c70106ccb23476"
+    },
+    "2eacecab4d50b104b8f11e230ea298f4:1": {
+      "guid": "cb63a4fc1d7ce94648acec3629aabef6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cb63a4fc1d7ce94648acec3629aabef6/skill0_fire.mp3",
+      "name": "skill0_fire",
+      "sha256": "48b75d6fdc6d4587043caee7535fea8656ad1ede7de67f895fa4a7c6e6980b3b"
+    },
+    "7e1e097bd0f1afd4bb4fa589c6c1ae6a:1": {
+      "guid": "c09d49f5afbafd5a997539faf43c26cc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c09d49f5afbafd5a997539faf43c26cc/skill0_grab.mp3",
+      "name": "skill0_grab",
+      "sha256": "23c4dae6ae7660181c8bf77adf3d09afeb2c6a7427ecbdaab17dacb6ded6205a"
+    },
+    "a43710b58161b9a4f9b4e53cb6943a1a:1": {
+      "guid": "b45c331a136f1d4d4a02ab401d84c7d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b45c331a136f1d4d4a02ab401d84c7d9/skill1.mp3",
+      "name": "skill1",
+      "sha256": "fab37f5d4a23570e8f77817fc8efc6dd0595794c4e7747570ca4c43faf72c119"
+    },
+    "1b978003c4d52124296922c6a8ecdb37:1": {
+      "guid": "f19a0ecb62ae42ea5a4bac9a17be9a33",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f19a0ecb62ae42ea5a4bac9a17be9a33/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "5b2d31780c544ef0bc0c6ae76481274bb5f10897653684c704582b709f6c51a4"
+    },
+    "5dd90b87ebf6da74ba304fdb0b8be82f:1": {
+      "guid": "248bcd581adf0ae3ad6c32e94e3a6a0f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/248bcd581adf0ae3ad6c32e94e3a6a0f/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "2787dc524b2a123eb7d9e093a78213e26234915d705e6ebd4729843e687ee47d"
+    },
+    "d52e6454b33a23f4d9272aa8b3fddacb:1": {
+      "guid": "1b4c23c8626aab1a7983525ba520ec72",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1b4c23c8626aab1a7983525ba520ec72/skill3.mp3",
+      "name": "skill3",
+      "sha256": "e0080b4746eb76f1cb870b590bd317f192593c472cbc7b1e2a66202fbfee9d26"
+    },
+    "dc5bd790a70ee3448bfea9be4b639842:1": {
+      "guid": "4502b53b76607cab07aa03d703c6b5a7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4502b53b76607cab07aa03d703c6b5a7/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "7439d2440472ee10fc4b8d0cf53c9f9056661f7f8f7d0a91c33e8d5988f5ab89"
+    },
+    "7f17f541b2d43cd49ad0dbb19676abb7:1": {
+      "guid": "002cd469dc7f3059b04885d09b7c90d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/002cd469dc7f3059b04885d09b7c90d9/skill3_passive_loop.mp3",
+      "name": "skill3_passive_loop",
+      "sha256": "16b0fff7f4b89fd8726c72eb8b6bf9dfe6e25042da001b6648a96a7f3e7447cb"
+    },
+    "3c4d6b6a036b57740a76b1b09d29f987:1": {
+      "guid": "c0ba3c83d825a44ba16329530a493764",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c0ba3c83d825a44ba16329530a493764/attack2.mp3",
+      "name": "attack2",
+      "sha256": "1db7ace646aaddba5381c677aa7fda113ffad0070fb1e9fcaf1ed059ccc457e7"
+    },
+    "9cedbf955e4da2e48b71e7066843c711:1": {
+      "guid": "5d44c835c6fe43427d52c237627130cb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5d44c835c6fe43427d52c237627130cb/attack.mp3",
+      "name": "attack",
+      "sha256": "197f837e440bb4e4f91e6c87ea8d7be82b89b7ae9fd53584756bbe3a0458fd6c"
+    },
+    "762bf3275aa58354eaab8f9522489edc:1": {
+      "guid": "57703922911bd309096f71b3e8cb1e33",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/57703922911bd309096f71b3e8cb1e33/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "5a427519c087886e4b1317aa106f67201a7ad350515b30436e67268d30cba0a7"
+    },
+    "b06e6d7d8d57ed6418f0b3c707ae3479:1": {
+      "guid": "cbaef9b8d386e9bb2a12d42a054141f3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cbaef9b8d386e9bb2a12d42a054141f3/death.mp3",
+      "name": "death",
+      "sha256": "b983435eac8d12576041fb7a564fcc19c87d8e44a81ac861af500342dee2cace"
+    },
+    "dd3b58868ef3cb047882abf82ced3faf:1": {
+      "guid": "70101b0d6e90afa991cc984873ed011c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/70101b0d6e90afa991cc984873ed011c/hit.mp3",
+      "name": "hit",
+      "sha256": "a64dc9bccf40de812c41df590af2389c73833de2a020c79ae3b4c6902c305f6b"
+    },
+    "bcde967b53b77314e971dd044ad4c6b9:1": {
+      "guid": "d1cba97a9e92ea8e03143ca58b2a6844",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d1cba97a9e92ea8e03143ca58b2a6844/passive.mp3",
+      "name": "passive",
+      "sha256": "081efc18358b42f7e88aedf3d692e6893509c5e642ab8e4b9162624abe4b1556"
+    },
+    "491326013a86fe44190cf7c9bd05070b:1": {
+      "guid": "1f02941e8993de4a8e272e21649b48c4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1f02941e8993de4a8e272e21649b48c4/passive_ex.mp3",
+      "name": "passive_ex",
+      "sha256": "f2a379ec7fcb9507f515fa1881b5b5dfaf0d843b70ba5708d7782324cc7221f5"
+    },
+    "0d24dbe43e6818a41af1717c9a3b9e26:1": {
+      "guid": "52815d2b4f64f47104104951b85f49a5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/52815d2b4f64f47104104951b85f49a5/skill0.mp3",
+      "name": "skill0",
+      "sha256": "f4d722a5dc0c98c5d4eaab4862d03617afb4d10c5a1c40404bc6dfb75d6bdb53"
+    },
+    "aa755559b9212414f8d15884e25f5c14:1": {
+      "guid": "8c3de3a910860fa74e555db9faa02262",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8c3de3a910860fa74e555db9faa02262/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "a197546a66d6ab9ef683bbe4c707f9eb1c4dcfdf25a5d3414d40c361380eecb6"
+    },
+    "5cfde1964359a6942a978991a32cea9d:1": {
+      "guid": "1cc68cdb71aad84524589a59f1ba4fcf",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1cc68cdb71aad84524589a59f1ba4fcf/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "3b8297c60a528eef5c357835d29de334555772058f1d900b2d571e0c7d9c78a1"
+    },
+    "a4fdaa660e4513443a98a92adc8e1773:1": {
+      "guid": "380d9196938b6c7f5c8ea1d4ab1f28d0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/380d9196938b6c7f5c8ea1d4ab1f28d0/skill1.mp3",
+      "name": "skill1",
+      "sha256": "b32e9afaf9a48ed9b6abf07edacaab5346bc701a4fdf9c569cda2b162314c746"
+    },
+    "620ba89726fc11a40913685bc38d278d:1": {
+      "guid": "6a67ea8824a483442c5c97200c3ff7e9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6a67ea8824a483442c5c97200c3ff7e9/skill1_ex.mp3",
+      "name": "skill1_ex",
+      "sha256": "a967358c2746473de75063292fe19f2532103d8c6d8aa400637b445e997b519c"
+    },
+    "066a1351280e1704092fbe26b81051e0:1": {
+      "guid": "f01441a5ae71fb653ae4e6c44061aafb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f01441a5ae71fb653ae4e6c44061aafb/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "59081a442e1e224afab0dc591daef7d1aa035123f8a59cf8d18fdc249a45db2b"
+    },
+    "037084e1b877ebd41b1f4d1ae2554108:1": {
+      "guid": "cd14b37a569187fe18549e33ef3fea21",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cd14b37a569187fe18549e33ef3fea21/skill2.mp3",
+      "name": "skill2",
+      "sha256": "8a40e5c6ab196dc8b9a6d4f92244c1df4c3aa30702596b4a52b9d6a2ff117c3f"
+    },
+    "c97a40ab36e9780449d4e1513810cc16:1": {
+      "guid": "1e8ea4b672e1d6f5acdfe267252b4774",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1e8ea4b672e1d6f5acdfe267252b4774/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "9a55c35258c778c9380e1ea0c45334d681ad6060a7612b6e56692c3b80b354ef"
+    },
+    "eab19a3439e2e7643a83828ae4fe82ec:1": {
+      "guid": "c8a809a8228b7c0a75ae9611eb7b0938",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c8a809a8228b7c0a75ae9611eb7b0938/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "27d18a743676fbda76d449d1842db573306ee5637df5b140efe72f4eddb8501c"
+    },
+    "113cebd2c5496694487902ee16cf3788:1": {
+      "guid": "41f6a26cc93698c141fdb29f03dc4b64",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/41f6a26cc93698c141fdb29f03dc4b64/skill3.mp3",
+      "name": "skill3",
+      "sha256": "56d9e7cf3e8bc6da6d5637029450c2356f04a74f260b847a1dc6bc981efb361e"
+    },
+    "73a476cd517fd204dbb392b384a1d711:1": {
+      "guid": "aa5eb1fa326d2e182ee7c38619a3548e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/aa5eb1fa326d2e182ee7c38619a3548e/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "f17ddd6deb8d69ebdd5f519c56028709752820038ca7491c238f63965e52c4d5"
+    },
+    "dd16f367bcfe5c34aad75c67bce9d2e1:1": {
+      "guid": "0f8d604823fcba5888cca4d75ce45041",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0f8d604823fcba5888cca4d75ce45041/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "1d5741ab2544e4cca633d4b09598e6c239c3b22fc6583711cb66a3b2c27c67fa"
+    },
+    "b3c9cc62f95bade4ab44c8e20146ce4e:1": {
+      "guid": "8889d73eefe35cc036dbcc5c0ef3e3d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8889d73eefe35cc036dbcc5c0ef3e3d9/attack.mp3",
+      "name": "attack",
+      "sha256": "6147adf2b6cde0a9805597f86cdd2824a255628d16027da8b12ad0d7faee05e6"
+    },
+    "627cdcd6c66be6745ab20945972f2242:1": {
+      "guid": "655729db3ff19e1e827043a075487e21",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/655729db3ff19e1e827043a075487e21/attack2.mp3",
+      "name": "attack2",
+      "sha256": "3d6a8158850d1983bc7a712ac06c348bdcd402bd8e85a78b62f4aa3eb2647291"
+    },
+    "6444a89fa9724a749a4db1c9eb8dbcec:1": {
+      "guid": "51b42a54b78ab66c7071ea1cf4ab7f5e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/51b42a54b78ab66c7071ea1cf4ab7f5e/attack3.mp3",
+      "name": "attack3",
+      "sha256": "7fc95cf168c9af3ffd62e4493bf8689100923c02e32e2b8e31361658ad066441"
+    },
+    "32b9d67857c35f243ae6bdeaee969739:1": {
+      "guid": "2d9ebda1c4039571d8f849dbb92bea32",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2d9ebda1c4039571d8f849dbb92bea32/death.mp3",
+      "name": "death",
+      "sha256": "6deb6817e6a6bdacfc5ffb70ce319d4aaa105259a64b9810ce75487a1a01ddd7"
+    },
+    "46e7f566a71b2eb4d9b7a111987b52ca:1": {
+      "guid": "7c530019b7707e371eeba0a4dfa4d8d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7c530019b7707e371eeba0a4dfa4d8d9/hit.mp3",
+      "name": "hit",
+      "sha256": "a62973fa7813051fd08351a88ea2e3017b84eece2c0a4cfbfa0d4eab48786e3f"
+    },
+    "fc42177123bcc0542ac490c2660d0c7d:1": {
+      "guid": "ad1ec1fdf1294280c59d9bd34b481dce",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ad1ec1fdf1294280c59d9bd34b481dce/hit2.mp3",
+      "name": "hit2",
+      "sha256": "94694e0a28bc45cd739db2efbf318b1e15f4423a6b57b0c242a7269a91b42f69"
+    },
+    "8a4e9bb836af42949848daf162a56e3b:1": {
+      "guid": "ca826204e9c6dc321574d42bab35a9c2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ca826204e9c6dc321574d42bab35a9c2/hit3.mp3",
+      "name": "hit3",
+      "sha256": "0fcab5000ae9df569054fce31c5e5b64e4956458d1b133944e215c5cba600ea5"
+    },
+    "82f5b58e012116c4089d060042015e83:1": {
+      "guid": "76b6bca6e93828ac50eb476484c86eac",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/76b6bca6e93828ac50eb476484c86eac/skill0.mp3",
+      "name": "skill0",
+      "sha256": "31af15325579d8ef6d2c7dd957f22352ba2d870c31891425c7082d143399355c"
+    },
+    "0adcd4ae658dfd84891795972e75bee9:1": {
+      "guid": "967c53d2d0df02214185627096d99ea7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/967c53d2d0df02214185627096d99ea7/skill0_in_hit.mp3",
+      "name": "skill0_in_hit",
+      "sha256": "901ebb0350a1f3888624e1962d32e42e2b0e5e3f33143b9955758b260bea2528"
+    },
+    "9e1d26a6bc7a0eb488dfb987e026ea2d:1": {
+      "guid": "cd0b4b46e73963f48128288f9d2c7195",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cd0b4b46e73963f48128288f9d2c7195/skill0_out_hit.mp3",
+      "name": "skill0_out_hit",
+      "sha256": "d27a3c552f9753bd00b57e88eb33ab4783ad7f0ae935c8806e8f1e36f11c5ac4"
+    },
+    "6485538b56de162419fa3db2cc18de6e:1": {
+      "guid": "fc53d8d0b14a0d12cb57c47f862e4239",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fc53d8d0b14a0d12cb57c47f862e4239/skill1.mp3",
+      "name": "skill1",
+      "sha256": "ceddf492d8cc68cce0220af05d309372ad81496b78664358b3dc101fe1db1336"
+    },
+    "bf98dbc49270b3e4a9b61e9d42827aff:1": {
+      "guid": "a19ef191b84881a639751c20cc9f05d0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a19ef191b84881a639751c20cc9f05d0/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "5bc8ce8fd7d4fa1d21cb4558ade20b17a105c7a8f45965c25e0c82e666acf717"
+    },
+    "a4b94e53cfb1777419c11482ef48e28b:1": {
+      "guid": "6069ed3fe92a0e47643634446b20fc81",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6069ed3fe92a0e47643634446b20fc81/skill2.mp3",
+      "name": "skill2",
+      "sha256": "0ec901f964dd765aea907a37be11c50ccbd16c787142fec3dd9b0eeda80375a4"
+    },
+    "3cb4ae92a6312144f891f0c342c17425:1": {
+      "guid": "f802919ccc4521934e0ebe9b6f193f95",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f802919ccc4521934e0ebe9b6f193f95/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "e0c422cc0ce5cbd02efcd30891cb6aeae5689019dc3a72f983a0d0ee3e6df70d"
+    },
+    "78c7b2b190220a54e8dc0ce4e67a166c:1": {
+      "guid": "d87eb1323dcfe42f5fa5fdf097acbb01",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d87eb1323dcfe42f5fa5fdf097acbb01/skill3.mp3",
+      "name": "skill3",
+      "sha256": "2570ee3a10a8a46d37fb02f2508f68a77d23be7f77a5ae9d06811a7e59356bd9"
+    },
+    "21c21a3e412c83f43aff71da8d067ed7:1": {
+      "guid": "246d5309b38c97858956aa70a86bd8fb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/246d5309b38c97858956aa70a86bd8fb/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "ba7a073fbbbbf32e242f832692e0b2fad528e48f0b3e3693ec5fe66832550e3c"
+    },
+    "58932e6bf24d4e04b82863f779e1aa4f:1": {
+      "guid": "aae922490d82ccdeb47c52cdd6a2991a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/aae922490d82ccdeb47c52cdd6a2991a/skill3_kill.mp3",
+      "name": "skill3_kill",
+      "sha256": "f2c8555f4efc5112e85cc023de5fd202c88c4d1d5a7654b62b1029258ad5667f"
+    },
+    "e4613db8fc293074e899902b57730556:1": {
+      "guid": "2e7fe3b633e0b40574af857e706c7ce5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2e7fe3b633e0b40574af857e706c7ce5/attack.mp3",
+      "name": "attack",
+      "sha256": "65694193628987bca3c63c58cc23686c73dd69c5cee9da8d6148fccc429245cb"
+    },
+    "0706fd5f6ed21c7428ae582da00c4c8b:1": {
+      "guid": "0fbc80c8e1942969aadafb6aa1ce302f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0fbc80c8e1942969aadafb6aa1ce302f/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "d3559ac18dd13cb1500117193fc52ee672e5eaf962e86347771bb9f4b3bed9e2"
+    },
+    "2db6ee906ba89844c8411c3f4f94dd98:1": {
+      "guid": "183d4e7f1ace1663aa64f08f4f891572",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/183d4e7f1ace1663aa64f08f4f891572/death.mp3",
+      "name": "death",
+      "sha256": "e4f0645fc1725754cc25d325a620fea4ff9b06ea75f8feece3bb8d4696578eda"
+    },
+    "de70328a7fda06f428e1d015b5972692:1": {
+      "guid": "bea08ee81dd408eae3ef1099ac909ef3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bea08ee81dd408eae3ef1099ac909ef3/hit.mp3",
+      "name": "hit",
+      "sha256": "be4c0a0484f70f48e3c92599e9534a162c88886574805ed24798082357e9798a"
+    },
+    "4096614c3b36f804b8551bba17f2097f:1": {
+      "guid": "219ad922896be9c38f9cbc1682a57836",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/219ad922896be9c38f9cbc1682a57836/skill0.mp3",
+      "name": "skill0",
+      "sha256": "af6d69c942fd655fb81ebbd128e4330b86ee971d65fade3519f0039672d2df78"
+    },
+    "8a31f2144214b4d4aba689446d207adb:1": {
+      "guid": "fd2d8e5aa23ed526840b7d8775665251",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fd2d8e5aa23ed526840b7d8775665251/skill0_missile_hit.mp3",
+      "name": "skill0_missile_hit",
+      "sha256": "db867026991efabb443746609cd6fc64b12808e5806adf0feb58fb9c4369b34c"
+    },
+    "daec4d67242d5bc4cbd037d5df5afc30:1": {
+      "guid": "14766a062272bf87e35b23445fe0e07e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/14766a062272bf87e35b23445fe0e07e/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "511f7877761833921becd39d53e5ac09bfab621812a5e8d2c67d306a2225a44c"
+    },
+    "e2b8bd0fb2239d5498c780c3a750e9cb:1": {
+      "guid": "b28a1648faafc0be4592c5626e0811cc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b28a1648faafc0be4592c5626e0811cc/skill1.mp3",
+      "name": "skill1",
+      "sha256": "71362259eb1f4635f024f2e1751fafc15c5788421ad00251d26cf02cd4a14123"
+    },
+    "a13bf9247f2d71a4b89c411d12bcfa31:1": {
+      "guid": "5eea7eaa239a8d56694d5a46afa918fe",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5eea7eaa239a8d56694d5a46afa918fe/skill1_missile_hit.mp3",
+      "name": "skill1_missile_hit",
+      "sha256": "98734660910995d91c436fca47a84f00f5287d9f395c9acce485ed0de8c5a209"
+    },
+    "8fbe571f7dd4c1546ba1976cc9c28bbb:1": {
+      "guid": "22cd406d7f164c9d0dcdfa725733117c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/22cd406d7f164c9d0dcdfa725733117c/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "6d7f4f3f769ceb66a68fb5704a706821cba1ba05459e66dfbbb434dc5755837b"
+    },
+    "2d7c02e4ceecd5e44a1ef8c438b261a7:1": {
+      "guid": "a4b33bb32b5f6d2cac3d51c1f41dc119",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a4b33bb32b5f6d2cac3d51c1f41dc119/skill2.mp3",
+      "name": "skill2",
+      "sha256": "9c6f7b5dcdf7870fde1e3078c38cd620e13819e223c9e50209b471bee106ed88"
+    },
+    "7dc125fbb5510384798f7cd094b59bef:1": {
+      "guid": "fa9c02d6cf605cab2a7e7589f7a255fd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fa9c02d6cf605cab2a7e7589f7a255fd/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "b3c719e84756fd5d583b29ab132c328f9198ebb08ff7b8a832c9c66a27410feb"
+    },
+    "03855fae257937b49bff97128a2f7982:1": {
+      "guid": "129a4c2a5660ede68676a0a9f1aeccb7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/129a4c2a5660ede68676a0a9f1aeccb7/skill3_missile_hit.mp3",
+      "name": "skill3_missile_hit",
+      "sha256": "b3ef9059f1310f349bfa1b8a27479a148b124a8de80bc942a28db8e75af8d1ce"
+    },
+    "2d33ec936b8750c478078965014ce5c3:1": {
+      "guid": "067a5cdf5c5f490f3e75a8c0c5ea4ec8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/067a5cdf5c5f490f3e75a8c0c5ea4ec8/skill3_shot.mp3",
+      "name": "skill3_shot",
+      "sha256": "bb353dbabfd4e97da94691c27e01c2e409cc098552c2d14fe23d4f1caf7aeb16"
+    },
+    "2a7754c5253cec743a239e6eb294aba7:1": {
+      "guid": "53192e6eb4e01f31159bdbb49e1cbf6a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/53192e6eb4e01f31159bdbb49e1cbf6a/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "18dcfe924832fa8bdc9e0bcf58e337321ad22ae6535a4a33950386c41aead7c6"
+    },
+    "0fb71dfbe35686740b243b0b70626779:1": {
+      "guid": "8d9c89fb7b3b4e92d98be84c82e8d68c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8d9c89fb7b3b4e92d98be84c82e8d68c/hit.mp3",
+      "name": "hit",
+      "sha256": "cc973bc71c255f4eeff287952b61654ac8427f2d2a8ac44028bb76e45e291562"
+    },
+    "106e28e85b5056d49a43c38124f77872:1": {
+      "guid": "b43116dc9fca92c4f16b22170f459c38",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b43116dc9fca92c4f16b22170f459c38/skill2_ground.mp3",
+      "name": "skill2_ground",
+      "sha256": "002906795991a9409dde910a391b0f13e2d6850bd32432fbb8258c063865647a"
+    },
+    "255b57c2b89f7d24b87021e810bba251:1": {
+      "guid": "1247fbe99f71903e92bd8ae121bbff0f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1247fbe99f71903e92bd8ae121bbff0f/skill3_idle.mp3",
+      "name": "skill3_idle",
+      "sha256": "fc513793c89ca515522dad9da3b0bcfcf06a1da97ecf611be9b8292c5c31ab2b"
+    },
+    "264d7009f68a60642892d47ac4c4f9d6:1": {
+      "guid": "f8cd9c1fe1cbbbaa173c1dcd6c139822",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f8cd9c1fe1cbbbaa173c1dcd6c139822/skill3.mp3",
+      "name": "skill3",
+      "sha256": "5b012e08acc41f1a56304a714d800a59d5ea0302f0a11de5880c9fed8eede707"
+    },
+    "332fd7396c8ecb9479af4a2518ce8d58:1": {
+      "guid": "efbc4b7f7abad7ffda669b7249253c41",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/efbc4b7f7abad7ffda669b7249253c41/skill0.mp3",
+      "name": "skill0",
+      "sha256": "8493d165ed9161d69314431ef037819901c3464cb45b44da2533f261a39664e7"
+    },
+    "4c57770413879114b8c1786d1bab22fe:1": {
+      "guid": "99bfe34834787cfc547c0dbe23b7cd00",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/99bfe34834787cfc547c0dbe23b7cd00/death.mp3",
+      "name": "death",
+      "sha256": "5143b6e2ad54a349976c2be1bd54c56b0a934374fd8f5d6081bd36f9b6b67525"
+    },
+    "4e41e752edf9365428d82b0271329d33:1": {
+      "guid": "f3e4e2d83f2e2752bfc1e43a7bad28a4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f3e4e2d83f2e2752bfc1e43a7bad28a4/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "59a159f5000f46a626eff416b51a8835776a7ac34fb9d94935ceb7a7489f07a2"
+    },
+    "4f196ec0f98386d42b5c0c40df9c8c03:1": {
+      "guid": "2c57145637ea1b166a0606682e01661f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2c57145637ea1b166a0606682e01661f/skill2_2.mp3",
+      "name": "skill2_2",
+      "sha256": "ec90d0ce73a6ff1973026b76a74571168d86a605eecc08709f62424dd6223572"
+    },
+    "4f77a3907100feb46962c8052e9b5b2a:1": {
+      "guid": "c11b77fe20855c5005781f43f4a32560",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c11b77fe20855c5005781f43f4a32560/skill1.mp3",
+      "name": "skill1",
+      "sha256": "3fc5d64b16cf0efaf5dc5fd6b839dcf32dc4501e9effb87287bbaafc0cddf15b"
+    },
+    "6620b7dfec6547343ae219c77443902f:1": {
+      "guid": "3af562e94406ff5cbdc19523f3f53593",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3af562e94406ff5cbdc19523f3f53593/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "8872470b45b0ed5e4aff06dcd9e7e1400f7e11208eb2773e54bcc05829e40eb6"
+    },
+    "76525f937b42fa649896f858ef575200:1": {
+      "guid": "07f057cc3ab271b71acf88238d7d7bd3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/07f057cc3ab271b71acf88238d7d7bd3/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "4e0b6b9394f6f99cfc539e49130f84f02c46191f0bbe1e3c32f83bee69fe9e67"
+    },
+    "944ff75b526c7a740a255944d477f7be:1": {
+      "guid": "e9b7e7acd14e5e1118a242d82fd9fad3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e9b7e7acd14e5e1118a242d82fd9fad3/skill2_0.mp3",
+      "name": "skill2_0",
+      "sha256": "895bb0894b34c05419591dd1d783ed3001f68ee76beab77da4415e7388495071"
+    },
+    "96dccdb73b6b01f489ffd24e71204d26:1": {
+      "guid": "0c207a7536d96ed5414ff6ff52dc2d4d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0c207a7536d96ed5414ff6ff52dc2d4d/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "d5e744a99f87eceea2a399f659f525635c39320ba0eaf3ec333d77b649b6706c"
+    },
+    "ad983d107519b5a46b87e90ee8478ecd:1": {
+      "guid": "6431b228ae93c85f1efab3a14a5f2101",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6431b228ae93c85f1efab3a14a5f2101/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "c43bddf32910c1795dc50101b518ebd10c35a506a8bd86fdf211a6fcfda60554"
+    },
+    "ba68eb482a383d944bd0e05410e3f86c:1": {
+      "guid": "78db576bf5fffe001f0a3ea7341e5a25",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/78db576bf5fffe001f0a3ea7341e5a25/attack.mp3",
+      "name": "attack",
+      "sha256": "8dd6a711c3a582608f410aef63ca5ca09f820d7cd0e32f6e67f36e5871a1c6a8"
+    },
+    "cb678ff6d3be63f409fceb13e1733763:1": {
+      "guid": "45846925fa26665d0e9ce8b56375d583",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/45846925fa26665d0e9ce8b56375d583/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "6430496a814f5b3209dbcd20907eb59f09a8b708f70301bc971043f0dbda16e9"
+    },
+    "cb6d0ba463e54f440b2a38a91152a3d9:1": {
+      "guid": "eaba98f1e8b83a24756f699202e8f277",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/eaba98f1e8b83a24756f699202e8f277/skill1_hit.mp3",
+      "name": "skill1_hit",
+      "sha256": "c3fb8e16eb8a3cd3797a450b96c795f1e09fa73e18feee143a2dae61b84bf00c"
+    },
+    "cd3e382842a41e44c941af6a907618da:1": {
+      "guid": "6af41c3669681bf6508f26c95c784a92",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6af41c3669681bf6508f26c95c784a92/skill3_shark.mp3",
+      "name": "skill3_shark",
+      "sha256": "a89acd0f6f1e00e68dde3e1a162e932d1d322118f4a50b50383061cdef8cb392"
+    },
+    "d54b8e0d097416644b23a7a7b738f08e:1": {
+      "guid": "5b1362a5bf39f74d093f1e87b423d793",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5b1362a5bf39f74d093f1e87b423d793/attack2.mp3",
+      "name": "attack2",
+      "sha256": "008dd84933edbf2d0a0d994cbb3e5d10d4370a4764bfa9fc5632ca10279281c2"
+    },
+    "d7777e2239ea2d24a8a491d8ab5028a6:1": {
+      "guid": "8c87f034c715de58e15f1e51e758147f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8c87f034c715de58e15f1e51e758147f/skill2_3.mp3",
+      "name": "skill2_3",
+      "sha256": "0ea71a194bd6cfd84006f02498fb62c0bde1d42a2ecf6dc161e12d46aa85e623"
+    },
+    "ded75246ea0a8864b92b23a77f817112:1": {
+      "guid": "d7ab2d80c35547d7a3b10a255599c55a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d7ab2d80c35547d7a3b10a255599c55a/skill2_1.mp3",
+      "name": "skill2_1",
+      "sha256": "2c10b8283467adf68d3d8c6129daf1225afca82b1550a8a75173183db3241c5f"
+    },
+    "f68026932ac21af468d442dcefdfe369:1": {
+      "guid": "8e6e84d5af9f7cbf1e7c0d06d523cd81",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8e6e84d5af9f7cbf1e7c0d06d523cd81/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "2952aed8e0de61b1f9b029d7de75559d432e5abaac09a5b42fdf9f6310b0a262"
+    },
+    "6bd0b3dd7bd81c942956e6768e615d4c:1": {
+      "guid": "c484634006fb74990b55b1c664ce2f68",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c484634006fb74990b55b1c664ce2f68/attack.mp3",
+      "name": "attack",
+      "sha256": "1d1f5c34f05df26981e385ea625ead78f4484c5a09ad3feff0babcd625fbe733"
+    },
+    "e1a18104b71456f42b7d2a0a441d900c:1": {
+      "guid": "31b43abf6e7d5e545b9911f7f7f1d9fb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/31b43abf6e7d5e545b9911f7f7f1d9fb/attack2.mp3",
+      "name": "attack2",
+      "sha256": "66a41df8e006eca9e3a87a7eaefe39a6fb00b047b702c4656ecd035cf5ac9ae9"
+    },
+    "9be9b0034929a7448b34be89cfecb24d:1": {
+      "guid": "4158a765a18017e992d052b74b0c4d2d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4158a765a18017e992d052b74b0c4d2d/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "19eb74fe483b94ea97846a3ddc1744d1782479d3eca2c30e26e0208d7c10bc60"
+    },
+    "9912b781fdeb0314ead0d2437e9198cb:1": {
+      "guid": "9731b789285e47f131a324e117745224",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9731b789285e47f131a324e117745224/attack3.mp3",
+      "name": "attack3",
+      "sha256": "b6ff02697787aa1211d376689b7832e15f7c839defae9520231810c8dca1e145"
+    },
+    "0ca47ba0171ffab4e98956df51aaf0cf:1": {
+      "guid": "9e0388477fa378d1b1b499a230f9f52e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9e0388477fa378d1b1b499a230f9f52e/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "8a1bde69248df5c2067057e0abc32f5a2248d25efdc9011a69999652bc882cb0"
+    },
+    "3c1d7a555b16cd04fa28dc3b629367b9:1": {
+      "guid": "92fac647f15e136ba44c28518aec7ca6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/92fac647f15e136ba44c28518aec7ca6/death.mp3",
+      "name": "death",
+      "sha256": "e6a162509a46c536603b729bf5026665f8a3b5036bc2d40a83581ee13745f315"
+    },
+    "799408274231c9e48bd60ce209fc82d4:1": {
+      "guid": "bf799ffa88e1162d54e04c2e228db7b8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bf799ffa88e1162d54e04c2e228db7b8/hit.mp3",
+      "name": "hit",
+      "sha256": "2be9e256fdf77593881fb13c2f2e7b0617662c9d598c8608a47017e3fd4f8a9f"
+    },
+    "fccc46869a3429043b1b3ad8e678baf5:1": {
+      "guid": "09cce8132f032c69ebcdbd5b093b7647",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/09cce8132f032c69ebcdbd5b093b7647/hit2.mp3",
+      "name": "hit2",
+      "sha256": "a4897ce0a930706a8d885208129bad9e885503eaf865805a0df4148ff764b0d3"
+    },
+    "0113062787ebf584c87ee1b0052af2d5:1": {
+      "guid": "3394d4f9015b1d6cf503d29aec720c0f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3394d4f9015b1d6cf503d29aec720c0f/hit3.mp3",
+      "name": "hit3",
+      "sha256": "4def807203cb54b024ac0c1e6d9db1c7a3153b51f29b23cf93f1ab91525e7693"
+    },
+    "44e4ea38089666a44bd736c84ab5a631:1": {
+      "guid": "5d774f5ad166c321f2249e2cdc312d73",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5d774f5ad166c321f2249e2cdc312d73/skill0.mp3",
+      "name": "skill0",
+      "sha256": "073dfca51d70dc98159536eebb5acef088b17e266ffc3dd0a8ff07500b2dfbe2"
+    },
+    "500d2b57b91477d49bb052e223124747:1": {
+      "guid": "5f3a72372581c8d972b27f2dcff77de1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5f3a72372581c8d972b27f2dcff77de1/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "b9b94bbb215ff574b72e375bed3105f67ff0c32b390705191abdf84e65c47e7b"
+    },
+    "4571eb0d59259704db8989b44c26e0ab:1": {
+      "guid": "b6c4b609f0fbc38d56e0d92893b5ebe0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b6c4b609f0fbc38d56e0d92893b5ebe0/skill1.mp3",
+      "name": "skill1",
+      "sha256": "b0575415ad31f432c81c71c63c58dfb1aef2cfbaa55ef1b9dfc046fd9b902685"
+    },
+    "352c6527692ec444b89fc82db905b32b:1": {
+      "guid": "1361a06590bc5116851ca7d72c302547",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1361a06590bc5116851ca7d72c302547/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "36edc10270c910dedffe9157261e92387611381a11cfcfdab82c26ef12455110"
+    },
+    "7f9f81e4497d5974aa28f3dab3dbf275:1": {
+      "guid": "fa31745a2ebaee77113e17051f3ebd93",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fa31745a2ebaee77113e17051f3ebd93/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "639004fac99e934e76297c3538afa766549db30232aaa87693eadd41e1e6ca07"
+    },
+    "0922a3639b896d043b3105ce0d1b9adb:1": {
+      "guid": "765f43a5b8636d67ee91652868f207bf",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/765f43a5b8636d67ee91652868f207bf/skill2.mp3",
+      "name": "skill2",
+      "sha256": "2b769c7887258a5a1bad0da8f0e8d6f6a6230626279c6af884f247c5fa875fac"
+    },
+    "3f23f45b91da3bc42a1ad69770bb4759:1": {
+      "guid": "1e50c4d010ac58638c8c426e4ac1eff6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1e50c4d010ac58638c8c426e4ac1eff6/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "b67fe7e6edf471c2500e7e6aed1bfafeaebf4b88beabf18a18e5f633227e1945"
+    },
+    "329e055983dc0274bbfee21381999ba7:1": {
+      "guid": "f0427da08455ce469cb6a7288e2bc314",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f0427da08455ce469cb6a7288e2bc314/skill2_loop.mp3",
+      "name": "skill2_loop",
+      "sha256": "1e811c2c1609d638c5027bdb679a5a3d7994047d6102b3ff385851d6c3cb660b"
+    },
+    "9f9652f25ca92174186d9d4a1864b229:1": {
+      "guid": "96eb28aedf2903c4e2db637908b9563d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/96eb28aedf2903c4e2db637908b9563d/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "50067dba236ffc35e2f3ca62c8b22dc262f670ad89b445298fc3fe6300aa210b"
+    },
+    "f4920d6daab865a468a9b37c7eaea398:1": {
+      "guid": "a152f8fcd84fcb6dbbafa345220361fa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a152f8fcd84fcb6dbbafa345220361fa/skill3.mp3",
+      "name": "skill3",
+      "sha256": "2b290895ddc1d3f09acbf549646df5272b1bba72cfd0a317555d4068d9a83715"
+    },
+    "484cbe5d5e24bc842b74b5aa602c88f6:1": {
+      "guid": "bf576797623bcc382ff365c239d841d7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bf576797623bcc382ff365c239d841d7/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "6935b2fdf9f46fb07194e43edf3ae4b4fd5219febe3882cf18bd45a6542ce93c"
+    },
+    "7d12f28d66a1ca343b07fe9303b3c923:1": {
+      "guid": "359888ecf1071cc7c54fb48ea75410d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/359888ecf1071cc7c54fb48ea75410d9/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "b00289de5daf3a8b16e8ecf8398238951e5cb5050cbbc23c3a6cdaffae6b6d1f"
+    },
+    "549687feb2e6f6b48a9f68009cac412e:1": {
+      "guid": "15e4b0be1c62bab65b12b20bed0764da",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/15e4b0be1c62bab65b12b20bed0764da/attack.mp3",
+      "name": "attack",
+      "sha256": "74fb02728288cc0c892a71b5deaa9c8bc816cc40786afd8950e307bc2859c1b9"
+    },
+    "4fad3f7aa14e9704fa7f55546aa73d1a:1": {
+      "guid": "fb1e167d3074561ea13e02a688d793b6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fb1e167d3074561ea13e02a688d793b6/attack2.mp3",
+      "name": "attack2",
+      "sha256": "5fae5e8df09a57293b3355989e19dd76d3901aca5be985de3354413970791b5d"
+    },
+    "444eb33d31f3b0f48840feb9d85f4e9e:1": {
+      "guid": "a1bf07fbb5fc18a80f8edbbce13d85e2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a1bf07fbb5fc18a80f8edbbce13d85e2/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "80567bbe67aa474c0ccc39267ede447e663d1770b2b11db79771a4b10828fc2a"
+    },
+    "8aa372d182db82d42b306f8392cf792d:1": {
+      "guid": "7db5b51b70015b02a40a2181b3250483",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7db5b51b70015b02a40a2181b3250483/death.mp3",
+      "name": "death",
+      "sha256": "49af71274e29eadfd13c45f5ce9fb0364b3d4d8fbcc87dad6d3310e1dcac26dd"
+    },
+    "217ff2c4074790e41a456776bc34b00d:1": {
+      "guid": "0ddb252e2126116b4efb91d86644f3b1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0ddb252e2126116b4efb91d86644f3b1/hit.mp3",
+      "name": "hit",
+      "sha256": "5462379c9431f746bd09ca3d51911a5779166833dab5d4807e6c823a5c8c700c"
+    },
+    "6f7417fc129fd0e4fb3be75b19ed6cc0:1": {
+      "guid": "e4e452f1f3b12da5cc471a7acd4cd139",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e4e452f1f3b12da5cc471a7acd4cd139/missile_move1.mp3",
+      "name": "missile_move1",
+      "sha256": "ee8fddc73fb5068c93d3efce99ab3e4fe7d85d1bdaa8d3e0cb6d43baad4d622f"
+    },
+    "25dd8c75bbe998e4b8f20ef4f9a437d8:1": {
+      "guid": "eb3449775ef2073cfc8093393f9697e9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/eb3449775ef2073cfc8093393f9697e9/missile_move2.mp3",
+      "name": "missile_move2",
+      "sha256": "ee20dea126d0750328bafc806878074c1ba8a8661d6d66b05ea4c5a5492623fd"
+    },
+    "62d807085aa3736438fde8c29d84148e:1": {
+      "guid": "38a841c6454be8c7ca7b60ef0d41a314",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/38a841c6454be8c7ca7b60ef0d41a314/skill0.mp3",
+      "name": "skill0",
+      "sha256": "b5130a9f1c8ada0d5593768d52cefa54702550fe21057c42c668302a7be4c364"
+    },
+    "384f5ac6ec1e6bf4cafdee7503ce2ea6:1": {
+      "guid": "0d96fc71f004f7939643165ecfb61a2d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0d96fc71f004f7939643165ecfb61a2d/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "bb1cdc7459e718837c37896bd6a5de0692f31730ac9f03e609ed3042daf775fe"
+    },
+    "f4717d1dd717daa4885031c9ff809708:1": {
+      "guid": "9d02f7bcf9124a3027af58a794c961cd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9d02f7bcf9124a3027af58a794c961cd/skill1.mp3",
+      "name": "skill1",
+      "sha256": "85e01f3813416d7b3a3dfacf872a47596dc487211521698863d829b8d12f43e0"
+    },
+    "1dbef0f2d50724b4c8b911f81805c5e9:1": {
+      "guid": "1c238ba9c7363ccea7eb4ef744d8f1c8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1c238ba9c7363ccea7eb4ef744d8f1c8/skill1_ex.mp3",
+      "name": "skill1_ex",
+      "sha256": "5fec3997b809f9ae1a6455007239178915b32cae064c59f95079304744be2a62"
+    },
+    "7449b7a50fdf9544891f106bcd9c6834:1": {
+      "guid": "4419cc55522896fe8d554fa1e73ef55f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4419cc55522896fe8d554fa1e73ef55f/skill1_shot.mp3",
+      "name": "skill1_shot",
+      "sha256": "f7fe461b7c088905976a096b8e0bfdd142e5cc6de5ffa4fac6829d35454dc734"
+    },
+    "3c502f565686caa459ca6df9c7da05d0:1": {
+      "guid": "b7720290e0cbafea68ccc6baf302c4a7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b7720290e0cbafea68ccc6baf302c4a7/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "59c5cea89e3b94ca0e3893f21ef74a7fdb44e6e8a24355ee9b005304ca220240"
+    },
+    "94eb25b49f4d9ae41b88b0161775f6b2:1": {
+      "guid": "9675a8dea48f709b8be97cf70ddd6d28",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9675a8dea48f709b8be97cf70ddd6d28/skill2.mp3",
+      "name": "skill2",
+      "sha256": "d65bb6b2f95c84b74c063c0a442e057b7b3299788fba5ac6036a8640a02507fb"
+    },
+    "86d174de9fce76f479f7fa45db470ed8:1": {
+      "guid": "58bea942bdd496c686e011c0836a51e7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/58bea942bdd496c686e011c0836a51e7/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "e23c0dbc08e1ea17331a8e737f1e049c6872f219a9fa4f77172a81857da5b62f"
+    },
+    "bc9250e4e12dbd74b882d561cbd2828d:1": {
+      "guid": "03e4582ef01ce470d4f3cd8d21042d53",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/03e4582ef01ce470d4f3cd8d21042d53/skill3.mp3",
+      "name": "skill3",
+      "sha256": "fac7c0c86f750896583e1ba55bae3ec6ec727d55c9c1a381c4aef54489284589"
+    },
+    "44387d0ed4bd1e845ae8b7a3b5f73c7a:1": {
+      "guid": "d52094d52f73c16f50328f76709f593c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d52094d52f73c16f50328f76709f593c/skill3_ex.mp3",
+      "name": "skill3_ex",
+      "sha256": "5815f028371e813372d8b4d50adc2c79926e5ef7bdc11e6b6296c3c66b4d64ca"
+    },
+    "81c7bf8bbe9569f4d8b2a47bc0695de6:1": {
+      "guid": "f2d1d694a56ca1787bfcd179f7dc0057",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f2d1d694a56ca1787bfcd179f7dc0057/skill3_shot.mp3",
+      "name": "skill3_shot",
+      "sha256": "b28be064c4897cfffa4758d6c2a271c9dcb3f620fb94924a807ad7951dd0d7c5"
+    },
+    "6f10ef7b531f16b45bd5c8733df8d121:1": {
+      "guid": "792183c20a8e84eeab2a0bd06580c185",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/792183c20a8e84eeab2a0bd06580c185/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "ca4ecceb3b101ae7655e546c21f5297d911f15d707eb0810754131b3bcf65c88"
+    },
+    "a0c8f16cda7e7b245b8476d7c605e70c:1": {
+      "guid": "6f1cd58a7d998d29dc5898671c047411",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6f1cd58a7d998d29dc5898671c047411/attack.mp3",
+      "name": "attack",
+      "sha256": "ef0e06923f83dafadb94fad83d45d541d42fb672fd4a3d14a8af8f5cd3a4a711"
+    },
+    "d913dcc8e55a0e3468a171116419dbea:1": {
+      "guid": "026410391bd84f72abfde808017a6036",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/026410391bd84f72abfde808017a6036/attack2.mp3",
+      "name": "attack2",
+      "sha256": "24fbddf3848b744a94b03e00d444571f3193ffa30d54cae5d123c818ab6905bb"
+    },
+    "f0fd8fe4ff8dfc44fbcf25dc64176f03:1": {
+      "guid": "36ee327c3d4c085ed0b25842723f9f9c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/36ee327c3d4c085ed0b25842723f9f9c/attack3.mp3",
+      "name": "attack3",
+      "sha256": "19df141c15aea0f05711de7c5d1afd6cc69fe3ab2972c85f463d1dd9b7934f56"
+    },
+    "90bb123935defb140960a7edc9b00af5:1": {
+      "guid": "8450102906ca732f145a8d46a0697cd8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8450102906ca732f145a8d46a0697cd8/death.mp3",
+      "name": "death",
+      "sha256": "6071347fac0dfbbbe0d19fbfe601f2ca296605ac6e4648af24fb70a2218f69de"
+    },
+    "34679c0ea495e92419ff831e86d8e00d:1": {
+      "guid": "b00ff097cda39638cb82e715212eed70",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b00ff097cda39638cb82e715212eed70/hit.mp3",
+      "name": "hit",
+      "sha256": "293bb84288d82238ee8f76821bc031a399aeaab9dcf1bee50423177f8672d1c6"
+    },
+    "8a484bfef46827f4a85be863ff2aa95d:1": {
+      "guid": "b726895c1e63f0a0125d64ffbb6ab6ae",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b726895c1e63f0a0125d64ffbb6ab6ae/hit2.mp3",
+      "name": "hit2",
+      "sha256": "92c28e02254063a4a7a9ba26024b5975fc3ba7a9206cf35fe1aa738b80414479"
+    },
+    "5aa1b620d8e69b04fb70a2e8da24bc53:1": {
+      "guid": "d393af61757ff24c4674a30d00c662f8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d393af61757ff24c4674a30d00c662f8/hit3.mp3",
+      "name": "hit3",
+      "sha256": "d73e33790f736a9b6162d72822c7dce72d3ed764405f11ee7b2e87cad76ba7fc"
+    },
+    "8519dc0c38510104e8f690490dfa5962:1": {
+      "guid": "5ff3b86d01a68acc6b63e12b1392cd40",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5ff3b86d01a68acc6b63e12b1392cd40/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "3fc4d60e381eed9d4024be03f133e1ec51d268067e56eae329832bf0f8d37bed"
+    },
+    "09217160094d45f4eb0449e7641f2cd3:1": {
+      "guid": "fc8259a78c0187ff24ce674f7e21ab56",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fc8259a78c0187ff24ce674f7e21ab56/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "0c3bdd42083a84f25c3ebe32730950c95b98be1e5e6a8fbd0bdeb04eb9353bf8"
+    },
+    "f3c0ccaa9f96a5c4e9d0d5d4cc298967:1": {
+      "guid": "5dee33e4f7e8fb1da47ba2444cc29146",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5dee33e4f7e8fb1da47ba2444cc29146/skill1.mp3",
+      "name": "skill1",
+      "sha256": "f8276986a53ce48c2cd3f72bc30f52bbc8ee3e2efb84d5a7644db105adffe004"
+    },
+    "5042eb2fd2660744b9445139c5e28091:1": {
+      "guid": "918c46d33c0ce1d1579b826815ffc47a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/918c46d33c0ce1d1579b826815ffc47a/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "aef9c807dad9ac9c74852aae25d444d72b7389dc1111b4463261e57d6a2fb504"
+    },
+    "93651a73c9ecb944da4384b65b46978a:1": {
+      "guid": "98d16f3d4516ed2f46c7c1818ae00822",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/98d16f3d4516ed2f46c7c1818ae00822/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "7a79c608ff716f6cad7795dafb0152e0857015f2b85b5a5af5e723b630012b17"
+    },
+    "a6f9bb46633c22340ab6d8ec837c860c:1": {
+      "guid": "fffcfa5b321d083a0c427c374af3fac8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fffcfa5b321d083a0c427c374af3fac8/skill2.mp3",
+      "name": "skill2",
+      "sha256": "9d01892f3e5bbb792b6764f4fdac2c30eb6769e952306f850f58e35b485440e0"
+    },
+    "c148019ccc46f2a41a527483115de1c0:1": {
+      "guid": "0b485f79a8bd4c537a84381aa5689245",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0b485f79a8bd4c537a84381aa5689245/skill2_1.mp3",
+      "name": "skill2_1",
+      "sha256": "4097bfc1808b64dbd01fdf734a453de7543798c51504dd8d133971b9e0ae14c7"
+    },
+    "2a01a6e8a47c1524791152c6671f8558:1": {
+      "guid": "a975e1b82d3553ee8eba89b607519e65",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a975e1b82d3553ee8eba89b607519e65/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "312272d6d5b6931a20024c9ab7fd42d2e200a7e0b4ac3b963ac8c2ff52e6159f"
+    },
+    "eff1243983672d14e9c200e4e38e49e4:1": {
+      "guid": "b4c6d438dcf9099ec469e243aa88659c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b4c6d438dcf9099ec469e243aa88659c/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "f96818e2913e97bb8a5df79c905fb9998c90d751e4f62f5eff6489ca7d7755bc"
+    },
+    "c0e1f0d2f2fccf04eb756f084b9b9bfc:1": {
+      "guid": "be1f1fd92ccc04f8c7f748d602d60d02",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/be1f1fd92ccc04f8c7f748d602d60d02/skill3.mp3",
+      "name": "skill3",
+      "sha256": "38bf1c8b1c6ed940fdda2a7adf4b099d3c19038b18fc67d06b0464dada14a403"
+    },
+    "e664c52146d4a7040a01f7b2aade60fe:1": {
+      "guid": "221cb5b48d8cf927b9ff0e2a95771376",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/221cb5b48d8cf927b9ff0e2a95771376/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "db9622d4689d5bcba3ac947ceb359930f1abc38d4d1d7ee4c1bd2101cd011d64"
+    },
+    "2446eb82c972ebe43bef4c2f83af18d9:1": {
+      "guid": "6f2faef0d6e1b66d1d5be36fe0aee3be",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6f2faef0d6e1b66d1d5be36fe0aee3be/attack.mp3",
+      "name": "attack",
+      "sha256": "0ce24bc566b97691def61b646fb8b7221927b35c740e7a534093f7e0fde0bd2b"
+    },
+    "85bce277bd297404094607e30c303e05:1": {
+      "guid": "0aef48c3f57eb4fecc26b974912e0a28",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0aef48c3f57eb4fecc26b974912e0a28/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "7835ed61ad3a5074581c91325400b391a9ba0c89b4043dbf6fbeda32d87dd386"
+    },
+    "ebc3e748597ea7e41abe35b83d6209d7:1": {
+      "guid": "e02ccb452443a369fd7351ae18ffcab1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e02ccb452443a369fd7351ae18ffcab1/death.mp3",
+      "name": "death",
+      "sha256": "c19f74f3e18dfa1a9fb1b66fd9ce738c9a5d2ea27c4d5da5359331d272147f10"
+    },
+    "ac6186f368e47e44bb268793dcd6f931:1": {
+      "guid": "be3017d5e21048cead94c9505b36fd11",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/be3017d5e21048cead94c9505b36fd11/hit.mp3",
+      "name": "hit",
+      "sha256": "794411aee78a6c6e16b39437fa788dd429004d4f2e9b77c46826c1c6fcfb218c"
+    },
+    "3de0ff2d52c3d584793fe3ff7c4ece1b:1": {
+      "guid": "9ad3e7ed680849cd1900ae6b609f5687",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9ad3e7ed680849cd1900ae6b609f5687/skill0.mp3",
+      "name": "skill0",
+      "sha256": "59ef1b5c2f4b61692d52bc1e5b5c2b633699687bfc8c2e221ad144ad2a16e9fb"
+    },
+    "abb1c1898614d5944bfc50bde9bfc5ea:1": {
+      "guid": "3c32077e526d4292a8aa4761727ee8fb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3c32077e526d4292a8aa4761727ee8fb/skill0_missile_hit.mp3",
+      "name": "skill0_missile_hit",
+      "sha256": "9bfba0bfa0351c240374ea195c8f07618548bfc132b0da9a88d0b1dd34aa787c"
+    },
+    "3c777dbe993dc3d46b7f572920fc81b0:1": {
+      "guid": "bf83b844cc346b361fc769213a373079",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bf83b844cc346b361fc769213a373079/skill0_missile_loop.mp3",
+      "name": "skill0_missile_loop",
+      "sha256": "7052058e1e01ac40bb1bed62d7f307824f7ca8f003b89cf92cf859eae4390471"
+    },
+    "57d6849cd64e7ae48b8edef524edf0ab:1": {
+      "guid": "e752eb72bfdbca1a4bf4a412ebf7a802",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e752eb72bfdbca1a4bf4a412ebf7a802/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "de30474a99e523ab56c8c65ff719c1276afcb9064606641361b4277cdc850e7e"
+    },
+    "4a4a3b76a9477f1499c1393745f72382:1": {
+      "guid": "ae1d3dabe21c77595ae646fa2ac961ae",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ae1d3dabe21c77595ae646fa2ac961ae/skill1.mp3",
+      "name": "skill1",
+      "sha256": "63b4aec250298610fa6643c35849b065d85e10c02b99c2f679c1e612ec67ff1a"
+    },
+    "0becea696f54947429743558778a6a67:1": {
+      "guid": "2598dad2bcbdc175b69748e0af1b9a1b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2598dad2bcbdc175b69748e0af1b9a1b/skill1_hit.mp3",
+      "name": "skill1_hit",
+      "sha256": "1f379e0099e57fb9e6feece48f6ba681123c3b5796209cc47b56fe0173520dc6"
+    },
+    "4feaf472510dcf144a866f0dda60af75:1": {
+      "guid": "be4b8c73bc68d0ec88524b6f8a873272",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/be4b8c73bc68d0ec88524b6f8a873272/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "39648ee3fbe77eae3a31845c432476306b1b10050d10c31362fd8dac7f2f87cc"
+    },
+    "c14b9b48e5e33444abaec0e2f7ce7db4:1": {
+      "guid": "cee8e809e046dca1591b65b8877ab26d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cee8e809e046dca1591b65b8877ab26d/skill2.mp3",
+      "name": "skill2",
+      "sha256": "1f4cc159ad36fa79b29c4dab2784e80f7dcfe33a75413f5c4a1fb9a45868d765"
+    },
+    "4a374b3e359dfb54b908707f5e08435b:1": {
+      "guid": "af505ea0b18a3d0f6876c8c165ca8d46",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/af505ea0b18a3d0f6876c8c165ca8d46/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "ac20e912a4e1f6f92ba4d5e69edbfb0bd1e4abc6a153b1fdceb8dd89d7dee417"
+    },
+    "303905c24218f194e82ddac1b0a15e4f:1": {
+      "guid": "c43436c21b884c6c302631389a0e9a74",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c43436c21b884c6c302631389a0e9a74/skill3_missile_start.mp3",
+      "name": "skill3_missile_start",
+      "sha256": "3c01e7c8462a99550502a50ec3d4258f9ff4df12ff91a350eb56d8a2d567dd03"
+    },
+    "bd51dba40bb7d5c48a8b33864d165749:1": {
+      "guid": "a1d7438cbab823f367f559ab10ced30d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a1d7438cbab823f367f559ab10ced30d/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "31c4803e42d908561a5ce2d3971b2bc2c825cb87de1d0e5e049b185c152f06d9"
+    },
+    "808dd79baa33f84488c943b259e40d1f:1": {
+      "guid": "497470225e40862abde2ffa72414be64",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/497470225e40862abde2ffa72414be64/attack.mp3",
+      "name": "attack",
+      "sha256": "00a12ef6b89b58a7508291f9467ee5f52349de1cc94f1ef9b22513428fad8e04"
+    },
+    "8b23605ab24a9154bab661fc82656ea7:1": {
+      "guid": "11e16d4e801aa6c365559fc4ad367d46",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/11e16d4e801aa6c365559fc4ad367d46/attack2.mp3",
+      "name": "attack2",
+      "sha256": "6ff2f0ef4873c945126318a8b6e29b740491dce87094d95ea2033e96b185703b"
+    },
+    "3bbf16964fcb53744ad55dd45b2a469a:1": {
+      "guid": "52fea3873d990f75e2c4f0860939ab33",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/52fea3873d990f75e2c4f0860939ab33/attack3.mp3",
+      "name": "attack3",
+      "sha256": "37f2bed4ded337ceaef44a35d9222f5af68878bedd56b44131ddfc4b2badce2c"
+    },
+    "19f45e8ea2fb64347b7aa2126378f63b:1": {
+      "guid": "9536d92af65f289bdbaffdac24991a0f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9536d92af65f289bdbaffdac24991a0f/attack4.mp3",
+      "name": "attack4",
+      "sha256": "42ea0b627d3271e1ea7f9f0e28ebcbb1ea87b25d2117801169f4a7e7e7078990"
+    },
+    "7189c99e93e4f924bbd2d4f3cd522b63:1": {
+      "guid": "3c2ec9864aeaf145c2fa298d2b654ed2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3c2ec9864aeaf145c2fa298d2b654ed2/death.mp3",
+      "name": "death",
+      "sha256": "6ee2bec07bd95380af80e3a55760c2a72ea95939c6e2552c58c09c5689b73736"
+    },
+    "ddd8739e6341e5a45b687a1d74d35ddf:1": {
+      "guid": "d618c5c83f5b402734742bf0ffabc5ea",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d618c5c83f5b402734742bf0ffabc5ea/skill0.mp3",
+      "name": "skill0",
+      "sha256": "b649f4180678c9c6f6b4c3d4d4dc2ac21680b9c7c4f4610d38b668a6542e3014"
+    },
+    "5927618b980f3684ca5542e14b5e8771:1": {
+      "guid": "0e659c0ff1ef59be276946063d3053b4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0e659c0ff1ef59be276946063d3053b4/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "0a09c41dc2022ca38ac05161187715bc2f3ea48944b5c8964c7b567cd20ed802"
+    },
+    "d3f9fc876d5a1b4409ddd72e8c4afbef:1": {
+      "guid": "387b6d4d6f4621e57cbb24d50e597344",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/387b6d4d6f4621e57cbb24d50e597344/skill0_shot.mp3",
+      "name": "skill0_shot",
+      "sha256": "e17df1b0f6ca47e53b3c351e5332af990e7e84541ecba4c758612d35c8b28b06"
+    },
+    "927a2136b41d69e4181de6576881468d:1": {
+      "guid": "c723ba35ce85fe7c1c2e9772859c81bc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c723ba35ce85fe7c1c2e9772859c81bc/skill1.mp3",
+      "name": "skill1",
+      "sha256": "cc7be5d292f83ad2e65acb76781738a4c2ebdb9ae7e2c07b675d608e89653c1f"
+    },
+    "ce00722191453254186c5c907e2295ac:1": {
+      "guid": "b54253d53d6dde4549960abe94573a04",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b54253d53d6dde4549960abe94573a04/skill1_ex.mp3",
+      "name": "skill1_ex",
+      "sha256": "10cf58c2b8484b219009be442a3c16dafb9e8d027df725a62da8dbbe1167b514"
+    },
+    "09869be331ce73c4985273fc1376d104:1": {
+      "guid": "35130d3166a9faeea9a1d20d1ad82a66",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/35130d3166a9faeea9a1d20d1ad82a66/skill1_hit.mp3",
+      "name": "skill1_hit",
+      "sha256": "d3cffbfb1ab91ef2cb87b6f4a76a2eac297496429a3b5d167aff8ec89954cfd3"
+    },
+    "fef745a610bb9e641bbd7d0a20a412c7:1": {
+      "guid": "1860d89fe7e2b4f3abb3f30733ed487b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1860d89fe7e2b4f3abb3f30733ed487b/skill2.mp3",
+      "name": "skill2",
+      "sha256": "702dff42a40f2a3fead610f0b290b7fee2ad6c4e7b3fdb523a61369dfb479faf"
+    },
+    "da8d2d3ddaaa1984aa665f47491e80d6:1": {
+      "guid": "198a9e0036c18a73143a4efe16ab4668",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/198a9e0036c18a73143a4efe16ab4668/skill3.mp3",
+      "name": "skill3",
+      "sha256": "aa145c4055acecf4d897634146d3afd2b71d6c0491dc86d900c2d2d7ed734ab6"
+    },
+    "69515889b55c3774891fa1b2f760b47d:1": {
+      "guid": "06a1c2764f274e02104d096171bd21a2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/06a1c2764f274e02104d096171bd21a2/attack.mp3",
+      "name": "attack",
+      "sha256": "13d7945423a3af5304976b945c78762172df50abcded57548e82fba230ec9160"
+    },
+    "38bdd5aa6d6a8b64c90f76419a3f3a2c:1": {
+      "guid": "415a8d9b5a9e5aaaf1e9833794fba9d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/415a8d9b5a9e5aaaf1e9833794fba9d9/attack2.mp3",
+      "name": "attack2",
+      "sha256": "e47d64fc2f62e8094aea1ea34cac154c5b4bf6e4b5a2e5c4346b06191e60dd60"
+    },
+    "470a73d434d13ce4682e9e19e50400ae:1": {
+      "guid": "621093a79e6dc3a7b661dda69fd35882",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/621093a79e6dc3a7b661dda69fd35882/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "70c1b5a1b234edc9660fd2899fa9937db242474e6a1513bc91578c9d047de5f1"
+    },
+    "b3536c08d8549f14fb43b0163018094b:1": {
+      "guid": "7fc7d8d7d745638e75137926170fe84a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7fc7d8d7d745638e75137926170fe84a/attack3.mp3",
+      "name": "attack3",
+      "sha256": "8354b2ea054d2f5e6985a269d98633783c04ca3a18dd61f4770cd5cfe5770b46"
+    },
+    "4fb50a91915a81445b5b56bbad83a6ff:1": {
+      "guid": "bfcb29283ad5102f0fce6c30bad1958a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bfcb29283ad5102f0fce6c30bad1958a/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "d3fb143e51de168ef9d65e3b9faebc3d68e5647d17f2cf2cbf11a24f047cfc0c"
+    },
+    "d9b755dd8ced0e14086455942b4f212d:1": {
+      "guid": "47a8e5a807e52a3428a21487d19fae2c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/47a8e5a807e52a3428a21487d19fae2c/death.mp3",
+      "name": "death",
+      "sha256": "83bac0609772c4a1fabb2bfa9477de8144d03c3bb13684f8c0bfc6bbb6c9c867"
+    },
+    "2735f423d39972242989ac83d24d58c8:1": {
+      "guid": "ab26a6d49d61413d8797e7689bd6e82b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ab26a6d49d61413d8797e7689bd6e82b/hit.mp3",
+      "name": "hit",
+      "sha256": "bcce8063c0b4222aa0892fac8ef7c7e28775a97a5fce610d5baba9bb89e19903"
+    },
+    "822415fe567c0a7468232f69a0e5ca6c:1": {
+      "guid": "52ff16d3f4aba4b78bde2c2aa689716f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/52ff16d3f4aba4b78bde2c2aa689716f/hit2.mp3",
+      "name": "hit2",
+      "sha256": "1c7682ca6a8245dad985702a4e4ae259c9f5e0f4a3838981fd7c57f959727601"
+    },
+    "68833d43802197f4796e2604ceefaf06:1": {
+      "guid": "c88ddf11b3ceacf3be6e96a4686b3055",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c88ddf11b3ceacf3be6e96a4686b3055/skill0.mp3",
+      "name": "skill0",
+      "sha256": "ec6fb3e8249af4c96073d79a89ffc8ddf528e01c5f12686b3619a26d282e30f3"
+    },
+    "df84508edc6104745916c867b3e04f68:1": {
+      "guid": "889c5885f739af5cbda198e71bd73bd6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/889c5885f739af5cbda198e71bd73bd6/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "5e65c8b3b07996f3a07f0a3f48dd6734d58012a3094b617ecfb918a6a8d574fb"
+    },
+    "397bbf5cb9c5bce49983d94413345700:1": {
+      "guid": "c3a49a42114c527dfa945264c9d1d1e6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c3a49a42114c527dfa945264c9d1d1e6/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "e7474621e80d88d487385000f2985b83163129c11242954f0ffba83a0e427a29"
+    },
+    "f235575578f7b624bbc405df31dd8cdb:1": {
+      "guid": "a66718d8fc6b66452d831f07cdf4b4b5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a66718d8fc6b66452d831f07cdf4b4b5/skill1.mp3",
+      "name": "skill1",
+      "sha256": "beb1e3a2bd44fc3d383edda5d7e9164270c79c1e3bc7b7b5acbde1d9d72b3780"
+    },
+    "170c2a89da6c9104e8e0ba50ccc6fa5c:1": {
+      "guid": "254158688a6bfc42de54544fa77cfdf7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/254158688a6bfc42de54544fa77cfdf7/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "f5eeb331d6212aa51a73f90f5377fa213b6c4f46437763ab8d0f3d387e91fa28"
+    },
+    "0da5a07e1b3d0a9429041dbc71d38305:1": {
+      "guid": "aa2e2abc1591c834e101ebb9a4c26131",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/aa2e2abc1591c834e101ebb9a4c26131/skill2.mp3",
+      "name": "skill2",
+      "sha256": "cb772311d8f8e4ca35431218f7abe9c9e4a4d71097f9d946860bdb7ccc8474f5"
+    },
+    "5c793acfee96a7349910138559304e29:1": {
+      "guid": "3c26daf64a9f7923f828fd28aadae0eb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3c26daf64a9f7923f828fd28aadae0eb/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "cda32cec560e5b802ca7a22b1d3caf7040adaac35e15eae1ba6cf23552986357"
+    },
+    "3f601849149ea00488f9e41e81139af8:1": {
+      "guid": "1732349054e8c237abcd0b6ce047ba28",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1732349054e8c237abcd0b6ce047ba28/skill3.mp3",
+      "name": "skill3",
+      "sha256": "0e5e5f8e8fe9bf86b9fbf1476fed4640d8024a6b30c4ac8a452e76f31c048426"
+    },
+    "d397b8ccefef50549b4f371cf5ac917e:1": {
+      "guid": "d82615714ee25c9c7f02e00bbebc437e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d82615714ee25c9c7f02e00bbebc437e/turret_hit.mp3",
+      "name": "turret_hit",
+      "sha256": "6ca810a442b4c7220fca58eb257677aa8ca1e86df66f69689f52c205a20d03a9"
+    },
+    "02cada58b631eec4a924bffdaf249962:1": {
+      "guid": "f33f3e998b334d459d006b3b5ef74217",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f33f3e998b334d459d006b3b5ef74217/attack.mp3",
+      "name": "attack",
+      "sha256": "7540f6a5c165e98925e43c09c10b60c2eef92827ad3b8d171bd9b303bb440e3c"
+    },
+    "2a2ca0ca5ccde0746a0a5121db817094:1": {
+      "guid": "30c270208fe3a8d2de53737e532c1594",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/30c270208fe3a8d2de53737e532c1594/attack2.mp3",
+      "name": "attack2",
+      "sha256": "65e889537c517e2bace702e64ee56dea9bae8f601814328492470188880a6028"
+    },
+    "45eef7940f84ac143bdc4134a5305f19:1": {
+      "guid": "3f3c59f5357dd1a001a645357d12559c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3f3c59f5357dd1a001a645357d12559c/skill0.mp3",
+      "name": "skill0",
+      "sha256": "600d645dc0f2524f3bc9379fae7f99ccb048a675b18d8809499caccebe3870c1"
+    },
+    "63081b81174b0154898121d5a6d4387b:1": {
+      "guid": "6ff0c4ac06541316b44397e8237d5cf2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6ff0c4ac06541316b44397e8237d5cf2/hit.mp3",
+      "name": "hit",
+      "sha256": "a475330160619af6fa3e8eb6490bb8dbdf5fbe94fff24401075f160b33194f1c"
+    },
+    "6619becb1a77cc84e9382f2d35cc529d:1": {
+      "guid": "d1fcffbaf093b0176b58a3b60cfa1ae2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d1fcffbaf093b0176b58a3b60cfa1ae2/attack3.mp3",
+      "name": "attack3",
+      "sha256": "78afb1446e508dcbaa0c09fc8ee6529fa9de44dee3f5981241b4178f3418d2b5"
+    },
+    "93b9efb4416c86042b73dbc2fc92ac43:1": {
+      "guid": "083562b9a47719e7427e4099b4661986",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/083562b9a47719e7427e4099b4661986/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "10b64838f054a4c1a7aea32306943fedb8437618ff2d2c25f67f414cf9b7f103"
+    },
+    "d0ab4d4a9902adc4b9a55c2e07647847:1": {
+      "guid": "f3b39446dad013efea1a9b529d846ea7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f3b39446dad013efea1a9b529d846ea7/turret_hit.mp3",
+      "name": "turret_hit",
+      "sha256": "b179e05a7241b7166cd773622ca41e59bf08a95c020f34c90f1a883a2d472f34"
+    },
+    "471d3a8e956c0b84faa92a4999bfea05:1": {
+      "guid": "6464ee27e5c86d8d45792073814c8901",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6464ee27e5c86d8d45792073814c8901/skill3.mp3",
+      "name": "skill3",
+      "sha256": "4895f763b6d6a0af6369ea59ed9a2786b7df0508f3bd9be68f69387315893175"
+    },
+    "a266306033f3e464c908825c9a8ec7f8:1": {
+      "guid": "4c5706abc67b91e7cf43c07138d07663",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4c5706abc67b91e7cf43c07138d07663/skill2.mp3",
+      "name": "skill2",
+      "sha256": "9fc0f918dd36e21d069d7dc1532327eb31b780ebefa4b1c0dc3b2fdbfceb2077"
+    },
+    "bdbf598608f4e6b45b71fa60e265e6a4:1": {
+      "guid": "824e1d87d5da1fe9be61bf2e3ba6361d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/824e1d87d5da1fe9be61bf2e3ba6361d/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "82b7d42e362b80ab45d1528cf733fec386b0ec78d460b44c9dbaf8c59a16025d"
+    },
+    "d6d74dda65f393045a03cf61dbc978bb:1": {
+      "guid": "18549184d45ab2cf8ce52fec0809f8ab",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/18549184d45ab2cf8ce52fec0809f8ab/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "eddf4f43ed7c42d35d96bfad6db46b099d5bd54372c44ad7a3139ab2a475488a"
+    },
+    "efe27aa51309c2149a7a40890cda4e9e:1": {
+      "guid": "544aa44a529829b473f2826e298a9204",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/544aa44a529829b473f2826e298a9204/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "9daf67524776e993079b7c875d635b60a5b03e86a3303c7dee9656b66bf812cc"
+    },
+    "f01bed2e882962046ab70311203e04ea:1": {
+      "guid": "e8303ee35fccc876078381fd9bdd593c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e8303ee35fccc876078381fd9bdd593c/hit2.mp3",
+      "name": "hit2",
+      "sha256": "4795c66a7b302e3de144e7b7c85f54b54c8b36390b71d869fec3fa768ea8f0ec"
+    },
+    "fb09e037b4981aa4894518e7e9374967:1": {
+      "guid": "337a2814e460d7eba566baaed6a6ceba",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/337a2814e460d7eba566baaed6a6ceba/skill1.mp3",
+      "name": "skill1",
+      "sha256": "1581a684a8a0bfab974f1e3cee34fede50093150d7d84ba46f6cbb2ff65186b3"
+    },
+    "01299c19ced2dfc43a2c05936b394327:1": {
+      "guid": "0331fcf934a9a822f54c420195a2ae51",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0331fcf934a9a822f54c420195a2ae51/skill1.mp3",
+      "name": "skill1",
+      "sha256": "f966be05fec9e9ded175bf9f141161f303f87c9eb464741ee0ae5c455a4243f0"
+    },
+    "0f682be5894d762449996c8ff49b10fa:1": {
+      "guid": "43e8890a5ea0d60548e6f830526579aa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/43e8890a5ea0d60548e6f830526579aa/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "186db9f163148e2f7b2beafb4115e3299a8b2474b99fef6b198ab96ced51f706"
+    },
+    "24373c4e8892e254ba19ee8670bd2d6d:1": {
+      "guid": "6327f1dc463c06f7ff9f6007e2b6fd9f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6327f1dc463c06f7ff9f6007e2b6fd9f/skill0_drop.mp3",
+      "name": "skill0_drop",
+      "sha256": "886cb877d935a37f43fca9eaaad04d5e5c3ae84b8e9cc3dec95b723a38f435f7"
+    },
+    "3d06337e43efb2a41907a8b0df18d723:1": {
+      "guid": "7a0287f07c55d2025a79779c51f7c7a8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7a0287f07c55d2025a79779c51f7c7a8/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "092d1eab0f6f17da4ed92f27d7ea6c2dc3d512f468786ded9b699b006c98d9aa"
+    },
+    "3fde961d765f8814dab2400c28c2a589:1": {
+      "guid": "5078c430ca02395c32c4b1748afaf882",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5078c430ca02395c32c4b1748afaf882/get_axe.mp3",
+      "name": "get_axe",
+      "sha256": "a1736ebde8574e0b6482c9bd1bc18358f3137a2e3cbef61499d7cfad9831f2fd"
+    },
+    "4480c2a373cd3ba4997d89988de4d462:1": {
+      "guid": "cdd1ca37eb516198da5919aba6301f7c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cdd1ca37eb516198da5919aba6301f7c/skill3.mp3",
+      "name": "skill3",
+      "sha256": "23956a599eb41f20e3143b4487a59ea323811574973346daefbbf8dbc9d98dbd"
+    },
+    "a6036a64c10bc14409d55507554a521c:1": {
+      "guid": "e20fe1e0384226e71d5202c40134244c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e20fe1e0384226e71d5202c40134244c/hit2.mp3",
+      "name": "hit2",
+      "sha256": "e10ca08574bc2f3b77596a901880e65aee136dcd16fd0253d4cb5a7857000ca8"
+    },
+    "a79097aedc4b236409ed3633fa6a1645:1": {
+      "guid": "c56fb2e376fef3d440b47920614bb4d1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c56fb2e376fef3d440b47920614bb4d1/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "c60485881d2222ed7d4bf4ebe34a31c008e2d7eb2938971ecabb2531a5f39121"
+    },
+    "cc581b0fda8d4b547872a5adeeb4a722:1": {
+      "guid": "eb937ebf8167a75587764a6f17b5ed46",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/eb937ebf8167a75587764a6f17b5ed46/attack.mp3",
+      "name": "attack",
+      "sha256": "eaceceea7297addd926283c1c1ebe5b4f7324bf8565e5a4a5400af91fa129c47"
+    },
+    "e7e0518b7795b4542b7eeeafae8e7508:1": {
+      "guid": "ca0a850dfbbef8a47e03e53daf70d09f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ca0a850dfbbef8a47e03e53daf70d09f/hit.mp3",
+      "name": "hit",
+      "sha256": "b74e7266e9e5c26aae6866c38073fd4e835f1242829fbbdba79390840b699948"
+    },
+    "eca607e519a118749bb00a334dd8675c:1": {
+      "guid": "685e0f4087267bce4ca453cefeb73ce9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/685e0f4087267bce4ca453cefeb73ce9/skill0.mp3",
+      "name": "skill0",
+      "sha256": "82ecc5f9708db257f020f62207a72d375ad5cc57dfd2417d79a18036ceef97d5"
+    },
+    "ee9ad191ab8e6194fb5ac474578dee15:1": {
+      "guid": "5949936dc2b63285cf33188f4c1b2fbe",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5949936dc2b63285cf33188f4c1b2fbe/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "7d9fa04593699860ba8d8961f772a5674131d83058c8655dd9f10b7e10d9b1bc"
+    },
+    "b94740851f4df5549a5e7607090819a8:1": {
+      "guid": "220a03489a03292b0308c4a61816f61d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/220a03489a03292b0308c4a61816f61d/attack.mp3",
+      "name": "attack",
+      "sha256": "1f4212afdd02e9c281bbff44a92b5823e1e079e1771253296a350e591d3431de"
+    },
+    "597f096c2e97e1043bc49794926ff33b:1": {
+      "guid": "14aa24e52aa7ce7ff481b483ffc1bb97",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/14aa24e52aa7ce7ff481b483ffc1bb97/attack2.mp3",
+      "name": "attack2",
+      "sha256": "c3fc25d9941023ee9320d7fd9591080eb4b79ace67cdf6c76af231d193c5412e"
+    },
+    "a26c40234f7d51446be47542783123b1:1": {
+      "guid": "cf446becc862c066a6e6e7dbb1a1f275",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cf446becc862c066a6e6e7dbb1a1f275/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "cf99cf5119f07ea5b3ed1f0864ea776226238bc2ac944742efafb14df84d75e0"
+    },
+    "3087875bc87dfee4a8e812067582f2ff:1": {
+      "guid": "1b807e50df60c3756a28a489afed5bd6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1b807e50df60c3756a28a489afed5bd6/attack3.mp3",
+      "name": "attack3",
+      "sha256": "c86c15e8da3dfa7a1bc207b151ee583304cc8d110d7472a14331343c124b1cd8"
+    },
+    "2d6660484d5496b4daa7d2c0abac4ce9:1": {
+      "guid": "c878cafbb6d54fb9e6e83fc916470907",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c878cafbb6d54fb9e6e83fc916470907/attack3_voice.mp3",
+      "name": "attack3_voice",
+      "sha256": "e3793edbc426d919f9cddc8a936821f2d7de27908af8104e54ab76313b2242c9"
+    },
+    "141aad3a6b5cae549945ba6fe2a090b7:1": {
+      "guid": "ae01e0b1a59d49fc53e038ec56bc5dc7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ae01e0b1a59d49fc53e038ec56bc5dc7/attack4.mp3",
+      "name": "attack4",
+      "sha256": "798fe57d1b91a6db189d6bffbef5c1667825e57dd3d6d343348f12e8af485e31"
+    },
+    "2f03343f61a55064ca7fe90e80445911:1": {
+      "guid": "2c5859c07d6225e60924a69045f35e28",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2c5859c07d6225e60924a69045f35e28/attack4_voice.mp3",
+      "name": "attack4_voice",
+      "sha256": "68bf1a28d44f64cb71338910d264525aa2994c6b73a599cb28f5f2b686521fe5"
+    },
+    "e365a9839489597428fdef0f25433a79:1": {
+      "guid": "b4e393a31d9b89b046a0597ff7710e50",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b4e393a31d9b89b046a0597ff7710e50/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "7195fb5486d58a27b385aa8e1e3654bb993763d1e7b4e33ef0dc157395f176fc"
+    },
+    "77b64e972fff22e438259041a7596261:1": {
+      "guid": "97f94253ae79faab9650301fc786d8a7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/97f94253ae79faab9650301fc786d8a7/death.mp3",
+      "name": "death",
+      "sha256": "131d989f536693cbf5c9d8f15fd90d6b04cb82cc0b8cf8c6cae3501ebf08e34f"
+    },
+    "eb378ab7b325bc04dad22cc8a7de62a3:1": {
+      "guid": "977cfe88fafd203b29fb61c39ae9b431",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/977cfe88fafd203b29fb61c39ae9b431/hit.mp3",
+      "name": "hit",
+      "sha256": "7308d6c8b348ec8db0b639a3fcec8f5f7de187916256822007907f3577d35f3a"
+    },
+    "688e65fea9595d845b96affcd7215974:1": {
+      "guid": "2bfc6bb904da495d8053db83d9b903d5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2bfc6bb904da495d8053db83d9b903d5/hit2.mp3",
+      "name": "hit2",
+      "sha256": "dcdcf881ab95e5d4a3deb40345eaa2c17260448f36419eaf11034f10d3e7e6b9"
+    },
+    "840ce14d9f0cfd14f915919441babe50:1": {
+      "guid": "20c81c6ec372f63e4adbff86a79c7105",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/20c81c6ec372f63e4adbff86a79c7105/skill0_0.mp3",
+      "name": "skill0_0",
+      "sha256": "3d295ef4958a0ade84a13cf373c2c74da21c7c1cf4fbb4ef1713e8476557284b"
+    },
+    "d5930b24abd4dc1419bdd750a0c82971:1": {
+      "guid": "0d1e994d64fceb8e825326d4d6ff3c3f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0d1e994d64fceb8e825326d4d6ff3c3f/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "3cca33a6481255c80fddcb8fe1bc22c9d136afa34c8f174a616be9339b6d4855"
+    },
+    "b8e167b5ffc632a4fab1bfee7f337e05:1": {
+      "guid": "ed0fda365693efa7d1f5a2babba5864a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ed0fda365693efa7d1f5a2babba5864a/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "3e7265ec350c8627e3af3e7a53f0d801a29378894cf744cb144f92414b08d29c"
+    },
+    "6ee0fae0451506e4eae248f093e95444:1": {
+      "guid": "c3e46fd9595b34150260ba40c52c95a6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c3e46fd9595b34150260ba40c52c95a6/skill1.mp3",
+      "name": "skill1",
+      "sha256": "46291fcb84e0c8813644ff5b170d2076f6ee3a94aaababbd796d8437fb5362bc"
+    },
+    "59ffe05556dfb50458c06392df03bd70:1": {
+      "guid": "bc5bdff96163c208e5ea7f563472704a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bc5bdff96163c208e5ea7f563472704a/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "1ff9eaeb6c727ba0db41abe09f15282aa6d1a93774e3c68b18493d744873d3e9"
+    },
+    "420094758c5a77f48b79a85715be860d:1": {
+      "guid": "4c4ef49ba999291561d416dc9836deb0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4c4ef49ba999291561d416dc9836deb0/skill2_0.mp3",
+      "name": "skill2_0",
+      "sha256": "13d71afcf79bf9117f16ce3db4eb6809a8b4ee39acf83e5342e971c1baba542e"
+    },
+    "301d462e5a56c794690eb28bb7a0bc3c:1": {
+      "guid": "3b22e21ef248b2c468dd7b0b287ebd2e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3b22e21ef248b2c468dd7b0b287ebd2e/skill2_1.mp3",
+      "name": "skill2_1",
+      "sha256": "bbd3522c110922ab22c2e3bde97224664918674bf3af04d7c444238e80f66e5a"
+    },
+    "ec891e9ef55264745a34d673f30ea897:1": {
+      "guid": "cd77d95d4add825126d76f4a3181b48f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cd77d95d4add825126d76f4a3181b48f/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "2fb7ef276c351345a31c2ca66edf37fd192b6a60b36e7d82bd3785a517077cdf"
+    },
+    "a4f0724b096e1724b9f77064ebf8d8f3:1": {
+      "guid": "f72d734f24e485ffc94973b183da96bf",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f72d734f24e485ffc94973b183da96bf/skill3.mp3",
+      "name": "skill3",
+      "sha256": "9ff1d5e4463e4b5c2ecf1089fa0473b786307d40c74fa4245d1b4a114b49e54d"
+    },
+    "c82870c91ca22c346b35e273d436411f:1": {
+      "guid": "acccf0c47ff97afaa5b79e84c0d369f8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/acccf0c47ff97afaa5b79e84c0d369f8/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "9488a1b3392bf9f8e1804604eac3c4944af4a7d84d948af3ea25ba07ba9a9bf5"
+    },
+    "939d8866eb541ee478313c20f51ab66d:1": {
+      "guid": "152a908010ee04f88306606179f95ae4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/152a908010ee04f88306606179f95ae4/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "6c03a378929b6b3f0d908768549876b5d81ec1073f44b47397114d9465c451cd"
+    },
+    "8dcf66d3e16133042a008f5269be64f9:1": {
+      "guid": "c61005b186cde301200d33cc47ccfcde",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c61005b186cde301200d33cc47ccfcde/attack.mp3",
+      "name": "attack",
+      "sha256": "a05c372e6e1f3f82e3f20e940f185b8b54a51e71bd3284745e56326604d1f328"
+    },
+    "0738de8f024b2c146b6541156f451055:1": {
+      "guid": "5123971e61a926f1bdee37fafbe87863",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5123971e61a926f1bdee37fafbe87863/attack2.mp3",
+      "name": "attack2",
+      "sha256": "1da373c1a452e59d797cbb39e79ede526c4d27e8fd8bdd03a5de14b36700c34f"
+    },
+    "10052ee8ac99a1248a17a40846976f1c:1": {
+      "guid": "a650bb113b942bbec0d5e3c87483d4dc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a650bb113b942bbec0d5e3c87483d4dc/attack3.mp3",
+      "name": "attack3",
+      "sha256": "64df8577c24ccdbe6363f5ebc56ac67091b12a1b6464032f14ef7c1d80cff65d"
+    },
+    "c8fc53a462695b14b88146517ae76038:1": {
+      "guid": "4a4dfd0dda1d51f5eedf25598a5f2214",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4a4dfd0dda1d51f5eedf25598a5f2214/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "e24e7ee40aea9499aa3da3f48d02cbf5db88b9aca77ab67c9645bfa02611b6bd"
+    },
+    "959f90f5d9e37524ba427e89cd416949:1": {
+      "guid": "1c563f27316257682cc77a977f11de88",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1c563f27316257682cc77a977f11de88/death.mp3",
+      "name": "death",
+      "sha256": "85bd3ae4a6cbe5b0a56c98061f09fe6188263f0c442474b9e8f6c59976b04273"
+    },
+    "dd880a384c7aec2499527cba5fee1191:1": {
+      "guid": "c80ce9015d7ab66ddd6d90b7397769d9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c80ce9015d7ab66ddd6d90b7397769d9/hit.mp3",
+      "name": "hit",
+      "sha256": "b18ad3fd472e07094924aaf486663c9d14421a35be241757d00405a017d61052"
+    },
+    "184aa401c82edb14083bd19948d4aa75:1": {
+      "guid": "163b6bd918c25b64fc9df2854658c156",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/163b6bd918c25b64fc9df2854658c156/hit2.mp3",
+      "name": "hit2",
+      "sha256": "dd884f5e17ccec9f4111aedab3662a9ff1b8c44ea5485961e8aa828fa17022ab"
+    },
+    "54cf84347f6787d4992351afb9d790bf:1": {
+      "guid": "6c6df0018a77708a83ceb34023dadfb9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6c6df0018a77708a83ceb34023dadfb9/hit3.mp3",
+      "name": "hit3",
+      "sha256": "85e9c2f74a7da35eb8020315f6062b1bdadaa0d014c86ea2351edb7d698b8b7b"
+    },
+    "8d704a075e5e1cf46b51dccfacb09593:1": {
+      "guid": "2334f837fefa94de26889ae3512cc2e6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2334f837fefa94de26889ae3512cc2e6/skill0_0.mp3",
+      "name": "skill0_0",
+      "sha256": "564b52afe4798ee5a8ee821c6bb496146e3956a64fdcb34e44bc0586003e665b"
+    },
+    "f0d4baab87dba0f47850f6031b30d6c6:1": {
+      "guid": "babe43caf4b2919458751b58bca86508",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/babe43caf4b2919458751b58bca86508/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "c83df12e9f2a67af899db17d64a67ac3cb7933c313b5bc110d32960e59987ba8"
+    },
+    "0a0a3cc5d8d008e489b70864caedb358:1": {
+      "guid": "6540945a749ea80a91e7d42d2c7c2cfb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6540945a749ea80a91e7d42d2c7c2cfb/skill0_2.mp3",
+      "name": "skill0_2",
+      "sha256": "b30427d0263889d066a2fe23f83dca0001c9bc7efd7039a30a3af4bc5212a6da"
+    },
+    "cf4010072b46c434590f52420c067da9:1": {
+      "guid": "dc873e1647f92dd6c98fc511fd825ba8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/dc873e1647f92dd6c98fc511fd825ba8/skill0_2_ground.mp3",
+      "name": "skill0_2_ground",
+      "sha256": "0ce948776fdbccebadcf77a1933e145732317aea1ea3167fa8109fb2854cd943"
+    },
+    "f84dc20a1f81e3d449b86c25e18f182f:1": {
+      "guid": "840cd0a4d63983ae1ad2913a3999b005",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/840cd0a4d63983ae1ad2913a3999b005/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "91f3b5a23a807629a682f5b22849ef7984dda5d074f8d2f7a5c1ecdcbe94bd9a"
+    },
+    "022564e7ee2ddda44b00d54f07094a3b:1": {
+      "guid": "c4119270b06997c0311decca6340c2fc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c4119270b06997c0311decca6340c2fc/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "18189d5c69672cfbd144c28caeaf06080f6cae6ebda4ed656cdc1acdcf2b5eb6"
+    },
+    "e76b0ff5f0207f545933a97ff19fcf0a:1": {
+      "guid": "e2c18ad92ce851ea11ef1e674918bded",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e2c18ad92ce851ea11ef1e674918bded/skill1.mp3",
+      "name": "skill1",
+      "sha256": "80d8f6ceb9b887bd5128e362b01626be41d7cdacec41ed40ccfd555e37754ed9"
+    },
+    "e365112ec8039f045a8cbbfb1e6f994f:1": {
+      "guid": "bae79d9db4938e627e70c088c6a4fa2f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bae79d9db4938e627e70c088c6a4fa2f/skill2.mp3",
+      "name": "skill2",
+      "sha256": "ada04562e26b79ea0ce349a604344f8503048d157e31270e2bdb7e801c84fe1b"
+    },
+    "1a7d60ecc2a9bd84bb36afbb7f216588:1": {
+      "guid": "afee6a613172c8637bfca0b8515b7347",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/afee6a613172c8637bfca0b8515b7347/skill2_shield.mp3",
+      "name": "skill2_shield",
+      "sha256": "9c7848b1e5779d700eb1aab9d3d35217850091e57b7f17c61aacc5638e5829b0"
+    },
+    "86b29c093a63d9a40a4f345016a5a6b5:1": {
+      "guid": "dc95245d66351341851125e889e696ed",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/dc95245d66351341851125e889e696ed/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "6d22ec5e893c67729aa97360f5ddde81f7980b7ac2e7efc7b6e2c49b5478ae81"
+    },
+    "15731b2b8319b0d49b76ef2126cf929f:1": {
+      "guid": "f998fd4b84cd0c7675696673e2c5a758",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f998fd4b84cd0c7675696673e2c5a758/skill3_0.mp3",
+      "name": "skill3_0",
+      "sha256": "022565f235201b3c2a5aa0113d7ed48605c85db77872969ec7388fd6670a953b"
+    },
+    "f672354c9d098694e9194a391fb2e0c1:1": {
+      "guid": "f318ec434d45b7e5b158b4059abbf8a0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f318ec434d45b7e5b158b4059abbf8a0/skill3_0_voice.mp3",
+      "name": "skill3_0_voice",
+      "sha256": "e7f54a5ee0b61722058316e268e9ee7fb8eb40c0bb7f4df220afc74350d49cdc"
+    },
+    "4ebf9284e04bfa54189800245a1438cf:1": {
+      "guid": "869d108c9b29e4ce8f0aeec8b0aecddd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/869d108c9b29e4ce8f0aeec8b0aecddd/skill3_1.mp3",
+      "name": "skill3_1",
+      "sha256": "ed929f92fc8595e9148c3f667fb57b981b17f543f6062965e33a1087b00c14e4"
+    },
+    "cb90233ba1c174c468f2c8047d0b760f:1": {
+      "guid": "79d90762d5a1827d99128bac10aeb4dd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/79d90762d5a1827d99128bac10aeb4dd/skill3_1_voice.mp3",
+      "name": "skill3_1_voice",
+      "sha256": "2542de79322e28499acdc5509225e75dacda0b9fe6a10002a0d49456c0284a4e"
+    },
+    "53c2f119e51290245990fb9fd122c7c8:1": {
+      "guid": "bdc27c280d5d192688a23a3395240f4b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bdc27c280d5d192688a23a3395240f4b/skill3_missile_hit.mp3",
+      "name": "skill3_missile_hit",
+      "sha256": "05ad3c30097455e98dd8a9468f15541750cc3e563264f9602c3257883cbd27f9"
+    },
+    "75d1ae50c8e26b1479626ad4da30a021:1": {
+      "guid": "f7ce447700020a3559d53fa28f52ae5c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f7ce447700020a3559d53fa28f52ae5c/attack.mp3",
+      "name": "attack",
+      "sha256": "f48f1ff4f50523e10d1d3d8eac5f36c54445308b39077284fe5b754b3a2a080a"
+    },
+    "3b94b610c776a954e949aa28573ac217:1": {
+      "guid": "09864f19a437f1eb9cd2f63ca68b8f6a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/09864f19a437f1eb9cd2f63ca68b8f6a/attack2.mp3",
+      "name": "attack2",
+      "sha256": "549f20a691646159c4889a5cfce5cbfda5bddc3a47dea4e7a18f3bfb2546fc85"
+    },
+    "d4cf861a263523a4389116fa898368df:1": {
+      "guid": "551c1147e5506d40d081fd45c17fb324",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/551c1147e5506d40d081fd45c17fb324/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "8f5269eaa4e10c46a52439731a9903094d49f2d6188a99dd65d99fcfda3cb02c"
+    },
+    "8bbf90cad647ee84e9807fdbbbbf5661:1": {
+      "guid": "8bfcab78dbe52284ededd480dd2e53be",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8bfcab78dbe52284ededd480dd2e53be/attack_flying.mp3",
+      "name": "attack_flying",
+      "sha256": "bbb1895e96b5d58b8a220938f2fe709fca229b90487bbc66992d0a6047da68e8"
+    },
+    "f53a83c13330d4a4c96c3f0d723c922a:1": {
+      "guid": "9f805c0a6d1165f74bef384343152b77",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9f805c0a6d1165f74bef384343152b77/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "ff19a50ef6988a2a0af1b2b8edb711e39aeda60f40321999097e58664f1b5c14"
+    },
+    "83cf8390cdcb9f041b3bf2f882c562bb:1": {
+      "guid": "b44e5898aa50202a871d55f6f714af6f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b44e5898aa50202a871d55f6f714af6f/hit.mp3",
+      "name": "hit",
+      "sha256": "4cf1d8ac188c89229c226e0fe5d0c6400e90648829ae82b4e6606f56eef22372"
+    },
+    "081ea765eae85324fa767f4d1000ef0c:1": {
+      "guid": "16bf4f7c0706532cb8e264be7ac69f1d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/16bf4f7c0706532cb8e264be7ac69f1d/hit2.mp3",
+      "name": "hit2",
+      "sha256": "196bfcdf20b5984eec3b7f57d21e2f439b68cc3690c6e795962edc5a8f9bc9ff"
+    },
+    "d69faef507377f64f9bfe644959d2ebd:1": {
+      "guid": "70ab30d909d86930624e6e19327d333b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/70ab30d909d86930624e6e19327d333b/skill0.mp3",
+      "name": "skill0",
+      "sha256": "5703d362486b8b8ebea0b91e61798102d7246e361fcaaefee3b8933f03a20b1a"
+    },
+    "3fe27c442371cc3419f086695e5c0c52:1": {
+      "guid": "1b3c124c5c7b34977765dbae48801e5b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1b3c124c5c7b34977765dbae48801e5b/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "73e02182be27ef080db4e3766de2489a12232c06d36d08fc2be399df9fc89972"
+    },
+    "04c91eff7b09a814d8557c85f21cd2df:1": {
+      "guid": "358e0e8756f94624d9c92059286e0989",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/358e0e8756f94624d9c92059286e0989/skill0_missile_go.mp3",
+      "name": "skill0_missile_go",
+      "sha256": "70913b839cac5d3d5cc8a87f43ac3b9371da5b8fa34341c4cedc185bc76f49fa"
+    },
+    "bb6a8b5b3fe4cbc4d8074efbdbf7c368:1": {
+      "guid": "17d513d4f1f78eefb36d9bf31db8a75d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/17d513d4f1f78eefb36d9bf31db8a75d/skill0_missile_return.mp3",
+      "name": "skill0_missile_return",
+      "sha256": "11ef6aaa5dd8d97e3e9fe1f92a9d68d488b339f5583deb259f7047ec717b26eb"
+    },
+    "85130c722797b7d4da17771c5b51fe46:1": {
+      "guid": "33b39aebe784a8fcb66cf18e259f5cd9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/33b39aebe784a8fcb66cf18e259f5cd9/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "592bd0a1a4a050430a12bbc61da9adf06d78ca14788a7044aceb19265fb4c8a8"
+    },
+    "624fcfe08f534ca4a8d602f287fe5512:1": {
+      "guid": "13e99baf0a1fb9f7e9bd24b17c2b1c02",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/13e99baf0a1fb9f7e9bd24b17c2b1c02/skill1.mp3",
+      "name": "skill1",
+      "sha256": "76bc956c7a3e14572c8675d0ba00c8a2e4e3c75a624d11588147b52b8e4f4ea6"
+    },
+    "63b87ba23d5f987448bf7f7c98f8ee7a:1": {
+      "guid": "973080eda22088e6dfeec8fcbded4f64",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/973080eda22088e6dfeec8fcbded4f64/skill1_hit.mp3",
+      "name": "skill1_hit",
+      "sha256": "0adf979892258bfce9d765686285ad26a4738127e8185c2cf3276a2e643fd290"
+    },
+    "baef2778c76cbaa46833f4fef3e2a114:1": {
+      "guid": "410feb9418afa2a6174d55f3136e07b2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/410feb9418afa2a6174d55f3136e07b2/skill2.mp3",
+      "name": "skill2",
+      "sha256": "1832eea6caaa56af6aff087c7398d473a45d8f3d4dbc850f3d15a739b610a188"
+    },
+    "051dc92a941ace94db0ba84b53f9cdac:1": {
+      "guid": "a97ce4be177f4f236c56fd6a0da34cca",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a97ce4be177f4f236c56fd6a0da34cca/skill3.mp3",
+      "name": "skill3",
+      "sha256": "89bf94adb511e7eddad0520a2839d0d718d48b0165301eeb3d4be4e59fcf0e07"
+    },
+    "2f5dfdd2501490c479d62847c67b7ac8:1": {
+      "guid": "829eedd3aedf1f0fe0a962a55e35faa8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/829eedd3aedf1f0fe0a962a55e35faa8/skill3_loop.mp3",
+      "name": "skill3_loop",
+      "sha256": "ef03ab161b46209a72f83db456109e757cb2b54a1e415d56799bb07d85ec41af"
+    },
+    "643add1e2d3ffba46934b8a16a0459cb:1": {
+      "guid": "581a7a5f8a688ec90d9921aaa3029426",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/581a7a5f8a688ec90d9921aaa3029426/attack_skill1.mp3",
+      "name": "attack_skill1",
+      "sha256": "a7287e8558c407b539855bc08915fa1cde21a00cbcfa27cb74e1e071d3584658"
+    },
+    "27314d34d64c70b4da7310d73469a824:1": {
+      "guid": "ff85b30c55fa0b9454a7e546f538ecc3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ff85b30c55fa0b9454a7e546f538ecc3/death.mp3",
+      "name": "death",
+      "sha256": "11fe4b6138ed29e09c5ff51c81f38eb86f1ff3bd837bcafdcaa37cdc958bb3a1"
+    },
+    "0059347f04c21a04c887887a9c9402d2:1": {
+      "guid": "56972be52aa2d0a7bf761d171ec64468",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/56972be52aa2d0a7bf761d171ec64468/passive.mp3",
+      "name": "passive",
+      "sha256": "a65d7d60acfeb0733525953f8dcb4efb43a39c7a4e8b810bde6651c8558cb108"
+    },
+    "0e15138b51cd90d4184ab65edd80b039:1": {
+      "guid": "87c2177a0b45e116882f48987c47bc8e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/87c2177a0b45e116882f48987c47bc8e/skill2.mp3",
+      "name": "skill2",
+      "sha256": "bbad99fcee253f65b95c168d11e7a1efbd656f17753a307fbe66627e9567b705"
+    },
+    "365e1fe510c11c446826d73bb0b7947e:1": {
+      "guid": "5c3f534d20d6305f62eff6c20474c54f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5c3f534d20d6305f62eff6c20474c54f/skill3.mp3",
+      "name": "skill3",
+      "sha256": "fec8bcf1dd455312158319b2bf48816c9268059fb79feeafa5f117687306f994"
+    },
+    "388b8d31294a6354db23101709ecd566:1": {
+      "guid": "dbe62a1757524f2f24bece256abb5c2b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/dbe62a1757524f2f24bece256abb5c2b/attack.mp3",
+      "name": "attack",
+      "sha256": "1e1faa17861559a39643000f9b9e63e697802a18e32d286e7fa738456e94e12a"
+    },
+    "6ddd9db593007d944844991213a9ba67:1": {
+      "guid": "078a7e970409870b3bfd6f73aa7df47c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/078a7e970409870b3bfd6f73aa7df47c/hit.mp3",
+      "name": "hit",
+      "sha256": "10b434b9856f38db2d4200bd78ef099bc93c10392ffb7465f0fbb473ff9195c4"
+    },
+    "7659409fda1adc2479d28ea4dfce7940:1": {
+      "guid": "170c3efd64478b8c801e00f06d089442",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/170c3efd64478b8c801e00f06d089442/skill0_ex.mp3",
+      "name": "skill0_ex",
+      "sha256": "d275bf816ca7ef13fbb259450698b81196e3c0357a47ed399f6a2460b606c3c1"
+    },
+    "8f3ef32336af12c4fa5fc40f436a752d:1": {
+      "guid": "a0f5302a21256eb8350719819ef16ec8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a0f5302a21256eb8350719819ef16ec8/skill0.mp3",
+      "name": "skill0",
+      "sha256": "3102ddb1687b3b80cb49b46591bfe104167249a9e65f6c73010078e4c8b2ed9d"
+    },
+    "915f1eff4a5ccbd47aba4f121d1bd1a0:1": {
+      "guid": "27a72ce223f3d1349f370f8ad3cd96b2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/27a72ce223f3d1349f370f8ad3cd96b2/protectionofstar.mp3",
+      "name": "protectionofstar",
+      "sha256": "86fe9a2b334fdb87b710d9ae32fe9cf2e8cbd327988569b2815a86ac267fcae6"
+    },
+    "a0e6be2df6d8939449fd759b9efda67b:1": {
+      "guid": "0203b3948ef1475e35bae3e0e8a78f1f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0203b3948ef1475e35bae3e0e8a78f1f/skill2_ex.mp3",
+      "name": "skill2_ex",
+      "sha256": "cebf087f581217128b4ac89e8b898ab4433214e665b56ed77cee6f9d7f391eb4"
+    },
+    "b543c938df69da74da31cad365ac44d2:1": {
+      "guid": "9e61f963dd8218d81b7aebc388f70ba6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9e61f963dd8218d81b7aebc388f70ba6/attack2.mp3",
+      "name": "attack2",
+      "sha256": "ce8d3d6d6cd02b3de490bdc1a9fae971cfe3e00a5748f9f9a6ba98f3623e9163"
+    },
+    "b6333c78fda02da4f8cdb8b5b9ff6dbe:1": {
+      "guid": "97082b6ed1a30e1b0580a3592ca283ea",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/97082b6ed1a30e1b0580a3592ca283ea/hit2.mp3",
+      "name": "hit2",
+      "sha256": "1528e8ef8dd2acc90f0740641bae7a37a558793d4edaa6e694922ac144758722"
+    },
+    "dae74204d97db7541b1f59ead7748685:1": {
+      "guid": "3980673d1d99daf15f529421fe1d7387",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3980673d1d99daf15f529421fe1d7387/skill1.mp3",
+      "name": "skill1",
+      "sha256": "042e14d1b367deb268c6d6a258f5d2b0d0029edf73de8aa0bd9b3626023e6b11"
+    },
+    "4200202306baec94da677fd9d9fe095a:1": {
+      "guid": "325c661e07801d96312bbc733eee7fea",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/325c661e07801d96312bbc733eee7fea/death.mp3",
+      "name": "death",
+      "sha256": "e0d4ebdcb228bf066c097808b6c433a68321bf1445589a32f26a2bf810e63d85"
+    },
+    "28599f75bb7482148b1f31cae2d09d7a:1": {
+      "guid": "9000a30fafa818ade3b6a61a07157789",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9000a30fafa818ade3b6a61a07157789/attack.mp3",
+      "name": "attack",
+      "sha256": "daa6b1458bea43d27bda6a298d5b48e1e467b016763b2caab2fe8bf8a071c6e8"
+    },
+    "54dba39ca228aa14cbd9155fb1abcd18:1": {
+      "guid": "5b19a7571e222dbafa5df48f7fe7893c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5b19a7571e222dbafa5df48f7fe7893c/attack2.mp3",
+      "name": "attack2",
+      "sha256": "4eac2222973eb1dee3f21f0e7e392ee222dfc974e72558d0ac17e3775e7e8757"
+    },
+    "a8ad907d73f6eb44a87684b6a3ca5d25:1": {
+      "guid": "1588b578f32588a9c5104ccb706ddf03",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1588b578f32588a9c5104ccb706ddf03/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "f2c8a6f0120ab83c3adaf633a1abef870b7d248271550f75572dcaea61ad329b"
+    },
+    "b023989f605426441b88684a8c7b4615:1": {
+      "guid": "ac9530fb6664102300d79cdeabd679ad",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ac9530fb6664102300d79cdeabd679ad/attack3.mp3",
+      "name": "attack3",
+      "sha256": "2cbdbb380eb9251c9fc22bd20c95e7af25773cfd1468e058fa21b0d2a2e796ea"
+    },
+    "8a13b6c4f699e5c4db2c79f3a3d66393:1": {
+      "guid": "ebf6f6b515fe6579ed0ce74f31cd4964",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ebf6f6b515fe6579ed0ce74f31cd4964/attack3_voice.mp3",
+      "name": "attack3_voice",
+      "sha256": "0f457ea4ec587cb7a20b0a72d605d6797f99f709c303e451f02c3b59e34c02af"
+    },
+    "02d61d4d230595348892ef5b3e3bddf8:1": {
+      "guid": "f37fa434509c7eb1d0fb496f3f3f32eb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f37fa434509c7eb1d0fb496f3f3f32eb/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "1a33a3341dc98a24ea547a182cf12b3b3d75bb25f82f9dd1366c741f7bd67305"
+    },
+    "e724faa5a228fc940b0e50d073e01316:1": {
+      "guid": "a137d79f9249d34cf4591c96583e46c1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a137d79f9249d34cf4591c96583e46c1/death.mp3",
+      "name": "death",
+      "sha256": "00dde839cffacef3f7c57ab5381ea81322e64bdac07e02be14f37b9b8a3e60c6"
+    },
+    "ae8f87140c7ceb545afae492f1953c0b:1": {
+      "guid": "d11aa3a7be24dfc9c0d8523fe76076a2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d11aa3a7be24dfc9c0d8523fe76076a2/hit.mp3",
+      "name": "hit",
+      "sha256": "319420035f89c2cc0e4f2e7cd108e985753306f2dcda0cddfa79e1e252ed7744"
+    },
+    "0bd097ad8fc85d845910a77cacf99f6e:1": {
+      "guid": "615527238e8cbe7b7dc008e6f72719fa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/615527238e8cbe7b7dc008e6f72719fa/hit2.mp3",
+      "name": "hit2",
+      "sha256": "a0c6eb63e5afad4a05df6c70149a9ac3472b369a6ca94ff3a7cd480dff0726d3"
+    },
+    "13a202d37c558b14ab013fb4b657075b:1": {
+      "guid": "c06cac98d7aad3fd69fe6bdfcea0a8f6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c06cac98d7aad3fd69fe6bdfcea0a8f6/hit3.mp3",
+      "name": "hit3",
+      "sha256": "350a5745bd866f0ff2489db9b562c216a8f9f9f960b1ba39751467542c0b9e49"
+    },
+    "61b721d404bb76241bb7b13c6776652b:1": {
+      "guid": "1c2a9c0921b10df41f1d205f35431f0f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1c2a9c0921b10df41f1d205f35431f0f/skill0.mp3",
+      "name": "skill0",
+      "sha256": "b3f039ec70bbf62775cadea713c88c703b4c526236421d7e296e4284db7fd3f5"
+    },
+    "ba836f188d3b9fb4da326ed9e5068f03:1": {
+      "guid": "3a5e4f454417798ff34e3371e0b9fdfd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3a5e4f454417798ff34e3371e0b9fdfd/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "2dfea323fa00b8dd538131c1d0a3295e1d4f010a879a32dfd37c344ab10a719c"
+    },
+    "cae5841dd2192a14493a170c442b7824:1": {
+      "guid": "3a3a3eeaa723f986706d3b589a1d5141",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3a3a3eeaa723f986706d3b589a1d5141/skill0_loop.mp3",
+      "name": "skill0_loop",
+      "sha256": "e49f74f06a0412f834b7b08deccaadd21119cf946cc5c4f54d24258e2fc62f70"
+    },
+    "ea1fb0ce53087504ab6a00f288eae5a5:1": {
+      "guid": "4ce5065a10e8285ce3d1d73161e4307d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4ce5065a10e8285ce3d1d73161e4307d/skill1.mp3",
+      "name": "skill1",
+      "sha256": "f830cc1f2ed5c7f4d970b741f4691851a62d78d9fb0fa340aadb934c3ec5d7f9"
+    },
+    "85f18c70d78f03f4791de98a1bd4d320:1": {
+      "guid": "6dd868804bb282d6ec546d5f752af670",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6dd868804bb282d6ec546d5f752af670/skill1_1.mp3",
+      "name": "skill1_1",
+      "sha256": "c82cf0ba0fe388e521a409af812bbfcc07ac3b8021a64f412e4f34e057c8bef9"
+    },
+    "bbacb75b2922ba34b98592e958341e77:1": {
+      "guid": "58eda1ba12229dda839923a098a27966",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/58eda1ba12229dda839923a098a27966/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "26ac69ae7f0b08d138f129c9c40c006fc4c77dcc45af40bf16eb833eab4c0e3b"
+    },
+    "1a51019b918736c4caac8e74ee79ccbb:1": {
+      "guid": "3fe17e3a4e08d4ea2ec3df2543efce83",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3fe17e3a4e08d4ea2ec3df2543efce83/skill2.mp3",
+      "name": "skill2",
+      "sha256": "ba4799ba4bd1502c6d8406846359e60ef8187e5ae5ff9bc1fad054e17fba6554"
+    },
+    "6ce6db434e9eadb43b753098038fb004:1": {
+      "guid": "804c3fb445f35e3fb4e39c0b61ed3d2d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/804c3fb445f35e3fb4e39c0b61ed3d2d/skill2_1.mp3",
+      "name": "skill2_1",
+      "sha256": "af88d9a2af2a0c3f2ba75d121bcd10964784aa04f6e54a3ccd13f0feb45f1df2"
+    },
+    "66712cc4526d99c40af312bb433929db:1": {
+      "guid": "a3819052818f5c5ce1d5fcddad588ff1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a3819052818f5c5ce1d5fcddad588ff1/skill3.mp3",
+      "name": "skill3",
+      "sha256": "53ae22e383ccd39e68544a507ad625acc8df1e41588800f8a866e7412e69bd87"
+    },
+    "13fb089f8d818cb40899171497e902bd:1": {
+      "guid": "48687daf43e2b1742927a621591f4ad2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/48687daf43e2b1742927a621591f4ad2/skill3_1.mp3",
+      "name": "skill3_1",
+      "sha256": "a5d8143054f04c78f2af5b8b9d07d961007184e1c7d951c8d9d8f96a1f27e8e1"
+    },
+    "ccb69735184fffe48a9f1027898a46bf:1": {
+      "guid": "a83cba9514de7084802b7758d6ead500",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a83cba9514de7084802b7758d6ead500/skill3_go.mp3",
+      "name": "skill3_go",
+      "sha256": "869e9a9165baa2fd2cbde77b82a1c520b9ee662d477336c87662dc10b954826c"
+    },
+    "05f9e70842828334b8be7c844591b99b:1": {
+      "guid": "632894aede02bc9a341ff75046ac53c0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/632894aede02bc9a341ff75046ac53c0/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "966cab694305cd7a97d52fa876abb9a0e2da12794cb85beb4fbea66135917566"
+    },
+    "0ffa7ff8ad4bc2b45b2d4726b93e290c:1": {
+      "guid": "f935cf4d2218b6b6b94aa40683728269",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f935cf4d2218b6b6b94aa40683728269/skill3_return.mp3",
+      "name": "skill3_return",
+      "sha256": "7cf230dad9fc44d44dfb16e694783b43e08b07a3a84bdf134b58913294322ee4"
+    },
+    "e4277e4f55a3eef4f8673c346c0db1d9:1": {
+      "guid": "5e6a16e3b19f9695fcbbd7a915855c54",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5e6a16e3b19f9695fcbbd7a915855c54/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "aa2ebb2055d52e6868f161399ef7614956a0be5aea7ac68039786fe7a9dc7804"
+    },
+    "a495f38b30631a04588ca279c0c323ec:1": {
+      "guid": "9afc551827e1688ef1d06518c7ea6705",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9afc551827e1688ef1d06518c7ea6705/attack.mp3",
+      "name": "attack",
+      "sha256": "17a3c8f1d66ce0b16cd764fbd15cf48716d1eb2d02eb43bd996f479a579dacb9"
+    },
+    "ff5bce781a71ea44398c5910bcfd46ab:1": {
+      "guid": "010353cee8e5292e588df92911272d84",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/010353cee8e5292e588df92911272d84/attack2.mp3",
+      "name": "attack2",
+      "sha256": "8e37ce3364157e02f27a143efecadd1f2abc112a353f4bdd88ca3e23379aa080"
+    },
+    "c89d6f7a7026ce64d9f27ecc0cf02cf2:1": {
+      "guid": "99221d75f91a894f39c8d71965d9c854",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/99221d75f91a894f39c8d71965d9c854/hit.mp3",
+      "name": "hit",
+      "sha256": "796534e0cc5afd14ac0b3b5ee5f551fe817d1c40f857013cb1b94851d7301c7b"
+    },
+    "7d2e44feb678d6243aafe7a4c72eb097:1": {
+      "guid": "c06dfba20d21cf3156336230481098fe",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c06dfba20d21cf3156336230481098fe/hit2.mp3",
+      "name": "hit2",
+      "sha256": "c7fb6562f24a8490e761dfe4fcbb6df89caa0bea15a13f1ed94ef6d871eb4584"
+    },
+    "55f2e2af22293d941a1fd7834151cfbd:1": {
+      "guid": "78a791444f92c9d3ffbcc717f63c060d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/78a791444f92c9d3ffbcc717f63c060d/skill0.mp3",
+      "name": "skill0",
+      "sha256": "71f5c68e5b8e4a0fa5ccd15e500c904a85747cb260d2997be0138a29a4940082"
+    },
+    "97aefef517867af4686afca9fcb6c5f0:1": {
+      "guid": "8e3cbd5c6d42d2e464fc1f8bd983f4ff",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8e3cbd5c6d42d2e464fc1f8bd983f4ff/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "6c43ee3445498d556b921a674080af142e5cd3390e309bbf36c3daefc576b3ab"
+    },
+    "db86b5712ee64ad46904b00339842760:1": {
+      "guid": "d00c9f1788d811418da065db78542e22",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d00c9f1788d811418da065db78542e22/skill1.mp3",
+      "name": "skill1",
+      "sha256": "60dd80bd6dbf120018ce2f1efefcab01664358c35df14138d75821bc551215ae"
+    },
+    "4fce5e343bdbe8e4190d21e643bec24d:1": {
+      "guid": "e5cd53743d23b41c659ce4ceb71e8397",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e5cd53743d23b41c659ce4ceb71e8397/skill1_end.mp3",
+      "name": "skill1_end",
+      "sha256": "0291102685cf76f12badd3882ea4717807f709d6e219e4557b89900bfb43318e"
+    },
+    "c28eae206babb4e4794ab999ebe258a0:1": {
+      "guid": "019d465196ada0d94509a27ce392ccfe",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/019d465196ada0d94509a27ce392ccfe/skill3.mp3",
+      "name": "skill3",
+      "sha256": "0174c9cc1cd30ac5203a68c187b7b63583df877b1af68a5434ce7cdfe3621b93"
+    },
+    "ab61a9e6b74053347ab5d57cfab8d33e:1": {
+      "guid": "a0f104d840e7743f88ec46c12631da7a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a0f104d840e7743f88ec46c12631da7a/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "e1e6facb1418bd9fcc7f90bca6497e64e06e24d3237ec87e8320412c1b185dbe"
+    },
+    "b451c6d069091664a930a4fe1cab14c8:1": {
+      "guid": "1accea2adcab725a2553b53238c6e032",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1accea2adcab725a2553b53238c6e032/skill1_jump.mp3",
+      "name": "skill1_jump",
+      "sha256": "63bee247a9313ef5e32097316279773f815e34140d7cfe37e9b2fdeecff3ebec"
+    },
+    "920efdd2c20d3c94982a6f509cda60ea:1": {
+      "guid": "044e5ba70e4a5ac1ac5e153cd8039fbe",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/044e5ba70e4a5ac1ac5e153cd8039fbe/skill2_timer.mp3",
+      "name": "skill2_timer",
+      "sha256": "71ccb122cc7dd883c10eddc76be62bc4700c4ba2814827f3e9fc6d8b5ecfde24"
+    },
+    "f5137be351eae6d429095d7e2f3cdc20:1": {
+      "guid": "2b7e4f05c8bba96bcc7e19510f245715",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2b7e4f05c8bba96bcc7e19510f245715/attack.mp3",
+      "name": "attack",
+      "sha256": "ac029b4901c7b2ffef0d8574bf6927604acd04fe5b85a972ea8981d836d2662e"
+    },
+    "abadcd54ec414ab4eabaa1c536d9e778:1": {
+      "guid": "ec967b73d3d34759f25e67800290ed7d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ec967b73d3d34759f25e67800290ed7d/attack2.mp3",
+      "name": "attack2",
+      "sha256": "49b8fd6035c305436feb51d8211745992f4e389e449024c4a7acdccd4d6e038c"
+    },
+    "107db1f4be96f694ab25a5faa1e57827:1": {
+      "guid": "67a5f204ed55c0314385d1341915f685",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/67a5f204ed55c0314385d1341915f685/skill1_ex.mp3",
+      "name": "skill1_ex",
+      "sha256": "84ddc792e0755ef46f3ce682ee0d23e9103a9d00c8e18cd71c05138ea0ba7ac2"
+    },
+    "ec98f195e5691ed45b4a50190474ed63:1": {
+      "guid": "375c1e719fcf220b43717a915db83bed",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/375c1e719fcf220b43717a915db83bed/hit.mp3",
+      "name": "hit",
+      "sha256": "dc4f65d24c4f0cb5ff7d00426fda3196320a9a51ae1331393e2361edf4b74099"
+    },
+    "ee3ac52723f07af4fa2521a18676657a:1": {
+      "guid": "9e72ef226e84d030888177846fe2bfd2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9e72ef226e84d030888177846fe2bfd2/skill0_loop.mp3",
+      "name": "skill0_loop",
+      "sha256": "140afc33231983ba8741a91ef151f6109a160c3f35f22324fd03a747ea3ca848"
+    },
+    "964fd158e5932d641a8a9379277b5812:1": {
+      "guid": "5bee8a4e6b9e2e3966f5532f5a9f8634",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5bee8a4e6b9e2e3966f5532f5a9f8634/skill2.mp3",
+      "name": "skill2",
+      "sha256": "a6fd023114e309faaf228682c0dbff391e531d79d367af893d42b2cb9f238106"
+    },
+    "870ac078819ce884abd0f09e4c2fd00d:1": {
+      "guid": "18288517888aa881fb71ffb1b93aabb8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/18288517888aa881fb71ffb1b93aabb8/skill0.mp3",
+      "name": "skill0",
+      "sha256": "34d6966da98b5f92598d49933c6fc275659c4e09f9a09f0c5c74834671bae981"
+    },
+    "c4fde41a2c9778142b499d085346ab7f:1": {
+      "guid": "662ec612f7b8b762368b617b0020b2fb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/662ec612f7b8b762368b617b0020b2fb/skill1.mp3",
+      "name": "skill1",
+      "sha256": "ae4ed25e9bf33f3bf5d8e1c6983235ea8b67ee75e18055577ff41bbbaf84a5b6"
+    },
+    "a60e481a695eb6f4c94a6b568233aa28:1": {
+      "guid": "980990a7d286fe6078ce28770e50a5c3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/980990a7d286fe6078ce28770e50a5c3/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "72dd8f39fe49552e46154a4c54f653f1280dfdc7f7529c0c34f36f2b4097834d"
+    },
+    "a5fa987d8e958a34288485ae931fb081:1": {
+      "guid": "52e1822b88987794263533ac8668d301",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/52e1822b88987794263533ac8668d301/skill2_ex.mp3",
+      "name": "skill2_ex",
+      "sha256": "bb202512ce4dbbe309bb4f43a3cb55c133942bd7b24e8e5bc88ea0978d6f971b"
+    },
+    "a6e2e77f77351b94cace6a261b7d5051:1": {
+      "guid": "17228cea532fca843b741d966adc08b8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/17228cea532fca843b741d966adc08b8/hit2.mp3",
+      "name": "hit2",
+      "sha256": "2f827eeffc11e34b4e1bef25f825cdb830ac6a397ed7d6647b0e5cb97fcfd4b9"
+    },
+    "f006d89fa99074f4ab6eb96064a42a06:1": {
+      "guid": "cbf3d379e581515e170d4a0e17e8d77d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cbf3d379e581515e170d4a0e17e8d77d/skill3.mp3",
+      "name": "skill3",
+      "sha256": "6e1971428678af29972c88db93a6f4ff904b386fbb9b78f4f2bcd5bbc3296db5"
+    },
+    "90fb588f78bc44c4b8c0027d2049346a:1": {
+      "guid": "996a781efb9b5219d49c3a6cf5e78ee7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/996a781efb9b5219d49c3a6cf5e78ee7/skill2_passive_hit.mp3",
+      "name": "skill2_passive_hit",
+      "sha256": "4cb17e5f8e4ecac577c3d71f94f2ba3d9436d788a56b5876521142f040776027"
+    },
+    "f143510a0cb1d984fabe7a701bef4015:1": {
+      "guid": "c11e2d61ed973922b87b63926d137b60",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c11e2d61ed973922b87b63926d137b60/attack.mp3",
+      "name": "attack",
+      "sha256": "e5f6c23f41e24e3103687934f0cc02870c5337376246e445299168ccbc2e7655"
+    },
+    "c0ec5ffbf2a762042aa131d4b1786930:1": {
+      "guid": "9ff928565842437c44316df003627fab",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9ff928565842437c44316df003627fab/attack2.mp3",
+      "name": "attack2",
+      "sha256": "6911fc9a4fb83e46261e505d554db7c9c0a0a24f1064320e23d97287aa1e4527"
+    },
+    "33c6081357f587b4580d6825634b8ffe:1": {
+      "guid": "458dde837973db93fa50e718d456df62",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/458dde837973db93fa50e718d456df62/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "dfb60cf37af5474d625cde55d6bd2694edafd4dff7c3abd393f03c74971b8819"
+    },
+    "2d9cb174aa11e214193e5fe9b6084d33:1": {
+      "guid": "d75c68eaa35feae8a0f1cc42ef7192d3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d75c68eaa35feae8a0f1cc42ef7192d3/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "65093e09809b4e2d67fcc4b7dc02ae73ee230b7ea5a32467b5d0aa969bcfa133"
+    },
+    "6fe55ad7f4aaa6d47b5549c44121f6b0:1": {
+      "guid": "1034fc93d533334b23e454f77390f96c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1034fc93d533334b23e454f77390f96c/death.mp3",
+      "name": "death",
+      "sha256": "53cae0797bcc1a87dde1c865cff1b91df469bff496cd1c9ef25ff464d2b6120d"
+    },
+    "026c793303743e24d9cccf0efbf57a82:1": {
+      "guid": "24478dbc71d5cf24d8cb424cf06585cc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/24478dbc71d5cf24d8cb424cf06585cc/hit.mp3",
+      "name": "hit",
+      "sha256": "05ab16395d1d5663bf227b2162171e9434fca097008320a12a6fb4a5b38d5e9c"
+    },
+    "a663f5b9f1fff494299a3380dab4e6a9:1": {
+      "guid": "fe7c5d98e2a8eb48b89481740207095d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fe7c5d98e2a8eb48b89481740207095d/hit2.mp3",
+      "name": "hit2",
+      "sha256": "86e012e3b83fb6495e53b87cdf5e4defebe81cc4078ad6e1d1db67af18d41c66"
+    },
+    "593eee70a7936aa44bf5dd7664cca84b:1": {
+      "guid": "7650fe5e2d565d7d8def00be4694111b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7650fe5e2d565d7d8def00be4694111b/skill0.mp3",
+      "name": "skill0",
+      "sha256": "91677575dd41f76b8f29034895b406ab413204c809af02636a03bae150ba5bca"
+    },
+    "ad8bd3f35c062cd499dcd28b1a05f741:1": {
+      "guid": "314de0f89c5f3ef7c02fc257c8345180",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/314de0f89c5f3ef7c02fc257c8345180/skill1_buf.mp3",
+      "name": "skill1_buf",
+      "sha256": "874772e42461eebf011dfc31b27c0a3f858ca052a5b87918d4604da6a7bbb68d"
+    },
+    "24be7ac093ed20a49aecaddfd99aee01:1": {
+      "guid": "55a97195054ef28b4deadb6474bec44a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/55a97195054ef28b4deadb6474bec44a/skill2.mp3",
+      "name": "skill2",
+      "sha256": "4733b697e66529030ded385df49586f6cbdd4bb1ccafe74c3a8de00a3c7ed235"
+    },
+    "5d7cbe574486f9f44a5e85808c0b1321:1": {
+      "guid": "7cedeac2f19208a0058b517be6b5dec6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7cedeac2f19208a0058b517be6b5dec6/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "4508916d004befb6754e25d995556b56509e38691ec111b9c501d0ece89d3aca"
+    },
+    "f754b6ea86e48274d9609d5f96ab0867:1": {
+      "guid": "c9320d1d91fe24c21678643882513d3a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c9320d1d91fe24c21678643882513d3a/skill3.mp3",
+      "name": "skill3",
+      "sha256": "edc50a6e55c3d544d4f8612956099bd5fde583421a7afe104bdc4d03d56b4c40"
+    },
+    "952bf6ce3c38a674cbbe3c78ff7ddee3:1": {
+      "guid": "a3ca700bf3b0e5b4299b81c4fe3661d7",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a3ca700bf3b0e5b4299b81c4fe3661d7/attack.mp3",
+      "name": "attack",
+      "sha256": "02e443eb5e148d0819f36195b93d2b14592f0697516ddc973dca123523781a55"
+    },
+    "8f6a8bcdb10685d4489402433e173276:1": {
+      "guid": "3335d42f1d625797cf6fad1145fad536",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3335d42f1d625797cf6fad1145fad536/critical_hit.mp3",
+      "name": "critical_hit",
+      "sha256": "d6689e5403a7e6022600f1155ab4bbc386ee3ecd6b6f3bfab2f3658fdf8edb60"
+    },
+    "b1c1374bc259f81488bf957068ade816:1": {
+      "guid": "dfe922eeaf141195adfd9f0675bbe4dd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/dfe922eeaf141195adfd9f0675bbe4dd/critical_shot.mp3",
+      "name": "critical_shot",
+      "sha256": "7529100f4c2acf53fc2574ac78ec0588b59dd827b5a9c0892ef898b21cf1c81f"
+    },
+    "117f34bcfa3b4964cb50cafbfe067e9d:1": {
+      "guid": "3fc404509c0bb345a804d2979f3acdd9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3fc404509c0bb345a804d2979f3acdd9/death.mp3",
+      "name": "death",
+      "sha256": "ad75ff7133ca3694a462495b693c609b7feef1900eb8f355c2bf8e86bab1636b"
+    },
+    "a4c0fcae588779b459046a09d46754b0:1": {
+      "guid": "c9e8fb55537f3e06709d09b1b6e2e6b1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c9e8fb55537f3e06709d09b1b6e2e6b1/hit.mp3",
+      "name": "hit",
+      "sha256": "b433bcce069bde073dfe80a31c532be44635ba390249a93fa89441417d2e50c2"
+    },
+    "3471d2207ea07244ea4415495ff08c0e:1": {
+      "guid": "8fdc4bd76710068767f5294198f29f4c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8fdc4bd76710068767f5294198f29f4c/shot.mp3",
+      "name": "shot",
+      "sha256": "92cb54998bfcf66d5eb8915fabcfb32421008faf1bd8a684caf7492987502e69"
+    },
+    "4ab4e0aed57909b42b7f90f40f356511:1": {
+      "guid": "38b08aa347329581898f777bfb92bfc3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/38b08aa347329581898f777bfb92bfc3/silverbold_hit.mp3",
+      "name": "silverbold_hit",
+      "sha256": "d3c1c87077f21ecc8e7e2ede78438df08288a67a8632f4bf5b05b39099ff9288"
+    },
+    "a5dbf27d3e4a96c42bc1205624e8698e:1": {
+      "guid": "a3658ca5d5035431def77038631d11fb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/a3658ca5d5035431def77038631d11fb/skill0.mp3",
+      "name": "skill0",
+      "sha256": "662efa64510bfc212d7c82f3964a17629aa3e0504e10e7b719a78ff3b2fb0e95"
+    },
+    "9340ab87b2590e24794e374d3c04ad1f:1": {
+      "guid": "0e047f3a318aa0d3f14752a5dfe4bbaa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0e047f3a318aa0d3f14752a5dfe4bbaa/skill0_shot.mp3",
+      "name": "skill0_shot",
+      "sha256": "f44ed088b50488bf93626cce0e61ed3055b5c443f68b0071f11ed71e3da58207"
+    },
+    "e59e8b463e381cf439c36c9ada8f4bbf:1": {
+      "guid": "efa369add163a161f42fda698f8d290b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/efa369add163a161f42fda698f8d290b/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "2dcdc5e272e11b3d5750d298d91cc582de95f5b51badd795904e40ef274e2911"
+    },
+    "fa14246d59b0e2f4ab3386ff2e55f9e4:1": {
+      "guid": "0f8e9d3545d3fab73a0f0d00b3e2c427",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0f8e9d3545d3fab73a0f0d00b3e2c427/skill2.mp3",
+      "name": "skill2",
+      "sha256": "abd1c70857b4fc02fe74a1be682f4e90a6ddfd1ca3cf3b3a2cf8d373be700cc3"
+    },
+    "737314dfa21619c4486500e2689eca42:1": {
+      "guid": "33a4afe3fd3780494247b066558237f5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/33a4afe3fd3780494247b066558237f5/skill2_hit_wall.mp3",
+      "name": "skill2_hit_wall",
+      "sha256": "aa49fe3591560a0d4dcbee5f3812f35ee60a08f91d079b7528f078d7d7864b06"
+    },
+    "298c67a4270538a4ba875e540d2c86a3:1": {
+      "guid": "4a427c7b5b62d0331d45e81a05fc6547",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4a427c7b5b62d0331d45e81a05fc6547/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "2b1b0540513d195f6ec097ee68d74e61811fc621171bfe58b15968d227aeaae1"
+    },
+    "cc3dcaf30ab00ad4680bc5fc3f52a19b:1": {
+      "guid": "2d031b1d23964a90952892ce624cbe92",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2d031b1d23964a90952892ce624cbe92/skill3.mp3",
+      "name": "skill3",
+      "sha256": "aae9e98a3795aa31456550187d954d8c76fbf039acc411e3342e3597b94b3f6c"
+    },
+    "39b3ee81fcf720348bcefac821e005af:1": {
+      "guid": "e57987fd28cb8a8eb54800cda4839f32",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e57987fd28cb8a8eb54800cda4839f32/attack.mp3",
+      "name": "attack",
+      "sha256": "ca6fa20f50efd31d1ee33327a4cf0a55060f3dc083c94d79cac6d30e101a0f81"
+    },
+    "32cdf99ff69947b498b72d3bfd710353:1": {
+      "guid": "48a8111fb2842be79e451a1affb84cfa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/48a8111fb2842be79e451a1affb84cfa/attack2.mp3",
+      "name": "attack2",
+      "sha256": "02a1af75d0505048c000b2a40542bb5fc67f28e7a4d42e451f4334a8fb3aac1d"
+    },
+    "67f91479be302374cac84b26a661a7ab:1": {
+      "guid": "e7229ef48c829ab6ee5c505d8bc476a3",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e7229ef48c829ab6ee5c505d8bc476a3/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "3bee7eeb02125837467b899a4c4a738c8fab6daeb5c4c772560162edc0035ad6"
+    },
+    "fc84a3b3a6842044ab9eeee89edb947a:1": {
+      "guid": "5d2e3af62a0c2943dc8f8a2da9b6b2a4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5d2e3af62a0c2943dc8f8a2da9b6b2a4/death.mp3",
+      "name": "death",
+      "sha256": "456c68b784001ff2f79736aa3054c0f8e0fd4b3c92ad6bf99a96dceee104ebe8"
+    },
+    "a2cb91893dce69546954fb8acaf3b003:1": {
+      "guid": "de179d6423c5e02e9872518a912488d8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/de179d6423c5e02e9872518a912488d8/hit.mp3",
+      "name": "hit",
+      "sha256": "c0d6af8336ac9a51934854f050a57bfd70add1e3a2ed8e2b130c74cd4ad5b27c"
+    },
+    "5eed7ace6e187f74e82ec27b6f662415:1": {
+      "guid": "33489b4fd25b0f6fda6711926e6f0506",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/33489b4fd25b0f6fda6711926e6f0506/hit2.mp3",
+      "name": "hit2",
+      "sha256": "aa756a49dfb3888dc80d8ae34765df891845b71fa078a4b49087ee22dfcb1412"
+    },
+    "c3c3e12321acc50409a364ca5fc38ddd:1": {
+      "guid": "ed3f840723983c9a29fc7f2af0adf980",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ed3f840723983c9a29fc7f2af0adf980/skill0.mp3",
+      "name": "skill0",
+      "sha256": "16c2a0304153b19cf7eb180b6257788e59a1da9d03d21a4b51490be391e5586f"
+    },
+    "3bb06f26cf85d2746b66b43894b41238:1": {
+      "guid": "6aa065fc7809a7d285787b1937be99c0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6aa065fc7809a7d285787b1937be99c0/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "9179b288834ccba3833c1f006784cdd3ef59fb7845f833e1dc928d610f127452"
+    },
+    "6a3c82e9fe43e2642bd6ebc2465d90a5:1": {
+      "guid": "4fb3c0b2b43c6267eac1e1af4298c602",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4fb3c0b2b43c6267eac1e1af4298c602/skill0_heal.mp3",
+      "name": "skill0_heal",
+      "sha256": "4e9d131c2798af46fc24d4eb88745727de34c7eb09c1ef8d196d659206f5644a"
+    },
+    "43045d0cb3f60d646a06eb7ab3c33450:1": {
+      "guid": "536cd15b99d42d32bb66289fbde141da",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/536cd15b99d42d32bb66289fbde141da/skill0_passive.mp3",
+      "name": "skill0_passive",
+      "sha256": "3f66c65f156dacb694837772caae2435a02898f719cf490a29562efb91fc2326"
+    },
+    "0eca2af14b2235d4f825b36a99449efe:1": {
+      "guid": "76527fe874168b35794fff98c31f5be6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/76527fe874168b35794fff98c31f5be6/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "e7d463d8f8fbebb2ddf4ebd2d86bf16ec4b8a929c717a50dd9bc8e534e98c414"
+    },
+    "f42efe7e936fd0c4a8e0a8840bc4ec24:1": {
+      "guid": "2becf25312c327b9a729c2ab3629ec9d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2becf25312c327b9a729c2ab3629ec9d/skill1.mp3",
+      "name": "skill1",
+      "sha256": "070a7fdf8ea558bff0285863827a1dd35ceccda108e1a970eb5223c2b3586a2b"
+    },
+    "44b29365b9903e8408ac3e12fe7de63d:1": {
+      "guid": "e08ad8df935477a05d9cf7810a86159e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e08ad8df935477a05d9cf7810a86159e/skill1_down.mp3",
+      "name": "skill1_down",
+      "sha256": "6fb58def3b72cbd7b813f80963c8ba8be9ad20deb247f12dba26bab610f34896"
+    },
+    "37487289ca15b1140a191eb706e936ae:1": {
+      "guid": "3d5061b24a7cb752276bc4319fce20c5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3d5061b24a7cb752276bc4319fce20c5/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "5136e36e5a5318e1567c625cae43e96012f93b96fd318001fc498238d16254f4"
+    },
+    "46c9668f1064afa449549591a45cdf20:1": {
+      "guid": "0260f4da537050492731099d7fac3e5f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0260f4da537050492731099d7fac3e5f/skill2_ex.mp3",
+      "name": "skill2_ex",
+      "sha256": "d27142e5b209df2e567ac901c6b9b4b8156640ea24cf08c32995382f705e7f5b"
+    },
+    "735f44c95204e8d4c89f75b558831bbf:1": {
+      "guid": "1c4bb1385df0ddc8868b096898ba6e29",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1c4bb1385df0ddc8868b096898ba6e29/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "51c0812d70a892d4ac33b37ef9ff2a67a419772e6f528c1346cb232315632134"
+    },
+    "e458edcd44b4d4740a250698bb9a7dee:1": {
+      "guid": "9359d8b1441c62eebad182bfe4ccbd32",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9359d8b1441c62eebad182bfe4ccbd32/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "9195a4fe36045c524eca33bc23d945997e74303b01aa558782877a030c4c636e"
+    },
+    "09b97c771984d344c82e3cb804d502b8:1": {
+      "guid": "16cafceab7e98841c9156e49a904fa9d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/16cafceab7e98841c9156e49a904fa9d/skill3.mp3",
+      "name": "skill3",
+      "sha256": "d038e40823ff1ce227bc426c349379f6da169063a131dca4b0052cb3bb180a99"
+    },
+    "458e8114a86f3674ca6777926125b417:1": {
+      "guid": "5637c0e27d19536d15eaec787bb2bfc9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5637c0e27d19536d15eaec787bb2bfc9/skill3_buff.mp3",
+      "name": "skill3_buff",
+      "sha256": "070a7fdf8ea558bff0285863827a1dd35ceccda108e1a970eb5223c2b3586a2b"
+    },
+    "72a311af2efa5864b977afe75730c013:1": {
+      "guid": "4adfbae92ca8bc46adff9e70b23e76c4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4adfbae92ca8bc46adff9e70b23e76c4/skill3_hit.mp3",
+      "name": "skill3_hit",
+      "sha256": "09041202b1a6288889aff499a5d1ae3e0fdcae9f462ea6c53625eaf4e4efe4f8"
+    },
+    "ad644706621f04c40ab49d650b6fb020:1": {
+      "guid": "63200fa909c480770e220211011a497b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/63200fa909c480770e220211011a497b/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "23b6910ca0cb8127733b961af787b17df18130eb165525738aa6eb4c9cf0fd2e"
+    },
+    "a15616b4b42da0648ad157f9fc1d0340:1": {
+      "guid": "6b33523c03bcf3f489b9ae051ed9fd2c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6b33523c03bcf3f489b9ae051ed9fd2c/skill2.mp3",
+      "name": "skill2",
+      "sha256": "7c41b49ed9291c9c08983251d3ce689334125e97d99b743faf80eb005b55d757"
+    },
+    "3f8406088ed3a274cbd154cc37bcb642:1": {
+      "guid": "59056d6d0e3f6386402871e10c7ab503",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/59056d6d0e3f6386402871e10c7ab503/attack.mp3",
+      "name": "attack",
+      "sha256": "f47d1fcf980bf791e6c91c4578e2d37acb338bf8fae0ff71821372b67e5e0fbf"
+    },
+    "ee664f77282e6e348a7c70609cfee3df:1": {
+      "guid": "1d5435aae51bd697e96191bb1e87ca49",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1d5435aae51bd697e96191bb1e87ca49/attack2.mp3",
+      "name": "attack2",
+      "sha256": "6ad27e044b1b088b6f61d23718a6851f51ae33a84087b036f0de40dc70d638b3"
+    },
+    "183db1ffe7230e44a8dea8b03ce55352:1": {
+      "guid": "af892f43fb221ec6d18f56b9eaef97f1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/af892f43fb221ec6d18f56b9eaef97f1/attack_voice.mp3",
+      "name": "attack_voice",
+      "sha256": "dd995470522119c8d5a620404c2f15f4d773127bc7cc5d500390744008774933"
+    },
+    "84ebf9cbbc4906a4f9ded93c5e5853af:1": {
+      "guid": "0424fa1f04c85d70bede9d23a14afaf0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0424fa1f04c85d70bede9d23a14afaf0/attack_voice2.mp3",
+      "name": "attack_voice2",
+      "sha256": "547def281caba5cf4adb16ce591817ca8483d5089d7cb2ba776f0b1563aaedc9"
+    },
+    "65e5af49a6dc5d3429ea2a04cca45aa2:1": {
+      "guid": "8b61983d8a3e5235ef46011a255e13c8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8b61983d8a3e5235ef46011a255e13c8/death.mp3",
+      "name": "death",
+      "sha256": "86fc27da8e30cb443bcc089a573310d14d32f0df1f2f0ea967bd161e8cd8a6b1"
+    },
+    "395300b2ffb5d924d8ee7fb4b31c02cc:1": {
+      "guid": "847aac5ecd23df7d4eab7a8fffbe8477",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/847aac5ecd23df7d4eab7a8fffbe8477/hit.mp3",
+      "name": "hit",
+      "sha256": "9c16444a9449299b8fb8385bb644eaca0b06456256795a573fcfb7a8863e50d9"
+    },
+    "24953eff388db154e86b1a37ffc14d86:1": {
+      "guid": "d6473e4a5a9f6e38e9d613e43a64429a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/d6473e4a5a9f6e38e9d613e43a64429a/hit2.mp3",
+      "name": "hit2",
+      "sha256": "4b2d6a73a831e8be8cc14f7cfdb728b906ba9799bdacb81d07841896a74bfdf3"
+    },
+    "cf7ec65b8f4d6f648a67949e04a21d18:1": {
+      "guid": "610019091b54cffc1276881fff084a99",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/610019091b54cffc1276881fff084a99/passive.mp3",
+      "name": "passive",
+      "sha256": "1cc992eeca44dfb45eb30090e664f1a910dc17a8c230e0c08d60faee01dc7e7d"
+    },
+    "6c87912e4e1490f42a82052b90eaec89:1": {
+      "guid": "fa0b528621e2e377e04c253a3c438a0a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fa0b528621e2e377e04c253a3c438a0a/passive2.mp3",
+      "name": "passive2",
+      "sha256": "7da7b6510164780c02a374c25a35eda201a9374e2b6c1268d0ed251fe407949e"
+    },
+    "fa54c6021fb543740828fe7b1592927b:1": {
+      "guid": "01d600f259a4aa9c271689997f52f060",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/01d600f259a4aa9c271689997f52f060/skill0_0.mp3",
+      "name": "skill0_0",
+      "sha256": "92d386d5569a7ca7dd8c66e39b5b9381c3cac46ff7f2b7d26e62f693edcf83ac"
+    },
+    "e7a0fdca07a00154d947176fac3d5254:1": {
+      "guid": "298a947ab9e6488054fc94b74e9b992a",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/298a947ab9e6488054fc94b74e9b992a/skill0_0_voice.mp3",
+      "name": "skill0_0_voice",
+      "sha256": "b1145ed509ae03548c0210e8e84b0edc0233a4b48f0d71e897f19577cc681f08"
+    },
+    "abf073fd9ae674541873bb120faa8011:1": {
+      "guid": "245a0446fb3ced0ae46c72e86d12e374",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/245a0446fb3ced0ae46c72e86d12e374/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "8c1f8bb8a849a3899917bfd519070d7b2036fd6ad8779254c58fdbe5a236b774"
+    },
+    "e3de554f97a3d1a4a847397540049cc1:1": {
+      "guid": "39f27e6032f8593a5ad2a72d5d587304",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/39f27e6032f8593a5ad2a72d5d587304/skill0_1_voice.mp3",
+      "name": "skill0_1_voice",
+      "sha256": "204c4691151d2642d659bf5ef4b38092095bfd6f7e3faac20322db752d74b0bd"
+    },
+    "27fefed68e239ef48a215e203bd9c2a4:1": {
+      "guid": "6b72201da205fc501ab8607447cbf2ca",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6b72201da205fc501ab8607447cbf2ca/skill0_2.mp3",
+      "name": "skill0_2",
+      "sha256": "4a94139cee49e8bc1b891473cc310c1cf64a95cff994cffa149293d98b4b3434"
+    },
+    "4e55ae7ef237c4847846970027da43c0:1": {
+      "guid": "7c8c0c9bc3944a454191879a817a1726",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7c8c0c9bc3944a454191879a817a1726/skill0_2_voice.mp3",
+      "name": "skill0_2_voice",
+      "sha256": "d0c1336962234edb611d81e1ddfa2f3008d62edd824be8b5b5fcf739917bc922"
+    },
+    "df0ea03696c92814da5eb794019753dd:1": {
+      "guid": "fba0aab5910c2e7517bc8aa71d119050",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fba0aab5910c2e7517bc8aa71d119050/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "344b074f106482ec4d203c329b6792e458f0e20cbd5d3ebd1701485e53c07f69"
+    },
+    "637b6e07885a5214291a3ad5abf97dca:1": {
+      "guid": "1a178a360596a48051c77c9fcfa67cbd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1a178a360596a48051c77c9fcfa67cbd/skill1.mp3",
+      "name": "skill1",
+      "sha256": "d0f87a6933f6ff2068684ee030ec3703ee13a997360542422e8a8e40a2bcd7f4"
+    },
+    "cc6e391529e7f314f824443c13bd64cf:1": {
+      "guid": "180bdcc09ae6314e9e9bc3ce1ca654ae",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/180bdcc09ae6314e9e9bc3ce1ca654ae/skill1_block.mp3",
+      "name": "skill1_block",
+      "sha256": "be1d33d7cb445e58641526ec3cca4fc55f56c90a3f9288cc5da78b3a52be16e5"
+    },
+    "612c08ca230ef7d4db1bb84619bb34b3:1": {
+      "guid": "bc8bc03a4f1f62168e3a2aa184ea1921",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/bc8bc03a4f1f62168e3a2aa184ea1921/skill1_loop.mp3",
+      "name": "skill1_loop",
+      "sha256": "7c52d5d9ccccc23a7d7900140a8630024b06f194a1ad7bc3dbe67304a76985a2"
+    },
+    "a77a323d6cbc8834fa145bc6e234558a:1": {
+      "guid": "ed632b5684565a94b521a1c0144c8600",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ed632b5684565a94b521a1c0144c8600/skill1_voice.mp3",
+      "name": "skill1_voice",
+      "sha256": "195097173d60d0da30194b9e35a69cf9c839783384d59b18d6b142d064719df0"
+    },
+    "682bd348c677c8146b9dd1973a159562:1": {
+      "guid": "88ccc06d3156eef94afddf6cfbdf809f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/88ccc06d3156eef94afddf6cfbdf809f/skill2.mp3",
+      "name": "skill2",
+      "sha256": "139ca48aaf387247546e949692a97c39e0065cbc4b52ac0ed7c821e3a5a258ca"
+    },
+    "1f266ac9a5c9ed14a8bc5a2bb1e51c68:1": {
+      "guid": "027b00e6e846d8279d017aa0f677ec89",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/027b00e6e846d8279d017aa0f677ec89/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "5d5135d27f94a7c1ac6b21741a3202410c9f923ac90f10b4b52535c97d8e6aea"
+    },
+    "08823ac6483cec140a5e319a0a31d43f:1": {
+      "guid": "31175d69892ccd13c690ee7973d05220",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/31175d69892ccd13c690ee7973d05220/skill3.mp3",
+      "name": "skill3",
+      "sha256": "bcf42015428569023909a38801fd6d5157f7d2ebb1297255f4dfa0ae65df7941"
+    },
+    "114a5d7d3f260b343a5bac825024d2d6:1": {
+      "guid": "fdb06d16cdf2322cd16efad8eb2c3f5c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/fdb06d16cdf2322cd16efad8eb2c3f5c/skill3_ex.mp3",
+      "name": "skill3_ex",
+      "sha256": "994a57ee29e404407db77e481eb63d7a32cb1bbbdd769d29cdc11f20411d0487"
+    },
+    "e7d1d4b7f47e48f439cb81b859e7454d:1": {
+      "guid": "8be943fad909fe9bf4faa92fa602de96",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8be943fad909fe9bf4faa92fa602de96/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "b6ab4fa230680a66088963392777f97ff10400b1f0793cda35838e6f6a86b496"
+    },
+    "0ec34d326a002a842abbce3c1dc2e7f8:1": {
+      "guid": "549f416532f76ef89db2054b3f3b9a86",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/549f416532f76ef89db2054b3f3b9a86/attack3.mp3",
+      "name": "attack3",
+      "sha256": "e62728d36e879fddcbacc05bae62c63652051657afc6ef3f3ab36cb8dca6ca5d"
+    },
+    "ed2567c3891255e45a43350f1b9d4051:1": {
+      "guid": "f4770d16e673885565a817734ea36e71",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f4770d16e673885565a817734ea36e71/skill0_0_active.mp3",
+      "name": "skill0_0_active",
+      "sha256": "a643676380dff0d89f3035cc15afab48832e15dade8f84f86539381fe8a90840"
+    },
+    "42e1764018d7a8c49a29fe3af21e3067:1": {
+      "guid": "667d8c27d561e8e2447db2c577cef734",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/667d8c27d561e8e2447db2c577cef734/attack2.mp3",
+      "name": "attack2",
+      "sha256": "8e7e56116da6af5e5f3f2deec9f878a2ddc6c0eb4707ea56cb69339aeeadc0ea"
+    },
+    "3fbe4ab031368d346b3c5adf5fea7c95:1": {
+      "guid": "82679eec7b22649b210eecc26b1fb1aa",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/82679eec7b22649b210eecc26b1fb1aa/skill1.mp3",
+      "name": "skill1",
+      "sha256": "874199fd3535924c0065c6764297001f1c5a5170db4a5f0a370cc32004fcb86d"
+    },
+    "5ff094a18e162d14aac97e027214418e:1": {
+      "guid": "68ca53a3549efa73dd372217881d1029",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/68ca53a3549efa73dd372217881d1029/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "6e4179b653ae546bc49eb9c0f8178b19d2e0205bf498c321e4c7cf56adf2e072"
+    },
+    "ac4da7833371e8040b29be0d831b819d:1": {
+      "guid": "7c665cb87e7ee969446fb379d6a37940",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7c665cb87e7ee969446fb379d6a37940/skill1_1.mp3",
+      "name": "skill1_1",
+      "sha256": "efe6f9bd503266ddc5f9460767ae54da6f777fb7701cfcfefdd4c5c7b6023541"
+    },
+    "607cbd34bd6acb74a9f96f60503c2dd5:1": {
+      "guid": "6a5a7b5b5eb573e0326b4b55834b673f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6a5a7b5b5eb573e0326b4b55834b673f/skill0_missile_hit.mp3",
+      "name": "skill0_missile_hit",
+      "sha256": "defa7949ea9370e746bd18bfeaa445c3eab67093151abb74f76d255680609ded"
+    },
+    "c5212cf43a4e7224a8d68741357cb3df:1": {
+      "guid": "5549483493bbac4403a8890f1b403312",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/5549483493bbac4403a8890f1b403312/attack.mp3",
+      "name": "attack",
+      "sha256": "5fa51d13801155987194a469789270937e17fb4153f3cbfe41c5e82c4efdb277"
+    },
+    "5f1ca266cd56ada4fa98baa0cb016a06:1": {
+      "guid": "c169f9c49e84c88fe4959c02d0d6eee6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c169f9c49e84c88fe4959c02d0d6eee6/skill3.mp3",
+      "name": "skill3",
+      "sha256": "dce9ca1c505a4073af9474d12fc22ef72038722143a4add40c254af7a185d725"
+    },
+    "6f117397edfd3cd4eb3f286ade861127:1": {
+      "guid": "f4d43e1eab34e8a59396b99861c6cc5f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f4d43e1eab34e8a59396b99861c6cc5f/hit2.mp3",
+      "name": "hit2",
+      "sha256": "375c9e037ede75e6e38b5166172daae2bca1c90edc13cc643d114c647b67d8ea"
+    },
+    "169f2108224a65f4c938db445b54d0aa:1": {
+      "guid": "62fc3e8e08cc3f28d1111809c259df7e",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/62fc3e8e08cc3f28d1111809c259df7e/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "c79d0ed9b62502a65f8e9e80c55b360dc619e116747ce8387778f40924411b1c"
+    },
+    "43875308559b3a24c8289b7f0f4d3a96:1": {
+      "guid": "3c1a897e0c661cb203309e1b837c4c4b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/3c1a897e0c661cb203309e1b837c4c4b/hit.mp3",
+      "name": "hit",
+      "sha256": "65ea8d1cabe8fdff9177152e8c60f13fad0a4c30e1ff767669bcb4e1212609b9"
+    },
+    "b4740e59c3ad4484880978039115765f:1": {
+      "guid": "50f737a0da3616de32f3656eba8bff01",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/50f737a0da3616de32f3656eba8bff01/skill3_1.mp3",
+      "name": "skill3_1",
+      "sha256": "ac9a49c26f3d1d1bb62f2062ddff7cfc3456b620206a660efdaa09a3ee234f94"
+    },
+    "541d816adc852304ca1cbf8be087d9de:1": {
+      "guid": "05dc92115327b6755f15a0e1fc993c98",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/05dc92115327b6755f15a0e1fc993c98/passive.mp3",
+      "name": "passive",
+      "sha256": "723041b249e9faf725f9a7fae31a926b9eb6fdd75803c6b556c5764ba294d15f"
+    },
+    "24c9fada1f21491438f1fcf82bd9bf01:1": {
+      "guid": "9ca9a09376be589ec633b91806e030f1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9ca9a09376be589ec633b91806e030f1/skill0_2.mp3",
+      "name": "skill0_2",
+      "sha256": "a7e26125f63aedc5d2a73b45fcc4b937f0f03b3ef69f4f4e6b3dcad2c69865a8"
+    },
+    "d3d5815b85f4d7b4d974cdc09f870b51:1": {
+      "guid": "c95bf8e4e99fe97097cb6c23c20e65fd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c95bf8e4e99fe97097cb6c23c20e65fd/attack3.mp3",
+      "name": "attack3",
+      "sha256": "2e906f4a2e1408a1499d8b27f9727ff88d553346e4b910014c3b0b9dcdd1fe4e"
+    },
+    "e79b586c04952d84281a62c83224950c:1": {
+      "guid": "b791ea2730ed96410514daf20d461280",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b791ea2730ed96410514daf20d461280/skill0_0_active.mp3",
+      "name": "skill0_0_active",
+      "sha256": "77dd1a88476efa80b6270935ccf628efd570276f416dc82c6e5fb5cfc198dc51"
+    },
+    "2add427ca66774749a79f97655a7e657:1": {
+      "guid": "55a842a6ad7e15f91c257371d1d2ade0",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/55a842a6ad7e15f91c257371d1d2ade0/skill2.mp3",
+      "name": "skill2",
+      "sha256": "fe80ef99e8275c659c363616eced9f15194a3e54b4471174e9b49b791ec31266"
+    },
+    "045a972d3ed47894d995238a640f3023:1": {
+      "guid": "574fa4ca8199c1272d28a9af6028e161",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/574fa4ca8199c1272d28a9af6028e161/skill1_block.mp3",
+      "name": "skill1_block",
+      "sha256": "ca0242cb202e246a526fef0b6184a6dab7a7cf64ae399b6b55be4d64c0784313"
+    },
+    "627c8b0f0d497d8498591bf4e1b487a0:1": {
+      "guid": "7c0d48748d904873ea5e19fc2decf770",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7c0d48748d904873ea5e19fc2decf770/skill0_0.mp3",
+      "name": "skill0_0",
+      "sha256": "9476adaa27f1a149e7242dffbffd282325264b1f687231f79ca46699c5d2b975"
+    },
+    "016557ec6c0c6c240893bd8f809fb706:1": {
+      "guid": "2a0a0976f566aa6125373d7b283989dd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/2a0a0976f566aa6125373d7b283989dd/skill3_1.mp3",
+      "name": "skill3_1",
+      "sha256": "3cd797e763bd8527bd1830c28e6f104a53a332ca5aeb00eea67836c6a3ed2911"
+    },
+    "1331f917f16701541b11f08fef395c7a:1": {
+      "guid": "cc373e2c8a46faba323acd360ec64303",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/cc373e2c8a46faba323acd360ec64303/hit2.mp3",
+      "name": "hit2",
+      "sha256": "944eea67abb9873a295bcfbcc5470f1aa535fe8ea44c20c2176097529918ac51"
+    },
+    "1e51338b72039ea45afa68da89214ee9:1": {
+      "guid": "949889b16e01f1e0f1f008af2cb8e19f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/949889b16e01f1e0f1f008af2cb8e19f/attack2.mp3",
+      "name": "attack2",
+      "sha256": "80d20662fed18a5137319893e1a5b26a839908d5fa54da704f204a20e6035bc6"
+    },
+    "248a17a80996f8f4a87ddbf6068b86cb:1": {
+      "guid": "ec99de0adf5b21dfe6ebf44093f5ee49",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ec99de0adf5b21dfe6ebf44093f5ee49/skill3_ex.mp3",
+      "name": "skill3_ex",
+      "sha256": "bd53e88f050ee53013dffaf70c4ed5b70425b1170d69bffac72972776c1f85ff"
+    },
+    "2e87b5e68ff06284eac7c4ca234a01d4:1": {
+      "guid": "be12b37d22214690e0b83f0eb89d011c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/be12b37d22214690e0b83f0eb89d011c/attack.mp3",
+      "name": "attack",
+      "sha256": "8b2ca87ae99b74e25ae4c7a4ac0148fe4744226fbf6fde53123dce8ff5ffc93a"
+    },
+    "34b3e18bdeb8a1c4d83473e5857889cd:1": {
+      "guid": "f93ee2e52e4b78083d5ea4ab54887bc2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f93ee2e52e4b78083d5ea4ab54887bc2/attack3.mp3",
+      "name": "attack3",
+      "sha256": "197b227da5b8537bdd6f48d6db3b27bfb994453ec8a630e3b613198240fb047f"
+    },
+    "37a304eb528f74e48ad5cab66f7e31c2:1": {
+      "guid": "daa6b33d4544a04132ff9de9602f4d03",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/daa6b33d4544a04132ff9de9602f4d03/skill0_0_active.mp3",
+      "name": "skill0_0_active",
+      "sha256": "8f833e70938480d754d1b77cfc8c449e7eb025ab6cd645468bf2a3cdf6a5302d"
+    },
+    "5636b069cef31304f8fa137f7401741f:1": {
+      "guid": "0600638c43471f32ef8d7555eda88c4d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/0600638c43471f32ef8d7555eda88c4d/skill0_2.mp3",
+      "name": "skill0_2",
+      "sha256": "2e977426807b2795849c60275adbfc2e1a973ac9f302ee17308f2ad7c184be09"
+    },
+    "5f18c59031a303147bbdafcbb9441b96:1": {
+      "guid": "6b4feaa9a60fd67878c0fce988fd90c5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6b4feaa9a60fd67878c0fce988fd90c5/skill0_0.mp3",
+      "name": "skill0_0",
+      "sha256": "a0b5743db5932d62d5ce70e43995ddbd7217ea4822c905e227b49f075f048664"
+    },
+    "5ffa748dc0f41a44388381f9c5b6699c:1": {
+      "guid": "70d1653e7d4ba9a8eb971d0c4fb414f8",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/70d1653e7d4ba9a8eb971d0c4fb414f8/skill3.mp3",
+      "name": "skill3",
+      "sha256": "d61257c6937614c7b15e8922dbd492895c2b0c43390b1ccdaf23284c64d7ef15"
+    },
+    "678b4c7e6d48770429526e2057c89e64:1": {
+      "guid": "c526afb4455e2f685ae1a6fa14a491a9",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/c526afb4455e2f685ae1a6fa14a491a9/skill1_1.mp3",
+      "name": "skill1_1",
+      "sha256": "c477613d6c009ee46e2ca15a12219b75de880f048df0cbffc10dcd4cc47019b8"
+    },
+    "67c2c8d4433132f4183ca4e9738be6ba:1": {
+      "guid": "b8bb918961f239ba2327a1474698041f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/b8bb918961f239ba2327a1474698041f/skill0_1.mp3",
+      "name": "skill0_1",
+      "sha256": "d96efd9b84a231ec590e66bda0c31ae7839727b6d85f8749c13e8f0a062f1e6f"
+    },
+    "6ca97f06035378a439040e842e2f1fe7:1": {
+      "guid": "4a3640867cec07a9a472c15beb001229",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4a3640867cec07a9a472c15beb001229/skill1_block.mp3",
+      "name": "skill1_block",
+      "sha256": "3d39803592a59653f8cc00d0601f37ad5a0e333c77d161c52efb9bf14a96e6fa"
+    },
+    "7f387fa5d4aea0d49bb151c2a1991c2f:1": {
+      "guid": "df5a63952ea80e34aa1dbcbcaebd18e1",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/df5a63952ea80e34aa1dbcbcaebd18e1/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "c47902809b5c35aa51d6720e0251d8c4eb81fa047e70e0d0403de8ebf56ca7be"
+    },
+    "c26e97bbe662f08498c2f35957a68088:1": {
+      "guid": "303fbacdb46eae3fcce3637b85bbfcf4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/303fbacdb46eae3fcce3637b85bbfcf4/skill2.mp3",
+      "name": "skill2",
+      "sha256": "e8c7e4cc383bfd24666d6aeebd394cacbcca6903223d01c73af472573b97fba0"
+    },
+    "cf5013668699e7746bde5e494f5b44d0:1": {
+      "guid": "7ea8473e4ac12154ca11a4884ce960bc",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7ea8473e4ac12154ca11a4884ce960bc/passive.mp3",
+      "name": "passive",
+      "sha256": "361ff4e67425ad387e2aaab5dc88ca013ff469c6a7e40e1f1e45432714e49d30"
+    },
+    "dc4a69b9a31ac564eb1d55eb9def8b84:1": {
+      "guid": "88b7f31508f99df9cae2d49c18f81949",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/88b7f31508f99df9cae2d49c18f81949/skill1.mp3",
+      "name": "skill1",
+      "sha256": "d30cd884e6d33f7be7e1c96a33df9c55db1a7209d0e4dd86b2d42960091bb03e"
+    },
+    "e15373e43fef5b149a5954ab312b90cc:1": {
+      "guid": "8810795a3bb8dac1d228484f8be21e82",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8810795a3bb8dac1d228484f8be21e82/hit.mp3",
+      "name": "hit",
+      "sha256": "0a2727934fe00cf4ad292f09439022c08b612b24325b9c7a5ea9b2ecf5b77259"
+    },
+    "f464b3c60c2554142834d874687e02d9:1": {
+      "guid": "45734409d273b8ac6360da9acae80d1d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/45734409d273b8ac6360da9acae80d1d/skill0_missile_hit.mp3",
+      "name": "skill0_missile_hit",
+      "sha256": "482e137d6c7125515dd6287a0b0246269a520787008c3661d4e3e97bd54d4c87"
+    },
+    "5e1edd4ba301b2c41821f53c31400dde:1": {
+      "guid": "84a30260c6edacb79011c679577a79ca",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/84a30260c6edacb79011c679577a79ca/attack1.mp3",
+      "name": "attack1",
+      "sha256": "79e93d01ae07d77df4cbd793d3a25ef65b6513de439b8cf674205c9cf3ab5ab5"
+    },
+    "6b05ae600745c1a4cbc7d59fbbe97a88:1": {
+      "guid": "89c3a76552884f410062ef4a3c3c7e40",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/89c3a76552884f410062ef4a3c3c7e40/attack1_voice.mp3",
+      "name": "attack1_voice",
+      "sha256": "3dae2db38f7d89f03fe3828206d257ecf2d88cecd6cd6922104cbf59d5adf580"
+    },
+    "0fb3e05959f5d1141be1251afedece9b:1": {
+      "guid": "6dd2b71852de9cee4d3d194b6662ae01",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/6dd2b71852de9cee4d3d194b6662ae01/attack2.mp3",
+      "name": "attack2",
+      "sha256": "5f0045d395d7b57fa57d0231770fa3e5356cbd50a5cade8a92165e69ebfde16d"
+    },
+    "b464f7fa399a5d54cb40b1d66fd34346:1": {
+      "guid": "f698aba6e30e790f10815913fb31db03",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f698aba6e30e790f10815913fb31db03/attack2_voice.mp3",
+      "name": "attack2_voice",
+      "sha256": "d64b6f290860aca80a91391357c332e8810a82dbc61dbc732e0d2eabc44e92ca"
+    },
+    "6f153ee9a49aed743944c26230053ad5:1": {
+      "guid": "02514c59739c727e2dff6ee92ea04b4f",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/02514c59739c727e2dff6ee92ea04b4f/critical.mp3",
+      "name": "critical",
+      "sha256": "28f3e9be67706eb1b98300eaf348e6a1bf1d13391707f4ec13370fd46e23d17e"
+    },
+    "97042a788a451314e9082a114875e451:1": {
+      "guid": "97fe7108f8ba8a43eb2777a47df7aadd",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/97fe7108f8ba8a43eb2777a47df7aadd/death.mp3",
+      "name": "death",
+      "sha256": "960a897bf4acc446be869fae17d07ea4a656628a3732a32e021fb1c9ef125007"
+    },
+    "1420c929a86f2e64d965f5c152c7cd0a:1": {
+      "guid": "f02bc279f4bedc835657e3f8f52101ab",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f02bc279f4bedc835657e3f8f52101ab/hit1.mp3",
+      "name": "hit1",
+      "sha256": "14910ea52849e00679874b57258d05eef4107317a4ddff4e661cbd1e5dc952bc"
+    },
+    "f6232c6ab320a0f4b9279e118edb78e2:1": {
+      "guid": "7511aa8c60a30ab2b0a270ff2b20bd50",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/7511aa8c60a30ab2b0a270ff2b20bd50/hit2.mp3",
+      "name": "hit2",
+      "sha256": "50478005bc7235aea0dbef275fcfe8b841f9192e3b9889078a4fdd19433aa62d"
+    },
+    "896646008d60dde448b6439fd2c9d2d8:1": {
+      "guid": "1dc2065d34cd8dbfc863a549b2424803",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1dc2065d34cd8dbfc863a549b2424803/shadow_skill2.mp3",
+      "name": "shadow_skill2",
+      "sha256": "f2ccda9cf2c5816579c8deb588388dff08e350dc5e613048af3db58dca44ba8f"
+    },
+    "920c17be082983746a2322482446a4f6:1": {
+      "guid": "db1716fa1ec2b64f465b12d87336126c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/db1716fa1ec2b64f465b12d87336126c/skill0.mp3",
+      "name": "skill0",
+      "sha256": "193d4343cdff552dbafab06c3eb2d4aba8813eb37c61e47fa997f9501844fa69"
+    },
+    "592b5494da127394bbcc76b708ef3d79:1": {
+      "guid": "81d141106b8ada8f74170d18fdd7ae8b",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/81d141106b8ada8f74170d18fdd7ae8b/skill0_hit.mp3",
+      "name": "skill0_hit",
+      "sha256": "dc0655a7a86a20d8665e7baf9e94c0e78458c2bae27308ce328a31bc0f283201"
+    },
+    "b543af86ebeb4c740862defacaacbd9e:1": {
+      "guid": "e94168485036c48738a102a874beb860",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/e94168485036c48738a102a874beb860/skill0_voice.mp3",
+      "name": "skill0_voice",
+      "sha256": "218541a9c78eeaede41a635e71d2f8b14c635337df4a51726eca292f1905f3e0"
+    },
+    "28d347dc393df5b4c908565d23c311c8:1": {
+      "guid": "ece765fce200044d0653a15155666cd2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/ece765fce200044d0653a15155666cd2/skill1.mp3",
+      "name": "skill1",
+      "sha256": "c6290cb0516fd3197f74bf6fba844633e003162e8839f6a853ef8575f3691b30"
+    },
+    "d71e86d81bdd4a74d8ec487879701453:1": {
+      "guid": "9ebb9123194382956554d9e3399254b6",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/9ebb9123194382956554d9e3399254b6/skill2.mp3",
+      "name": "skill2",
+      "sha256": "98cc9e8b39dd46010b3306f2b7b3a8a6be24f39f70841c9e84925baaf98542f6"
+    },
+    "c29abf72460f70e4199d60099a598f0b:1": {
+      "guid": "90afa1410e3da3cac7d3d32c60e7b9f5",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/90afa1410e3da3cac7d3d32c60e7b9f5/skill2_hit.mp3",
+      "name": "skill2_hit",
+      "sha256": "ceefcf40662c3888b94e80c78f715b11bbaf089c04643fd7445c3fc4822c3925"
+    },
+    "bafaa91aba7899a48bf20d8f444ab81c:1": {
+      "guid": "31adc4cf2e741e8a8fb0f429a43a8b8c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/31adc4cf2e741e8a8fb0f429a43a8b8c/skill2_voice.mp3",
+      "name": "skill2_voice",
+      "sha256": "b62c2164a6e3df393f50c4c9a586eb79dde5641a2639200b8e089dcfa9d67133"
+    },
+    "286c68dc7805df546873263041dfdc65:1": {
+      "guid": "caa971c21e8883e39e47ba67b9787278",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/caa971c21e8883e39e47ba67b9787278/skill3.mp3",
+      "name": "skill3",
+      "sha256": "33599801970798e212fc0be77f30c6dcb277ae7fb44d9931795d06b2b695fd58"
+    },
+    "66c79a0ba5439f849b6d40bf2b8c2f46:1": {
+      "guid": "385518e21cc0d17030f6ae23c37cbef4",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/385518e21cc0d17030f6ae23c37cbef4/skill3_explosion.mp3",
+      "name": "skill3_explosion",
+      "sha256": "51a87683c37911c5112d8037cf937c4957d0b6d20637f97480a59609b56ceace"
+    },
+    "6027fd4c0554e894e9be29e8161fb9ab:1": {
+      "guid": "218c39240c2ec8b33289b368066dabda",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/218c39240c2ec8b33289b368066dabda/skill3_voice.mp3",
+      "name": "skill3_voice",
+      "sha256": "16c2852233c146acf9256515ef3a98c25e78f4408f964867116f053c8ec5c7bd"
+    },
+    "795a7074399c0cf44a46aae5d368ff33:1": {
+      "guid": "4191baa004970322c5ccf52114d3677c",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4191baa004970322c5ccf52114d3677c/swap.mp3",
+      "name": "swap",
+      "sha256": "cd3ec38d1c0f4989a64d80a33e80f7b62bdafff0cd409d74a324f40c614ea59a"
+    },
+    "sharedassets3.assets:150": {
+      "guid": "945db8bc9c3ef170854cea2517e48982",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/945db8bc9c3ef170854cea2517e48982/attack.mp3",
+      "name": "attack",
+      "sha256": "8c77fee99439fdc6533a7c2afb75fbd06b1dbf86b4e391a41fa49560eae34235"
+    },
+    "sharedassets3.assets:149": {
+      "guid": "8a9a2f657226e8448dd9376f195997e2",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/8a9a2f657226e8448dd9376f195997e2/attack.mp3",
+      "name": "attack",
+      "sha256": "de34eb56f38e33979ca438d7c7cf69bfe184970f0ba56a77df35da6ff17e6f3d"
+    },
+    "sharedassets3.assets:146": {
+      "guid": "1a4bc7b73ab418d9f9161368657433ee",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/1a4bc7b73ab418d9f9161368657433ee/death.mp3",
+      "name": "death",
+      "sha256": "f747f21d79816245dbf23a8b9a73f5abf1cab5fbae6a2b9ce2540394d0e19163"
+    },
+    "sharedassets3.assets:154": {
+      "guid": "34e7ad81847446c69bfdadb6429d71eb",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/34e7ad81847446c69bfdadb6429d71eb/attack.mp3",
+      "name": "attack",
+      "sha256": "5f972a9c056fd926787ec585eba8e1122c6349d6136b00f70c49b06e86d95dcd"
+    },
+    "sharedassets3.assets:151": {
+      "guid": "f4caf4a5e2a1330e9766d656925c2c3d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/f4caf4a5e2a1330e9766d656925c2c3d/attack.mp3",
+      "name": "attack",
+      "sha256": "8e3f3e44ec196bb77954d3caa127936d374c55894e45f3f3814299f30c2a3adf"
+    },
+    "sharedassets3.assets:141": {
+      "guid": "4409486bdcb8563e98f0c94a53d78630",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/4409486bdcb8563e98f0c94a53d78630/death.mp3",
+      "name": "death",
+      "sha256": "b86baa697bf61ad92be530a942d22874c983a5484c5378e62ad888c5ed32da65"
+    },
+    "sharedassets3.assets:143": {
+      "guid": "aff0aed7cbbe39a730e1d7de4ddbe47d",
+      "path": "PhoneLOL-02/Assets/AudioClip/OriginalActorAudio/aff0aed7cbbe39a730e1d7de4ddbe47d/attack.mp3",
+      "name": "attack",
+      "sha256": "9373573415aedab64dbf01e3dc49e55beb980b3f0745999787ddaeb3d923c2f5"
+    }
+  },
+  "actors": [
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/Alistar.prefab",
+      "component": 11439548,
+      "clipCount": 13
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/AncientGolem.prefab",
+      "component": 11465029,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/BlueMinionCannon.prefab",
+      "component": 11425385,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/BlueMinionMelee.prefab",
+      "component": 11435660,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/BlueMinionSuper.prefab",
+      "component": 11472182,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/BlueMinionWizard.prefab",
+      "component": 11405464,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/Dragon.prefab",
+      "component": 11484583,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/GoldLizardElder.prefab",
+      "component": 11454360,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/challenge/LizardElder.prefab",
+      "component": 11454360,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Ahri_0.prefab",
+      "component": 11467818,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Ahri_1.prefab",
+      "component": 11417017,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Ahri_2.prefab",
+      "component": 11467818,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Alistar_0.prefab",
+      "component": 11439548,
+      "clipCount": 14
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Alistar_1.prefab",
+      "component": 11439548,
+      "clipCount": 14
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Blitzcrank_0.prefab",
+      "component": 11448483,
+      "clipCount": 18
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Blitzcrank_1.prefab",
+      "component": 11439548,
+      "clipCount": 18
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Brand_0.prefab",
+      "component": 11459786,
+      "clipCount": 19
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Brand_1.prefab",
+      "component": 11459786,
+      "clipCount": 19
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Brand_2.prefab",
+      "component": 11424449,
+      "clipCount": 19
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_0.prefab",
+      "component": 11403601,
+      "clipCount": 17
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_1.prefab",
+      "component": 11403601,
+      "clipCount": 17
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_2.prefab",
+      "component": 11403601,
+      "clipCount": 17
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Ezreal_0.prefab",
+      "component": 11495861,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Ezreal_1.prefab",
+      "component": 11495861,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Fizz_0.prefab",
+      "component": 11496012,
+      "clipCount": 22
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Fizz_1.prefab",
+      "component": 11496012,
+      "clipCount": 22
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Garen_0.prefab",
+      "component": 11429211,
+      "clipCount": 22
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Garen_1.prefab",
+      "component": 11492373,
+      "clipCount": 22
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Graves_0.prefab",
+      "component": 11458972,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Graves_1.prefab",
+      "component": 11458972,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Graves_2.prefab",
+      "component": 11458972,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Jax_0.prefab",
+      "component": 11456797,
+      "clipCount": 19
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Jax_1.prefab",
+      "component": 11467758,
+      "clipCount": 19
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Jax_2.prefab",
+      "component": 11456797,
+      "clipCount": 19
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Katarina_0.prefab",
+      "component": 11449862,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Katarina_1.prefab",
+      "component": 11449862,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Katarina_2.prefab",
+      "component": 11449862,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Lucian_0.prefab",
+      "component": 11417017,
+      "clipCount": 14
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Lucian_1.prefab",
+      "component": 11417017,
+      "clipCount": 14
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/MasterYi_0.prefab",
+      "component": 11484216,
+      "clipCount": 18
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/MasterYi_1.prefab",
+      "component": 11484216,
+      "clipCount": 18
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/MasterYi_2.prefab",
+      "component": 11431434,
+      "clipCount": 18
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/MasterYi_3.prefab",
+      "component": 11469566,
+      "clipCount": 15
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Olaf_0.prefab",
+      "component": 11488124,
+      "clipCount": 12
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Olaf_1.prefab",
+      "component": 11488124,
+      "clipCount": 12
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Renekton_0.prefab",
+      "component": 11450766,
+      "clipCount": 23
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Renekton_1.prefab",
+      "component": 11450766,
+      "clipCount": 23
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Riven_0.prefab",
+      "component": 11413056,
+      "clipCount": 24
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Riven_1.prefab",
+      "component": 11480903,
+      "clipCount": 24
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Sivir_0.prefab",
+      "component": 11470521,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Sivir_1.prefab",
+      "component": 11470521,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Sivir_2.prefab",
+      "component": 11470521,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Soraka_0.prefab",
+      "component": 11431434,
+      "clipCount": 13
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Soraka_1.prefab",
+      "component": 11431434,
+      "clipCount": 13
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_0.prefab",
+      "component": 11458972,
+      "clipCount": 25
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_1.prefab",
+      "component": 11458972,
+      "clipCount": 25
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_2.prefab",
+      "component": 11458972,
+      "clipCount": 25
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Teemo_0.prefab",
+      "component": 11463256,
+      "clipCount": 10
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Teemo_1.prefab",
+      "component": 11463256,
+      "clipCount": 10
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Tristana_0.prefab",
+      "component": 11431434,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Tristana_1.prefab",
+      "component": 11431434,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Tristana_2.prefab",
+      "component": 11431434,
+      "clipCount": 16
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Tryndamere_0.prefab",
+      "component": 11411857,
+      "clipCount": 12
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Tryndamere_1.prefab",
+      "component": 11411857,
+      "clipCount": 12
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Tryndamere_2.prefab",
+      "component": 11411857,
+      "clipCount": 12
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Vayne_0.prefab",
+      "component": 11412170,
+      "clipCount": 15
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Vayne_1.prefab",
+      "component": 11411857,
+      "clipCount": 15
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Vayne_2.prefab",
+      "component": 11412170,
+      "clipCount": 15
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Vladimir_0.prefab",
+      "component": 11438461,
+      "clipCount": 22
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Vladimir_1.prefab",
+      "component": 11438461,
+      "clipCount": 22
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Yasuo_0.prefab",
+      "component": 11431434,
+      "clipCount": 28
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Yasuo_1.prefab",
+      "component": 11431434,
+      "clipCount": 28
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Yasuo_2.prefab",
+      "component": 11496012,
+      "clipCount": 29
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Yasuo_3.prefab",
+      "component": 11403859,
+      "clipCount": 20
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Zed_0.prefab",
+      "component": 11411857,
+      "clipCount": 21
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/hero/Zed_1.prefab",
+      "component": 11411857,
+      "clipCount": 21
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/BlueMinionCannon.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/BlueMinionMelee.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/BlueMinionSuper.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/BlueMinionWizard.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/RedMinionCannon.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/RedMinionMelee.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/RedMinionSuper.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/minion/RedMinionWizard.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/missile/TargetArrow.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/AncientGolem.prefab",
+      "component": 11465029,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/Baron.prefab",
+      "component": 11433324,
+      "clipCount": 2
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/Dragon.prefab",
+      "component": 11484583,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/Ghast.prefab",
+      "component": 11454360,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/GhastBig.prefab",
+      "component": 11454360,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/GoldLizardElder.prefab",
+      "component": 11454360,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/Golem.prefab",
+      "component": 11465029,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/LizardElder.prefab",
+      "component": 11454360,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/Wolf.prefab",
+      "component": 11425385,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/monster/WolfBig.prefab",
+      "component": 11425385,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/nexus/BlueNexus.prefab",
+      "component": 11465029,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/nexus/RedNexus.prefab",
+      "component": 11492514,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill0_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill1_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill2_missile.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/baron/attack_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/blueminioncannon/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/blueminionwizard/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/brand/attack_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill0_missile.prefab",
+      "component": 11454010,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill1_missile.prefab",
+      "component": 11454010,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill2_missile.prefab",
+      "component": 11419550,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill3_missile.prefab",
+      "component": 11484216,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/attack_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill0_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill1_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill3_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/fizz/skill3_missile.prefab",
+      "component": 11469566,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/graves/attack_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill0_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill1_missile.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_missile.prefab",
+      "component": 11409266,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill0_missile.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill3_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/lucian/attack_missile.prefab",
+      "component": 11405782,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/lucian/passive_missile.prefab",
+      "component": 11405782,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/lucian/skill1_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/lucian/skill3_missile.prefab",
+      "component": 11405782,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/olaf/skill0_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/redminioncannon/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/redminionwizard/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill3_1_missile.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill3_1_missile_c1.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/attack_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/skill0_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/skill1_missile.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/soraka/attack_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/soraka/skill0_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/soraka/skill2_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill1_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill3_missile.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/skill0_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/skill3_trap.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/tristana/attack_missile.prefab",
+      "component": 11461526,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/tristana/skill2_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/tristana/skill3_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/turret/attack_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/skill2_missile.prefab",
+      "component": 11419550,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/attack_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill0_missile.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill0_missile_c2.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill0_missile_c3.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill1_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill1_missile_c2.prefab",
+      "component": 11484216,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill1_missile_c3.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill0_missile.prefab",
+      "component": 11431434,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill0_missile_c1.prefab",
+      "component": 11443158,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_missile.prefab",
+      "component": 11454010,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_shadow.prefab",
+      "component": 11479834,
+      "clipCount": 7
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_shadow_c1.prefab",
+      "component": 11481434,
+      "clipCount": 7
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill3_shadow.prefab",
+      "component": 11479834,
+      "clipCount": 7
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill3_shadow_c1.prefab",
+      "component": 11481434,
+      "clipCount": 7
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/turret/Turret0.prefab",
+      "component": 11470521,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/turret/Turret1.prefab",
+      "component": 11470521,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Resources/turret/Turret2.prefab",
+      "component": 11470521,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 3896,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 3919,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 3972,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 3977,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4015,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4083,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4120,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4143,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4196,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4246,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4262,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4274,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4285,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4292,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4301,
+      "clipCount": 2
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4322,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4344,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4364,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4370,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4474,
+      "clipCount": 0
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4483,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4532,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4536,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+      "component": 4550,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MtmGame.unity",
+      "component": 4465,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MtmGame.unity",
+      "component": 4502,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MtmGame.unity",
+      "component": 4676,
+      "clipCount": 1
+    },
+    {
+      "asset": "PhoneLOL-02/Assets/Scenes/MtmGame.unity",
+      "component": 4743,
+      "clipCount": 1
+    }
+  ]
+}

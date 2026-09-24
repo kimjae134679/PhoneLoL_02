@@ -170,19 +170,19 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 105782}
   m_audioClips:
-  - {fileID: 8300000, guid: 91ab674fe773fab4ab2c71fda0fccc33, type: 3}
-  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
-  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
-  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
-  - {fileID: 8300000, guid: a30b042b3a446f94aa677394448cbe6d, type: 3}
-  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
-  - {fileID: 8300000, guid: fd336184ca15e4047aeece90285f8091, type: 3}
-  - {fileID: 8300000, guid: c88e857b5c447b84aafaeba65c7fc52c, type: 3}
-  - {fileID: 8300000, guid: a07b5a0f6b6efa940ab9d7aa37aa73ff, type: 3}
-  - {fileID: 8300000, guid: 20f3828e1679ef94faf5b9662edc3869, type: 3}
-  - {fileID: 8300000, guid: 0e96dea3c36e7ce49a11967a48c59c07, type: 3}
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
+  - {fileID: 8300000, guid: 56972be52aa2d0a7bf761d171ec64468, type: 3}
+  - {fileID: 8300000, guid: 87c2177a0b45e116882f48987c47bc8e, type: 3}
+  - {fileID: 8300000, guid: 5c3f534d20d6305f62eff6c20474c54f, type: 3}
+  - {fileID: 8300000, guid: dbe62a1757524f2f24bece256abb5c2b, type: 3}
+  - {fileID: 8300000, guid: 078a7e970409870b3bfd6f73aa7df47c, type: 3}
+  - {fileID: 8300000, guid: 170c3efd64478b8c801e00f06d089442, type: 3}
+  - {fileID: 8300000, guid: a0f5302a21256eb8350719819ef16ec8, type: 3}
+  - {fileID: 8300000, guid: 27a72ce223f3d1349f370f8ad3cd96b2, type: 3}
+  - {fileID: 8300000, guid: 0203b3948ef1475e35bae3e0e8a78f1f, type: 3}
+  - {fileID: 8300000, guid: 9e61f963dd8218d81b7aebc388f70ba6, type: 3}
+  - {fileID: 8300000, guid: 97082b6ed1a30e1b0580a3592ca283ea, type: 3}
+  - {fileID: 8300000, guid: 3980673d1d99daf15f529421fe1d7387, type: 3}
+  - {fileID: 8300000, guid: 325c661e07801d96312bbc733eee7fea, type: 3}
 --- !u!195 &19570521
 NavMeshAgent:
   m_ObjectHideFlags: 0

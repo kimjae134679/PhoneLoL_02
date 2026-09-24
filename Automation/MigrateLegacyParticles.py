@@ -22,7 +22,7 @@ rndRotation worldRotationAxis localRotationAxis sizeGrow rndForce force damping 
 counts = collections.Counter()
 def fields(block):
     result = {}
-    for m in re.finditer(r"^  ([^ \n][^:\n]*):(.*(?:\n(?!  [^ \n][^:\n]*:|---).*)*)", block, re.M):
+    for m in re.finditer(r"^  ([^ \n-][^:\n]*):(.*(?:\n(?!  [^ \n-][^:\n]*:|---).*)*)", block, re.M):
         result[m[1]] = m[2]
     return result
 def convert(block):

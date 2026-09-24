@@ -1,0 +1,22 @@
+OBSTACLE|MultiGame|Turret2|active=True|pos=(-26.00, 3.00, -30.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|Turret1|active=True|pos=(-16.00, 2.00, -17.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|Turret1|active=True|pos=(16.00, 2.00, 17.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+SKILL|MultiGame|Skill0Button|pos=(-98.93, 8.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+SKILL|MultiGame|Skill1Button|pos=(-10.00, 99.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+SKILL|MultiGame|Skill2Button|pos=(-99.00, 99.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+SKILL|MultiGame|Skill3Button|pos=(-188.00, 8.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+OBSTACLE|MultiGame|Turret2|active=True|pos=(30.00, 3.00, 26.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|Turret2|active=True|pos=(26.00, 3.00, 30.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|Turret2|active=True|pos=(-30.00, 3.00, -26.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|Turret0|active=True|pos=(-7.00, 2.00, -8.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|BlueNexus|active=True|pos=(-32.00, 3.00, -32.00)|size=(2.00, 4.00, 2.00)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|RedNexus|active=True|pos=(32.00, 3.00, 32.00)|size=(2.00, 4.00, 2.00)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MultiGame|Turret0|active=True|pos=(7.00, 2.00, 8.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+SKILL|MtmGame|Skill0Button|pos=(-98.93, 8.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+SKILL|MtmGame|Skill1Button|pos=(-10.00, 99.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+SKILL|MtmGame|Skill2Button|pos=(-99.00, 99.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+SKILL|MtmGame|Skill3Button|pos=(-188.00, 8.00, 0.00)|scale=(1.00, 1.00, 1.00)|box=(70.00, 70.00, 0.00)|center=(0.00, 0.00, 0.00)
+OBSTACLE|MtmGame|Turret2|active=True|pos=(-12.00, 0.00, 0.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MtmGame|Turret2|active=True|pos=(12.00, 0.00, 0.00)|size=(0.80, 4.00, 0.80)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MtmGame|RedNexus|active=True|pos=(23.00, 0.00, 0.00)|size=(2.00, 4.00, 2.00)|center=(0.00, 2.00, 0.00)|carve=False
+OBSTACLE|MtmGame|BlueNexus|active=True|pos=(-23.00, 0.00, 0.00)|size=(2.00, 4.00, 2.00)|center=(0.00, 2.00, 0.00)|carve=False

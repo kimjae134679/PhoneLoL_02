@@ -120,7 +120,7 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 0}
   m_audioClips:
-  - {fileID: 8300000, guid: 01008e74b6b6d6b43b15fa7c204de939, type: 3}
+  - {fileID: 8300000, guid: 1e8ea4b672e1d6f5acdfe267252b4774, type: 3}
 --- !u!114 &11484216
 MonoBehaviour:
   m_ObjectHideFlags: 0

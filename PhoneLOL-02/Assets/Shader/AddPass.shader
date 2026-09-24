@@ -6,24 +6,26 @@ Properties {
  _Splat1 ("Layer 1 (G)", 2D) = "white" {}
  _Splat0 ("Layer 0 (R)", 2D) = "white" {}
 }
-	//DummyShaderTextExporter
-	
-	SubShader{
-		Tags { "RenderType" = "Opaque" }
-		LOD 200
-		CGPROGRAM
-#pragma surface surf Lambert
+SubShader { Tags { "Queue"="Geometry-99" "RenderType"="Opaque" "IgnoreProjector"="True" "TerrainCompatible"="True" }
+CGPROGRAM
 #pragma target 3.0
-		sampler2D _MainTex;
-		struct Input
-		{
-			float2 uv_MainTex;
-		};
-		void surf(Input IN, inout SurfaceOutput o)
-		{
-			float4 c = tex2D(_MainTex, IN.uv_MainTex);
-			o.Albedo = c.rgb;
-		}
-		ENDCG
-	}
+#pragma surface surf Lambert vertex:SplatmapVert finalcolor:SplatmapFinalColor decal:add addshadow fullforwardshadows
+#pragma multi_compile_instancing
+#pragma instancing_options assumeuniformscaling nomatrices nolightprobe nolightmap forwardadd
+#pragma shader_feature_local _ALPHATEST_ON
+#define TERRAIN_SPLAT_ADDPASS
+// Use the engine's terrain UV/weight handling with the original diffuse lighting model.
+#include "UnityCG.cginc"
+#include "TerrainSplatmapCommon.cginc"
+void surf(Input IN, inout SurfaceOutput o) {
+    half4 control;
+    half weight;
+    fixed4 diffuse;
+    SplatmapMix(IN, control, weight, diffuse, o.Normal);
+    o.Albedo=diffuse.rgb;
+    o.Alpha=weight;
+}
+ENDCG
+}
+Fallback "Diffuse"
 }

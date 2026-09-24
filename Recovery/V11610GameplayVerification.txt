@@ -1,0 +1,2 @@
+PASS audio imports=518 material shaders=630 legacy particle renderers=304 empty particle material arrays=0 original null material slots=29
+PASS original baked-light state; particle size ownership at 0.1/1/3 transform scale; original skill bounds raycasts=72

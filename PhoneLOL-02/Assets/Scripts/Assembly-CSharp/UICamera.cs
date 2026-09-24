@@ -981,6 +981,8 @@ public class UICamera : MonoBehaviour
 
 	public static bool Raycast(Vector3 GAJJLNKEKML)
 	{
+		// NGUI moves its roots outside FixedUpdate; synchronize before testing touches.
+		Physics.SyncTransforms();
 		for (int i = 0; i < list.POIJPKODPCK; i++)
 		{
 			UICamera uICamera = list.EDMNHDBEPMC[i];

@@ -168899,7 +168899,7 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 1047}
   m_audioClips:
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
+  - {fileID: 8300000, guid: aff0aed7cbbe39a730e1d7de4ddbe47d, type: 3}
 --- !u!114 &4466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170546,7 +170546,7 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 1156}
   m_audioClips:
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
+  - {fileID: 8300000, guid: aff0aed7cbbe39a730e1d7de4ddbe47d, type: 3}
 --- !u!114 &4503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177614,7 +177614,7 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 657}
   m_audioClips:
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
+  - {fileID: 8300000, guid: 4409486bdcb8563e98f0c94a53d78630, type: 3}
 --- !u!114 &4677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180459,7 +180459,7 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 721}
   m_audioClips:
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
+  - {fileID: 8300000, guid: 4409486bdcb8563e98f0c94a53d78630, type: 3}
 --- !u!114 &4744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186355,6 +186355,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e1bc00b32942f68b010be0777a630e, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  bakedLights:
+  - {fileID: 4027}
+  - {fileID: 4028}
+  - {fileID: 4030}
+  - {fileID: 4031}
+  - {fileID: 4032}
+  - {fileID: 4033}
+  - {fileID: 4034}
+  - {fileID: 4035}
+  - {fileID: 4036}
+  - {fileID: 4037}
+  - {fileID: 4038}
+  - {fileID: 4039}
+  - {fileID: 4040}
+  - {fileID: 4041}
+  - {fileID: 4042}
+  - {fileID: 4043}
+  - {fileID: 4044}
+  - {fileID: 4045}
+  - {fileID: 4046}
   maps:
   - {fileID: 2800000, guid: f1eb1f76fc2076f4ea8cf919a4f1a7ca, type: 3}
   - {fileID: 2800000, guid: c465d3af972e76440a2baf998808704f, type: 3}

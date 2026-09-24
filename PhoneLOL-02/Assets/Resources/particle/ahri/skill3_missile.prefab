@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 80610f5f11e94b844990757a38c71743, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -397,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 240d49bad2c66ef43923b8232a926e27, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -529,6 +531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 8646755225e2a8b4aae30bcd094ef4bd, type: 2}
+  - {fileID: 2100000, guid: 1d74d8d1964c1e8459241d33a1b421b9, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

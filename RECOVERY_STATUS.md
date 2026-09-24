@@ -1,3 +1,36 @@
+# 1.16.10 / 196 - in-game bug fixes first - 2026-09-25
+
+User priority: in-game bugs, then combat features, then remaining names/lobby/UI. The user reports that mode battle, passive +8 gold and expanded inventory already work on phone. Preserve those features. This section supersedes earlier lighting/audio/navigation recovery claims below.
+
+## Implemented in this candidate
+
+- Lighting: original opaque ETC1 lightmaps use double-LDR (rgb * 2), not RGBM (rgb * alpha * 8). Restore the original baked flag for 32 MultiGame / 19 MtmGame lights through serialized references; prevent those lights from illuminating the map a second time. Restore terrain splat/add passes. Normalize character normals after inverse-transpose and account for Unity's legacy light-intensity conversion.
+- Effects: restore 356 dropped legacy renderer material arrays by component identity from the untouched original export. The migration parser previously treated YAML list elements as fields. Retain original material GUIDs. Port five remaining fixed-function particle shaders and prevent transform scale from multiplying sizes already scaled by NcParticleSystem.
+- Audio: recover 518 distinct original MP3 objects by serialized-file/path ID, retaining their clip names. Rebind 193 Actor components in 167 assets. Previous recovery incorrectly selected same-name attack/hit clips from other characters. Original audio bytes and hashes are recorded in Recovery/OriginalAudioBindings.json.
+- Skill touch: original button positions and 70 x 70 collider sizes match the stable APK. Synchronize physics transforms before NGUI raycasts so recently moved UI roots use current bounds.
+- Movement: use the original NavMesh detail triangles and heights instead of coarse polygon fans. Rebuild both Unity 6 assets while preserving their GUIDs and original map geometry.
+
+## Verification and limits
+
+- Unity C# compilation passed. Editor checks: 518 imported audio clips; 630 supported/error-free material shaders; 304 resource particle renderers with nonempty material arrays; 72 original skill-bound raycasts; size ownership at 0.1/1/3 transform scales; original baked-light state.
+- The stable APK itself has 29 null material slots in generic particle examples. These were confirmed against the original and retained, not assigned invented replacements.
+- Navigation: MultiGame 2079 / MtmGame 278 detail triangles; zero sampled detail centroids missing within 0.3 units; both spawn-to-spawn lane paths complete.
+- Both maps were rendered in the Editor. Duplicate baked lighting was visible before and absent after the correction. This is not phone visual/touch/performance certification.
+- First Android build exposed an Editor-only Light API; replaced with serialized original-light references and rebuilt. Final Android ARM64 build succeeded: 0 errors / 760 warnings, 320759 ms. APK 143566248 bytes; SHA-256 `483fa84330eb119e1134a1bdd40f23c19a6df4b2aca476dcffbe46d35cba58e7`. All six native libraries are arm64-v8a / ELF64. Build job 5f78d6b662664eab9ddd128f1c0596fd.
+- No live server or account DB change is needed for these client-only fixes. Existing +8 gold, mode minions, inventory and startup repair remain.
+
+APK: `D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.16.10-arm64-candidate.apk`. A same-name copy is also in the existing `00_PHONELOL_TEST_HERE` folder. This is the client-only bug-fix checkpoint; the combat/UI requests below are not included.
+
+## Remaining requested work, in priority order
+
+1. Combat: nexus attacks on all maps while retaining destruction/victory behavior; repair friendly-mode entry; Mode2 up to 5v5; Mode3 5v5 with the existing mode rules.
+2. Other UI: rename 1v1/2v2/3v3 to Mode1/Mode2/Mode3; expose every inventory slot on the in-game scoreboard; remove overhead small character text.
+3. Optional last: stationary team Alistar behind each spawn, HP100000, immediate respawn, absent from scoreboard and active combat.
+
+Preserve the user's separate UnityConnectSettings.asset edit. Public GitHub upload remains blocked by the earlier automatic approval review; no new push or workaround is authorized by this bug-fix request.
+
+---
+
 # 2026-09-25 — 재부팅 후 서버 되돌림 원인 수정
 
 - 이전 작업은 1.16.9 / 195 APK 빌드와 서버 반영까지 완료됐고, 공개 GitHub 업로드 승인 단계에서 보류됐다. APK 해시는 기존 기록과 일치한다. 폰 플레이 검증은 여전히 사용자 담당이다.

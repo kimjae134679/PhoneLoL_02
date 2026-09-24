@@ -284,25 +284,25 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 105782}
   m_audioClips:
-  - {fileID: 8300000, guid: a07b5a0f6b6efa940ab9d7aa37aa73ff, type: 3}
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
-  - {fileID: 8300000, guid: 2da60b26cc4622942bf9d456077306e7, type: 3}
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
-  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
-  - {fileID: 8300000, guid: 91ab674fe773fab4ab2c71fda0fccc33, type: 3}
-  - {fileID: 8300000, guid: 4d74568cfa3a3e34e83c496716a07608, type: 3}
-  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
-  - {fileID: 8300000, guid: 85a3a7e35e35b8a47b4e6b4ee0e77366, type: 3}
-  - {fileID: 8300000, guid: 4522710d94aa7464ab6ec485cc8741e9, type: 3}
-  - {fileID: 8300000, guid: 0e96dea3c36e7ce49a11967a48c59c07, type: 3}
-  - {fileID: 8300000, guid: 073cbd8bf506447449e03a9e69104a3c, type: 3}
-  - {fileID: 8300000, guid: 16c28e3bc4ebc5c4184ffbb18ff6c447, type: 3}
-  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
-  - {fileID: 8300000, guid: 01008e74b6b6d6b43b15fa7c204de939, type: 3}
-  - {fileID: 8300000, guid: 92af783013a298f478566aadb3096652, type: 3}
-  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
-  - {fileID: 8300000, guid: d3b86b65d5557b94d8d68ef28ca29470, type: 3}
-  - {fileID: 8300000, guid: 6bb2adf1b34099a41b6685c6fa010f12, type: 3}
+  - {fileID: 8300000, guid: c0ba3c83d825a44ba16329530a493764, type: 3}
+  - {fileID: 8300000, guid: 5d44c835c6fe43427d52c237627130cb, type: 3}
+  - {fileID: 8300000, guid: 57703922911bd309096f71b3e8cb1e33, type: 3}
+  - {fileID: 8300000, guid: cbaef9b8d386e9bb2a12d42a054141f3, type: 3}
+  - {fileID: 8300000, guid: 70101b0d6e90afa991cc984873ed011c, type: 3}
+  - {fileID: 8300000, guid: d1cba97a9e92ea8e03143ca58b2a6844, type: 3}
+  - {fileID: 8300000, guid: 1f02941e8993de4a8e272e21649b48c4, type: 3}
+  - {fileID: 8300000, guid: 52815d2b4f64f47104104951b85f49a5, type: 3}
+  - {fileID: 8300000, guid: 8c3de3a910860fa74e555db9faa02262, type: 3}
+  - {fileID: 8300000, guid: 1cc68cdb71aad84524589a59f1ba4fcf, type: 3}
+  - {fileID: 8300000, guid: 380d9196938b6c7f5c8ea1d4ab1f28d0, type: 3}
+  - {fileID: 8300000, guid: 6a67ea8824a483442c5c97200c3ff7e9, type: 3}
+  - {fileID: 8300000, guid: f01441a5ae71fb653ae4e6c44061aafb, type: 3}
+  - {fileID: 8300000, guid: cd14b37a569187fe18549e33ef3fea21, type: 3}
+  - {fileID: 8300000, guid: 1e8ea4b672e1d6f5acdfe267252b4774, type: 3}
+  - {fileID: 8300000, guid: c8a809a8228b7c0a75ae9611eb7b0938, type: 3}
+  - {fileID: 8300000, guid: 41f6a26cc93698c141fdb29f03dc4b64, type: 3}
+  - {fileID: 8300000, guid: aa5eb1fa326d2e182ee7c38619a3548e, type: 3}
+  - {fileID: 8300000, guid: 0f8d604823fcba5888cca4d75ce45041, type: 3}
 --- !u!195 &19591323
 NavMeshAgent:
   m_ObjectHideFlags: 0

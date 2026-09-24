@@ -2,7 +2,7 @@ Shader "Mobile/Unlit (Supports Lightmap)"
 {
     Properties {
         _MainTex ("Base (RGB)", 2D) = "white" {}
-        [HideInInspector] _PhoneLOLLightmap ("Original RGBM lightmap", 2D) = "white" {}
+        [HideInInspector] _PhoneLOLLightmap ("Original mobile lightmap", 2D) = "white" {}
         [HideInInspector] _PhoneLOLHasLightmap ("Original lightmap enabled", Float) = 0
         [HideInInspector] _PhoneLOLLightmapST ("Original lightmap transform", Vector) = (1,1,0,0)
     }
@@ -29,8 +29,8 @@ Shader "Mobile/Unlit (Supports Lightmap)"
             float4 frag(Output i):SV_Target {
                 float4 color=tex2D(_MainTex,i.uv);
                 float4 lm=tex2D(_PhoneLOLLightmap,i.lightUV);
-                // Stable APK VertexLMRGBM pass: rgb * alpha * 8, in Gamma space.
-                color.rgb*=lerp(float3(1,1,1),lm.rgb*lm.a*8.0,_PhoneLOLHasLightmap);
+                // The APK uses opaque ETC1 double-LDR maps and the VertexLM pass.
+                color.rgb*=lerp(float3(1,1,1),lm.rgb*2.0,_PhoneLOLHasLightmap);
                 return color;
             }
             ENDHLSL

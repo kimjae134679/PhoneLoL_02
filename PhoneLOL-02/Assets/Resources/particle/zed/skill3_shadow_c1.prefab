@@ -1401,13 +1401,13 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 0}
   m_audioClips:
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
-  - {fileID: 8300000, guid: c9c73f23255b8d646b924651c8f6726e, type: 3}
-  - {fileID: 8300000, guid: 708754aa0c8e0064ab2115eae887e189, type: 3}
-  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
-  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
-  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
-  - {fileID: 8300000, guid: 2f56c2545aa085f4bbbeeef4eb2bbe24, type: 3}
+  - {fileID: 8300000, guid: a3ca700bf3b0e5b4299b81c4fe3661d7, type: 3}
+  - {fileID: 8300000, guid: dfe922eeaf141195adfd9f0675bbe4dd, type: 3}
+  - {fileID: 8300000, guid: 8fdc4bd76710068767f5294198f29f4c, type: 3}
+  - {fileID: 8300000, guid: 0f8e9d3545d3fab73a0f0d00b3e2c427, type: 3}
+  - {fileID: 8300000, guid: 2d031b1d23964a90952892ce624cbe92, type: 3}
+  - {fileID: 8300000, guid: a3658ca5d5035431def77038631d11fb, type: 3}
+  - {fileID: 8300000, guid: 0e047f3a318aa0d3f14752a5dfe4bbaa, type: 3}
 --- !u!114 &11413056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2778,6 +2778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 470693d3d895efa41ac015d14fca4bfa, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -2910,6 +2911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 299cf01d795cafa4a859a14c0519541c, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

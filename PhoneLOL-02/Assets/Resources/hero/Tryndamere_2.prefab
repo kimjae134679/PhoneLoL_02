@@ -1515,18 +1515,18 @@ MonoBehaviour:
   m_useGameObjectPool: 0
   m_damageHUDPosition: {fileID: 170521}
   m_audioClips:
-  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
-  - {fileID: 8300000, guid: a07b5a0f6b6efa940ab9d7aa37aa73ff, type: 3}
-  - {fileID: 8300000, guid: df4e126d384955445b8b071425aab641, type: 3}
-  - {fileID: 8300000, guid: 2da60b26cc4622942bf9d456077306e7, type: 3}
-  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
-  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
-  - {fileID: 8300000, guid: 20f3828e1679ef94faf5b9662edc3869, type: 3}
-  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
-  - {fileID: 8300000, guid: eb5cd4fd22c495d498a6fc60a09b396b, type: 3}
-  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
-  - {fileID: 8300000, guid: 92af783013a298f478566aadb3096652, type: 3}
-  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
+  - {fileID: 8300000, guid: c11e2d61ed973922b87b63926d137b60, type: 3}
+  - {fileID: 8300000, guid: 9ff928565842437c44316df003627fab, type: 3}
+  - {fileID: 8300000, guid: 458dde837973db93fa50e718d456df62, type: 3}
+  - {fileID: 8300000, guid: d75c68eaa35feae8a0f1cc42ef7192d3, type: 3}
+  - {fileID: 8300000, guid: 1034fc93d533334b23e454f77390f96c, type: 3}
+  - {fileID: 8300000, guid: 24478dbc71d5cf24d8cb424cf06585cc, type: 3}
+  - {fileID: 8300000, guid: fe7c5d98e2a8eb48b89481740207095d, type: 3}
+  - {fileID: 8300000, guid: 7650fe5e2d565d7d8def00be4694111b, type: 3}
+  - {fileID: 8300000, guid: 314de0f89c5f3ef7c02fc257c8345180, type: 3}
+  - {fileID: 8300000, guid: 55a97195054ef28b4deadb6474bec44a, type: 3}
+  - {fileID: 8300000, guid: 7cedeac2f19208a0058b517be6b5dec6, type: 3}
+  - {fileID: 8300000, guid: c9320d1d91fe24c21678643882513d3a, type: 3}
 --- !u!195 &19517017
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1917,6 +1917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: a085365a4fd32464fb23b87ffdebf9c2, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

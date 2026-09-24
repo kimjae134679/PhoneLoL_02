@@ -13,6 +13,7 @@ public sealed class PhoneLOLLegacyLightmaps : MonoBehaviour
         public Vector4 scaleOffset;
     }
     public Texture2D[] maps;
+    public Light[] bakedLights;
     public Binding[] bindings;
     private void Awake() { Apply(); }
     public void Apply()
@@ -40,6 +41,14 @@ public sealed class PhoneLOLLegacyLightmaps : MonoBehaviour
                 b.terrain.lightmapIndex=b.index;
                 b.terrain.lightmapScaleOffset=b.scaleOffset;
             }
+        }
+        // Unity 4's baked flag is lost during import. Avoid lighting the baked map twice.
+        foreach (var light in bakedLights) {
+            if (light == null) throw new InvalidOperationException("Missing original baked light");
+            var output = light.bakingOutput;
+            output.isBaked = true;
+            output.lightmapBakeType = LightmapBakeType.Baked;
+            light.bakingOutput = output;
         }
         Debug.Log("V1169_LIGHTMAPS|scene="+gameObject.scene.name+"|maps="+maps.Length+"|bindings="+bindings.Length);
     }

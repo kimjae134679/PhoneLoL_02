@@ -1,0 +1,11 @@
+MultiGame original triangle centroids=1015 missing within 0.3=3 max distance=0.246849
+MISSING|(16.79, 1.71, -13.98)
+MISSING|(20.12, 1.72, -13.45)
+MISSING|(-20.41, 1.79, 13.49)
+MtmGame original triangle centroids=273 missing within 0.3=4 max distance=0.218778
+MISSING|(30.07, 0.67, -3.57)
+MISSING|(29.93, 0.47, -3.25)
+MISSING|(30.07, 0.60, 5.28)
+MISSING|(29.75, 0.40, 4.92)
+TERRAIN|MultiGame|Terrain|material=Nature/Terrain/Diffuse|layers=7|lm=-1
+TERRAIN|MtmGame|Terrain|material=Nature/Terrain/Diffuse|layers=4|lm=-1

@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 59bd77d3d990f28408bd75471194e370, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

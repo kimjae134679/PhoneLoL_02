@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 25f5e7af4d457624a9ac90c919fefb78, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0
@@ -299,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
+  - {fileID: 2100000, guid: 7334f757078c18d41942054d15a33755, type: 2}
   sortingLayerID: 0
   sortingOrder: 0
   cameraVelocityScale: 0

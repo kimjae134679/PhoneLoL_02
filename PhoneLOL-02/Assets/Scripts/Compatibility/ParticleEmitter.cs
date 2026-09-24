@@ -21,7 +21,8 @@ public class ParticleEmitter : MonoBehaviour
             system.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
             var main = system.main;
             main.playOnAwake = false; main.loop = true; main.startSpeed = 0;
-            main.maxParticles = 10000; main.scalingMode = ParticleSystemScalingMode.Local;
+            main.maxParticles = 10000; // Legacy particle sizes are already scaled by NcParticleSystem.
+            main.scalingMode = ParticleSystemScalingMode.Shape;
             var emission = system.emission; emission.enabled = false;
             var shape = system.shape; shape.enabled = false;
             ApplySpace();
