@@ -115,13 +115,30 @@ public static class PhoneLOLParticipantFix
 		return string.Format("{0:00}:{1:00}", seconds / 60, seconds % 60);
 	}
 
-	public static void CompleteResult(UIMultiGameResult panel)
-	{
-		int seconds = (int)(float)GameManager.get_Instance().get_m_elapsedTime();
-		panel.m_prizeLabel.set_text("경기 시간 " + MatchDuration(seconds));
-		panel.m_prize2Label.set_text("경기 보상: 미지급");
-		panel.m_timeLabel.set_text(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-		typeof(UIMultiGameResult).GetField("FDCFGPJALMN", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(panel, false);
-		typeof(UIMultiGameResult).GetField("AFFMNKJGDBJ", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(panel, true);
-	}
+    public static void CompleteResult(UIMultiGameResult panel)
+    {
+        panel.m_prizeLabel.set_text("서버에서 경기 결과를 확인하는 중입니다.");
+        panel.m_prize2Label.set_text(string.Empty);
+        typeof(UIMultiGameResult).GetField("AFFMNKJGDBJ", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(panel, false);
+        var battle = NetworkManager.get_Instance().get_m_battleNetClient();
+        NetworkManager.get_Instance().get_m_gameNetClient().NELLNJJNBDO(
+            new IKMBGMILCDO(panel.OnReceiveGameResult), battle.IMKOGBNIJBO().DCHDPGPBJGC,
+            battle.GLPDLIDMHFA().IBFJBIBACIA(), EveUnityNetwork.get_Instance().DGJCCPAOIDF());
+        panel.StartCoroutine(WaitForResult(panel));
+    }
+
+    private static System.Collections.IEnumerator WaitForResult(UIMultiGameResult panel)
+    {
+        yield return new UnityEngine.WaitForSecondsRealtime(12f);
+        if (panel == null) yield break;
+        var field = typeof(UIMultiGameResult).GetField("AFFMNKJGDBJ", BindingFlags.Instance | BindingFlags.NonPublic);
+        if ((bool)field.GetValue(panel)) yield break;
+        panel.m_prizeLabel.set_text("경기 결과 응답을 받지 못했습니다.");
+        panel.m_prize2Label.set_text("서버 연결 상태를 확인해 주세요.");
+        // Release the exit button without claiming that settlement succeeded.
+        field.SetValue(panel, true);
+        PhoneLOLRealtimeLog.Record("RESULT_LOOKUP_TIMEOUT", "game=" +
+            NetworkManager.get_Instance().get_m_battleNetClient().IMKOGBNIJBO().DCHDPGPBJGC);
+    }
+
 }

@@ -158,6 +158,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 25
+  m_heroCostumeID: 1
+  m_selfCreateHeroInfo: 0
+  m_team: 0
+  m_actorType: 2
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 5.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 105782}
+  m_audioClips:
+  - {fileID: 8300000, guid: 91ab674fe773fab4ab2c71fda0fccc33, type: 3}
+  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
+  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
+  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
+  - {fileID: 8300000, guid: a30b042b3a446f94aa677394448cbe6d, type: 3}
+  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
+  - {fileID: 8300000, guid: fd336184ca15e4047aeece90285f8091, type: 3}
+  - {fileID: 8300000, guid: c88e857b5c447b84aafaeba65c7fc52c, type: 3}
+  - {fileID: 8300000, guid: a07b5a0f6b6efa940ab9d7aa37aa73ff, type: 3}
+  - {fileID: 8300000, guid: 20f3828e1679ef94faf5b9662edc3869, type: 3}
+  - {fileID: 8300000, guid: 0e96dea3c36e7ce49a11967a48c59c07, type: 3}
+  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
 --- !u!195 &19570521
 NavMeshAgent:
   m_ObjectHideFlags: 0

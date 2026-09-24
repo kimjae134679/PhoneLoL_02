@@ -9,7 +9,7 @@ using UnityEngine;
 public static class PhoneLOLBuild
 {
     // This produces a migration candidate, not a validated replacement for 1.15.11.
-    [MenuItem("PhoneLOL/Build 1.16.7 ARM64 candidate")]
+    [MenuItem("PhoneLOL/Build 1.16.8 ARM64 candidate")]
     public static void BuildAndroidCandidate()
     {
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Android, BuildTarget.Android))
@@ -23,8 +23,8 @@ public static class PhoneLOLBuild
                 for (int layer = 0; layer < icon.minLayerCount; layer++) icon.SetTexture(originalIcon, layer);
             PlayerSettings.SetPlatformIcons(NamedBuildTarget.Android, kind, icons);
         }
-        PlayerSettings.bundleVersion = "1.16.7";
-        PlayerSettings.Android.bundleVersionCode = 193;
+        PlayerSettings.bundleVersion = "1.16.8";
+        PlayerSettings.Android.bundleVersionCode = 194;
         PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.jcl.lmulti");
         PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
@@ -44,7 +44,7 @@ UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
         string[] scenes = names.Select(name => "Assets/Scenes/" + name + ".unity").ToArray();
         foreach (string scene in scenes)
             if (!File.Exists(scene)) throw new FileNotFoundException("Missing original scene", scene);
-        string output = Path.GetFullPath("Builds/PhoneLOL-v1.16.7-arm64-candidate.apk");
+        string output = Path.GetFullPath("Builds/PhoneLOL-v1.16.8-arm64-candidate.apk");
         Directory.CreateDirectory(Path.GetDirectoryName(output));
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
             scenes = scenes, locationPathName = output, target = BuildTarget.Android,
@@ -57,5 +57,27 @@ UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
         if (report.summary.result != BuildResult.Succeeded)
             throw new InvalidOperationException(status);
         Debug.Log(status);
+    }
+}
+
+public sealed class PhoneLOLLegacyIconPostprocessor : UnityEditor.Android.IPostGenerateGradleAndroidProject
+{
+    public int callbackOrder { get { return 1000; } }
+
+    public void OnPostGenerateGradleAndroidProject(string path)
+    {
+        string root = Path.GetDirectoryName(path);
+        string resources = Path.Combine(root, "launcher", "src", "main", "res");
+        if (!Directory.Exists(resources))
+            throw new DirectoryNotFoundException("Generated launcher resources are missing: " + resources);
+        // Preserve the original full legacy icon instead of cropping it as two adaptive layers.
+        foreach (string xml in Directory.GetFiles(resources, "app_icon*.xml", SearchOption.AllDirectories)) {
+            var document = System.Xml.Linq.XDocument.Load(xml);
+            if (document.Root == null || document.Root.Name.LocalName != "adaptive-icon") continue;
+            string fallback = Path.GetFileNameWithoutExtension(xml) + ".png";
+            if (Directory.GetFiles(resources, fallback, SearchOption.AllDirectories).Length == 0)
+                throw new FileNotFoundException("Legacy icon fallback is missing: " + fallback);
+            File.Delete(xml);
+        }
     }
 }

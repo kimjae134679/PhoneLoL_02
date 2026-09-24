@@ -110624,6 +110624,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30002
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 0
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1023}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &3897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111466,6 +111479,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20008
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 591}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &3920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113619,6 +113645,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30001
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 0
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1406}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &3973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113723,6 +113762,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20007
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 339}
+  m_audioClips: []
 --- !u!114 &3978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115249,6 +115300,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20002
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 117}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118210,6 +118274,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30001
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 1
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 325}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119660,6 +119737,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20000
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 239}
+  m_audioClips: []
 --- !u!114 &4121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120230,6 +120319,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20000
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 922}
+  m_audioClips: []
 --- !u!114 &4144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122438,6 +122539,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30002
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 1
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 459}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124597,6 +124711,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20005
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 146}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125081,6 +125208,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20008
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1260}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125463,6 +125603,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20001
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1435}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125792,6 +125945,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20008
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1333}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126008,6 +126174,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20001
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 921}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126245,6 +126424,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20003
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 569}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
+  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
 --- !u!114 &4302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126884,6 +127077,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30002
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 1
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1163}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127683,6 +127889,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30002
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 0
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 845}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128374,6 +128593,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30000
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 0
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1140}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128602,6 +128834,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 31000
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 0
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1165}
+  m_audioClips:
+  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
 --- !u!114 &4371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132862,6 +133107,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20007
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 661}
+  m_audioClips: []
 --- !u!114 &4475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133101,6 +133358,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 30000
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 1
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 156}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134969,6 +135239,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20005
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 1083}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135061,6 +135344,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 31000
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 1
+  m_actorType: 16
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 0.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 784}
+  m_audioClips:
+  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
 --- !u!114 &4537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135529,6 +135825,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 20008
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 1
+  m_team: 2
+  m_actorType: 4
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 2.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 17}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
 --- !u!114 &4551
 MonoBehaviour:
   m_ObjectHideFlags: 0

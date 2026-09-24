@@ -149,7 +149,15 @@ public class UIBattleReadyHeroInfo : MonoBehaviour
 
 	private void Update()
 	{
-		bool flag = false;
+        var manager = NetworkManager.get_Instance();
+        var battle = manager == null ? null : manager.get_m_battleNetClient();
+        var room = battle == null ? null : battle.IMKOGBNIJBO();
+        if (room == null) {
+            m_connect.gameObject.SetActive(false);
+            m_pingLabel.gameObject.SetActive(false);
+            return;
+        }
+        bool flag = false;
 		ABBLIOLAABC defaultGroup = EveUnityNetwork.get_Instance().GetDefaultGroup();
 		if (defaultGroup != null && m_playerInfo != null)
 		{
@@ -174,8 +182,10 @@ public class UIBattleReadyHeroInfo : MonoBehaviour
 				{
 					m_connect.gameObject.SetActive(true);
 					m_pingLabel.gameObject.SetActive(true);
-					m_pingLabel.set_text(((int)(NetworkManager.get_Instance().get_m_battleNetClient().JIPBIOELJHC()
-						.EJNOJPCPLEB() * 1000f)).ToString());
+					var serverPeer = battle.JIPBIOELJHC();
+                    m_pingLabel.gameObject.SetActive(serverPeer != null);
+                    if (serverPeer != null)
+                        m_pingLabel.set_text(((int)(serverPeer.EJNOJPCPLEB() * 1000f)).ToString());
 					flag = true;
 				}
 			}

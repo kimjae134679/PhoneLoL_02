@@ -149,6 +149,41 @@ public sealed class PhoneLOLLocalHost : IDisposable
         }
     }
 
+    private static byte[] OwnedHeroes(Central central)
+    {
+        central.Send(50, new byte[0]);
+        byte[] bootstrap = central.Receive(51);
+        if (bootstrap.Length < 5 || bootstrap[0] != 0)
+            throw new InvalidDataException("Champion inventory rejected.");
+        int length = BitConverter.ToUInt16(bootstrap, 1);
+        if (length > bootstrap.Length - 5)
+            throw new InvalidDataException("Truncated champion inventory.");
+        using (var reader = new BinaryReader(new MemoryStream(bootstrap, 5, length))) {
+            return Body(writer => {
+                ushort count = reader.ReadUInt16();
+                if (count > 512) throw new InvalidDataException("Invalid champion count.");
+                writer.Write(count);
+                var seen = new HashSet<ushort>();
+                for (int i = 0; i < count; i++) {
+                    ushort hero = reader.ReadUInt16();
+                    if (hero == 0 || !seen.Add(hero)) throw new InvalidDataException("Invalid champion identity.");
+                    writer.Write(hero);
+                    ushort size = reader.ReadUInt16();
+                    byte[] skins = reader.ReadBytes(size);
+                    if (skins.Length != size) throw new EndOfStreamException("Truncated skin metadata.");
+                    writer.Write(size);
+                    writer.Write(skins);
+                    // The central legacy contract uses bytes; the stable managed reader expects UInt32.
+                    writer.Write((uint)reader.ReadByte());
+                    writer.Write((uint)reader.ReadByte());
+                    writer.Write((uint)reader.ReadByte());
+                }
+                if (reader.BaseStream.Position != reader.BaseStream.Length)
+                    throw new InvalidDataException("Unexpected champion inventory bytes.");
+            });
+        }
+    }
+
     private static void Game(NetworkStream stream, int session, LegacyFrame frame, Central central)
     {
         if (frame.pid == 4) {
@@ -160,8 +195,9 @@ public sealed class PhoneLOLLocalHost : IDisposable
             // Preserve the stable native host's profile -> inventory -> login-ready ordering.
             Reply(stream, session, frame, profile);
             Reply(stream, session, new LegacyFrame { pid = 7 }, runes);
+            Reply(stream, session, new LegacyFrame { pid = 5 }, OwnedHeroes(central));
             Reply(stream, session, new LegacyFrame { pid = 12 }, new byte[] { 0, 0 });
-            PhoneLOLRealtimeLog.Record("GAME_BOOTSTRAP_SENT", "profile=4 runes=7 ready=12 session=" + session);
+            PhoneLOLRealtimeLog.Record("GAME_BOOTSTRAP_SENT", "profile=4 runes=7 heroes=5 ready=12 session=" + session);
             return;
         }
         if (frame.pid == 3) {
@@ -176,14 +212,16 @@ public sealed class PhoneLOLLocalHost : IDisposable
             return;
         }
         if (frame.pid == 5) {
-            central.Send(50, new byte[0]);
-            byte[] bootstrap = central.Receive(51);
-            if (bootstrap.Length < 5 || bootstrap[0] != 0) throw new InvalidDataException("Champion inventory rejected.");
-            int length = BitConverter.ToUInt16(bootstrap, 1);
-            if (length > bootstrap.Length - 5) throw new InvalidDataException("Truncated champion inventory.");
-            byte[] heroes = new byte[length];
-            Buffer.BlockCopy(bootstrap, 5, heroes, 0, length);
-            Reply(stream, session, frame, heroes);
+            Reply(stream, session, frame, OwnedHeroes(central));
+            return;
+        }
+        if (frame.pid == 33 || frame.pid == 27) {
+            Reply(stream, session, frame, central.Rpc(0, frame.pid, frame.payload));
+            return;
+        }
+        if (frame.pid == 63) {
+            // Legacy diagnostics are fire-and-forget and have no registered response handler.
+            PhoneLOLRealtimeLog.Record("LEGACY_DIAGNOSTIC_RECEIVED", "bytes=" + frame.payload.Length);
             return;
         }
         PhoneLOLRealtimeLog.Record("GAME_REQUEST_UNSUPPORTED", "pid=" + frame.pid);

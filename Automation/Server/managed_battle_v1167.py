@@ -15,6 +15,7 @@ class ManagedBattle:
     def __init__(self, state, raw_send):
         self.state, self.raw_send = state, raw_send
         self.contexts, self.prepared, self.loaded = {}, {}, {}
+        self.started_at, self.result_frames = {}, {}
         self.lock = threading.RLock()
         self.catalog = json.loads(Path(__file__).with_name("managed_rune_catalog.json").read_text())
     def send(self, peer, pid, body=b"", request=0):
@@ -114,6 +115,7 @@ class ManagedBattle:
             if not ctx or not room or ctx.get("started"): return
             self.publish(peer,True)
             ctx["started"] = True
+            self.started_at.setdefault(room.room_id,time.monotonic())
             members = self.members(room)
             host = self.state.peers[room.host_peer].session_key
             # Register self first so Eve creates the group before adding its other members.
@@ -127,6 +129,25 @@ class ManagedBattle:
                                     p.visual.skin_id if p else 0,slot+1 if p else 0,
                                     p.session_key if p else 0)
             self.send(peer,18,bytes(data))
+    def maybe_start_ready(self, peer):
+        # Managed rooms allow solo play while retaining authenticated readiness.
+        with self.state.lock, self.lock:
+            room = self.state.rooms.get(peer.room_id)
+            if not room or room.room_id in self.state.authoritative_started_rooms:
+                return False
+            members = self.members(room)
+            if not members or room.host_peer not in {p.peer_id for p in members}:
+                return False
+            if any(p.peer_id not in self.contexts or p.visual.ready != 1 or
+                   p.visual.hero_id not in range(1,28) for p in members):
+                return False
+            self.state.starting_rooms.add(room.room_id)
+            self.state.authoritative_started_rooms.add(room.room_id)
+            payload = core.START.pack(room.epoch,room.shared_game_id)
+            for target in members:
+                self.state.send(target,core.START_SYNC,payload,room.room_id,0)
+            return True
+
     def handle(self, peer, envelope):
         if len(envelope)<6 or len(envelope)>60000: raise ValueError("Invalid managed battle envelope")
         pid, request = ENVELOPE.unpack_from(envelope); data = envelope[6:]
@@ -183,7 +204,7 @@ class ManagedBattle:
             self.state.update_player_state(peer,core.PSTATE.pack(v.slot,lane,ready,skin,hero,0))
             ctx["lane"]=peer.visual.lane_role
             self.publish_room(peer.room_id)
-            self.state.maybe_start_ready(peer)
+            self.maybe_start_ready(peer)
             return
         if pid==15:
             if len(data)!=1 or data[0]>1: raise ValueError("Invalid rune page")
@@ -197,6 +218,26 @@ class ManagedBattle:
                 for target in members: self.send(target,19,struct.pack("<I",peer.device_id)+data)
                 if all(x.peer_id in loaded for x in members):
                     for target in members: self.send(target,20,struct.pack("<?Q",True,room.shared_game_id))
+            return
+        if pid==21:
+            if data or not ctx.get("started"):
+                raise ValueError("Invalid world initialization marker")
+            ctx["world_initialized"] = True
+            print("MANAGED_WORLD_READY room="+str(room.room_id)+" peer="+str(peer.peer_id),flush=True)
+            return
+        if pid==22:
+            if not ctx.get("started") or peer.peer_id != room.host_peer:
+                raise ValueError("Only the active room host can submit its result")
+            with self.state.lock, self.lock:
+                members = self.members(room)
+                if not all(self.contexts.get(p.peer_id,{}).get("world_initialized") for p in members):
+                    raise ValueError("Result arrived before world initialization")
+                competitive = room.mode in (0,20) and room.group == 0x11670000 and len(members)>1
+                body = self.state.account_services.results.settle(
+                    room,members,data,time.monotonic()-self.started_at[room.room_id],competitive)
+                self.result_frames[room.room_id] = body
+                for target in members:
+                    self.send(target,22,body,request if target is peer else 0)
             return
         if pid==60019:
             if len(data)<6 or not ctx.get("started"): raise ValueError("Invalid battle relay")

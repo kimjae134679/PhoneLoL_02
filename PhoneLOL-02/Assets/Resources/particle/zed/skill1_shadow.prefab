@@ -1370,6 +1370,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 3
+  m_heroCostumeID: 0
+  m_selfCreateHeroInfo: 0
+  m_team: 0
+  m_actorType: 1
+  m_lifeTime: 10.0
+  m_moveSpeed: 0.0
+  m_dontDamage: 1
+  m_dontHeal: 1
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 0}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
+  - {fileID: 8300000, guid: c9c73f23255b8d646b924651c8f6726e, type: 3}
+  - {fileID: 8300000, guid: 708754aa0c8e0064ab2115eae887e189, type: 3}
+  - {fileID: 8300000, guid: 69bdb5de89179644383f8193ead62045, type: 3}
+  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
+  - {fileID: 8300000, guid: d52f10a516b739f489352e8ac87b1ff0, type: 3}
+  - {fileID: 8300000, guid: 2f56c2545aa085f4bbbeeef4eb2bbe24, type: 3}
 --- !u!114 &11481434
 MonoBehaviour:
   m_ObjectHideFlags: 0

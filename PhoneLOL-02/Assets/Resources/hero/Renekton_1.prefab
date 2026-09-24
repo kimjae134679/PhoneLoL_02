@@ -1371,6 +1371,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe4d2a6e91eb90db84d1482ed545a1c, type: 3}
   m_Name:
   m_EditorClassIdentifier:
+  m_hero_id: 8
+  m_heroCostumeID: 1
+  m_selfCreateHeroInfo: 0
+  m_team: 0
+  m_actorType: 2
+  m_lifeTime: 3.4028234663852886e+38
+  m_moveSpeed: 5.0
+  m_dontDamage: 0
+  m_dontHeal: 0
+  m_useGameObjectPool: 0
+  m_damageHUDPosition: {fileID: 170521}
+  m_audioClips:
+  - {fileID: 8300000, guid: a64958a89f5125942bad18a61bcbea56, type: 3}
+  - {fileID: 8300000, guid: a07b5a0f6b6efa940ab9d7aa37aa73ff, type: 3}
+  - {fileID: 8300000, guid: df4e126d384955445b8b071425aab641, type: 3}
+  - {fileID: 8300000, guid: a2b8f338b88943c489fe75347834c45e, type: 3}
+  - {fileID: 8300000, guid: bfb0e2b21f95caa499790f1d93b85784, type: 3}
+  - {fileID: 8300000, guid: d20681bdb1d5bc143bbf8aeaf8c91379, type: 3}
+  - {fileID: 8300000, guid: a2916365d987fe44fa8b4bcfe56409bf, type: 3}
+  - {fileID: 8300000, guid: 2da60b26cc4622942bf9d456077306e7, type: 3}
+  - {fileID: 8300000, guid: 91f75e6883a3cb6468793c86b7215595, type: 3}
+  - {fileID: 8300000, guid: 3d36d989a51fdea45aa5e94d6bce1d11, type: 3}
+  - {fileID: 8300000, guid: 20f3828e1679ef94faf5b9662edc3869, type: 3}
+  - {fileID: 8300000, guid: 732222f2108553442a5fc269acb2efd8, type: 3}
+  - {fileID: 8300000, guid: 69a4cce86cb8e2947b298369cc2617b1, type: 3}
+  - {fileID: 8300000, guid: 4522710d94aa7464ab6ec485cc8741e9, type: 3}
+  - {fileID: 8300000, guid: 0e96dea3c36e7ce49a11967a48c59c07, type: 3}
+  - {fileID: 8300000, guid: 16c28e3bc4ebc5c4184ffbb18ff6c447, type: 3}
+  - {fileID: 8300000, guid: d2589220d63f3d44cbf684dee8700e9c, type: 3}
+  - {fileID: 8300000, guid: 77962e00c72a5e14ca63b40aaff7a80c, type: 3}
+  - {fileID: 8300000, guid: 92af783013a298f478566aadb3096652, type: 3}
+  - {fileID: 8300000, guid: b1aeb1d488bdfc149acaa838ad877a4b, type: 3}
+  - {fileID: 8300000, guid: a39dfcce7bebd2840a1ae16ba669a2b8, type: 3}
+  - {fileID: 8300000, guid: 6bb2adf1b34099a41b6685c6fa010f12, type: 3}
+  - {fileID: 8300000, guid: 4212d2082744e644db2c5bbb56e5339d, type: 3}
 --- !u!195 &19579834
 NavMeshAgent:
   m_ObjectHideFlags: 0

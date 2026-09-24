@@ -1,3 +1,92 @@
+# 1.16.8 / 194 — 복구본 빌드·서버 반영 — 2026-09-24
+
+사용자의 작업 재개 요청에 따라 이전 WIP를 이어서 수정했다. Unity Package Manager 오류도 해결했다. **아래가 현재 상태이며, 이전 인수인계와 버전별 구역은 과거 기록이다. 실기기 화면·플레이 검증은 사용자가 담당하며 정상 전투 전체를 인증한 것은 아니다.**
+
+## 전달 APK
+
+- 경로: `D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.16.8-arm64-candidate.apk`
+- 버전: 1.16.8 / Android versionCode 194, com.jcl.lmulti.
+- 117508955 bytes; SHA-256 `81881b91b5080f7e34949b323168a8676fb77f24afffc9cdc2690ef664fd17e5`.
+- Unity Android build: Succeeded, 0 errors / 760 warnings. Build job `a6e3d778d62b4989b985868265149d5c`, 374982 ms.
+- Packaged native libraries: 6, all arm64-v8a / ELF64. Unity splash remains disabled. iOS source boundaries remain; no iOS build was performed.
+- 기존 1.16.7 APK와 1.15.11 기준 자료는 보존했다. 새 파일은 candidate이며 실제 화면·입력·전투는 사용자 확인이 필요하다.
+
+## 이번에 변경한 내용
+
+### Original Actor data and map recovery
+
+- `Automation/RecoverOriginalActorData.py` restores 193 Actor components across 165 resource prefabs and 2 scenes (167 files). Actual stable APK values replace missing serialization; no NPC stats are guessed.
+- Restored hero ID, costume, self-create flag, team/type, lifetime/movement flags, damage HUD reference and audio clip references.
+- Provenance and values: `Recovery/OriginalActorData.json`. The extractor checks the exact stable APK SHA and consumes the entire original Actor byte record.
+- Unity 4 MonoBehaviour header alignment comes from UnityPy's built-in type tree. Generated Actor fields omit the patched DLL's absent m_v093RuneGoldTick tail. ObscuredByte has no serialized children in these assets.
+- mainData contains the first built scene; later scenes are level(index-1). Duplicate object names are matched through hierarchy plus local position, not name alone. All HUD/audio mappings resolved without fallback.
+- Representative Unity imports: Turret0 hero=30000/selfCreate=false; Dragon hero=20002/selfCreate=true.
+- Retained the checkpoint's 932 recovered static-batch meshes: MultiGame 296 and MtmGame 636. Unity read-back confirmed all references and material/submesh counts.
+- Fixed the two map shaders' missing closing braces from the unbuilt checkpoint. Both shaders now import without shader errors and retain the archived original GLES equations.
+- `Automation/VerifyRecoveryAssets.cs` records this narrow Editor check. It is not a phone screenshot comparison. NavMesh, particles, animation and all original visual details still require real play feedback.
+
+### Champion bootstrap and lobby exceptions
+
+- Confirmed the recovered NEFBHKKAMJF.JCOLMPJMMEB reads three UInt32 values after hero ID/skin metadata. The existing central legacy p5 builder sends three bytes.
+- PhoneLOLLocalHost expands those three existing values to UInt32 at the managed boundary, preserving the native server contract and actual inventory. Count, record boundaries, duplicate IDs and trailing bytes are checked.
+- Bootstrap now sends profile 4 → runes 7 → owned heroes 5 → ready 12, so selection does not begin without its inventory.
+- UIBattleReadyHeroInfo.Update handles the interval with no room and a missing native server-ping peer. It does not fabricate a ping measurement.
+- Legacy diagnostic game packet 63 is fire-and-forget; the adapter no longer generates an unregistered 255 reply. Existing realtime error/stack capture remains.
+
+### Solo/multiplayer, results and rankings
+
+- Managed rooms can start with one authenticated, ready player and a valid owned hero. Real connected membership is used; no artificial opponent is inserted.
+- The older/native minimum-two rule and launcher setting are unchanged. The solo rule is restricted to managed rooms.
+- Loading packet 19 / shared start 20 remain. World-initialized marker 21 is accepted without a bogus response.
+- Only the active room host can submit battle result 22, after participant world initialization. The server checks roster, slot, device, hero, frame boundaries and duplicate/conflicting result identity before persisting.
+- A validated result is sent to every room participant in the recovered scoreboard format. The server does not run a full authoritative combat simulation; host-reported combat statistics are not independently proven.
+- Added `Automation/Server/managed_results_v1168.py` and SQLite tables managed_match_results, managed_match_members, managed_rank_stats. Existing account tables and balances are retained.
+- Result lookup game packet 27 returns the recovered 85-byte account/result contract to authenticated participants only. UI now requests the server result instead of immediately marking an unqueried result complete. After 12 seconds without a response it displays an error and permits exit, without claiming settlement success.
+- Game packet 33 returns a real persisted top-100 list for 3v3/1v1, with exact ushort count / nickname / byte position / int32 points layout. Profile scores, positions and win/loss counts use the same database.
+- **원본 서버의 점수 산식은 확보하지 못했다.** 복구 서버는 별도 Elo 정책을 사용한다: first competitive rating 1000, K=32, team-average expected score, floor 0. This is an explicit replacement policy, not a recovered original formula.
+- Only completed managed ranked modes 0 and 20 with actual players on both teams and the ranked matchmaking group affect rating. Solo, normal and friendly results are retained but do not farm ranking points.
+- No historical matches/rankings are invented. Ties in the list sort by wins then account ID. The existing client maps ranking-position thresholds to badge names.
+- Original currency/experience reward rules remain unrecovered, so result rewards stay zero and current account balances/level/experience are returned unchanged. This preserves the earlier unpaid-reward behavior rather than fabricating rewards.
+
+### Icon and Unity startup
+
+- OriginalAppIcon.png remains unchanged. Android post-generation removes adaptive app_icon XML overrides only when matching legacy PNG fallbacks exist, so the original full image is not enlarged as both adaptive layers.
+- Generated launcher check: 0 adaptive app_icon XML overrides, 12 legacy app_icon PNGs. Actual launcher display still belongs to device testing.
+- The Package Manager executable itself ran successfully. The remote launch environment was missing standard Windows variables including ProgramData, ALLUSERSPROFILE, TMP, ComSpec and ProgramFiles(x86).
+- Filling missing values in the process environment allowed the diagnostic tool and Unity/Pipeline to start. Machine/user environment settings and antivirus configuration were not changed.
+- Added `Automation/OpenUnity.ps1` to repeat the corrected launch and avoid opening a second copy of the project. No editor/package reinstall was necessary.
+- Unity Editor 6000.3.14f1 / Pipeline 0.7.0-exp.1 / port 7800. Final C# compilation state was not failed and reported 0 current console errors before build.
+- The existing Python311 / TypeTreeGeneratorAPI 0.0.10 installation was reused. Project/tool paths remain in the user-selected existing locations; no new system-wide AI installation or Jev dependency was introduced.
+
+## Live deployment and evidence
+
+At resume, live server_central_authority_v33.py, account_services_v1158.py and the runtime manifest had reverted to the pre-1.16.7 behavior: managed bridge hooks absent, paid/two-week nickname restriction restored, managed dependencies missing from the manifest. The cause of that reversion was **not established**. These files were compared with the recorded release before replacement; no unrelated newer changes appeared in that comparison.
+
+- Consistent SQLite/source/launcher backup:
+  `C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\recovery\04_runtime\backups\before-v1168-20260924-170631`.
+- Replaced only the existing runtime's managed entry/account/battle/result/rune files and added their dependencies to central_v33_runtime_files.json. The complete dependency manifest is mirrored under Automation/Server.
+- Existing launcher, listen port 29000, DB path and public tunnel were retained. New server PID at deployment: 27800; launcher PID: 32508. PIDs are observations, not permanent identifiers.
+- Free unlimited nickname changes and managed invitation translation were restored along with the new fixes.
+- Local and public POST /phonelol-diag/v1 both returned HTTP 204. Synthetic marker: V1168_DEPLOY_20260924T080926Z.
+- Public endpoint remains uko9ef6n.free.pwrp.cc:10045. Existing tunnel replacement/autostart guidance below still applies. No production test account was created.
+- Code-only rollback uses the source backup, but note that it contains the unexpectedly reverted pre-1.16.7 runtime. Do not blindly restore its DB: that would discard subsequent user activity. New result/rank tables may remain harmlessly if older code is restored.
+
+One disposable-server check passed:
+1. Free repeated nickname changes without balance loss.
+2. Two real authenticated peers in one room, champion selection, shared start/load and relay.
+3. Rejection of a non-host result; persisted outcome; exact ranking/result frames; duplicate submission cannot award twice.
+4. One authenticated player can start, load and complete without a fake opponent or ranking gain.
+
+These checks plus the Editor import check and final build are the verification performed. They do not certify combat responsiveness, original visual parity, all UI actions, reconnect/disconnect recovery, old-native cross-play, iOS or anti-cheat robustness. The user performs phone testing.
+
+## 다음 담당자 / 다음 사용자 테스트
+
+현재 candidate에서 먼저 아이콘 크기, 챔피언 목록, 1인 시작, 두 명 동시 진행, 두 맵 배경/Actor HUD, 종료·랭킹을 확인한다. 추가 문제가 나오면 진단 ID와 PHONE_CLIENT_TRACE를 같은 화면/시각에 맞춰 확인한다. 임의의 전체 재복구나 가짜 성공 처리 대신 실패 지점을 좁힌다.
+
+기존 출석/무료보상 자동 알림 억제, 친구 입력 보호, 무료 닉네임, 교체 가능한 서버 설정을 유지한다. 사용자 별도 변경 `PhoneLOL-02/ProjectSettings/UnityConnectSettings.asset`는 이번 커밋에서도 제외했다.
+
+---
+
 # 인수인계 체크포인트 — 2026-09-23 — 미완료 복구 작업 포함
 
 작성: [B계정] Nova / Codex. 최신 사용자 요청에 따라 추가 기능 수정·배포·빌드를 멈추고, 다음 담당자가 이어받을 수 있도록 작업 상태를 보존한다. **작업 완료 선언이 아니다. 아래 구역이 현재 상태이며, 아래쪽 1.16.7~1.16.4 기록은 각 시점의 이력이다.**

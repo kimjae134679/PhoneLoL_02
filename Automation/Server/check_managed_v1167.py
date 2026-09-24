@@ -77,6 +77,51 @@ def run():
             a.legacy(60019,struct.pack("<iH",-1,60016)+b"managed-relay-probe")
             assert b.receive(67,60016)==b"managed-relay-probe"
             print("PASS: both loading acknowledgements and shared battle packet relay")
+            for c in clients:
+                c.legacy(21)
+                c.legacy(3)
+                assert c.receive(67,3)==b"\0"
+            def outcome(room, active):
+                by_slot={p.visual.slot:p for p in active}
+                data=bytearray(struct.pack("<Bii",0,3,1))
+                for slot in range(room.capacity):
+                    p=by_slot.get(slot)
+                    data+=bytes((p is not None,))
+                    if p:
+                        account=srv.state.accounts.get_or_create(p.device_id)
+                        data+=struct.pack("<IH",p.device_id,p.visual.hero_id)+core.encode_text(account.nickname)
+                        data+=struct.pack("<IBHHHHB5H",0,5,3 if slot%2==0 else 1,1,0,4,0,0,0,0,0,0)
+                return bytes(data)
+            body=outcome(room,peers)
+            host=next(c for c in clients if c.peer==room.host_peer)
+            nonhost=next(c for c in clients if c is not host)
+            nonhost.legacy(22,body);assert nonhost.receive(67,22)==b"\xff"
+            host.legacy(22,body)
+            for c in clients:assert c.receive(67,22)==body
+            board=a.rpc(0,33,b"\x01")
+            assert struct.unpack_from("<H",board)[0]==2
+            stats_before=[srv.state.account_services.results.stats(srv.state.accounts.get_or_create(c.device).uid) for c in clients]
+            assert sorted(x[1][0] for x in stats_before)==[984,1016]
+            host.legacy(22,body)
+            for c in clients:assert c.receive(67,22)==body
+            stats_after=[srv.state.account_services.results.stats(srv.state.accounts.get_or_create(c.device).uid) for c in clients]
+            assert stats_after==stats_before
+            reply=a.rpc(0,27,struct.pack("<QH?ii",room.shared_game_id,hero,True,0,0))
+            assert len(reply)==85
+            assert srv.state.accounts.get_or_create(a.device).gold==before
+            print("PASS: authenticated results, persistent ranking, idempotent settlement and exact 85-byte result")
+            solo=Client(srv.server_address[1],991700003);clients.append(solo)
+            assert solo.rpc(0,25,bytes((10,0))+bytes(14))[0]==0
+            solo.legacy(1,struct.pack("<iIq",79,solo.device,solo.token));assert solo.receive(67,1)[0]==0
+            solo.legacy(4,bytes((10,0)));assert solo.receive(67,7)[0]==0
+            solo.legacy(12,struct.pack("<H",hero));solo.receive(67,24)
+            solo.legacy(16);assert solo.receive(67,18)[0]==1
+            solo.legacy(19,struct.pack("<i",100));assert solo.receive(67,20)[0]==1
+            solo.legacy(21);solo.legacy(3);assert solo.receive(67,3)==b"\0"
+            sp=srv.state.peers[solo.peer];sr=srv.state.rooms[sp.room_id]
+            solo_body=outcome(sr,[sp]);solo.legacy(22,solo_body);assert solo.receive(67,22)==solo_body
+            assert srv.state.account_services.results.stats(srv.state.accounts.get_or_create(solo.device).uid)[0]==(0,0,0,0,0)
+            print("PASS: one real player starts, loads and completes without artificial opponents or ranking gains")
         finally:
             for c in clients: c.s.close()
             srv.shutdown();srv.server_close()
