@@ -4,7 +4,7 @@ Patch the existing V3.3 runtime; this folder is not a standalone replacement for
 
 Deploy the files listed in central_v33_runtime_files.json into the existing runtime. Updated managed files are server_central_authority_v33.py, account_services_v1158.py, managed_battle_v1167.py, managed_results_v1168.py and managed_rune_catalog.json. Keep the existing launcher, environment, database and public tunnel. Back up replaced sources/manifest and use SQLite backup before deployment.
 
-The current deployment and APK are recorded at the top of ../../RECOVERY_STATUS.md. Backup before this release: recovery/04_runtime/backups/before-v1168-20260924-170631. That backup contains a runtime unexpectedly reverted to pre-1.16.7 behavior; the cause is unknown. Prefer code-only rollback and do not restore the database just to roll back code.
+The current deployment and APK are recorded at the top of ../../RECOVERY_STATUS.md. Backup before this release: recovery/04_runtime/backups/before-v1168-20260924-170631. That backup contains a runtime reverted to pre-1.16.7 behavior. On 2026-09-25 the cause was traced to the legacy test launcher's startup sync; see the startup repair below. Prefer code-only rollback and do not restore the database just to roll back code.
 
 In 1.16.9, bounded Eve sessions are separate from native transport sessions to prevent champion view-ID collision and overflow. Team movement uses managed packet 61001. Mode 10 results carry eight item IDs per player; ranked/friendly results retain five. All mode participants must install 1.16.9. See Recovery/V1169Deployment.txt and the top of RECOVERY_STATUS.md for the current deployment and backup.
 
@@ -19,3 +19,13 @@ New SQLite tables are managed_rank_stats, managed_match_results and managed_matc
 Run check_managed_v1167.py with the inherited runtime dependencies available. The existing filename is retained. It uses a temporary database/local server and now covers two-peer start/load/relay, solo completion, host-only result submission, duplicate settlement, ranking/result contracts and free repeated renames. It is not a full gameplay or device test.
 
 Disconnect/rejoin, original visual parity, every room-control operation, old-native cross-play, combat anti-cheat and iOS are not certified. Actual phone validation remains with the user.
+
+## Startup repair (2026-09-25)
+
+The current Windows Startup wrapper invokes the runtime's 00_PHONELOL_TEST_HERE/PHONELOL_TEST_V213.ps1. The old launcher copied obsolete sources from PhoneLOL_v1155/APK on every detected bundle mismatch, reverting the managed entrypoint and account services after reboot.
+
+The tracked PHONELOL_TEST_V213.ps1 is the deployed repair. It selects this folder's manifest and five required managed files, and resolves inherited dependencies from the preserved legacy bundle. Missing managed files fail the isolated preflight; the preflight also requires managed battle and results services. Sync excludes the legacy launcher itself so it cannot overwrite this fix.
+
+To redeploy this repair, back up the active launcher, server bundle and SQLite database first, copy this launcher to the existing runtime's 00_PHONELOL_TEST_HERE folder, then run START_REMOTE_STACK.ps1. Run it again to verify the current process is preserved and compare the five managed sources plus manifest. Paths are pinned to the current Windows installation; update them explicitly if moving installations. Keep the separate existing Portwarp startup shortcut. Do not restore the account database merely to roll back code.
+
+Verified with the actual startup entrypoint twice, exact source/manifest comparisons, disposable managed protocol checks and local/public diagnostic HTTP 204. No second full PC reboot or phone gameplay test was performed.

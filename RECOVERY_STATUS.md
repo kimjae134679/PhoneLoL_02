@@ -1,3 +1,19 @@
+# 2026-09-25 — 재부팅 후 서버 되돌림 원인 수정
+
+- 이전 작업은 1.16.9 / 195 APK 빌드와 서버 반영까지 완료됐고, 공개 GitHub 업로드 승인 단계에서 보류됐다. APK 해시는 기존 기록과 일치한다. 폰 플레이 검증은 여전히 사용자 담당이다.
+- 재부팅 후 구버전으로 돌아간 두 파일: server_central_authority_v33.py, account_services_v1158.py. 관리형 전투 진입점과 결과/무료 닉네임 처리가 빠져 있었다. HTTP 204만으로 이 문제를 판별할 수는 없다.
+- 원인: Startup의 PhoneLOL_REMOTE_STACK_AUTOSTART.vbs → START_REMOTE_STACK.ps1 → 00_PHONELOL_TEST_HERE/PHONELOL_TEST_V213.ps1. 실행기가 PhoneLOL_v1155/APK의 오래된 소스와 manifest를 현재 runtime에 복사했다.
+- 수정: 실행기가 현재 저장소 Automation/Server의 manifest와 관리형 서버 5개 파일을 사용한다. 나머지 상속 의존성은 기존 원본에서 가져온다. 파일 누락이나 관리형 서비스 초기화 실패 시 시작 전 검사에서 중단한다. 구형 실행기를 자기 자신 위에 복사하던 경로도 제거했다.
+- 재현 가능한 실행기 원본: Automation/Server/PHONELOL_TEST_V213.ps1. 실제 00_PHONELOL_TEST_HERE의 같은 파일과 SHA-256이 일치한다. 기존 원본 PhoneLOL_v1155는 수정하지 않았다.
+- 백업: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\recovery\04_runtime\backups\before-v1169-startup-fix-20260925-001312. 교체 전 서버 파일/manifest/실행기 및 SQLite backup API로 저장한 DB 포함. 실제 계정 DB를 복원하거나 초기화하지 않았다.
+- 검증: 같은 자동 시작 경로로 서버 재시작, 이어서 재실행 시 기존 PID 29608 유지. 관리형 서버 5개 파일과 manifest가 현재 저장소와 모두 동일하다. PC 자체를 다시 재부팅한 검사는 아니다.
+- 임시 DB 검사 통과: 무료 반복 닉네임, 두 참가자의 방/준비/로딩/relay, 충돌 없는 챔피언 ID, 양방향 팀 이동, 1인 모드 결과, 랭킹/중복 정산 방지. 실제 계정 DB에는 테스트 참가자를 만들지 않았다.
+- 29000 listen, 로컬 및 uko9ef6n.free.pwrp.cc:10045 진단 POST 모두 HTTP 204. 진단 표식 V1169_STARTUP_FIX|synthetic=1. 실제 폰 전투/화면 성공을 뜻하지 않는다.
+- Unity 오류 0 확인. 이번 변경은 서버 실행 경로만 수정했으므로 APK를 다시 빌드하지 않았다. 사용자 UnityConnectSettings.asset 변경은 보존하고 커밋에서 제외한다.
+- GitHub 공개 업로드는 기존 자동 승인 거절 상태를 유지한다. 우회 업로드하지 않았으며 아래 과거 기록은 당시 상태다.
+
+---
+
 # 1.16.9 / 195 — 전투·조명·애니메이션 복구 및 모드대전 — 2026-09-24
 
 작성: [B계정] Nova / Codex Work. 사용자의 이어서 작업 요청으로 진행했다. 아래가 최신 상태이며, 아래쪽 버전 기록은 과거 이력이다. **실기기 전투·화면 확인은 사용자가 담당한다. 코드·계약 검사와 빌드가 실제 플레이 성공을 보증하지 않는다.**

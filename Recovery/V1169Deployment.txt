@@ -6,3 +6,5 @@ Launcher PID observed at deployment: 15180
 uko9ef6n.free.pwrp.cc:10045 HTTP 204
 Diagnostic marker: V1169_DEPLOY_20260924T122454Z
 Server PID observed: 25592
+
+2026-09-25 startup repair: restored managed entrypoint/account sources via patched PHONELOL_TEST_V213.ps1; inherited legacy bundle preserved. Backup before-v1169-startup-fix-20260925-001312 includes sources, manifest, launcher and SQLite backup. Startup entrypoint restart succeeded; second invocation kept PID 29608. All 5 managed sources plus manifest match Automation/Server byte-for-byte. Disposable managed protocol checks passed; local/public diagnostics HTTP 204 (V1169_STARTUP_FIX|synthetic=1). Existing APK unchanged. No full reboot/phone gameplay certification. Public GitHub push remains blocked pending explicit authorization.
