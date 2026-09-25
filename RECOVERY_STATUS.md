@@ -1,3 +1,16 @@
+# 2026-09-25 마무리 / 다음 버전1.17.4
+사용자 최신 요청: 버전1.17.4 →1.17.5 →1.18.0, 밀린 변경·이슈·인수인계 및 GitHub/통합 소통방 최신화.
+과거 구역의 공개 업로드 보류·빌드 대기·1.7.x 다음 버전 안내는 당시 이력입니다. 이번 명시적 GitHub 반영 요청에 따라 게시를 진행합니다.
+
+- 기존1.7.4/code201 APK 빌드 **성공**, 오류0/경고762. 완료 증거: Recovery/V174BuildCompleted.txt.
+- 다음 빌드 기본값은1.17.4/code202. 기존 APK 내부 버전은1.7.4이며 이름만 바꾸지 않습니다.
+- 실제 앱 공개 DNS 진단 경로에서HTTP204 확인. 과거 고정IP 거절과 구분하며 휴대폰 외부망 검증은 아직 미완료입니다.
+- [인수인계](HANDOFF.md), [버전 규칙](VERSIONING.md), [누적 변경](CHANGELOG.md), [이슈](ISSUES.md).
+- GitHub 열린 이슈 #1 실기기 회귀, #2 iOS Mac 서명/배포, #3 원본 랭킹/계정 보상.
+- 서버 재배포·DB 변경·새 앱 빌드·바탕화면 복사·ZIP·새 도구 설치 없음. 기존 사용자 설정 변경 보존.
+
+---
+
 # 1.7.4 / 201 - disconnect, results, combat and practice targets - 2026-09-25
 
 - Latest user instruction: resume after interruption; finish these fixes, then issue the Android build command and end. No Desktop copy, ZIP or iOS export.

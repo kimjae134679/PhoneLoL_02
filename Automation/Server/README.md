@@ -1,3 +1,14 @@
+# 현재 서버 계약
+최신 상태는 [RECOVERY_STATUS](../../RECOVERY_STATUS.md), 실행/복구는 [HANDOFF](../../HANDOFF.md), 다음 버전은 [VERSIONING](../../VERSIONING.md)를 따릅니다. 아래 과거 버전 구역은 이력입니다.
+
+- 전투 시작 시 인증된 참가자 신원을 고정하고 탈주 후에도 원래 명단으로 정산합니다. 호스트·신원·위조·중복 검증을 유지합니다.
+- 관리형 탈주 이벤트61002: little-endian <IBi> (device, slot, new master session). 생존 최저 슬롯을 방장으로 이전하고 클라이언트는 기존 참가자 정보를 보존해 [나감]을 표시합니다.
+- 매칭은 그룹·모드·정원·친구 식별자를 구분합니다. 모드101은2석,102/103은10석.10/103은8아이템 결과.
+- 원본 계정 보상/경험치는 아직0, 랭킹은 대체 Elo입니다. GitHub #3 참조.
+- check_v173.py 및 check_v174.py와 실제 클라이언트 Verification 보고서를 사용합니다. 휴대폰 재접속·실전은 별도 검증입니다.
+
+---
+
 # 1.7.0 room expansion
 
 Display version is 1.7.0, with Android versionCode 197 for upgrade continuity. Next versions are 1.7.1, 1.7.2.

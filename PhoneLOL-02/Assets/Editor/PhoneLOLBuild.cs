@@ -8,13 +8,15 @@ using UnityEngine;
 
 public static class PhoneLOLBuild
 {
-    [MenuItem("PhoneLOL/Export 1.7.4 iOS Xcode project")]
+    public const string DisplayVersion = "1.17.4";
+    public const int BuildNumber = 202;
+    [MenuItem("PhoneLOL/Export " + DisplayVersion + " iOS Xcode project")]
     public static void BuildIOSCandidate()
     {
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.iOS, BuildTarget.iOS))
             throw new InvalidOperationException("Install Unity 6000.3.14f1 iOS Build Support first. Export requires this module; signing requires macOS/Xcode.");
-        PlayerSettings.bundleVersion = "1.7.4";
-        PlayerSettings.iOS.buildNumber = "201";
+        PlayerSettings.bundleVersion = DisplayVersion;
+        PlayerSettings.iOS.buildNumber = BuildNumber.ToString();
         PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.iOS, "com.jcl.lmulti");
         PlayerSettings.SetScriptingBackend(NamedBuildTarget.iOS, ScriptingImplementation.IL2CPP);
         PlayerSettings.SetManagedStrippingLevel(NamedBuildTarget.iOS, ManagedStrippingLevel.Minimal);
@@ -24,7 +26,7 @@ public static class PhoneLOLBuild
         PlayerSettings.allowedAutorotateToLandscapeLeft = true;
         PlayerSettings.allowedAutorotateToLandscapeRight = true;
         PlayerSettings.colorSpace = ColorSpace.Gamma;
-        string output = Path.GetFullPath("Builds/iOS/PhoneLOL-1.7.4");
+        string output = Path.GetFullPath("Builds/iOS/PhoneLOL-" + DisplayVersion);
         Directory.CreateDirectory(Path.GetDirectoryName(output));
         string[] names = { "Login", "Lobby", "MultiGameLoading", "MultiGame", "MtmGameLoading", "MtmGame" };
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
@@ -42,7 +44,7 @@ public static class PhoneLOLBuild
     }
 
     // This produces a migration candidate, not a validated replacement for 1.15.11.
-    [MenuItem("PhoneLOL/Build 1.7.4 ARM64 candidate")]
+    [MenuItem("PhoneLOL/Build " + DisplayVersion + " ARM64")]
     public static void BuildAndroidCandidate()
     {
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Android, BuildTarget.Android))
@@ -56,8 +58,8 @@ public static class PhoneLOLBuild
                 for (int layer = 0; layer < icon.minLayerCount; layer++) icon.SetTexture(originalIcon, layer);
             PlayerSettings.SetPlatformIcons(NamedBuildTarget.Android, kind, icons);
         }
-        PlayerSettings.bundleVersion = "1.7.4";
-        PlayerSettings.Android.bundleVersionCode = 201;
+        PlayerSettings.bundleVersion = DisplayVersion;
+        PlayerSettings.Android.bundleVersionCode = BuildNumber;
         PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.jcl.lmulti");
         PlayerSettings.SetScriptingBackend(NamedBuildTarget.Android, ScriptingImplementation.IL2CPP);
         PlayerSettings.Android.targetArchitectures = AndroidArchitecture.ARM64;
@@ -77,7 +79,7 @@ UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
         string[] scenes = names.Select(name => "Assets/Scenes/" + name + ".unity").ToArray();
         foreach (string scene in scenes)
             if (!File.Exists(scene)) throw new FileNotFoundException("Missing original scene", scene);
-        string output = Path.GetFullPath("Builds/PhoneLOL-1.7.4.apk");
+        string output = Path.GetFullPath("Builds/PhoneLOL-" + DisplayVersion + ".apk");
         Directory.CreateDirectory(Path.GetDirectoryName(output));
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
             scenes = scenes, locationPathName = output, target = BuildTarget.Android,
