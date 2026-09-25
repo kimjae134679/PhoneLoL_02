@@ -1,0 +1,6 @@
+PASS mode=20 departed=guest intentional=False: presence/master, win/loss for both, lookup, idempotence, identity/roster/nonhost rejection
+PASS mode=20 departed=host intentional=False: presence/master, win/loss for both, lookup, idempotence, identity/roster/nonhost rejection
+PASS mode=10 departed=guest intentional=False: presence/master, win/loss for both, lookup, idempotence, identity/roster/nonhost rejection
+PASS mode=10 departed=host intentional=False: presence/master, win/loss for both, lookup, idempotence, identity/roster/nonhost rejection
+PASS mode=103 departed=guest intentional=True: presence/master, win/loss for both, lookup, idempotence, identity/roster/nonhost rejection
+PASS mode=103 departed=host intentional=True: presence/master, win/loss for both, lookup, idempotence, identity/roster/nonhost rejection

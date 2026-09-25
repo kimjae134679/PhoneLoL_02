@@ -181,6 +181,8 @@ namespace BattleServer
 			return EBPBBBFBPNJ;
 		}
 
+        public void MarkDisconnected() { ICJDEHHJMLB = null; }
+
 		public bool MNHIDGANMFO()
 		{
 			if (CJENLAELLAO() == null)

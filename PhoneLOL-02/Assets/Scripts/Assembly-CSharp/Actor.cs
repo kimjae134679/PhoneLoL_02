@@ -4846,7 +4846,11 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	}
 
 	public void InitForReuse()
-	{
+    {
+        // Inactive prefab clones may reach the pool callback before Awake.
+        if (get_m_stateMachine() == null) Awake();
+        if (get_m_stateMachine() == null)
+            throw new InvalidOperationException("Projectile has no state machine: " + name);
 		if (m_actorType != IJJMDPGJAEM.Unknown)
 		{
 			for (int i = 0; i < MNDDPGPFJNE.Length; i++)

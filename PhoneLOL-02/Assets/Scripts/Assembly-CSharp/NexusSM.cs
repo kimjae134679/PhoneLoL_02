@@ -4,6 +4,29 @@ public class NexusSM : RangeMonsterSM
 {
     private bool defenseConfigured;
     private float defenseElapsed;
+    private GameObject defenseWarning;
+
+    public void UpdateDefenseWarning(Actor control)
+    {
+        var actor = get_m_actor();
+        bool visible = actor != null && actor.IsLive() && control != null && control.IsLive() &&
+            control.m_team != actor.m_team &&
+            (control.GetPosition2D() - actor.GetPosition2D()).sqrMagnitude <= actor.get_m_att_range() * actor.get_m_att_range();
+        if (visible && defenseWarning == null) {
+            var prefab = Resources.Load<GameObject>("Particle/Turret/warning");
+            if (prefab == null) return;
+            defenseWarning = Object.Instantiate(prefab);
+            defenseWarning.transform.localScale = new Vector3(actor.get_m_att_range(), 1f, actor.get_m_att_range());
+            defenseWarning.transform.SetParent(transform, true);
+            defenseWarning.transform.localPosition = new Vector3(0f, 0.02f, 0f);
+            var attach = defenseWarning.GetComponent<FxMakerParticleAttach>();
+            if (attach != null) attach.m_targetRoot = gameObject;
+        }
+        if (defenseWarning != null) defenseWarning.SetActive(visible);
+    }
+
+    private void OnDisable() { if (defenseWarning != null) defenseWarning.SetActive(false); }
+
 
     public override void OnUpdateIdle()
     {
@@ -25,6 +48,7 @@ public class NexusSM : RangeMonsterSM
             ActorManager.get_Instance().EnsurePracticeGuard((byte)actor.m_team);
             defenseElapsed = actor.get_m_attackCoolTime();
         }
+        UpdateDefenseWarning(ActorManager.get_Instance().GetControlActor());
         if (!EveUnityNetwork.get_Instance().IsMaster()) return;
         defenseElapsed += Time.deltaTime;
         if (defenseElapsed < actor.get_m_attackCoolTime()) return;
@@ -58,6 +82,7 @@ public class NexusSM : RangeMonsterSM
 
 	public override void OnEnterDeath()
 	{
+        if (defenseWarning != null) defenseWarning.SetActive(false);
 		base.OnEnterDeath();
 		get_m_actor().CreateParticle(string.Format("Particle/{0}/death", get_m_actor().get_m_resourceName()), false);
 		CALECABBOMG = 1f;

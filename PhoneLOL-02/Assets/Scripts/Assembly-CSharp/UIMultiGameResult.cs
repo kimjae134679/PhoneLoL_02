@@ -885,7 +885,11 @@ public class UIMultiGameResult : MonoBehaviour
 				}
 
 				public void OnReceiveGameResult(PJEMPFEIOAK HMOAHNANKNE)
-				{
+                {
+                    if (HMOAHNANKNE.FFINCCFLMEL() != 101) {
+                        PhoneLOLRuntimeServices.CriticalError("전투 결과를 아직 불러오지 못했습니다. [RESULT_LOOKUP_FAILED]");
+                        return;
+                    }
 					int num = HMOAHNANKNE.PNBKOPGIHDI();
 					uint num2 = HMOAHNANKNE.BMKOKHGAHEC();
 					long num3 = HMOAHNANKNE.GAGNPBAMJLE();

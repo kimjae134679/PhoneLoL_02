@@ -251,8 +251,29 @@ public class PNDMCOBIODO : EKACODPEIIO
 			FBAFKOCPFPG(cMNIABEFLBJ);
 		}
 
+        private void OnManagedDeparture(PJEMPFEIOAK packet)
+        {
+            uint device = packet.BMKOKHGAHEC();
+            byte slot = packet.KFAGPDGHEBK();
+            int masterSession = packet.PNBKOPGIHDI();
+            var room = IMKOGBNIJBO();
+            if (room == null || slot >= room.FMCMCKANEBC().Count) return;
+            var member = room.FMCMCKANEBC()[slot];
+            if (member.GBGKGJKBPHM != device) return;
+            member.MarkDisconnected();
+            var actor = member.ENLKLHEMPHA();
+            if (actor != null && actor.get_m_view() != null) actor.get_m_view().set_isSceneObject(true);
+            var group = EveUnityNetwork.get_Instance().GetDefaultGroup();
+            if (group != null && masterSession > 0) group.LNOAKEKHCGF(masterSession);
+            PhoneLOLRealtimeLog.Record("PLAYER_LEFT", "device=" + device + " slot=" + slot + " master=" + masterSession);
+            UIRoot.Broadcast("Refresh");
+        }
 		private void BAKOMJJIHMK(PJEMPFEIOAK HMOAHNANKNE)
-		{
+        {
+            if (HMOAHNANKNE.FFINCCFLMEL() < 25 || HMOAHNANKNE.EIMBOIKCJPE()[16] > 2) {
+                PhoneLOLRuntimeServices.CriticalError("서버가 전투 결과를 승인하지 못했습니다. 무승부로 처리하지 않습니다. [RESULT_REJECTED]");
+                return;
+            }
 			byte hIJLMPFMHBH = HMOAHNANKNE.KFAGPDGHEBK();
 			HMOAHNANKNE.KDOJNBAJJEO(16);
 			if (GameManager.get_Instance() != null)
@@ -730,6 +751,7 @@ public class PNDMCOBIODO : EKACODPEIIO
 			HADMKAKPDDO(18, NKGEGAKJHLP);
 			HADMKAKPDDO(19, LPGDFOOPLEP);
 			HADMKAKPDDO(20, KAHCHIJOFBG);
+            HADMKAKPDDO(61002, OnManagedDeparture);
 			HADMKAKPDDO(22, BAKOMJJIHMK);
             HADMKAKPDDO(24, ReceiveManagedRoomSnapshot);
 			EveUnityNetwork.get_Instance().SetNetClient(this);
@@ -794,7 +816,10 @@ public class PNDMCOBIODO : EKACODPEIIO
 		}
 
 		public override void OIHIOEMEAKF()
-		{
+        {
+            var game = GameManager.get_Instance();
+            if (!IDJDLMOGDMN && game != null && game.get_m_state() == GameManager.OEOIIKMBGAG.Battle)
+                PhoneLOLRuntimeServices.CriticalError("서버 연결이 끊겼습니다. 전투 동기화가 중단되었습니다. [BATTLE_DISCONNECTED]");
 			if (OOHFDEPKKFN() == OEOIIKMBGAG.CONNECTING || OOHFDEPKKFN() == OEOIIKMBGAG.GETINFO)
 			{
 				FJPMFBBCBLB(OEOIIKMBGAG.ERROR);

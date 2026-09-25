@@ -10,6 +10,15 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
     private bool panel;
     [SerializeField] private bool showServerDiagnostics;
     private static int criticalConsolePending;
+    private static readonly System.Collections.Concurrent.ConcurrentQueue<string> criticalMessages =
+        new System.Collections.Concurrent.ConcurrentQueue<string>();
+    public static void CriticalError(string message)
+    {
+        criticalMessages.Enqueue(message);
+        System.Threading.Interlocked.Exchange(ref criticalConsolePending, 1);
+        PhoneLOLRealtimeLog.Record("CRITICAL", message);
+        PhoneLOLRealtimeLog.Flush();
+    }
     private string hostname, port, feedback = "";
     private float nextHeartbeat;
 
@@ -83,6 +92,12 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
             Debug.developerConsoleVisible = true;
         } else if (!Debug.developerConsoleVisible) {
             Debug.developerConsoleEnabled = false;
+        }
+        string critical;
+        while (criticalMessages.TryDequeue(out critical)) {
+            Debug.developerConsoleEnabled = true;
+            Debug.developerConsoleVisible = true;
+            Debug.LogError(critical);
         }
         if (Time.realtimeSinceStartup < nextHeartbeat) return;
         nextHeartbeat = Time.realtimeSinceStartup + 15;

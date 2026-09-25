@@ -28507,7 +28507,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 377.00003, y: -190.2259, z: 0}
+  m_LocalPosition: {x: 351.00003, y: -190.2259, z: 0}
   m_LocalScale: {x: 1.22, y: 1.22, z: 1}
   m_Children:
   - {fileID: 1476}
@@ -171611,11 +171611,11 @@ MonoBehaviour:
   leftAnchor:
     target: {fileID: 2183}
     relative: 1
-    absolute: -100
+    absolute: -126
   rightAnchor:
     target: {fileID: 2183}
     relative: 1
-    absolute: 0
+    absolute: -26
   bottomAnchor:
     target: {fileID: 2183}
     relative: 0

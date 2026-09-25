@@ -3,6 +3,8 @@ import json
 import struct
 import time
 import threading
+import copy
+from types import SimpleNamespace
 from pathlib import Path
 import server_v4 as core
 import server_v093 as legacy
@@ -16,6 +18,7 @@ class ManagedBattle:
         self.state, self.raw_send = state, raw_send
         self.contexts, self.prepared, self.loaded = {}, {}, {}
         self.started_at, self.result_frames = {}, {}
+        self.match_rosters, self.world_ready = {}, {}
         self.lock = threading.RLock()
         self.next_eve_session = 1
         self.catalog = json.loads(Path(__file__).with_name("managed_rune_catalog.json").read_text())
@@ -129,6 +132,10 @@ class ManagedBattle:
             ctx["started"] = True
             self.started_at.setdefault(room.room_id,time.monotonic())
             members = self.members(room)
+            # Keep authenticated identities even after players leave.
+            self.match_rosters.setdefault(room.room_id, tuple(
+                SimpleNamespace(peer_id=p.peer_id, device_id=p.device_id, visual=copy.copy(p.visual))
+                for p in members))
             host = self.session(self.state.peers[room.host_peer])
             # Register self first so Eve creates the group before adding its other members.
             for p in [peer]+[x for x in members if x.peer_id != peer.peer_id]:
@@ -194,6 +201,7 @@ class ManagedBattle:
         if pid==10:
             room_id=peer.room_id
             self.send(peer,10,b"\0"+struct.pack("<I?",peer.device_id,False),request)
+            self.notify_departure(peer)
             self.state._leave_current_room_for_rematch(peer)
             ctx.update(joined=False,started=False,last=None)
             self.publish_room(room_id)
@@ -252,6 +260,7 @@ class ManagedBattle:
             if data or not ctx.get("started"):
                 raise ValueError("Invalid world initialization marker")
             ctx["world_initialized"] = True
+            self.world_ready.setdefault(room.room_id,set()).add(peer.peer_id)
             print("MANAGED_WORLD_READY room="+str(room.room_id)+" peer="+str(peer.peer_id),flush=True)
             return
         if pid==22:
@@ -259,11 +268,12 @@ class ManagedBattle:
                 raise ValueError("Only the active room host can submit its result")
             with self.state.lock, self.lock:
                 members = self.members(room)
-                if not all(self.contexts.get(p.peer_id,{}).get("world_initialized") for p in members):
+                participants = self.match_rosters.get(room.room_id, ())
+                if not participants or not all(p.peer_id in self.world_ready.get(room.room_id,set()) for p in participants):
                     raise ValueError("Result arrived before world initialization")
-                competitive = room.mode in (0,20) and room.group == 0x11670000 and len(members)>1
+                competitive = room.mode in (0,20) and room.group == 0x11670000 and len(participants)>1
                 body = self.state.account_services.results.settle(
-                    room,members,data,time.monotonic()-self.started_at[room.room_id],competitive)
+                    room,participants,data,time.monotonic()-self.started_at[room.room_id],competitive)
                 self.result_frames[room.room_id] = body
                 for target in members:
                     self.send(target,22,body,request if target is peer else 0)
@@ -281,8 +291,24 @@ class ManagedBattle:
         # Unsupported requests fail explicitly without inventing a match or account reward.
         print("MANAGED_BATTLE_UNSUPPORTED pid="+str(pid),flush=True)
         return self.send(peer,pid,b"\xff",request)
+    def notify_departure(self, peer):
+        with self.state.lock, self.lock:
+            room = self.state.rooms.get(peer.room_id)
+            if not room or room.room_id not in self.match_rosters:
+                return
+            survivors = [p for p in self.members(room) if p.peer_id != peer.peer_id and p.peer_id in self.contexts]
+            if room.host_peer == peer.peer_id and survivors:
+                room.host_peer = min(survivors,key=lambda p:p.visual.slot).peer_id
+                self.state.peers[room.host_peer].room_role = 1
+            master = self.contexts.get(room.host_peer,{}).get("eve_session",0)
+            body = struct.pack("<IBi",peer.device_id,peer.visual.slot,master)
+            for target in survivors:
+                self.send(target,61002,body)
+            print("MANAGED_PLAYER_LEFT room="+str(room.room_id)+" peer="+str(peer.peer_id)+" master="+str(master),flush=True)
+
     def disconnected(self, peer):
         room_id=peer.room_id
+        self.notify_departure(peer)
         with self.lock:
             self.contexts.pop(peer.peer_id,None)
             for loaded in self.loaded.values(): loaded.discard(peer.peer_id)

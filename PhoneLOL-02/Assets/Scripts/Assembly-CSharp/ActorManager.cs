@@ -8,6 +8,17 @@ using UnityEngine;
 
 public class ActorManager : MonoBehaviour
 {
+    private float nextPracticeGuardCheck;
+    private void Update()
+    {
+        var game = GameManager.get_Instance();
+        if (game == null || game.get_m_state() != GameManager.OEOIIKMBGAG.Battle ||
+            Time.unscaledTime < nextPracticeGuardCheck) return;
+        nextPracticeGuardCheck = Time.unscaledTime + 1f;
+        EnsurePracticeGuard(0);
+        EnsurePracticeGuard(1);
+    }
+
     public void EnsurePracticeGuard(byte team)
     {
         if (!EveUnityNetwork.get_Instance().IsMaster()) return;
@@ -19,6 +30,7 @@ public class ActorManager : MonoBehaviour
         int id = EveUnityNetwork.get_Instance().AllocateSceneViewID();
         get_m_view().RPC("SpawnPracticeGuardRPC", DJJPAPENCLN.Others, team, position, id);
         SpawnPracticeGuardRPC(team, position, id);
+        PhoneLOLRealtimeLog.Record("PRACTICE_GUARD", "team=" + team + " view=" + id + " position=" + position);
     }
 
     [JDLHECHNNDH]
@@ -28,6 +40,7 @@ public class ActorManager : MonoBehaviour
         var prefab = Resources.Load<GameObject>("practice/Alistar");
         if (prefab == null) throw new InvalidOperationException("Practice Alistar prefab is missing");
         var instance = UnityEngine.Object.Instantiate(prefab, position, Quaternion.identity);
+        instance.SetActive(true);
         instance.GetComponent<EveView>().set_viewID(viewID);
         instance.GetComponent<PhoneLOLPracticeGuardSM>().Configure(team);
         var actor = instance.GetComponent<Actor>();

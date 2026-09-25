@@ -26,8 +26,16 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
         // The straight map also needs lateral separation from the central travel lane.
         if (Mathf.Abs(spawn.z - oppositeSpawn.z) < 1f) position.z -= 8f * side;
         UnityEngine.AI.NavMeshHit ground;
-        if (UnityEngine.AI.NavMesh.SamplePosition(position, out ground, 3f, UnityEngine.AI.NavMesh.AllAreas))
+        if (UnityEngine.AI.NavMesh.SamplePosition(position, out ground, 20f, UnityEngine.AI.NavMesh.AllAreas))
             position = ground.position;
+        // Some recovered maps have no navmesh at the requested flank. Never bury the target.
+        foreach (var terrain in Terrain.activeTerrains) {
+            var origin = terrain.transform.position;
+            var size = terrain.terrainData.size;
+            if (position.x >= origin.x && position.x <= origin.x + size.x &&
+                position.z >= origin.z && position.z <= origin.z + size.z)
+                position.y = Mathf.Max(position.y, terrain.SampleHeight(position) + origin.y + 0.05f);
+        }
         return position;
     }
 

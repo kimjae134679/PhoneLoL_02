@@ -91,6 +91,7 @@ public static class PhoneLOLMultiplayerBridge
 
 	public static void BeginLoad(PNDMCOBIODO client, int stage)
 	{
+        client.IDJDLMOGDMN = false;
 		loading = client;
 		started = false;
 		deadline = Time.realtimeSinceStartup + 90f;
@@ -118,6 +119,7 @@ public static class PhoneLOLMultiplayerBridge
 		}
 		loading = null;
 		Log("CANCEL|" + reason);
+        PhoneLOLRuntimeServices.CriticalError("전투 연결 실패: " + reason);
 	}
 
 	public static void Tick()

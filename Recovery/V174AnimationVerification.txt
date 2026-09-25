@@ -1,0 +1,12 @@
+Teemo AS 2.5 events=10 hits=10 state=Idle
+Teemo AS 10 events=40 hits=40 state=Idle
+Teemo AS 50 events=120 hits=120 state=Idle
+Teemo AS 200 events=240 hits=240 state=Idle
+Ezreal AS 2.5 events=10 hits=10 state=Idle
+Ezreal AS 10 events=40 hits=40 state=Idle
+Ezreal AS 50 events=120 hits=120 state=Idle
+Ezreal AS 200 events=240 hits=240 state=Idle
+Vayne AS 2.5 events=10 hits=10 state=Idle
+Vayne AS 10 events=40 hits=40 state=Idle
+Vayne AS 50 events=120 hits=120 state=Idle
+Vayne AS 200 events=240 hits=240 state=Idle

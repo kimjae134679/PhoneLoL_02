@@ -264,8 +264,9 @@ public class GameObjectPool : MonoBehaviour
 		}
 
 		public GameObject IBLGIEAPNEK(Vector3 HEPNHCEIFMO, Quaternion KMILPEHBBEL, CKGHBADJELM DCHDMCOLBDB = null)
-		{
-			CPJJNBKEOBA();
+        {
+            CPJJNBKEOBA();
+            while (KFDOKMDPLLA.Count > 0 && KFDOKMDPLLA.First.Value == null) KFDOKMDPLLA.RemoveFirst();
 			GameObject gameObject = null;
 			if (KFDOKMDPLLA.Count == 0)
 			{
@@ -482,6 +483,26 @@ public class GameObjectPool : MonoBehaviour
 
 	private Dictionary<int, int> DDKHJMOKICO = new Dictionary<int, int>();
 
+    private sealed class ObjectIdentity : IEqualityComparer<GameObject>
+    {
+        public bool Equals(GameObject x, GameObject y) { return ReferenceEquals(x, y); }
+        public int GetHashCode(GameObject value) { return RuntimeHelpers.GetHashCode(value); }
+    }
+    private sealed class Lease
+    {
+        public FJJEHFCIFFA pool;
+        public int generation;
+        public bool active;
+    }
+    private readonly Dictionary<GameObject, Lease> leases = new Dictionary<GameObject, Lease>(new ObjectIdentity());
+    private readonly Dictionary<string, UnityEngine.Object> resourcePrefabs = new Dictionary<string, UnityEngine.Object>(StringComparer.Ordinal);
+
+    private IEnumerator ReleaseAfter(GameObject instance, Lease lease, int generation, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (instance != null && lease.active && lease.generation == generation) Free(instance);
+    }
+
 	private Dictionary<int, UnityEngine.Object> OLLDEKMFCOH = new Dictionary<int, UnityEngine.Object>();
 
 	public static GameObjectPool CJFCFLEHJKI
@@ -494,26 +515,22 @@ public class GameObjectPool : MonoBehaviour
 
 	public static void Free(GameObject HCKCCHPJOPI, float PABPHHFDANP = 0f)
 	{
-		if (PABPHHFDANP > 0.0001f)
-		{
-			get_Instance().StartCoroutine(get_Instance().AEGGLJJJBEM(HCKCCHPJOPI, PABPHHFDANP));
-			return;
-		}
-		int value = 0;
-		int hashCode = HCKCCHPJOPI.GetHashCode();
-		if (get_Instance().DDKHJMOKICO.TryGetValue(hashCode, out value))
-		{
-			FJJEHFCIFFA value2 = null;
-			if (get_Instance().FDNEIEMLOAK.TryGetValue(value, out value2))
-			{
-				value2.OPEDLOCDGLC(HCKCCHPJOPI);
-			}
-		}
+        if (HCKCCHPJOPI == null) return;
+        var manager = get_Instance();
+        Lease lease;
+        if (!manager.leases.TryGetValue(HCKCCHPJOPI, out lease) || !lease.active) return;
+        if (PABPHHFDANP > 0.0001f) {
+            manager.StartCoroutine(manager.ReleaseAfter(HCKCCHPJOPI, lease, lease.generation, PABPHHFDANP));
+            return;
+        }
+        lease.active = false;
+        lease.pool.OPEDLOCDGLC(HCKCCHPJOPI);
 	}
 
 	public static void ClearPrefabCache()
 	{
 		get_Instance().OLLDEKMFCOH.Clear();
+        get_Instance().resourcePrefabs.Clear();
 	}
 
 	public static GameObject EJLBMFACLOK(UnityEngine.Object JAAAMFIKGAO, CKGHBADJELM DCHDMCOLBDB = null)
@@ -689,27 +706,14 @@ public class GameObjectPool : MonoBehaviour
 
 	public static GameObject Alloc(string NCADFOBAFJD, Vector3 HEPNHCEIFMO, Quaternion KMILPEHBBEL, CKGHBADJELM DCHDMCOLBDB = null)
 	{
-		int hashCode = NCADFOBAFJD.GetHashCode();
-		UnityEngine.Object value = null;
-		if (!get_Instance().OLLDEKMFCOH.TryGetValue(hashCode, out value))
-		{
-			value = Resources.Load(NCADFOBAFJD);
-			if (value == null)
-			{
-				return null;
-			}
-			get_Instance().OLLDEKMFCOH.Add(hashCode, value);
-		}
-		if (value == null)
-		{
-			value = Resources.Load(NCADFOBAFJD);
-			if (value == null)
-			{
-				return null;
-			}
-			get_Instance().OLLDEKMFCOH[hashCode] = value;
-		}
-		return Alloc(value, HEPNHCEIFMO, KMILPEHBBEL, DCHDMCOLBDB);
+        var manager = get_Instance();
+        UnityEngine.Object prefab;
+        if (!manager.resourcePrefabs.TryGetValue(NCADFOBAFJD, out prefab) || prefab == null) {
+            prefab = Resources.Load(NCADFOBAFJD);
+            if (prefab == null) return null;
+            manager.resourcePrefabs[NCADFOBAFJD] = prefab;
+        }
+        return Alloc(prefab, HEPNHCEIFMO, KMILPEHBBEL, DCHDMCOLBDB);
 	}
 
 	public static void KCEIJNLBJAH()
@@ -731,21 +735,28 @@ public class GameObjectPool : MonoBehaviour
 
 	public static GameObject Alloc(UnityEngine.Object JAAAMFIKGAO, Vector3 HEPNHCEIFMO, Quaternion KMILPEHBBEL, CKGHBADJELM DCHDMCOLBDB = null)
 	{
-		GameObject gameObject = null;
-		int hashCode = JAAAMFIKGAO.GetHashCode();
-		FJJEHFCIFFA value = null;
-		if (!get_Instance().FDNEIEMLOAK.TryGetValue(hashCode, out value))
-		{
-			value = new FJJEHFCIFFA(JAAAMFIKGAO, get_Instance().gameObject);
-			get_Instance().FDNEIEMLOAK.Add(hashCode, value);
-		}
-		gameObject = value.IBLGIEAPNEK(HEPNHCEIFMO, KMILPEHBBEL, DCHDMCOLBDB);
-		int hashCode2 = gameObject.GetHashCode();
-		if (!get_Instance().DDKHJMOKICO.ContainsKey(hashCode2))
-		{
-			get_Instance().DDKHJMOKICO.Add(hashCode2, hashCode);
-		}
-		return gameObject;
+        if (JAAAMFIKGAO == null) return null;
+        var manager = get_Instance();
+        int key = JAAAMFIKGAO.GetInstanceID();
+        FJJEHFCIFFA pool;
+        if (!manager.FDNEIEMLOAK.TryGetValue(key, out pool) || !ReferenceEquals(pool.DMLPHKPAJFI, JAAAMFIKGAO)) {
+            pool = new FJJEHFCIFFA(JAAAMFIKGAO, manager.gameObject);
+            manager.FDNEIEMLOAK[key] = pool;
+        }
+        var owningPool = pool;
+        return pool.IBLGIEAPNEK(HEPNHCEIFMO, KMILPEHBBEL, instance => {
+            Lease lease;
+            if (!manager.leases.TryGetValue(instance, out lease)) {
+                lease = new Lease();
+                manager.leases.Add(instance, lease);
+            }
+            lease.pool = owningPool;
+            lease.generation++;
+            lease.active = true;
+            // Register before callbacks: an effect can finish during initialization.
+            manager.DDKHJMOKICO[instance.GetInstanceID()] = key;
+            if (DCHDMCOLBDB != null) DCHDMCOLBDB(instance);
+        });
 	}
 
 	private IEnumerator LKHKCKCDPLC(GameObject HCKCCHPJOPI, float PABPHHFDANP)

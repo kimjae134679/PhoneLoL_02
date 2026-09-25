@@ -2149,27 +2149,9 @@ public class MtmGameManager : GameManager
 
 	private void NCNGMLHNAJB()
 	{
-		if (NetworkManager.get_Instance().m_testMode)
-		{
-			return;
-		}
-		m_actionElapsedTime += Time.deltaTime;
-		if (m_actionElapsedTime > 80f)
-		{
-			NetworkManager.get_Instance().get_m_battleNetClient().MNCACLOFDBA();
-		}
-		else if (m_actionElapsedTime > 60f)
-		{
-			if (!m_mainDescription.activeSelf)
-			{
-				m_mainDescriptionLabel.set_text(LocalizationManager.get_Instance().GetText("오랫동안 조작이 없으면 접속이 해제되요"));
-				m_mainDescription.SetActive(true);
-			}
-		}
-		else
-		{
-			m_mainDescription.SetActive(false);
-		}
+		// Idle players stay connected.
+		m_actionElapsedTime = 0f;
+		if (m_mainDescription != null) m_mainDescription.SetActive(false);
 	}
 
 	public virtual void KIPJDIJGOEC()
