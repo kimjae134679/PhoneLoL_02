@@ -1825,7 +1825,7 @@ public class MultiGameManager : GameManager
 
 	public override float GetRespawnTime(byte DDILAEMMCAJ)
 	{
-		return 9f + (float)(int)DDILAEMMCAJ * 2f;
+		return PhoneLOLModeRules.ChampionRespawn(DDILAEMMCAJ);
 	}
 
 	private static bool EGMDKAIIFBB(Actor CDKMPAEODLA)

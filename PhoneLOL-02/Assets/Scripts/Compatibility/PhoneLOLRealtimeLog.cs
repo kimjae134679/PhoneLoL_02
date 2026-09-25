@@ -38,6 +38,12 @@ public static class PhoneLOLRealtimeLog
     public static void Record(string category, string message)
     {
         if (!ready) return;
+        // High-frequency diagnostics used to create thousands of upload connections.
+        if (category == "LOCAL_RX" || category == "LOCAL_TX" ||
+            category == "BATTLE_RX" || category == "BATTLE_TX" ||
+            category == "STAGE" || category == "UNITY_Log" ||
+            category == "UNITY_Warning" || category == "HEARTBEAT" ||
+            category == "LEGACY_DIAGNOSTIC_RECEIVED") return;
         message = secrets.Replace(message ?? "", "$1=[REDACTED]").Replace("\r", "\\r").Replace("\n", "\\n");
         lock (gate) {
             try {

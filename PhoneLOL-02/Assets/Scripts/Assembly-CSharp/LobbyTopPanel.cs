@@ -367,7 +367,10 @@ public class LobbyTopPanel : MonoBehaviour
 
 						public void OnClickNoticeLabel()
 						{
-							MsgManager.get_Instance().ShowMessageBox(LocalizationManager.get_Instance().GetText("더 자세한 정보를 보시겠습니까?"), true, ICGKFADKKLP);
+							if (!string.IsNullOrEmpty(PhoneLOLLobbyNotice.CurrentBody))
+								MsgManager.get_Instance().ShowMessageBox(PhoneLOLLobbyNotice.CurrentBody);
+							else
+								MsgManager.get_Instance().ShowMessageBox(LocalizationManager.get_Instance().GetText("더 자세한 정보를 보시겠습니까?"), true, ICGKFADKKLP);
 						}
 
 						private void JGOPFCBEFOD()

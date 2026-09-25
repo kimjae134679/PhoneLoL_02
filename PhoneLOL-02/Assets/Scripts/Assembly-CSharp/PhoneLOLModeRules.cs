@@ -9,8 +9,25 @@ public static class PhoneLOLModeRules
             var network = NetworkManager.get_Instance();
             var battle = network == null ? null : network.get_m_battleNetClient();
             var room = battle == null ? null : battle.IMKOGBNIJBO();
-            return room != null && (room.EHCPMLKEBME == 10 || room.EHCPMLKEBME == 103);
+            return room != null && (room.EHCPMLKEBME == 10 || room.EHCPMLKEBME == 102 || room.EHCPMLKEBME == 103);
         }
+    }
+    public static int CurrentMode {
+        get {
+            var network = NetworkManager.get_Instance();
+            var battle = network == null ? null : network.get_m_battleNetClient();
+            var room = battle == null ? null : battle.IMKOGBNIJBO();
+            return room == null ? -1 : room.EHCPMLKEBME;
+        }
+    }
+    public static bool FriendlyMode { get { return CurrentMode >= 101 && CurrentMode <= 103; } }
+    public static bool URF { get { return CurrentMode == 103; } }
+    public static byte ChampionLevelLimit { get { return FriendlyMode ? (byte)40 : (byte)18; } }
+    public static float ChampionRespawn(byte level) { return 9f + level * (FriendlyMode ? 1f : 2f); }
+    public static int StartingMoney { get { return URF ? 7000 : 500; } }
+    public static int BuildingHealth(int health, int heroId, Actor.IJJMDPGJAEM actorType) {
+        if (!FriendlyMode || actorType != Actor.IJJMDPGJAEM.Turret) return health;
+        return checked(health * (heroId == 31000 ? 4 : 2));
     }
     public static float AttackSpeed(float value) { return Enabled ? value : Mathf.Min(value, 2.5f); }
     public static float LifeSteal(float value) { return Enabled ? value : Mathf.Min(value, 0.55f); }
@@ -21,10 +38,11 @@ public static class PhoneLOLModeRules
         double points = Math.Max(0.0, (double)value * 100.0);
         double blocks = Math.Floor(points / 40.0);
         double remainder = points - blocks * 40.0;
-        return (float)(1.0 - Math.Pow(0.6, blocks) * (1.0 - remainder / 100.0));
+        double remaining = Math.Pow(0.6, blocks) * (1.0 - remainder / 100.0);
+        return (float)(1.0 - remaining * (URF ? 0.2 : 1.0));
     }
     public static int ItemSlots { get { return Enabled ? 8 : 5; } }
-    public static float Respawn(float seconds) { return Enabled ? seconds * 0.5f : seconds; }
+    public static float Respawn(float seconds) { return URF ? 60f : Enabled ? seconds * 0.5f : seconds; }
     public static UIGameItem[] ExpandItems(UIGameItem[] items)
     {
         if (!Enabled || items == null || items.Length != 5) return items;

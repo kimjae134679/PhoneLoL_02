@@ -101,7 +101,7 @@ public static class PhoneLOLAccountBridge
 			return scene;
 		}
 		byte eHCPMLKEBME = battleNetClient.IMKOGBNIJBO().EHCPMLKEBME;
-		if (eHCPMLKEBME != 20 && eHCPMLKEBME != 101)
+		if (eHCPMLKEBME != 20)
 		{
 			return scene;
 		}

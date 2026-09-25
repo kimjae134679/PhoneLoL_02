@@ -61,3 +61,9 @@ APK143245542 bytes, SHA256 68d1efa50f86faf7a7e570abe671c41a49398306ebfc9efd20e7f
 - 독립 사용자 수정 UnityConnectSettings.asset은 커밋하지 않습니다. ProjectSettings.asset의 빌드 자동 저장 공백 변경도 별도 보존합니다.
 - 기존 APK/백업/Known-Good 및 Remote Desktop 연결 유지. 새 바탕화면 복사/ZIP 없음.
 - 통합 소통은 project-operations-hub의 T-0010 THREAD.md에 추가하고 실제 버전/검증 원본은 이 저장소에 기록합니다.
+
+
+# 1.18.0 인수인계 — 2026-09-26
+실행 중 서버는1.18.0 코드로 갱신했고 계정21개 및 DB 무결성 확인. 백업 recovery/04_runtime/backups/v1180_20260926_020306. 공지 제목과 본문 수정은 Automation/Server/SetLobbyNotice.ps1 -Headline '제목' -Body '내용'. 서버 재시작이나 앱 재설치는 공지 문구 수정에 필요 없다.
+새 Android PhoneLOL-02/Builds/PhoneLOL-1.18.0.apk (code204, ARM64, SHA256 385f0769768f33608f95b606a8380d45f7a2c5400ab3800665963eda5e96ccce). 새 기능 사용자는 이 버전을 설치해야 한다. 상세 변경, 검사, 제한: Recovery/V1180Release.md.
+다음 버그 수정은1.18.1/code205. 이전 버전의 모드 규칙 및 알리스타 체력 이력은 아래에 그대로 남겨두었다.

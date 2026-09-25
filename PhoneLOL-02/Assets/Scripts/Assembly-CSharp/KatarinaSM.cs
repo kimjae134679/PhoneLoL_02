@@ -114,6 +114,7 @@ public class KatarinaSM : HumanSM
 		case 1:
 		{
 			float iMABEBIKOOH = get_m_actor().m_moveSpeed * (1f + GetPercentMoveSpeedBonus());
+			if (m_moveDirection.sqrMagnitude > 0.0001f) SetDirection(m_moveDirection);
 			Move(iMABEBIKOOH, m_moveDirection);
 			break;
 		}

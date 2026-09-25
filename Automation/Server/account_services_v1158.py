@@ -22,6 +22,7 @@ class AccountServices:
         self.events = {}
         self.invites = {}
         self.pending_joins = {}
+        self.public_last = {}
         self.lock = threading.RLock()
         with self.store._lock, self.store._db:
             self.store._db.executescript("""
@@ -29,6 +30,13 @@ CREATE TABLE IF NOT EXISTS account_restore_state (
  uid INTEGER PRIMARY KEY REFERENCES accounts(uid),
  rename_ticks INTEGER NOT NULL DEFAULT 0,
  runes_migrated INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE IF NOT EXISTS public_chat (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ sender_uid INTEGER NOT NULL REFERENCES accounts(uid),
+ nickname TEXT NOT NULL,
+ message TEXT NOT NULL,
+ created_at INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS public_chat_sender ON public_chat(sender_uid,id);
 CREATE TABLE IF NOT EXISTS account_friends (
  requester INTEGER NOT NULL REFERENCES accounts(uid),
  recipient INTEGER NOT NULL REFERENCES accounts(uid),
@@ -244,6 +252,42 @@ CREATE TABLE IF NOT EXISTS account_friends (
                 (device,target,target,device)).fetchone()
             return rows is not None
 
+    def public_chat(self, device, pid, payload):
+        a=self.account(device)
+        if pid==1:
+            if len(payload)!=8:raise ValueError("public history payload")
+            before,after=struct.unpack("<II",payload)
+            if before and after:raise ValueError("ambiguous history cursor")
+            with self.store._lock:
+                if before:
+                    rows=self.store._db.execute("SELECT * FROM public_chat WHERE id<? ORDER BY id DESC LIMIT 50",(before,)).fetchall()
+                    rows=list(reversed(rows))
+                elif after:
+                    rows=self.store._db.execute("SELECT * FROM public_chat WHERE id>? ORDER BY id LIMIT 50",(after,)).fetchall()
+                else:
+                    rows=self.store._db.execute("SELECT * FROM public_chat ORDER BY id DESC LIMIT 50").fetchall()
+                    rows=list(reversed(rows))
+            response=bytearray(b"\0"+struct.pack("<H",len(rows)))
+            for row in rows:
+                response+=struct.pack("<Iq",row["id"],row["created_at"])
+                response+=core.encode_text(row["nickname"])+core.encode_text(row["message"])
+            return bytes(response)
+        if pid==2:
+            message,end=core.decode_text(payload)
+            if end!=len(payload) or not message.strip() or len(message)>200 or len(message.encode("utf-8"))>600:
+                raise ValueError("public message")
+            if any(ord(c)<32 and c not in "\n\t" for c in message):
+                raise ValueError("public control character")
+            with self.lock,self.store._lock,self.store._db:
+                now=time.time()
+                if now-self.public_last.get(device,0)<2:
+                    return b"\x10"
+                self.public_last[device]=now
+                result=self.store._db.execute("INSERT INTO public_chat(sender_uid,nickname,message,created_at) VALUES(?,?,?,?)",
+                    (a.uid,a.nickname,message,int(now)))
+                return b"\0"+struct.pack("<I",result.lastrowid)
+        raise ValueError("unsupported public request")
+
     def dispatch(self, device, service, pid, payload):
         if service==2 and pid==0 and not payload:
             with self.lock:
@@ -253,6 +297,7 @@ CREATE TABLE IF NOT EXISTS account_friends (
                 if not waiting:self.events.pop(device,None)
                 return struct.pack("<H",len(queued))+b"".join(struct.pack("<HH",p,len(body))+body for p,body in queued)
 
+        if service==3:return self.public_chat(device,pid,payload)
         if service==0:
             if pid==33:return self.results.leaderboard(payload)
             if pid==27:return self.results.result(device,payload)

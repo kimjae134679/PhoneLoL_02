@@ -4,7 +4,7 @@ using UnityEngine;
 // A networked practice target; it has no participant or scoreboard entry.
 public sealed class PhoneLOLPracticeGuardSM : HumanSM
 {
-    public const int MaxHealth = 20000;
+    public const int MaxHealth = 10000;
     public const int KillGold = 1000;
     public const float RespawnDelay = 1f;
     private bool respawning;
@@ -118,6 +118,11 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
         actor.get_m_buffsInfo().DOGNNGPHIDC();
         actor.m_hp = MaxHealth;
         actor.m_dontDamage = false;
+        if (actor.m_navMeshAgent != null) {
+            actor.m_navMeshAgent.enabled = true;
+            actor.m_navMeshAgent.ResetPath();
+            actor.m_navMeshAgent.isStopped = true;
+        }
         respawning = false;
         SetStateForce(OEOIIKMBGAG.Idle);
         actor.SetAnimation("idle");

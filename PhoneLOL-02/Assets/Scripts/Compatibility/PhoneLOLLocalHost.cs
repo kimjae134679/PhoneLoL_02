@@ -9,6 +9,7 @@ using static PhoneLOLTransport;
 public sealed class PhoneLOLLocalHost : IDisposable
 {
     private sealed class AccountSession { public long token; public DateTime expires; }
+    private static PhoneLOLLocalHost active;
     private readonly Dictionary<uint, AccountSession> accounts = new Dictionary<uint, AccountSession>();
     private readonly List<TcpListener> listeners = new List<TcpListener>();
     private readonly HashSet<TcpClient> clients = new HashSet<TcpClient>();
@@ -29,6 +30,7 @@ public sealed class PhoneLOLLocalHost : IDisposable
                 var thread = new Thread(() => Accept(listener, port)) { IsBackground = true };
                 thread.Start();
             }
+            active = this;
             PhoneLOLRealtimeLog.Record("HOST_READY", "login=20000 game=20001 battle=20002 community=20100 central=" + endpoint);
         } catch { Dispose(); throw; }
     }
@@ -135,6 +137,24 @@ public sealed class PhoneLOLLocalHost : IDisposable
             if (central != null) central.Dispose();
             client.Close();
             lock (gate) clients.Remove(client);
+        }
+    }
+
+    public static byte[] PublicBoardRequest(ushort pid, byte[] payload)
+    {
+        var host = active;
+        if (host == null || host.stopped) throw new InvalidOperationException("Local account host is unavailable.");
+        uint device;
+        lock (host.gate) {
+            device = host.loggedInDevice;
+            AccountSession session;
+            if (device == 0 || !host.accounts.TryGetValue(device, out session) || session.expires <= DateTime.UtcNow)
+                throw new InvalidOperationException("Public chat requires a signed-in player.");
+        }
+        using (var central = new Central(host.endpoint, device)) {
+            byte[] reply = central.Rpc(3, pid, payload);
+            if (reply.Length == 0 || reply[0] == 255) throw new InvalidDataException("Public chat request failed.");
+            return reply;
         }
     }
 
@@ -264,6 +284,7 @@ public sealed class PhoneLOLLocalHost : IDisposable
     public void Dispose()
     {
         stopped = true;
+        if (ReferenceEquals(active, this)) active = null;
         foreach (var listener in listeners) listener.Stop();
         lock (gate) {
             foreach (var client in clients) client.Close();

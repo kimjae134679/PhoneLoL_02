@@ -587,6 +587,7 @@ public class LobbyMain : MonoBehaviour
 		NMPIGEFCGAC.Add(29, m_guildPanel);
 		NMPIGEFCGAC.Add(30, m_crossPromotionPanel);
 		NMPIGEFCGAC.Add(31, m_transferPanel);
+		if (GetComponent<PhoneLOLLobbyNotice>() == null) gameObject.AddComponent<PhoneLOLLobbyNotice>();
 		SoundManager.get_Instance().PlayBGM("bgm_lobby");
 		if (NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
 			.CMKGCKMLBBK())

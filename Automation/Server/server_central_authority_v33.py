@@ -37,7 +37,7 @@ class CentralAuthorityV33State(v32.CentralAuthorityV32State):
             super().disconnect(peer)
             if bridge: bridge.publish_room(room)
     def match(self,peer,friend,group,mode,capacity):
-        capacity={20:2,101:2,102:10,103:10}.get(mode,capacity)
+        capacity={20:2,101:10,102:10,103:10}.get(mode,capacity)
         with self.account_services.lock:
             invitation=self.account_services.pending_joins.get(peer.device_id)
         if invitation is not None:
@@ -54,7 +54,7 @@ class CentralAuthorityV33State(v32.CentralAuthorityV32State):
             return None
         return super().match(peer,friend,group,mode,capacity)
     def match_operation(self,peer,friend,group,mode,capacity,operation,target_room_id,request_id):
-        capacity={20:2,101:2,102:10,103:10}.get(mode,capacity)
+        capacity={20:2,101:10,102:10,103:10}.get(mode,capacity)
         return super().match_operation(peer,friend,group,mode,capacity,operation,target_room_id,request_id)
 class CentralAuthorityV33Handler(v32.CentralAuthorityV32Handler):
     def _dispatch(self,kind,room,header_peer,payload):

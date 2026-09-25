@@ -2186,7 +2186,7 @@ public class MtmGameManager : GameManager
 
 	public override float GetRespawnTime(byte DDILAEMMCAJ)
 	{
-		return 9f + (float)(int)DDILAEMMCAJ * 2f;
+		return PhoneLOLModeRules.ChampionRespawn(DDILAEMMCAJ);
 	}
 
 	public void CheckStageOver()

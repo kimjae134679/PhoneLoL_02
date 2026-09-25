@@ -15,6 +15,44 @@ public class UILobbyFriendPanel : MonoBehaviour
 	public GameObject m_friendWindow;
 
 	public GameObject m_guildWindow;
+    private UIToggle m_publicChatTab;
+    private GameObject m_publicChatWindow;
+    private void SetupPublicChat()
+    {
+        if (m_publicChatTab != null) return;
+        var clone = UnityEngine.Object.Instantiate(m_guildTab.gameObject, m_guildTab.transform.parent, false);
+        clone.name = "PublicChatTab";
+        m_publicChatTab = clone.GetComponent<UIToggle>();
+        m_publicChatTab.onChange.Clear();
+        m_publicChatTab.onChange.Add(new EventDelegate(OnChangeTab));
+        m_publicChatTab.set_value(false);
+        var title = clone.GetComponentInChildren<UILabel>();
+        if (title != null) title.set_text("채팅");
+        m_friendTab.transform.localPosition = new Vector3(-380f, 208f, 0f);
+        m_guildTab.transform.localPosition = new Vector3(-260f, 208f, 0f);
+        clone.transform.localPosition = new Vector3(-140f, 208f, 0f);
+        var friendScale = m_friendTab.transform.localScale;
+        friendScale.x *= 0.78f;
+        m_friendTab.transform.localScale = friendScale;
+        var guildScale = m_guildTab.transform.localScale;
+        guildScale.x *= 0.78f;
+        m_guildTab.transform.localScale = guildScale;
+        clone.transform.localScale = guildScale;
+        bool wasOpen = m_guildWindow.activeSelf;
+        m_guildWindow.SetActive(false);
+        m_publicChatWindow = UnityEngine.Object.Instantiate(m_guildWindow, m_guildWindow.transform.parent, false);
+        m_publicChatWindow.name = "PublicChatWindow";
+        m_guildWindow.SetActive(wasOpen);
+        var oldChat = m_publicChatWindow.GetComponent<UILobbyGuildChatWindow>();
+        var display = oldChat.m_chat;
+        var input = oldChat.m_input;
+        oldChat.enabled = false;
+        UnityEngine.Object.Destroy(oldChat);
+        var publicChat = m_publicChatWindow.AddComponent<PhoneLOLPublicChatPanel>();
+        publicChat.Initialize(display, input);
+        m_publicChatWindow.SetActive(false);
+    }
+
 
 	private float GEAOFCPMFFA;
 
@@ -56,6 +94,13 @@ public class UILobbyFriendPanel : MonoBehaviour
 
 	public void OnChangeTab()
 	{
+        if (m_publicChatTab != null && m_publicChatTab.get_value()) {
+            m_friendWindow.SetActive(false);
+            m_guildWindow.SetActive(false);
+            m_publicChatWindow.SetActive(true);
+            return;
+        }
+        if (m_publicChatWindow != null) m_publicChatWindow.SetActive(false);
 		if (m_friendTab.get_value())
 		{
 			m_friendWindow.SetActive(true);
@@ -71,6 +116,7 @@ public class UILobbyFriendPanel : MonoBehaviour
 	private void Start()
 	{
 		base.transform.localPosition = new Vector3(-477f + GEAOFCPMFFA, 0f, 0f);
+        SetupPublicChat();
 	}
 
 	public void CDMHLCEKGOC(bool JHDMFJKIPKF)

@@ -58,7 +58,7 @@ WHERE s.mode=? ORDER BY s.points DESC,s.wins DESC,s.uid ASC LIMIT 100""", (paylo
             raise ValueError("Invalid match outcome")
         by_slot = {p.visual.slot: p for p in peers}
         cursor, entries = 9, []
-        item_count = 8 if room.mode in (10,103) else 5
+        item_count = 8 if room.mode in (10,102,103) else 5
         canonical = bytearray(struct.pack("<Bii", winner, kills0, kills1))
         for slot in range(room.capacity):
             if cursor >= len(payload) or payload[cursor] not in (0, 1):

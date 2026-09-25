@@ -189,7 +189,7 @@ class ManagedBattle:
         if pid == 3: return self.send(peer,3,b"\0",request)
         if pid in (4,5,8):
             mode = ctx["mode"]
-            capacity = {20:2,101:2,102:10,103:10}.get(mode,6)
+            capacity = {20:2,101:10,102:10,103:10}.get(mode,6)
             operation = legacy.MATCH_OP_CREATE if pid==5 else legacy.MATCH_OP_FIND_OR_CREATE
             target = ctx["target"]
             if pid==8:

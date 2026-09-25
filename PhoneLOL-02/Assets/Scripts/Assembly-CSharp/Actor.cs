@@ -2942,12 +2942,12 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 		CGAMDJPGLBB();
 		for (uint num = 0u; num < KAAABNKKAJL.Length; num++)
 		{
-			if (PNJKANMGGBA < KAAABNKKAJL[num])
+			if (num > PhoneLOLModeRules.ChampionLevelLimit || PNJKANMGGBA < KAAABNKKAJL[num])
 			{
 				return (byte)(num - 1);
 			}
 		}
-		return (byte)(KAAABNKKAJL.Length - 1);
+		return PhoneLOLModeRules.ChampionLevelLimit;
 	}
 
 	public float get_m_phy_att_add()
@@ -2991,9 +2991,9 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 
 	public void SetLevel(byte DDILAEMMCAJ)
 	{
-		if (DDILAEMMCAJ > 18)
+		if (DDILAEMMCAJ > PhoneLOLModeRules.ChampionLevelLimit)
 		{
-			DDILAEMMCAJ = 18;
+			DDILAEMMCAJ = PhoneLOLModeRules.ChampionLevelLimit;
 		}
 		ELLDOFEGKMJ = DDILAEMMCAJ;
 	}
@@ -3032,7 +3032,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	{
 		if (KAAABNKKAJL == null)
 		{
-			KAAABNKKAJL = new uint[19];
+			KAAABNKKAJL = new uint[41];
 			uint num = 280u;
 			KAAABNKKAJL[2] = 280u;
 			for (uint num2 = 3u; num2 < KAAABNKKAJL.Length; num2++)
@@ -3104,7 +3104,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 
 	public bool IsMaxLevel()
 	{
-		if (get_Level() >= 18)
+		if (get_Level() >= PhoneLOLModeRules.ChampionLevelLimit)
 		{
 			return true;
 		}
@@ -4269,7 +4269,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	public static uint GetMaxExp()
 	{
 		CGAMDJPGLBB();
-		return KAAABNKKAJL[KAAABNKKAJL.Length - 1];
+		return KAAABNKKAJL[PhoneLOLModeRules.ChampionLevelLimit];
 	}
 
 	public void AddHpRemote(int LLAAHBDLNGP)
@@ -4863,7 +4863,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 			ELLDOFEGKMJ = (byte)1;
 			FFLHOOPFHMM = 0u;
 			OBDPODBBMDA = 0u;
-			NNCNGFFJHLM(500);
+			NNCNGFFJHLM(PhoneLOLModeRules.StartingMoney);
 			IJMKMDEBBAD(0);
 			m_skillPoint = (byte)1;
 			IBIKONGOAKN = (ushort)0;
@@ -4954,7 +4954,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 		{
 			num += (int)(get_m_mag_att_add() * 1.4f);
 		}
-		return V093RuneBattleFix.ApplyMaxHp(num, this);
+		return PhoneLOLModeRules.BuildingHealth(V093RuneBattleFix.ApplyMaxHp(num, this), m_hero_id, m_actorType);
 	}
 
 	public bool IsPossibleSkillLevelUp(byte KLGHHEDJLCA)
@@ -5093,7 +5093,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 		OBDPODBBMDA = 0u;
 		MCEIJGCLIIO = 0u;
 		m_skillPoint = (byte)1;
-		NNCNGFFJHLM(500);
+		NNCNGFFJHLM(PhoneLOLModeRules.StartingMoney);
 	}
 
 	public float get_m_att_speed_add_percent()
