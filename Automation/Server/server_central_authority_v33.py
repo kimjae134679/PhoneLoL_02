@@ -4,8 +4,13 @@ import os,time,struct
 import server_v093 as legacy
 import server_v4 as core
 import server_central_authority_v32 as v32
+import server_central_authority_v30 as transport
 from account_services_v1158 import AccountServices, RPC_GET, RPC_RESULT, RPC_HEADER
-from managed_battle_v1167 import ManagedBattle, REQUEST
+from managed_battle_v1167 import ManagedBattle, REQUEST, RESPONSE
+# Managed battle frames have the same high-frequency role as native battle data.
+# Retain connection/rejection/overflow diagnostics, without flushing a log per frame.
+transport.QUIET_RX_KINDS = transport.QUIET_RX_KINDS | {REQUEST}
+transport.QUIET_TX_KINDS = transport.QUIET_TX_KINDS | {RESPONSE}
 SERVER_VERSION="central-authority-v3.3-persistent-original-accounts"
 class CentralAuthorityV33State(v32.CentralAuthorityV32State):
     def __init__(self,db_path):
@@ -17,11 +22,20 @@ class CentralAuthorityV33State(v32.CentralAuthorityV32State):
         if bridge and bridge.central_event(peer,kind,payload,room,source_peer):
             return True
         return super().send(peer,kind,payload,room,source_peer)
+    def _writer_failure(self,peer,reason):
+        super()._writer_failure(peer,reason)
+        # Windows may leave the reader blocked after shutdown from the writer.
+        # Detach immediately so an overflowing/dead receiver is not shown online.
+        self.disconnect(peer)
     def disconnect(self,peer):
-        bridge=getattr(self,"managed_battle",None)
-        room=bridge.disconnected(peer) if bridge else 0
-        super().disconnect(peer)
-        if bridge: bridge.publish_room(room)
+        with self.lock:
+            # Writer failure and reader finally may race; notify/migrate once.
+            if self.peers.get(peer.peer_id) is not peer:
+                return
+            bridge=getattr(self,"managed_battle",None)
+            room=bridge.disconnected(peer) if bridge else 0
+            super().disconnect(peer)
+            if bridge: bridge.publish_room(room)
     def match(self,peer,friend,group,mode,capacity):
         capacity={20:2,101:2,102:10,103:10}.get(mode,capacity)
         with self.account_services.lock:

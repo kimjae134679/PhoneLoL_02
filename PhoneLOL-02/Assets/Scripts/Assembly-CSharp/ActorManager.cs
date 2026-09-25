@@ -26,7 +26,8 @@ public class ActorManager : MonoBehaviour
             if (actor != null && actor.get_m_stateMachine() is PhoneLOLPracticeGuardSM guard && guard.SpawnTeam == team) return;
         var game = GameManager.get_Instance();
         var spawn = game.GetTeamPos(team);
-        var position = PhoneLOLPracticeGuardSM.GetSpawnPosition(spawn, game.GetTeamPos(1 - team), team);
+        Vector3 position;
+        if (!PhoneLOLPracticeGuardSM.TryGetSpawnPosition(spawn, game.GetTeamPos(1 - team), team, out position)) return;
         int id = EveUnityNetwork.get_Instance().AllocateSceneViewID();
         get_m_view().RPC("SpawnPracticeGuardRPC", DJJPAPENCLN.Others, team, position, id);
         SpawnPracticeGuardRPC(team, position, id);

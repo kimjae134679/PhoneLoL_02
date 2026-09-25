@@ -1,0 +1,7 @@
+PASS loading departure host=False: survivor starts and settles original roster
+PASS loading departure host=True: survivor starts and settles original roster
+PASS stale retired object address cannot reject a live connection
+PASS 10-player relay: 10800 deliveries, no loss/duplicates/order errors; local p95=1.62ms max=14.67ms
+PASS separate mode room and unrelated directed recipient isolation
+PASS injected blocked writer isolated; healthy peer receives all4000 ordered4KB frames and both survivors stay responsive
+PASS 120 consecutive authenticated TCP connections

@@ -1,0 +1,17 @@
+{
+  "backup": "C:\\Users\\user\\Documents\\MultiGod\\PhoneLOL_LocalRuntime\\recovery\\04_runtime\\backups\\before-v1174-20260925-182240",
+  "accounts": 18,
+  "account_rows_sha256": "c56e80f20280f6b9e9e150eddd8b5a55e31d95fc2b61205c8b377a1713e8bb5d",
+  "integrity": "ok",
+  "deployed_source_matches": {
+    "server_central_authority_v33.py": true,
+    "account_services_v1158.py": true,
+    "managed_battle_v1167.py": true,
+    "managed_results_v1168.py": true,
+    "managed_rune_catalog.json": true
+  },
+  "accounts_preserved": true,
+  "integrity_after": "ok",
+  "127.0.0.1:29000": 204,
+  "uko9ef6n.free.pwrp.cc:10045": 204
+}

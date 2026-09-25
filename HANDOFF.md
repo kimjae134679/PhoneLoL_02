@@ -1,3 +1,13 @@
+# 1.17.4 재개 기준 — 2026-09-25
+최신 구현 및 검증은 RECOVERY_STATUS.md 맨 위와 Recovery/V1174*를 확인합니다.
+알리스타는 정글에서 각 스폰 옆으로 옮겼으며 이전 위치값은 과거 이력입니다.
+서버는 로딩 탈주·송신 실패 처리 보완 후 운영 배포했고 계정18개 보존/DB integrity/공개DNS204를 확인했습니다.
+최근 백업: recovery/04_runtime/backups/before-v1174-20260925-182240.
+Android 출력: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-1.17.4.apk (작업11da256dd71745beab82ba0258bead7e, 빌드 진행 중).
+다음 버전은1.17.5/code203, 이후 기능 버전1.18.0. 현재 빌드 상수는1.17.4/code202이며 다음 변경 때 증가시킵니다.
+
+---
+
 # 현재 인수인계
 2026-09-25. 재개 시 이 문서, VERSIONING.md, RECOVERY_STATUS.md 상단 및 실제 Git 상태를 확인합니다.
 

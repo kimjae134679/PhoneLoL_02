@@ -19,6 +19,7 @@ class ManagedBattle:
         self.contexts, self.prepared, self.loaded = {}, {}, {}
         self.started_at, self.result_frames = {}, {}
         self.match_rosters, self.world_ready = {}, {}
+        self.loading_released = set()
         self.lock = threading.RLock()
         self.next_eve_session = 1
         self.catalog = json.loads(Path(__file__).with_name("managed_rune_catalog.json").read_text())
@@ -249,18 +250,18 @@ class ManagedBattle:
             ctx["page"]=data[0];self.publish_room(peer.room_id);return
         if pid==19:
             if len(data)!=4 or not ctx.get("started"): raise ValueError("Invalid loading completion")
-            with self.lock:
+            with self.state.lock, self.lock:
                 loaded=self.loaded.setdefault(room.room_id,set());loaded.add(peer.peer_id)
                 members=self.members(room)
                 for target in members: self.send(target,19,struct.pack("<I",peer.device_id)+data)
-                if all(x.peer_id in loaded for x in members):
-                    for target in members: self.send(target,20,struct.pack("<?Q",True,room.shared_game_id))
+                self.release_loaded_room(room, members)
             return
         if pid==21:
             if data or not ctx.get("started"):
                 raise ValueError("Invalid world initialization marker")
-            ctx["world_initialized"] = True
-            self.world_ready.setdefault(room.room_id,set()).add(peer.peer_id)
+            with self.state.lock, self.lock:
+                ctx["world_initialized"] = True
+                self.world_ready.setdefault(room.room_id,set()).add(peer.peer_id)
             print("MANAGED_WORLD_READY room="+str(room.room_id)+" peer="+str(peer.peer_id),flush=True)
             return
         if pid==22:
@@ -269,7 +270,8 @@ class ManagedBattle:
             with self.state.lock, self.lock:
                 members = self.members(room)
                 participants = self.match_rosters.get(room.room_id, ())
-                if not participants or not all(p.peer_id in self.world_ready.get(room.room_id,set()) for p in participants):
+                if (not participants or room.room_id not in self.loading_released or
+                    not all(p.peer_id in self.world_ready.get(room.room_id,set()) for p in members)):
                     raise ValueError("Result arrived before world initialization")
                 competitive = room.mode in (0,20) and room.group == 0x11670000 and len(participants)>1
                 body = self.state.account_services.results.settle(
@@ -282,15 +284,29 @@ class ManagedBattle:
             if len(data)<6 or not ctx.get("started"): raise ValueError("Invalid battle relay")
             target_session, original_pid = struct.unpack_from("<iH",data)
             if not 60014<=original_pid<=60018: raise ValueError("Invalid original battle packet")
-            for target in self.members(room):
-                if target_session==-2 or (target_session==-1 and target!=peer) or self.session(target)==target_session:
-                    if target.peer_id in self.contexts: self.send(target,original_pid,data[6:])
+            with self.state.lock, self.lock:
+                targets = [target for target in self.members(room)
+                           if target.peer_id in self.contexts and
+                           (target_session==-2 or (target_session==-1 and target!=peer) or
+                            self.contexts[target.peer_id]["eve_session"]==target_session)]
+            for target in targets:
+                self.send(target,original_pid,data[6:])
             return
         if pid==6:
             return self.send(peer,6,b"\x01")
         # Unsupported requests fail explicitly without inventing a match or account reward.
         print("MANAGED_BATTLE_UNSUPPORTED pid="+str(pid),flush=True)
         return self.send(peer,pid,b"\xff",request)
+    def release_loaded_room(self, room, members):
+        # Called with state.lock then self.lock. A loading departure must not
+        # leave survivors waiting forever; duplicate load ACKs cannot start twice.
+        if (room.room_id in self.loading_released or not members or
+            not all(p.peer_id in self.loaded.get(room.room_id,set()) for p in members)):
+            return
+        self.loading_released.add(room.room_id)
+        for target in members:
+            self.send(target,20,struct.pack("<?Q",True,room.shared_game_id))
+
     def notify_departure(self, peer):
         with self.state.lock, self.lock:
             room = self.state.rooms.get(peer.room_id)
@@ -304,6 +320,7 @@ class ManagedBattle:
             body = struct.pack("<IBi",peer.device_id,peer.visual.slot,master)
             for target in survivors:
                 self.send(target,61002,body)
+            self.release_loaded_room(room, survivors)
             print("MANAGED_PLAYER_LEFT room="+str(room.room_id)+" peer="+str(peer.peer_id)+" master="+str(master),flush=True)
 
     def disconnected(self, peer):

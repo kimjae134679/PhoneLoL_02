@@ -20,15 +20,26 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
 
     public static Vector3 GetSpawnPosition(Vector3 spawn, Vector3 oppositeSpawn, byte team)
     {
-        // Mirror the sketch: bottom spawn's target to the right; top spawn's to the left.
+        Vector3 position;
+        if (!TryGetSpawnPosition(spawn, oppositeSpawn, team, out position))
+            throw new System.InvalidOperationException("Practice target base flank is not navigable.");
+        return position;
+    }
+
+    public static bool TryGetSpawnPosition(Vector3 spawn, Vector3 oppositeSpawn, byte team, out Vector3 position)
+    {
+        // Keep both targets beside the spawn circles inside their bases.
+        // A 28-unit offset with a 20-unit snap previously moved them into the jungle.
         float side = team == 0 ? 1f : -1f;
-        var position = spawn + Vector3.right * (28f * side);
-        // The straight map also needs lateral separation from the central travel lane.
-        if (Mathf.Abs(spawn.z - oppositeSpawn.z) < 1f) position.z -= 8f * side;
-        UnityEngine.AI.NavMeshHit ground;
-        if (UnityEngine.AI.NavMesh.SamplePosition(position, out ground, 20f, UnityEngine.AI.NavMesh.AllAreas))
-            position = ground.position;
-        // Some recovered maps have no navmesh at the requested flank. Never bury the target.
+        bool straightMap = Mathf.Abs(spawn.z - oppositeSpawn.z) < 1f;
+        position = spawn + new Vector3((straightMap ? 10f : 12f) * side, 0f,
+                                      straightMap ? -4f * side : 0f);
+        UnityEngine.AI.NavMeshHit ground, edge;
+        if (!UnityEngine.AI.NavMesh.SamplePosition(position, out ground, 1f, UnityEngine.AI.NavMesh.AllAreas) ||
+            !UnityEngine.AI.NavMesh.FindClosestEdge(ground.position, out edge, UnityEngine.AI.NavMesh.AllAreas) ||
+            edge.distance < 1f)
+            return false; // Retry after navigation loads; do not jump to another area.
+        position = ground.position;
         foreach (var terrain in Terrain.activeTerrains) {
             var origin = terrain.transform.position;
             var size = terrain.terrainData.size;
@@ -36,7 +47,7 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
                 position.z >= origin.z && position.z <= origin.z + size.z)
                 position.y = Mathf.Max(position.y, terrain.SampleHeight(position) + origin.y + 0.05f);
         }
-        return position;
+        return true;
     }
 
     private Vector3 home;
