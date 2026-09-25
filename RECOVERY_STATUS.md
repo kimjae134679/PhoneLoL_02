@@ -7,7 +7,8 @@
 - 관리형 중계 대상 목록은 잠금 안에서 확정. 관리형66/67의 매 프레임 flush 로그를 제외해 로그 I/O 감소, 접속 종료·거부·큐 초과 오류 로그 유지.
 - 서버 검사:10인10800건 중계 무손실/중복 없음/순서 보존(로컬p95 1.62ms, 최대14.67ms; Unity 빌드 병행). 막힌 송신 장애 주입 중 정상 수신자에게4000건4KB 전달 및 생존자 응답 확인.120회 인증 TCP 재접속,7개 매칭 구분,6개 탈주/결과 회귀 검사 통과.
 - 라이브 서버 무접속 확인 후 소스 및 SQLite 온라인 백업·기존 시작 경로로 배포. 백업 before-v1174-20260925-182240. 계정18개 전체 행 해시 일치·DB integrity ok, 관리형5파일 소스 해시 일치, 로컬 및 앱 DNS 공개 진단HTTP204.
-- Android1.17.4/code202 빌드 작업11da256dd71745beab82ba0258bead7e 진행 중. 완료 전 APK 성공을 주장하지 않음.
+- Android1.17.4/code202 빌드 성공: 오류0/경고762, 실제 APK manifest 버전/코드 및 ARM64 ELF 라이브러리6개·ZIP CRC 확인.143245542 bytes, SHA256 68d1efa50f86faf7a7e570abe671c41a49398306ebfc9efd20e7f5171ef317a5. 출력 PhoneLOL-02/Builds/PhoneLOL-1.17.4.apk. 완료 근거 Recovery/V1174BuildCompleted.json.
+- 수정 기준 소스4adc55c. 배포 서버PID14372/포트29000. 다음 버전1.17.5/code203. 바탕화면 복사/새 ZIP/iOS 재출력 없음.
 - 근거: Recovery/V1174PlacementVerification.txt, V1174ServerBaseline.txt, V1174ServerVerification.txt, V1174Deployment.json. 전체 인터넷 환경 무지연/무단절이나 휴대폰 실전 성공을 보증하지 않음. GitHub #1의 새 APK 실기기 항목은 계속 열림.
 
 ---
