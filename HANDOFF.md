@@ -1,3 +1,8 @@
+# 1.18.1 / 205 - offline solo mode and gameplay fixes - 2026-09-26
+APK: PhoneLOL-02/Builds/PhoneLOL-1.18.1.apk. Details and verification: Recovery/V1181Release.md. Phone device flow and iOS IPA are not verified.
+
+---
+
 # 1.17.5 재개 기준 — 2026-09-25
 알리스타는 이제 스폰 진영 소속입니다. 아군 공격·피해·보상은 차단하고 상대 팀만 처치할 수 있습니다.
 체력20000/적 챔피언 처치1000골드/1.17.4의 스폰 옆 위치는 유지합니다. 원본 사망 모션·소리를 재생하며1초 후 scene owner의 RPC로 부활합니다.

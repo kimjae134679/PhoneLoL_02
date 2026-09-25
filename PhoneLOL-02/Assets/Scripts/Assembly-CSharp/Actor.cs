@@ -4860,12 +4860,12 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 			{
 				MNDDPGPFJNE[i] = (byte)0;
 			}
-			ELLDOFEGKMJ = (byte)1;
-			FFLHOOPFHMM = 0u;
+			ELLDOFEGKMJ = (byte)(PhoneLOLModeRules.URF && m_actorType == IJJMDPGJAEM.Hero ? 3 : 1);
+			FFLHOOPFHMM = ELLDOFEGKMJ == 3 ? GetExpFromLevel(3) : 0u;
 			OBDPODBBMDA = 0u;
 			NNCNGFFJHLM(PhoneLOLModeRules.StartingMoney);
 			IJMKMDEBBAD(0);
-			m_skillPoint = (byte)1;
+			m_skillPoint = ELLDOFEGKMJ;
 			IBIKONGOAKN = (ushort)0;
 			PKGNAADLLNE = (ushort)0;
 			HGGCMNDHIPC = (ushort)0;
@@ -5084,15 +5084,15 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 		{
 			MNDDPGPFJNE[i] = (byte)0;
 		}
-		ELLDOFEGKMJ = (byte)1;
-		FFLHOOPFHMM = 0u;
+		ELLDOFEGKMJ = (byte)(PhoneLOLModeRules.URF && m_actorType == IJJMDPGJAEM.Hero ? 3 : 1);
+		FFLHOOPFHMM = ELLDOFEGKMJ == 3 ? GetExpFromLevel(3) : 0u;
 		IBIKONGOAKN = (ushort)0;
 		PKGNAADLLNE = (ushort)0;
 		HGGCMNDHIPC = (ushort)0;
 		IANMCKGEBNA = (ushort)0;
 		OBDPODBBMDA = 0u;
 		MCEIJGCLIIO = 0u;
-		m_skillPoint = (byte)1;
+		m_skillPoint = ELLDOFEGKMJ;
 		NNCNGFFJHLM(PhoneLOLModeRules.StartingMoney);
 	}
 

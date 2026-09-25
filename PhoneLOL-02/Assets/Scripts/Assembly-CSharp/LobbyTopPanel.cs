@@ -415,8 +415,9 @@ public class LobbyTopPanel : MonoBehaviour
 													m_scoreLabel.set_text(string.Format("[AAFFAA]{0}승[-] [FFAAAA]{1}패[-]\n[AAAAAA]({2:F1}%)[-]", hCECKOLDNDF, bCBKMKDPHHF, num2));
 													m_rank1v1MarkSprite.set_spriteName(IBHMLPMENFJ.KJJGGAMDNON(NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
 														.LKEMNIJNGMO));
-														m_rank1v1Label.set_text(string.Format("랭킹 {0}", NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
-															.FKFGLOBAEAE));
+														m_rank1v1Label.set_text("전체 전적");
+                                m_rank1v1MarkSprite.gameObject.SetActive(false);
+                                m_tier1v1Label.gameObject.SetActive(false);
 															int num3 = NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
 																.EDJCFKICCON();
 															if (num3 >= 0)
@@ -432,7 +433,7 @@ public class LobbyTopPanel : MonoBehaviour
 																	uint jBAIIDCFGME = NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA()
 																		.JBAIIDCFGME;
 																	NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA();
-																	uint num4 = 0u;
+																	uint num4 = NetworkManager.get_Instance().get_m_gameNetClient().GLPDLIDMHFA().MCKAHOPFMOG;
 																	float num5 = 0f;
 																	if (jBAIIDCFGME != 0 || num4 != 0)
 																	{

@@ -53,11 +53,18 @@ public static class PhoneLOLTransport
     {
         private readonly TcpClient client;
         private readonly NetworkStream stream;
+        private readonly PhoneLOLOfflineSession.Endpoint offline;
         private uint peer;
         public int SessionKey { get; private set; }
         public Central(PhoneLOLServerSettings endpoint, uint device)
         {
-            client = Connect(endpoint);
+            if (PhoneLOLOfflineSession.Enabled) {
+                offline = new PhoneLOLOfflineSession.Endpoint(device);
+                SessionKey = offline.SessionKey;
+                return;
+            }
+            try { client = Connect(endpoint); }
+            catch { PhoneLOLOfflineSession.ReportConnectionFailure(); throw; }
             stream = client.GetStream();
             try {
                 Send(1, Body(w => { w.Write(4u); w.Write(0x6d674f44u); w.Write(device); }));
@@ -65,11 +72,12 @@ public static class PhoneLOLTransport
                 if (hello.Length != 16) throw new InvalidDataException("Invalid central HELLO reply.");
                 peer = BitConverter.ToUInt32(hello, 0);
                 SessionKey = BitConverter.ToInt32(hello, 4);
-            } catch { Dispose(); throw; }
+            } catch { PhoneLOLOfflineSession.ReportConnectionFailure(); Dispose(); throw; }
         }
 
         public void Send(byte kind, byte[] payload)
         {
+            if (offline != null) { offline.Send(kind, payload); return; }
             byte[] frame = Body(w => {
                 w.Write(payload.Length + 16); w.Write(kind); w.Write((byte)0);
                 w.Write((ushort)0); w.Write(0u); w.Write(peer); w.Write(payload);
@@ -79,6 +87,7 @@ public static class PhoneLOLTransport
 
         public CentralFrame ReadFrame()
         {
+            if (offline != null) return offline.ReadFrame();
             byte[] header = ReadExact(stream, 16);
             int size = BitConverter.ToInt32(header, 0);
             if (size < 16 || size > 1048576) throw new InvalidDataException("Invalid central frame length.");
@@ -87,6 +96,7 @@ public static class PhoneLOLTransport
 
         public byte[] Receive(byte expected)
         {
+            if (offline != null) return offline.Receive(expected);
             // Persistent connections can queue more than 16 heartbeat frames while idle.
             var deadline = System.Diagnostics.Stopwatch.StartNew();
             while (deadline.ElapsedMilliseconds < 8000) {
@@ -104,6 +114,7 @@ public static class PhoneLOLTransport
 
         public byte[] Account()
         {
+            if (offline != null) return offline.Account();
             Send(20, new byte[0]);
             byte[] reply = Receive(21);
             if (reply.Length < 30 || reply[0] != 0)
@@ -113,6 +124,7 @@ public static class PhoneLOLTransport
 
         public byte[] Rpc(byte service, ushort pid, byte[] payload)
         {
+            if (offline != null) return offline.Rpc(service, pid, payload);
             Send(64, Body(w => { w.Write(service); w.Write(pid); w.Write(payload); }));
             byte[] reply = Receive(65);
             if (reply.Length < 3 || reply[0] != service || BitConverter.ToUInt16(reply, 1) != pid)
@@ -122,7 +134,10 @@ public static class PhoneLOLTransport
             return body;
         }
 
-        public void Dispose() { client.Close(); }
+        public void Dispose() {
+            if (offline != null) offline.Dispose();
+            if (client != null) client.Close();
+        }
     }
 
     public sealed class LegacyFrame

@@ -52,6 +52,7 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
             " os=" + SystemInfo.operatingSystem + " model=" + SystemInfo.deviceModel +
             " cpu=" + SystemInfo.processorType + " pointer_bytes=" + IntPtr.Size +
             " graphics=" + SystemInfo.graphicsDeviceName + " screen=" + Screen.width + "x" + Screen.height);
+        PhoneLOLOfflineSession.Disable();
         RestartHost();
     }
 
@@ -87,12 +88,23 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
 
     private void Update()
     {
+        PhoneLOLOfflineSession.SaveProfileOnMainThread();
         if (System.Threading.Interlocked.Exchange(ref criticalConsolePending, 0) != 0) {
             Debug.developerConsoleEnabled = true;
             Debug.developerConsoleVisible = true;
         } else if (!Debug.developerConsoleVisible) {
             Debug.developerConsoleEnabled = false;
         }
+        if (PhoneLOLOfflineSession.ConsumeConnectionFailure() &&
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Login" &&
+            MsgManager.get_Instance() != null)
+            MsgManager.get_Instance().ShowMessageBox(
+                "서버가 연결되지 않았습니다.\n로컬 모드로 혼자 플레이하시겠습니까?\n로컬 전적은 온라인에 반영되지 않습니다.",
+                true, () => {
+                    PhoneLOLOfflineSession.Enable();
+                    var login = FindObjectOfType<LoginMain>();
+                    if (login != null) login.OnClickLoginButton();
+                });
         string critical;
         while (criticalMessages.TryDequeue(out critical)) {
             Debug.developerConsoleEnabled = true;

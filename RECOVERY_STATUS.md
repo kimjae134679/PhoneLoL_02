@@ -1,3 +1,8 @@
+# 1.18.1 / 205 - offline solo mode and gameplay fixes - 2026-09-26
+APK: PhoneLOL-02/Builds/PhoneLOL-1.18.1.apk. Details and verification: Recovery/V1181Release.md. Phone device flow and iOS IPA are not verified.
+
+---
+
 # 1.18.0 / 204 — 공지·전체 채팅·모드 개편 — 2026-09-26
 서버 백업·배포, 모드별10명 방과 결과, 전체 채팅 저장·페이지, 서버 공지, 알리스타 재타게팅 및 로비 UI 검증 완료.
 Android ARM64 빌드 성공(오류0), 실제 versionName1.18.0/versionCode204 및 APK 무결성 확인.

@@ -324,11 +324,18 @@ public class UIInput : MonoBehaviour
 		return mValue;
 	}
 
+    private bool IsPublicChatInput {
+        get { return GetComponentInParent<PhoneLOLPublicChatPanel>() != null; }
+    }
+    private bool NativeChatSelection {
+        get { return ENJFEMDMJFP != null && IsPublicChatInput && !get_inputShouldBeHidden(); }
+    }
 	public int get_selectionStart()
 	{
 		if (ENJFEMDMJFP != null && !get_inputShouldBeHidden())
 		{
-			return 0;
+            return NativeChatSelection && ENJFEMDMJFP.canGetSelection
+                ? ENJFEMDMJFP.selection.start : 0;
 		}
 		return (!get_isSelected()) ? get_value().Length : NBIGEFAENHP;
 	}
@@ -405,7 +412,8 @@ public class UIInput : MonoBehaviour
 	{
 		if (ENJFEMDMJFP != null && !get_inputShouldBeHidden())
 		{
-			return get_value().Length;
+            return NativeChatSelection && ENJFEMDMJFP.canGetSelection
+                ? ENJFEMDMJFP.selection.end : get_value().Length;
 		}
 		return (!get_isSelected()) ? get_value().Length : OJOPELFGKGB;
 	}
@@ -549,12 +557,21 @@ public class UIInput : MonoBehaviour
 				POAEHCAPMJO = text2;
 				set_value(text2);
 			}
+            if (NativeChatSelection && ENJFEMDMJFP.canGetSelection) {
+                var range = ENJFEMDMJFP.selection;
+                if (NBIGEFAENHP != range.start || OJOPELFGKGB != range.end) {
+                    NBIGEFAENHP = range.start; OJOPELFGKGB = range.end;
+                    UpdateLabel();
+                }
+            }
 			if (ENJFEMDMJFP.done || !ENJFEMDMJFP.active)
 			{
-				if (!ENJFEMDMJFP.wasCanceled)
-				{
-					Submit();
-				}
+                // Closing the keyboard to move the cursor or dismiss chat is not sending.
+                if (!ENJFEMDMJFP.wasCanceled &&
+                    (GetComponentInParent<PhoneLOLPublicChatPanel>() == null || ENJFEMDMJFP.done))
+                {
+                    Submit();
+                }
 				ENJFEMDMJFP = null;
 				set_isSelected(false);
 				POAEHCAPMJO = string.Empty;
@@ -698,7 +715,8 @@ public class UIInput : MonoBehaviour
 	{
 		if (ENJFEMDMJFP != null && !get_inputShouldBeHidden())
 		{
-			return get_value().Length;
+            return NativeChatSelection && ENJFEMDMJFP.canGetSelection
+                ? ENJFEMDMJFP.selection.end : get_value().Length;
 		}
 		return (!get_isSelected()) ? get_value().Length : OJOPELFGKGB;
 	}
@@ -1090,7 +1108,7 @@ public class UIInput : MonoBehaviour
 			}
 		}
 		label.set_text(text);
-		if (isSelected && (ENJFEMDMJFP == null || get_inputShouldBeHidden()))
+		if (isSelected && (ENJFEMDMJFP == null || get_inputShouldBeHidden() || NativeChatSelection))
 		{
 			int num3 = NBIGEFAENHP - OIAEMPDJONN;
 			int num4 = OJOPELFGKGB - OIAEMPDJONN;
@@ -1419,6 +1437,11 @@ public class UIInput : MonoBehaviour
 
 	public void set_selectionEnd(int ICENKPDOHBK)
 	{
+        if (get_isSelected() && NativeChatSelection && ENJFEMDMJFP.canSetSelection) {
+            int start = ENJFEMDMJFP.canGetSelection ? ENJFEMDMJFP.selection.start : NBIGEFAENHP;
+            ENJFEMDMJFP.selection = new RangeInt(start, Mathf.Max(0, Mathf.Clamp(ICENKPDOHBK, 0, get_value().Length) - start));
+            return;
+        }
 		if (get_isSelected() && (ENJFEMDMJFP == null || get_inputShouldBeHidden()))
 		{
 			OJOPELFGKGB = ICENKPDOHBK;
@@ -1448,6 +1471,10 @@ public class UIInput : MonoBehaviour
 
 	public void set_cursorPosition(int ICENKPDOHBK)
 	{
+        if (get_isSelected() && NativeChatSelection && ENJFEMDMJFP.canSetSelection) {
+            ENJFEMDMJFP.selection = new RangeInt(Mathf.Clamp(ICENKPDOHBK, 0, get_value().Length), 0);
+            return;
+        }
 		if (get_isSelected() && (ENJFEMDMJFP == null || get_inputShouldBeHidden()))
 		{
 			OJOPELFGKGB = ICENKPDOHBK;
@@ -1468,6 +1495,12 @@ public class UIInput : MonoBehaviour
 
 	public void set_selectionStart(int ICENKPDOHBK)
 	{
+        if (get_isSelected() && NativeChatSelection && ENJFEMDMJFP.canSetSelection) {
+            int end = ENJFEMDMJFP.canGetSelection ? ENJFEMDMJFP.selection.end : OJOPELFGKGB;
+            int start = Mathf.Clamp(ICENKPDOHBK, 0, end);
+            ENJFEMDMJFP.selection = new RangeInt(start, end - start);
+            return;
+        }
 		if (get_isSelected() && (ENJFEMDMJFP == null || get_inputShouldBeHidden()))
 		{
 			NBIGEFAENHP = ICENKPDOHBK;

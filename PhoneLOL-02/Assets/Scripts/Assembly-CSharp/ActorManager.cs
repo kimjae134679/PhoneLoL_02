@@ -53,6 +53,14 @@ public class ActorManager : MonoBehaviour
         instance.transform.rotation = Quaternion.LookRotation(GameManager.get_Instance().GetTeamPos(1 - team) - position);
     }
 
+    [JDLHECHNNDH]
+    public void RespawnPracticeGuardRPC(int viewID) {
+        var view = EveUnityNetwork.get_Instance().get_m_peer().NLALKBLCPFK(viewID);
+        if (view == null) return;
+        var guard = view.GetComponent<PhoneLOLPracticeGuardSM>();
+        if (guard != null) guard.RespawnPracticeGuardRPC();
+    }
+
 	public delegate bool PNGKAIDOLOG(Actor CDKMPAEODLA);
 
 	private sealed class ICLMHILJEKK
@@ -767,6 +775,15 @@ public class ActorManager : MonoBehaviour
 						}
 					}
 				}
+                var practice = value.m_actorType == Actor.IJJMDPGJAEM.Monster && value.IsDeath()
+                    ? value.GetComponent<PhoneLOLPracticeGuardSM>() : null;
+                if (practice != null) {
+                    if (practice.ReadyToRespawn && EveUnityNetwork.get_Instance().IsMaster() && get_m_view().IsMine()) {
+                        practice.MarkRespawnRequested();
+                        get_m_view().RPC("RespawnPracticeGuardRPC", DJJPAPENCLN.AllViaServer, value.get_m_view().get_viewID());
+                    }
+                    continue; // Its one-second timer owns this monster; skip the ordinary jungle respawn.
+                }
 				if (value.m_actorType != Actor.IJJMDPGJAEM.Monster || !value.IsDeath())
 				{
 					continue;

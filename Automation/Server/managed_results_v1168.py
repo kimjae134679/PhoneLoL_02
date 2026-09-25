@@ -38,6 +38,16 @@ SELECT points,wins,losses,draws,position FROM (
                 result[mode] = tuple(int(x) for x in row) if row else (0, 0, 0, 0, 0)
         return result
 
+    def all_match_counts(self, uid):
+        # Count both ranked and casual settled games; a draw is neither a win nor a loss.
+        with self.store._lock:
+            row = self.store._db.execute("""
+SELECT COALESCE(SUM(CASE WHEN r.winner=m.slot%2 THEN 1 ELSE 0 END),0),
+       COALESCE(SUM(CASE WHEN r.winner IN (0,1) AND r.winner!=m.slot%2 THEN 1 ELSE 0 END),0)
+FROM managed_match_members m JOIN managed_match_results r ON r.game_id=m.game_id
+WHERE m.uid=?""", (uid,)).fetchone()
+        return int(row[0]), int(row[1])
+
     def leaderboard(self, payload):
         if len(payload) != 1 or payload[0] not in (0, 1):
             raise ValueError("Invalid ranking mode")

@@ -132,6 +132,7 @@ public sealed class PhoneLOLLocalHost : IDisposable
         } catch (EndOfStreamException) {
             PhoneLOLRealtimeLog.Record("LOCAL_CLOSED", "port=" + port + " session=" + session);
         } catch (Exception ex) {
+            if (!stopped && (port == 20000 || port == 20001) && (ex is SocketException || ex is TimeoutException || (ex is IOException && !(ex is InvalidDataException)))) PhoneLOLOfflineSession.ReportConnectionFailure();
             if (!stopped) PhoneLOLRealtimeLog.Record("SERVICE_FAILED", "port=" + port + " session=" + session + " endpoint=" + endpoint + " " + ex);
         } finally {
             if (central != null) central.Dispose();

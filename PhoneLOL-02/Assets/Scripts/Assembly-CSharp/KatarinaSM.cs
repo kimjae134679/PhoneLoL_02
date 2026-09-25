@@ -20,6 +20,14 @@ public class KatarinaSM : HumanSM
 	[CompilerGenerated]
 	private static Comparison<Actor> HHEGEPCBALM;
 
+    public override void OnStageInit()
+    {
+        base.OnStageInit();
+        // Movement and facing use the same input vector; animation/NavMesh must not overwrite yaw.
+        if (get_m_actor().m_navMeshAgent != null) get_m_actor().m_navMeshAgent.updateRotation = false;
+        if (get_m_actor().m_animator != null) get_m_actor().m_animator.applyRootMotion = false;
+    }
+
 	public override void OnLeaveSkill()
 	{
 		base.OnLeaveSkill();

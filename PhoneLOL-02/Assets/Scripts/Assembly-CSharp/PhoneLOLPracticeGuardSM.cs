@@ -9,6 +9,9 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
     public const float RespawnDelay = 1f;
     private bool respawning;
     private float respawnAt;
+    private bool respawnRequested;
+    public bool ReadyToRespawn { get { return respawning && !respawnRequested && Time.time >= respawnAt; } }
+    public void MarkRespawnRequested() { respawnRequested = true; }
 
     public byte SpawnTeam { get; private set; }
 
@@ -94,6 +97,7 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
     {
         if (respawning) return;
         respawning = true;
+        respawnRequested = false;
         respawnAt = Time.time + RespawnDelay;
         get_m_actor().m_hp = 0f;
         get_m_actor().m_dontDamage = true;
@@ -102,12 +106,7 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
         base.OnEnterDeath();
     }
 
-    public override void OnUpdateDeath()
-    {
-        // The current scene owner also handles this after a host migration.
-        if (respawning && Time.time >= respawnAt && get_m_view().IsMine())
-            get_m_view().RPC("RespawnPracticeGuardRPC", DJJPAPENCLN.All);
-    }
+    public override void OnUpdateDeath() { } // ActorManager owns the replicated respawn timer.
 
     [JDLHECHNNDH]
     public void RespawnPracticeGuardRPC()
@@ -124,6 +123,7 @@ public sealed class PhoneLOLPracticeGuardSM : HumanSM
             actor.m_navMeshAgent.isStopped = true;
         }
         respawning = false;
+        respawnRequested = false;
         SetStateForce(OEOIIKMBGAG.Idle);
         actor.SetAnimation("idle");
         if (actor.get_m_damageHUD() != null) {

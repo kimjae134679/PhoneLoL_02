@@ -54,11 +54,13 @@ CREATE TABLE IF NOT EXISTS account_friends (
         a = self.account(device)
         rank = self.results.stats(a.uid)
         r0, r1 = rank[0], rank[1]
+        all_wins, all_losses = self.results.all_match_counts(a.uid)
         body = bytearray(build_p4_profile(OriginalP4Profile(
             user_id=device, nickname=a.nickname, level=a.level, exp=a.exp, coin=a.gold,
             tier_3v3=min(r0[4],255), tier_1v1=min(r1[4],255),
             ranking_3v3=r0[4], ranking_1v1=r1[4],
-            win_3v3=r0[1], loss_3v3=r0[2], win_1v1=r1[1], loss_1v1=r1[2])))
+            win_3v3=r0[1]+r1[1], loss_3v3=r0[2]+r1[2],
+            win_1v1=all_wins, loss_1v1=all_losses)))
         score_offset = 27 + len(a.nickname.encode("utf-8"))
         struct.pack_into("<i", body, score_offset, r0[0])
         struct.pack_into("<i", body, score_offset + 8, r1[0])

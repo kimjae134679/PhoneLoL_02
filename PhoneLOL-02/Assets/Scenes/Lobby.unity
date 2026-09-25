@@ -35060,7 +35060,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: "모드3\r\n랭크대전"
+  mText: "랭킹\r\n대전"
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
@@ -38206,7 +38206,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 모드3
+  mText: URF 모드
   mFontSize: 14
   mFontStyle: 0
   mAlignment: 0
@@ -80474,7 +80474,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 모드3
+  mText: URF 모드
   mFontSize: 24
   mFontStyle: 0
   mAlignment: 0
@@ -81647,7 +81647,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 모드3 랭킹
+  mText: 랭킹 전적
   mFontSize: 16
   mFontStyle: 0
   mAlignment: 0
