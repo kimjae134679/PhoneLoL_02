@@ -1,11 +1,23 @@
+# 2026-09-25 — iOS tools installed and combined 1.7.0 ZIP delivered
+
+- User naming rule: no text after the version. Final archive PhoneLOL-1.7.0.zip; APK PhoneLOL-1.7.0.apk. Future builds use these names.
+- Delivered ZIP: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\00_PHONELOL_TEST_HERE\PhoneLOL-1.7.0.zip
+- Size 648469575 bytes; SHA-256 d0307a14902138020384cf92f72eaa0b7d7f9e111bdc0b116ecf9c3014750522. ZIP CRC and embedded APK hash verified.
+- ZIP contains the Android APK plus the iOS Xcode project and Korean instructions. It does not contain an IPA; Mac compilation and Apple signing are still required.
+- Unity iOS export: 0 errors / 35 warnings. Real project and Info.plist verified. Recovery/V170IOSStatus.md records module installation, restart/UPM recovery and Mac continuation.
+- Existing Automation/OpenUnity.ps1 is required for reliable remote Editor launch; missing Windows environment variables caused the Retry dialog. Editor is now ready.
+- No server/account DB changes, no public source upload. User's independent UnityConnectSettings.asset change remains excluded from commits.
+
+---
+
 # 1.7.0 / 197 — combat and UI implementation — 2026-09-25
 
 The corrected display version scheme is **1.7.0, 1.7.1, 1.7.2**. Android versionCode remains monotonic: 197. The user confirmed the previous candidate's effects, sound, collision and lightmaps; preserve those fixes.
 
 ## Android delivery
 
-- Source APK: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.7.0-arm64-candidate.apk
-- Delivered copy: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\00_PHONELOL_TEST_HERE\PhoneLOL-v1.7.0-arm64-candidate.apk
+- Source APK: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-1.7.0.apk
+- Delivered copy: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\00_PHONELOL_TEST_HERE\PhoneLOL-1.7.0.apk
 - Build succeeded: 0 errors / 761 warnings, 314575 ms. 143232958 bytes; SHA-256 b1a29fd0c96cd830fa545bf00615843e4a58452877c75cd86a7e751513456231.
 - Independently inspected manifest: com.jcl.lmulti, versionName1.7.0, versionCode197, minSDK25, targetSDK36. All six native libraries are ARM64 ELF64 with16384-byte LOAD segment alignment.
 - No phone install/play test performed. New nexus firing, Alistar appearance, full combat and UI feel still require user phone validation.
@@ -29,17 +41,17 @@ The corrected display version scheme is **1.7.0, 1.7.1, 1.7.2**. Android version
 - Existing two-player/solo/relay/ranking/duplicate-result regressions passed.
 - Existing startup wrapper deployed server changes after source/SQLite backup. Managed sources and manifest match the repository. Local/public diagnostic POST returned HTTP204; this is connectivity evidence, not gameplay evidence. See Recovery/V170Deployment.txt.
 
-## iOS — BLOCKED
+## iOS — Xcode export complete; Mac build/signing pending
 
-No Xcode export or IPA produced. Official iOS support installation failed with ELEVATION_CANCELLED: Windows administrator prompt cancelled/timed out. Editor reports unsupported iOS target. No Mac/Xcode/signing device connected. Added compiling PhoneLOLBuild.BuildIOSCandidate() export command; export/native linking/signing/device execution remain unverified. Resume steps: Recovery/V170IOSStatus.md.
+Official iOS support is installed. After restarting through Automation/OpenUnity.ps1, Unity exported the actual project with 0 errors / 35 warnings. Version1.7.0/build197, ARM64/Metal and landscape verified. No Mac is connected: Xcode compilation, signing, IPA and iPhone execution are not completed. See Recovery/V170IOSStatus.md and V170IOSExport.json.
 
 ## Continuity
 
 - Implementation/handoff are local. Do not bypass the earlier automatic approval rejection of public GitHub publishing.
 - Preserve the user's independent UnityConnectSettings.asset edit and exclude it from commits.
-- Existing project, Python, Unity and server locations retained. No new standalone tool installed; existing-location exception to C:/Program Files/_My/AI policy.
+- Existing project, Python, Unity and server locations retained. iOS support installed inside the existing Unity editor; existing-location exception to C:/Program Files/_My/AI policy.
 - Reproduce via Automation/Server/check_v170.py then Automation/VerifyV170.cs. Temporary room fixtures are generated under .git.
-- Next: user phone feedback; complete iOS module installation and provide a Mac build/signing environment.
+- Next: user phone feedback; provide a Mac build/signing environment. iOS module installation and Xcode export are complete.
 
 ---
 

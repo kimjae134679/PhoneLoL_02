@@ -24,16 +24,21 @@ public static class PhoneLOLBuild
         PlayerSettings.allowedAutorotateToLandscapeLeft = true;
         PlayerSettings.allowedAutorotateToLandscapeRight = true;
         PlayerSettings.colorSpace = ColorSpace.Gamma;
-        string output = Path.GetFullPath("Builds/PhoneLOL-v1.7.0-iOS-Xcode");
+        string output = Path.GetFullPath("Builds/iOS/PhoneLOL-1.7.0");
+        Directory.CreateDirectory(Path.GetDirectoryName(output));
         string[] names = { "Login", "Lobby", "MultiGameLoading", "MultiGame", "MtmGameLoading", "MtmGame" };
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
             scenes = names.Select(name => "Assets/Scenes/" + name + ".unity").ToArray(),
             locationPathName = output, target = BuildTarget.iOS, options = BuildOptions.Development
         });
+        string project = Path.Combine(output, "Unity-iPhone.xcodeproj", "project.pbxproj");
+        bool complete = File.Exists(project) && File.Exists(Path.Combine(output, "Info.plist"));
         string status = "Result: " + report.summary.result + "\nErrors: " + report.summary.totalErrors +
-            "\nOutput: " + output + "\nAn Xcode project must be built and signed on macOS before installation.";
+            "\nWarnings: " + report.summary.totalWarnings + "\nOutput: " + output +
+            "\nXcode project present: " + complete + "\nAn Xcode project must be built and signed on macOS before installation.";
         File.WriteAllText("Builds/ios-build-result.txt", status);
-        if (report.summary.result != BuildResult.Succeeded) throw new InvalidOperationException(status);
+        if (report.summary.result != BuildResult.Succeeded || report.summary.totalErrors != 0 || !complete)
+            throw new InvalidOperationException(status);
     }
 
     // This produces a migration candidate, not a validated replacement for 1.15.11.
@@ -72,7 +77,7 @@ UnityEditor.PlayerSettings.allowedAutorotateToLandscapeRight = true;
         string[] scenes = names.Select(name => "Assets/Scenes/" + name + ".unity").ToArray();
         foreach (string scene in scenes)
             if (!File.Exists(scene)) throw new FileNotFoundException("Missing original scene", scene);
-        string output = Path.GetFullPath("Builds/PhoneLOL-v1.7.0-arm64-candidate.apk");
+        string output = Path.GetFullPath("Builds/PhoneLOL-1.7.0.apk");
         Directory.CreateDirectory(Path.GetDirectoryName(output));
         var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
             scenes = scenes, locationPathName = output, target = BuildTarget.Android,
