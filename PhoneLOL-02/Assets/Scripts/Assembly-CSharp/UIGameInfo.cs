@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class UIGameInfo : MonoBehaviour
 {
+    private void Awake() { m_heroInfos = PhoneLOLRoomLayout.Expand(m_heroInfos, false); }
 	public UIGameMultiHeroInfo[] m_heroInfos;
 
 	private void EKGHGFIKAAE()
@@ -243,7 +244,7 @@ public class UIGameInfo : MonoBehaviour
 			if (nOBFFGBGCNA.ENLKLHEMPHA() != null)
 			{
 				m_heroInfos[b].SetInfo(nOBFFGBGCNA.MNHIDGANMFO(), nOBFFGBGCNA.FPFIIDFCLOL, nOBFFGBGCNA.ENLKLHEMPHA().IsLive(), nOBFFGBGCNA.IDANKJFFHFH, nOBFFGBGCNA.NJLBLFFDFCG, nOBFFGBGCNA.ENLKLHEMPHA().get_Level(), nOBFFGBGCNA.ENLKLHEMPHA().get_KillCount(), nOBFFGBGCNA.ENLKLHEMPHA().get_DeathCount(), nOBFFGBGCNA.ENLKLHEMPHA().get_AssistCount(), nOBFFGBGCNA.ENLKLHEMPHA().get_MinionCount(), nOBFFGBGCNA.FGPDJDPABGG);
-				for (int i = 0; i < 5; i++)
+				for (int i = 0; i < PhoneLOLModeRules.ItemSlots; i++)
 				{
 					if (nOBFFGBGCNA.ENLKLHEMPHA().get_m_gameItems().BHFIOMJAFBC()[i] != null)
 					{

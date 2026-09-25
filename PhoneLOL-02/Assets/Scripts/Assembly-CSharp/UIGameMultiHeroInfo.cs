@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UIGameMultiHeroInfo : MonoBehaviour
 {
+    private void Awake() { m_items = PhoneLOLModeRules.ExpandResultItems(m_items); }
 	public UISprite m_hero;
 
 	public UILabel m_level;

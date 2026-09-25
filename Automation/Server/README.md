@@ -1,3 +1,14 @@
+# 1.7.0 room expansion
+
+Display version is 1.7.0, with Android versionCode 197 for upgrade continuity. Next versions are 1.7.1, 1.7.2.
+Mode 101 has two seats. Modes 102 and 103 have ten seats. Mode 103 uses the existing mode-10 rules and eight-item result payloads.
+Both the managed adapter and central-authority capacity mapping must be updated; the latter previously forced mode 102 back to four seats.
+Run check_v170.py for disposable 2/10/10-player selection, start/load/results and nickname reconnect/server-restart persistence. It includes a Korean nickname.
+Keep the existing launcher and database. The deployed backup and source hashes are in Recovery/V170Deployment.txt.
+All participants in expanded rooms must use the new client; old six-slot clients cannot parse ten-slot room snapshots.
+
+---
+
 # Managed battle, results and rankings (1.16.9)
 
 Patch the existing V3.3 runtime; this folder is not a standalone replacement for inherited server modules.

@@ -1,0 +1,15 @@
+PASS nickname change and reconnect profile
+PASS mode=101 capacity=2, balanced teams, roster/start/load/results, items=5
+PASS mode=102 capacity=10, balanced teams, roster/start/load/results, items=5
+PASS mode=103 capacity=10, balanced teams, roster/start/load/results, items=8
+PASS nickname persists after server restart with same database
+
+Existing protocol regression:
+PASS: repeated nickname changes preserve balance without cooldown
+PASS: two authenticated clients join the same real room
+PASS: champion view IDs cannot collide with scene objects
+PASS: real player selection and shared countdown
+PASS: both loading acknowledgements and shared battle packet relay
+PASS: authenticated results, persistent ranking, idempotent settlement and exact 85-byte result
+PASS: team movement in both directions preserves actual room membership
+PASS: one real player starts, loads and completes without artificial opponents or ranking gains

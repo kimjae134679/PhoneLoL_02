@@ -166,6 +166,11 @@ namespace BattleServer
 				DCHDPGPBJGC = EFDLFNPAKGO.ODFEGIDCMPH();
 				JMOPPFOEPMA(EFDLFNPAKGO.JCGKFEPEJPO());
 				EHCPMLKEBME = EFDLFNPAKGO.KFAGPDGHEBK();
+                // Legacy modes keep six wire slots; expanded friendly rooms carry ten.
+                int wireSlots = System.Math.Max(6, (int)IFOLDPBLAGD());
+                if (wireSlots > 10) throw new System.InvalidOperationException("Unsupported room capacity");
+                while (DPKAGBLLPPG.Count < wireSlots) DPKAGBLLPPG.Add(new NOBFFGBGCNA(this, (byte)DPKAGBLLPPG.Count));
+                if (DPKAGBLLPPG.Count > wireSlots) DPKAGBLLPPG.RemoveRange(wireSlots, DPKAGBLLPPG.Count - wireSlots);
 				int num = 0;
 				for (num = 0; num < FMCMCKANEBC().Count; num++)
 				{

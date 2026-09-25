@@ -1,5 +1,42 @@
+using UnityEngine;
+
 public class NexusSM : RangeMonsterSM
 {
+    private bool defenseConfigured;
+    private float defenseElapsed;
+
+    public override void OnUpdateIdle()
+    {
+        base.OnUpdateIdle();
+        var actor = get_m_actor();
+        if (actor == null || actor.GetHeroInfo() == null || !actor.IsLive()) return;
+        if (!defenseConfigured) {
+            // Use the inner turret's attack stats without changing nexus identity or health.
+            var turret = new GameServer.NEFBHKKAMJF();
+            turret.FIGLEPBIEEJ(30002);
+            var source = turret.GPNKIAHCKMG.IIJMLJCIJFD();
+            var stats = actor.GetHeroInfo().GPNKIAHCKMG.IIJMLJCIJFD();
+            stats.IIICODNIMNN = source.IIICODNIMNN;
+            stats.LOJEMAMKHFD = source.LOJEMAMKHFD;
+            stats.ELDBGIKHAIO = source.ELDBGIKHAIO;
+            stats.LNKFLFOGCCD = source.LNKFLFOGCCD;
+            stats.FHJCBAOBGPG = source.FHJCBAOBGPG;
+            defenseConfigured = true;
+            ActorManager.get_Instance().EnsurePracticeGuard((byte)actor.m_team);
+            defenseElapsed = actor.get_m_attackCoolTime();
+        }
+        if (!EveUnityNetwork.get_Instance().IsMaster()) return;
+        defenseElapsed += Time.deltaTime;
+        if (defenseElapsed < actor.get_m_attackCoolTime()) return;
+        var target = ActorManager.get_Instance().GetActorInRange(actor, actor.get_m_att_range(), false, true,
+            Actor.IJJMDPGJAEM.Minion | Actor.IJJMDPGJAEM.SubHero, true);
+        if (target == null) target = ActorManager.get_Instance().GetActorInRange(actor, actor.get_m_att_range(), false, true, Actor.IJJMDPGJAEM.Hero, true);
+        if (target == null || !target.IsLive()) return;
+        IAKBNJEFLAN(target);
+        actor.CreateMissileRPC("attack_missile", actor.GetPosition() + Vector3.up * 2.5f, target);
+        defenseElapsed = 0f;
+    }
+
 	public virtual void EANGPHJBBHH()
 	{
 		base.INOKJCKAONB();

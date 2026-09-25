@@ -80,41 +80,14 @@ public static class PhoneLOLAccountBridge
 		label.bottomAnchor.target = null;
 	}
 
-	public static void NicknameHUD(UIHeroDamageHUD hud, Actor actor)
-	{
-		if (hud == null || hud.m_levelLabel == null)
-		{
-			return;
-		}
-		Transform parent = hud.m_levelLabel.transform.parent;
-		if (parent == null)
-		{
-			return;
-		}
-		Transform transform = parent.Find("PhoneLOL_Nickname");
-		string text = ((actor != null && actor.m_actorType == Actor.IJJMDPGJAEM.Hero) ? actor.get_m_resourceName() : "");
-		if (transform == null)
-		{
-			if (string.IsNullOrEmpty(text))
-			{
-				return;
-			}
-			GameObject obj = (GameObject)UnityEngine.Object.Instantiate(hud.m_levelLabel.gameObject);
-			obj.name = "PhoneLOL_Nickname";
-			transform = obj.transform;
-			transform.parent = parent;
-			transform.localPosition = new Vector3(50f, 22f, 0f);
-			transform.localRotation = Quaternion.identity;
-			transform.localScale = Vector3.one;
-			ConfigureLabel(obj.GetComponent<UILabel>());
-		}
-		UILabel component = transform.GetComponent<UILabel>();
-		if (!(component == null))
-		{
-			component.set_text(text);
-			transform.gameObject.SetActive(!string.IsNullOrEmpty(text));
-		}
-	}
+    public static void NicknameHUD(UIHeroDamageHUD hud, Actor actor)
+    {
+        // Keep account names in menus and scoreboards, not above characters.
+        if (hud == null || hud.m_levelLabel == null) return;
+        var parent = hud.m_levelLabel.transform.parent;
+        var label = parent == null ? null : parent.Find("PhoneLOL_Nickname");
+        if (label != null) label.gameObject.SetActive(false);
+    }
 
 	public static SceneManager.HNPEHFEAODI MapScene(SceneManager.HNPEHFEAODI scene)
 	{

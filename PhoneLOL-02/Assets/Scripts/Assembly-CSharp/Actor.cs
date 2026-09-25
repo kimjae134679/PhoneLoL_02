@@ -4335,7 +4335,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 			Vector3 forward = cEOBMJPGCJE.LPOAEBNAGCP.GetPosition() - GetPosition();
 			kMILPEHBBEL = Quaternion.LookRotation(forward);
 		}
-		GameObject gameObject = GameObjectPool.Alloc(string.Format("Particle/{0}/{1}", get_m_resourceName(), NCADFOBAFJD), HEPNHCEIFMO, kMILPEHBBEL, cEOBMJPGCJE.OKEAMOGAFAG);
+		GameObject gameObject = GameObjectPool.Alloc(string.Format("Particle/{0}/{1}", m_hero_id == 31000 && NCADFOBAFJD == "attack_missile" ? "Turret" : get_m_resourceName(), NCADFOBAFJD), HEPNHCEIFMO, kMILPEHBBEL, cEOBMJPGCJE.OKEAMOGAFAG);
 		if (gameObject == null)
 		{
 			return null;
@@ -4942,6 +4942,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 
 	public int get_m_max_hp()
 	{
+        if (get_m_stateMachine() is PhoneLOLPracticeGuardSM) return 100000;
 		int num = get_m_max_hp_base() + get_m_max_hp_add();
 		if (m_hero_id == 19)
 		{

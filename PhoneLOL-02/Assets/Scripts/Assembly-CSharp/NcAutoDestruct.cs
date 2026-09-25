@@ -59,6 +59,7 @@ public class NcAutoDestruct : NcEffectBehaviour
 
 	private void FEMMMMDCEEE()
 	{
+        if (!gameObject.activeInHierarchy) return;
 		if (!m_useGameObjectPool)
 		{
 			if (ODKCKCIAFDJ)
@@ -539,6 +540,7 @@ public class NcAutoDestruct : NcEffectBehaviour
 
 	public void StartDestroy()
 	{
+        if (!gameObject.activeInHierarchy) return;
 		if (m_fSmoothDestroyTime <= 0f)
 		{
 			FEMMMMDCEEE();

@@ -8,6 +8,38 @@ using UnityEngine;
 
 public class ActorManager : MonoBehaviour
 {
+    public void EnsurePracticeGuard(byte team)
+    {
+        if (!EveUnityNetwork.get_Instance().IsMaster()) return;
+        foreach (var actor in IAFBHOGKJBI)
+            if (actor != null && actor.m_team == team && actor.get_m_stateMachine() is PhoneLOLPracticeGuardSM) return;
+        var game = GameManager.get_Instance();
+        var spawn = game.GetTeamPos(team);
+        var away = spawn - game.GetTeamPos(1 - team); away.y = 0f;
+        var position = spawn + away.normalized * 2f;
+        int id = EveUnityNetwork.get_Instance().AllocateSceneViewID();
+        get_m_view().RPC("SpawnPracticeGuardRPC", DJJPAPENCLN.Others, team, position, id);
+        SpawnPracticeGuardRPC(team, position, id);
+    }
+
+    [JDLHECHNNDH]
+    public void SpawnPracticeGuardRPC(byte team, Vector3 position, int viewID)
+    {
+        if (team > 1 || EveUnityNetwork.get_Instance().get_m_peer().KBNKMEFINPM(viewID)) return;
+        var prefab = Resources.Load<GameObject>("practice/Alistar");
+        if (prefab == null) throw new InvalidOperationException("Practice Alistar prefab is missing");
+        var instance = UnityEngine.Object.Instantiate(prefab, position, Quaternion.identity);
+        instance.GetComponent<EveView>().set_viewID(viewID);
+        var actor = instance.GetComponent<Actor>();
+        actor.m_team = team;
+        var info = new NEFBHKKAMJF(); info.FIGLEPBIEEJ(1);
+        actor.SetInfo(info);
+        actor.StageInit(position);
+        actor.m_hp = 100000;
+        if (actor.m_navMeshAgent != null) actor.m_navMeshAgent.enabled = false;
+        instance.transform.rotation = Quaternion.LookRotation(GameManager.get_Instance().GetTeamPos(1 - team) - position);
+    }
+
 	public delegate bool PNGKAIDOLOG(Actor CDKMPAEODLA);
 
 	private sealed class ICLMHILJEKK

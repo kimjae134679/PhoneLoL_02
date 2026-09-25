@@ -23,13 +23,13 @@ class CentralAuthorityV33State(v32.CentralAuthorityV32State):
         super().disconnect(peer)
         if bridge: bridge.publish_room(room)
     def match(self,peer,friend,group,mode,capacity):
-        capacity={20:2,101:2,102:4}.get(mode,capacity)
+        capacity={20:2,101:2,102:10,103:10}.get(mode,capacity)
         with self.account_services.lock:
             invitation=self.account_services.pending_joins.get(peer.device_id)
         if invitation is not None:
             room_id,native_mode,native_group,expires=invitation
             with self.lock:room=self.rooms.get(room_id)
-            expected_mode=native_mode if native_mode in (20,101,102) else 0
+            expected_mode=native_mode if native_mode in (10,20,101,102,103) else 0
             if expires>=time.time() and expected_mode==mode and room is not None:
                 result=super().match_operation(peer,room.friend,room.group,room.mode,room.capacity,legacy.MATCH_OP_JOIN,room_id,0)
                 if peer.room_id==room_id:
@@ -40,7 +40,7 @@ class CentralAuthorityV33State(v32.CentralAuthorityV32State):
             return None
         return super().match(peer,friend,group,mode,capacity)
     def match_operation(self,peer,friend,group,mode,capacity,operation,target_room_id,request_id):
-        capacity={20:2,101:2,102:4}.get(mode,capacity)
+        capacity={20:2,101:2,102:10,103:10}.get(mode,capacity)
         return super().match_operation(peer,friend,group,mode,capacity,operation,target_room_id,request_id)
 class CentralAuthorityV33Handler(v32.CentralAuthorityV32Handler):
     def _dispatch(self,kind,room,header_peer,payload):

@@ -1,3 +1,48 @@
+# 1.7.0 / 197 — combat and UI implementation — 2026-09-25
+
+The corrected display version scheme is **1.7.0, 1.7.1, 1.7.2**. Android versionCode remains monotonic: 197. The user confirmed the previous candidate's effects, sound, collision and lightmaps; preserve those fixes.
+
+## Android delivery
+
+- Source APK: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.7.0-arm64-candidate.apk
+- Delivered copy: C:\Users\user\Documents\MultiGod\PhoneLOL_LocalRuntime\00_PHONELOL_TEST_HERE\PhoneLOL-v1.7.0-arm64-candidate.apk
+- Build succeeded: 0 errors / 761 warnings, 314575 ms. 143232958 bytes; SHA-256 b1a29fd0c96cd830fa545bf00615843e4a58452877c75cd86a7e751513456231.
+- Independently inspected manifest: com.jcl.lmulti, versionName1.7.0, versionCode197, minSDK25, targetSDK36. All six native libraries are ARM64 ELF64 with16384-byte LOAD segment alignment.
+- No phone install/play test performed. New nexus firing, Alistar appearance, full combat and UI feel still require user phone validation.
+
+## Implemented
+
+- Right control group enlarged6% around its existing right anchor on both maps. Original local positions and70x70 colliders scale together. This is a small usability adjustment, not measured parity with an original same-device screenshot.
+- Nexus host attacks use existing turret projectiles and inner-turret attack stats: range6.5, damage170, speed0.83. Nexus identity/HP and original death/victory path retained.
+- A stationary, team-aligned Alistar is spawned two units behind each spawn. HP100000, immediate same-position revival, no active attack/run behavior. It is a SubHero without a participant or scoreboard row.
+- Labels changed to 모드1/모드2/모드3. Mode1 has2 seats; Mode2 and Mode3 have10. Mode3 uses existing mode-battle rules, including8 items/passive gold/respawn changes.
+- Both server capacity mappings fixed; mode103 entry enabled. Roster/start data, client decoding, lobby seats and scoreboard/result rows expand to10. All participants in expanded rooms need this new client.
+- In-game scoreboard exposes all8 items for mode10/103. Persistent overhead level/name text removed, while menu/scoreboard account names remain.
+- Inactive death effects cannot return to their pool twice in one update.
+
+## Verification and deployment
+
+- Disposable-server checks:2/10/10 authenticated players, balanced5v5, unique champion view IDs, shared start/loading, results and correct5/8-item frames.
+- English and Korean nickname changes survived reconnect and a fresh server using the same disposable database. No live accounts were renamed or modified by tests.
+- Actual Unity packet reader consumed2/10/10-player room snapshots without losing alignment. Both map UI references, expanded rows/items and scaled skill-edge raycasts passed.
+- Isolated Alistar test passed3 consecutive HP100000 death-to-idle revivals at the original position. Full scene/network spawning and actual nexus impact remain phone checks.
+- Existing two-player/solo/relay/ranking/duplicate-result regressions passed.
+- Existing startup wrapper deployed server changes after source/SQLite backup. Managed sources and manifest match the repository. Local/public diagnostic POST returned HTTP204; this is connectivity evidence, not gameplay evidence. See Recovery/V170Deployment.txt.
+
+## iOS — BLOCKED
+
+No Xcode export or IPA produced. Official iOS support installation failed with ELEVATION_CANCELLED: Windows administrator prompt cancelled/timed out. Editor reports unsupported iOS target. No Mac/Xcode/signing device connected. Added compiling PhoneLOLBuild.BuildIOSCandidate() export command; export/native linking/signing/device execution remain unverified. Resume steps: Recovery/V170IOSStatus.md.
+
+## Continuity
+
+- Implementation/handoff are local. Do not bypass the earlier automatic approval rejection of public GitHub publishing.
+- Preserve the user's independent UnityConnectSettings.asset edit and exclude it from commits.
+- Existing project, Python, Unity and server locations retained. No new standalone tool installed; existing-location exception to C:/Program Files/_My/AI policy.
+- Reproduce via Automation/Server/check_v170.py then Automation/VerifyV170.cs. Temporary room fixtures are generated under .git.
+- Next: user phone feedback; complete iOS module installation and provide a Mac build/signing environment.
+
+---
+
 # 1.16.10 / 196 - in-game bug fixes first - 2026-09-25
 
 User priority: in-game bugs, then combat features, then remaining names/lobby/UI. The user reports that mode battle, passive +8 gold and expanded inventory already work on phone. Preserve those features. This section supersedes earlier lighting/audio/navigation recovery claims below.

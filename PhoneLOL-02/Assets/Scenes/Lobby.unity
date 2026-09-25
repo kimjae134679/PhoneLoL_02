@@ -35060,7 +35060,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: "3 vs 3\r\n랭크대전"
+  mText: "모드3\r\n랭크대전"
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
@@ -38206,7 +38206,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 3 vs 3
+  mText: 모드3
   mFontSize: 14
   mFontStyle: 0
   mAlignment: 0
@@ -48585,7 +48585,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 1 vs 1
+  mText: 모드1
   mFontSize: 24
   mFontStyle: 0
   mAlignment: 0
@@ -55416,7 +55416,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 1 vs 1
+  mText: 모드1
   mFontSize: 14
   mFontStyle: 0
   mAlignment: 0
@@ -58049,7 +58049,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: "1 vs 1\r\n랭크대전"
+  mText: "모드1\r\n랭크대전"
   mFontSize: 20
   mFontStyle: 0
   mAlignment: 0
@@ -73474,7 +73474,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 2 vs 2
+  mText: 모드2
   mFontSize: 24
   mFontStyle: 0
   mAlignment: 0
@@ -76279,7 +76279,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 1 vs 1 랭킹
+  mText: 모드1 랭킹
   mFontSize: 16
   mFontStyle: 0
   mAlignment: 0
@@ -80474,7 +80474,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 3 vs 3
+  mText: 모드3
   mFontSize: 24
   mFontStyle: 0
   mAlignment: 0
@@ -81647,7 +81647,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: c49bb817caadd5f41a6313cd04908023, type: 3}
   mFont: {fileID: 0}
-  mText: 3 vs 3 랭킹
+  mText: 모드3 랭킹
   mFontSize: 16
   mFontStyle: 0
   mAlignment: 0

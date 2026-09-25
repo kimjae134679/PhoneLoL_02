@@ -9,7 +9,7 @@ public static class PhoneLOLModeRules
             var network = NetworkManager.get_Instance();
             var battle = network == null ? null : network.get_m_battleNetClient();
             var room = battle == null ? null : battle.IMKOGBNIJBO();
-            return room != null && room.EHCPMLKEBME == 10;
+            return room != null && (room.EHCPMLKEBME == 10 || room.EHCPMLKEBME == 103);
         }
     }
     public static int ItemSlots { get { return Enabled ? 8 : 5; } }

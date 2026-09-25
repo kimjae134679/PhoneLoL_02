@@ -379,6 +379,7 @@ public class UILobbyBattleReady : MonoBehaviour
 
 	private void OnEnable()
 	{
+        m_battleReadyHeroInfos = PhoneLOLRoomLayout.Expand(m_battleReadyHeroInfos, true);
 		KLDEHFCIMDN = NetworkManager.get_Instance().get_m_battleNetClient().IMKOGBNIJBO();
 		CFAMDBIADFF = 0;
 		List<NEFBHKKAMJF> list = NetworkManager.get_Instance().get_m_gameNetClient().ACDEBBEGIIP()

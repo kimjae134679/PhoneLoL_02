@@ -108,30 +108,13 @@ public class UIHeroDamageHUD : MonoBehaviour
 	}
 
 	private void Update()
-	{
-		if (MEDAGKOPJMO.m_actorType == Actor.IJJMDPGJAEM.Hero)
-		{
-			if (!m_levelBack.activeSelf)
-			{
-				m_levelBack.SetActive(true);
-			}
-			byte level = MEDAGKOPJMO.get_Level();
-			if (CKLKHFHBFNI != level)
-			{
-				m_levelLabel.set_text(MEDAGKOPJMO.get_Level().ToString());
-				CKLKHFHBFNI = level;
-			}
-			if (m_exBar.gameObject.activeSelf)
-			{
-				m_exBar.set_value(m_exValue);
-			}
-		}
-		else if (m_levelBack.activeSelf)
-		{
-			m_levelBack.SetActive(false);
-		}
-		Refresh();
-	}
+    {
+        // Keep health and experience bars; suppress the persistent overhead level text.
+        if (m_levelBack != null && m_levelBack.activeSelf) m_levelBack.SetActive(false);
+        if (MEDAGKOPJMO == null) return;
+        if (m_exBar != null && m_exBar.gameObject.activeSelf) m_exBar.set_value(m_exValue);
+        Refresh();
+    }
 
 	public void COKHGJDEJAG(object HCKCCHPJOPI, Color CEMGPCOMLOP, float CMADNCOPOAO)
 	{

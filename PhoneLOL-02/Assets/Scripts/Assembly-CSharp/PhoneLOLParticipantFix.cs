@@ -83,7 +83,7 @@ public static class PhoneLOLParticipantFix
 		}
 		PBOOPPEPAIK pBOOPPEPAIK = nOBFFGBGCNA.CJENLAELLAO();
 		PBOOPPEPAIK pBOOPPEPAIK2 = client.GLPDLIDMHFA();
-		if (b >= 128 && b <= 133)
+		if (b >= 128 && b < 128 + client.IMKOGBNIJBO().IFOLDPBLAGD())
 		{
 			if (!MoveParticipant(client.IMKOGBNIJBO(), pBOOPPEPAIK, (byte)(b - 128)))
 			{

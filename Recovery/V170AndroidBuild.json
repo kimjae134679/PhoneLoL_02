@@ -1,0 +1,16 @@
+{
+  "version": "1.7.0",
+  "versionCode": 197,
+  "bytes": 143232958,
+  "sha256": "b1a29fd0c96cd830fa545bf00615843e4a58452877c75cd86a7e751513456231",
+  "native_libraries": [
+    "lib/arm64-v8a/libc++_shared.so",
+    "lib/arm64-v8a/libgame.so",
+    "lib/arm64-v8a/libil2cpp.so",
+    "lib/arm64-v8a/libmain.so",
+    "lib/arm64-v8a/libswappywrapper.so",
+    "lib/arm64-v8a/libunity.so"
+  ],
+  "source": "D:\\A_KJ\\AI\\PhoneLoL_02\\PhoneLOL-02\\Builds\\PhoneLOL-v1.7.0-arm64-candidate.apk",
+  "delivered": "C:\\Users\\user\\Documents\\MultiGod\\PhoneLOL_LocalRuntime\\00_PHONELOL_TEST_HERE\\PhoneLOL-v1.7.0-arm64-candidate.apk"
+}

@@ -36,7 +36,7 @@ class ManagedBattle:
         if len(payload) != 16:
             return b"\x01"
         mode, operation = payload[0], payload[1]
-        if mode not in (0, 10, 20, 101, 102) or operation not in (0, 1, 2, 3):
+        if mode not in (0, 10, 20, 101, 102, 103) or operation not in (0, 1, 2, 3):
             return b"\x01"
         target = 0
         if operation == 2:
@@ -83,7 +83,7 @@ class ManagedBattle:
         mode = self.contexts.get(room.host_peer,{}).get("mode",room.mode)
         out = bytearray(struct.pack("<iBBBQBB",room.room_id,2 if started else 1,
                                     room.capacity,host_slot,room.shared_game_id,1,mode))
-        for slot in range(6):
+        for slot in range(max(6,room.capacity)):
             p = peers.get(slot)
             out += bytes((p is not None,))
             if p: out += self.player(p)
@@ -135,7 +135,7 @@ class ManagedBattle:
                 self.send(peer,60004,struct.pack("<iii",room.room_id,self.session(p),host)+ENDPOINT+ENDPOINT)
             by_slot = {p.visual.slot:p for p in members}
             data = bytearray(b"\x01")
-            for slot in range(6):
+            for slot in range(max(6,room.capacity)):
                 p = by_slot.get(slot)
                 data += struct.pack("<HBii",p.visual.hero_id if p else 0,
                                     p.visual.skin_id if p else 0,(self.session(p)+1)*1000+1 if p else 0,
@@ -181,7 +181,7 @@ class ManagedBattle:
         if pid == 3: return self.send(peer,3,b"\0",request)
         if pid in (4,5,8):
             mode = ctx["mode"]
-            capacity = {20:2,101:2,102:4}.get(mode,6)
+            capacity = {20:2,101:2,102:10,103:10}.get(mode,6)
             operation = legacy.MATCH_OP_CREATE if pid==5 else legacy.MATCH_OP_FIND_OR_CREATE
             target = ctx["target"]
             if pid==8:

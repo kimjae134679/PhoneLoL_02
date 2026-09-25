@@ -1,0 +1,12 @@
+Result: Succeeded
+Errors: 0
+Warnings: 761
+Output: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.7.0-arm64-candidate.apk
+Gameplay, legacy native host, and shader parity are not certified by a successful build.
+lib/arm64-v8a/libc++_shared.so: LOAD alignment 16384
+lib/arm64-v8a/libgame.so: LOAD alignment 16384
+lib/arm64-v8a/libil2cpp.so: LOAD alignment 16384
+lib/arm64-v8a/libmain.so: LOAD alignment 16384
+lib/arm64-v8a/libswappywrapper.so: LOAD alignment 16384
+lib/arm64-v8a/libunity.so: LOAD alignment 16384
+APK zipalign -c -P 16 4: exit0

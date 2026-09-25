@@ -1,0 +1,60 @@
+Lobby UIROOT style=PixelPerfect height=720 min=320 max=1536 dpi=False
+Lobby UILobbyBattleReady BattleReadyPanel
+  m_battleReadyHeroInfos count=6
+    0 BattleReadyHeroInfo pos=(0.00, 91.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Team0Window
+    1 BattleReadyHeroInfo pos=(0.00, 91.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Team1Window
+    2 BattleReadyHeroInfo pos=(0.00, -5.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Team0Window
+    3 BattleReadyHeroInfo pos=(0.00, -5.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Team1Window
+    4 BattleReadyHeroInfo pos=(0.00, -101.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Team0Window
+    5 BattleReadyHeroInfo pos=(0.00, -101.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Team1Window
+  m_timeoutLabel count=2
+    0 Label pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Sprite
+    1 Label pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00) parent=Sprite
+MultiGameLoading UIROOT style=PixelPerfect height=720 min=320 max=1536 dpi=False
+MultiGameLoading MultiGameLoading Sprite
+MtmGameLoading UIROOT style=PixelPerfect height=720 min=320 max=1536 dpi=False
+MtmGameLoading MtmGameLoading Sprite
+MultiGame UIROOT style=PixelPerfect height=720 min=320 max=1536 dpi=False
+MultiGame SKILL_CHAIN Skill0Button pos=(-98.93, 8.00, 0.00) scale=(1.00, 1.00, 1.00)
+MultiGame SKILL_CHAIN BottomRight pos=(377.00, -190.25, 0.00) scale=(1.00, 1.00, 1.00)
+MultiGame SKILL_CHAIN GamePanel pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)
+MultiGame SKILL_CHAIN UI Root pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)
+MultiGame SKILL_CHAIN Camera4_UI pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)
+MultiGame UIGameInfo GameInfoWindow
+  m_heroInfos count=6
+    0 MultiHeroInfo pos=(-261.00, 95.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    1 MultiHeroInfo pos=(-261.00, -24.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    2 MultiHeroInfo pos=(-261.00, 59.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    3 MultiHeroInfo pos=(-261.00, -60.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    4 MultiHeroInfo pos=(-261.00, 23.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    5 MultiHeroInfo pos=(-261.00, -96.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+MultiGame UIMultiGameResult MultiGameResultPanel
+  m_resultHeroInfos count=6
+    0 MultiResultHeroInfo pos=(-310.00, 94.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    1 MultiResultHeroInfo pos=(-310.00, -26.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    2 MultiResultHeroInfo pos=(-310.00, 60.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    3 MultiResultHeroInfo pos=(-310.00, -60.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    4 MultiResultHeroInfo pos=(-310.00, 26.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    5 MultiResultHeroInfo pos=(-310.00, -94.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+MtmGame UIROOT style=PixelPerfect height=720 min=320 max=1536 dpi=False
+MtmGame SKILL_CHAIN Skill0Button pos=(-98.93, 8.00, 0.00) scale=(1.00, 1.00, 1.00)
+MtmGame SKILL_CHAIN BottomRight pos=(377.00, -190.23, 0.00) scale=(1.00, 1.00, 1.00)
+MtmGame SKILL_CHAIN GamePanel pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)
+MtmGame SKILL_CHAIN UI Root pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)
+MtmGame SKILL_CHAIN Camera4_UI pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00)
+MtmGame UIGameInfo GameInfoWindow
+  m_heroInfos count=6
+    0 MultiHeroInfo pos=(-261.00, 95.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    1 MultiHeroInfo pos=(-261.00, -24.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    2 MultiHeroInfo pos=(-261.00, 59.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    3 MultiHeroInfo pos=(-261.00, -60.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    4 MultiHeroInfo pos=(-261.00, 23.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+    5 MultiHeroInfo pos=(-261.00, -96.00, 0.00) scale=(1.00, 1.00, 1.00) parent=GameInfoWindow
+MtmGame UIMultiGameResult MultiGameResultPanel
+  m_resultHeroInfos count=6
+    0 MultiResultHeroInfo pos=(-310.00, 94.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    1 MultiResultHeroInfo pos=(-310.00, -26.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    2 MultiResultHeroInfo pos=(-310.00, 60.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    3 MultiResultHeroInfo pos=(-310.00, -60.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    4 MultiResultHeroInfo pos=(-310.00, 26.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow
+    5 MultiResultHeroInfo pos=(-310.00, -94.00, 0.00) scale=(1.00, 1.00, 1.00) parent=InfoWindow

@@ -876,11 +876,11 @@ public class UIMultiGameResult : MonoBehaviour
 					}
 					else if (gLAMMOFPCHP.EHCPMLKEBME == 20)
 					{
-						m_battleTypeLabel.set_text("1 vs 1 대전");
+						m_battleTypeLabel.set_text("모드1 대전");
 					}
 					else
 					{
-						m_battleTypeLabel.set_text("친선 대전");
+						m_battleTypeLabel.set_text(gLAMMOFPCHP.EHCPMLKEBME >= 101 && gLAMMOFPCHP.EHCPMLKEBME <= 103 ? "모드" + (gLAMMOFPCHP.EHCPMLKEBME - 100) : "친선 대전");
 					}
 				}
 
@@ -940,7 +940,9 @@ public class UIMultiGameResult : MonoBehaviour
 					SceneManager.get_Instance().ChangeScene(SceneManager.HNPEHFEAODI.Lobby);
 				}
 
-				private void Start()
+				private void Awake() { m_resultHeroInfos = PhoneLOLRoomLayout.Expand(m_resultHeroInfos, false); }
+
+                private void Start()
 				{
 					if (GameManager.get_Instance().get_m_state() == GameManager.OEOIIKMBGAG.Win)
 					{
