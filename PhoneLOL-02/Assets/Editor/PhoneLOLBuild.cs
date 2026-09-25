@@ -8,8 +8,8 @@ using UnityEngine;
 
 public static class PhoneLOLBuild
 {
-    public const string DisplayVersion = "1.17.4";
-    public const int BuildNumber = 202;
+    public const string DisplayVersion = "1.17.5";
+    public const int BuildNumber = 203;
     [MenuItem("PhoneLOL/Export " + DisplayVersion + " iOS Xcode project")]
     public static void BuildIOSCandidate()
     {

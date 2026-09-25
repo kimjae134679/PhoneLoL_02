@@ -3145,10 +3145,11 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 		{
 			return;
 		}
-		m_hp = BGFHMLEOCAA;
         var practice = get_m_stateMachine() as PhoneLOLPracticeGuardSM;
+        if (practice != null && !practice.CanReceiveDamage(HGIGECICLLJ)) return;
+        m_hp = BGFHMLEOCAA;
         if (practice != null && BGFHMLEOCAA <= 0f) {
-            // Award only the configured training bounty, then revive without normal kill events.
+            // Enemy bounty only, then a non-participant death and delayed respawn.
             practice.ApplyKillReward(HGIGECICLLJ);
             practice.OnEnterDeath();
             return;
@@ -3835,6 +3836,8 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 
 	public virtual float OnDamage(Actor AECFMGGMOGH, double HKMFCFABKGI, double HANPEPIBBBG, double OHEDEPKFAJE = 0.0, byte JBJEMLFEBGK = 1)
 	{
+        var practice = get_m_stateMachine() as PhoneLOLPracticeGuardSM;
+        if (practice != null && !practice.CanReceiveDamage(AECFMGGMOGH)) return 0f;
 		HAHKNKFOCMJ hAHKNKFOCMJ = new HAHKNKFOCMJ();
 		hAHKNKFOCMJ.JBJEMLFEBGK = JBJEMLFEBGK;
 		hAHKNKFOCMJ.KNIAJMGDGAA = this;
