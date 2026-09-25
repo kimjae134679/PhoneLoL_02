@@ -6,7 +6,7 @@
 - 사망 후1초에 현재 scene owner가 부활 RPC를 보내 모든 복제본을 같은 home 위치·체력20000·Idle로 복구합니다. 사망 중 방장 이전 시 새 owner가 처리하며 중복 부활 RPC는 무시합니다.
 - Unity 컴파일 및 실제 프리팹 검사 통과: 양 진영 아군 타깃/평타/스킬/수신 피해/소환수 차단, 적 평타 피해, 각3회 처치당1000골드 한 번, 사망 상태 및1초 deadline·조기 부활 금지·owner RPC 부활, 원본 사망 클립 연결 확인. 에디터 시간 경계는 주입해 검증했으며 두 폰 실전·실제 청취 검증은 미실행.
 - 근거 Automation/VerifyV1175Practice.cs 및 Recovery/V1175PracticeVerification.txt.
-- Android1.17.5/code203 빌드를 진행합니다. 서버 소스/계정DB/알리스타 위치 변경 및 재배포 없음. 참가자는 동일 APK로 업데이트하세요.
+- Android1.17.5/code203 빌드 성공(오류0/경고762), manifest 버전·ARM64 ELF6개·ZIP CRC 확인.143243610 bytes, SHA256 d86cf70e0a779f0d7bac98ab58c2151d4cec8a30e4d76bd59e3a09ecf6ec69fa. Recovery/V1175BuildCompleted.json 참조. 서버 소스/계정DB/알리스타 위치 변경 및 재배포 없음. 참가자는 동일 APK로 업데이트하세요.
 - 사용자 UnityConnectSettings.asset 변경 보존. 바탕화면 복사/ZIP/iOS 재출력 없음.
 
 ---
