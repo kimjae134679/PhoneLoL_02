@@ -570,6 +570,8 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 
 		internal void OKEAMOGAFAG(GameObject HCKCCHPJOPI)
 		{
+			// A fresh inactive clone must run Awake before its state is reset.
+			if (!HCKCCHPJOPI.activeSelf) HCKCCHPJOPI.SetActive(true);
 			Actor component = HCKCCHPJOPI.GetComponent<Actor>();
 			component.InitForReuse();
 			component.m_team = KNIAJMGDGAA.m_team;
@@ -3148,6 +3150,13 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 			return;
 		}
 		m_hp = BGFHMLEOCAA;
+        var practice = get_m_stateMachine() as PhoneLOLPracticeGuardSM;
+        if (practice != null && BGFHMLEOCAA <= 0f) {
+            // Award only the configured training bounty, then revive without normal kill events.
+            practice.ApplyKillReward(HGIGECICLLJ);
+            practice.OnEnterDeath();
+            return;
+        }
 		if (BGFHMLEOCAA <= 0f)
 		{
 			get_m_stateMachine().SetState(StateMachine.OEOIIKMBGAG.Death);
@@ -4132,8 +4141,9 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 			}
 			return kNGOMGNGLLD.JHNOPENIBNJ;
 		}
-		catch
+		catch (Exception exception)
 		{
+            if (get_m_stateMachine() is PhoneLOLPracticeGuardSM) Debug.LogException(exception);
 		}
 		return 0f;
 	}
@@ -4335,7 +4345,12 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 			Vector3 forward = cEOBMJPGCJE.LPOAEBNAGCP.GetPosition() - GetPosition();
 			kMILPEHBBEL = Quaternion.LookRotation(forward);
 		}
-		GameObject gameObject = GameObjectPool.Alloc(string.Format("Particle/{0}/{1}", m_hero_id == 31000 && NCADFOBAFJD == "attack_missile" ? "Turret" : get_m_resourceName(), NCADFOBAFJD), HEPNHCEIFMO, kMILPEHBBEL, cEOBMJPGCJE.OKEAMOGAFAG);
+		string path = string.Format("Particle/{0}/{1}", m_hero_id == 31000 && NCADFOBAFJD == "attack_missile" ? "Turret" : get_m_resourceName(), NCADFOBAFJD);
+		// Resolve the actual projectile instead of trusting a hash-only effect cache.
+		GameObject prefab = Resources.Load<GameObject>(path);
+		if (prefab == null || prefab.GetComponent<Actor>() == null || prefab.GetComponent<HumanSM>() == null)
+			throw new InvalidOperationException("Invalid projectile prefab: " + path);
+		GameObject gameObject = GameObjectPool.Alloc(prefab, HEPNHCEIFMO, kMILPEHBBEL, cEOBMJPGCJE.OKEAMOGAFAG);
 		if (gameObject == null)
 		{
 			return null;
@@ -4942,7 +4957,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 
 	public int get_m_max_hp()
 	{
-        if (get_m_stateMachine() is PhoneLOLPracticeGuardSM) return 100000;
+        if (get_m_stateMachine() is PhoneLOLPracticeGuardSM) return PhoneLOLPracticeGuardSM.MaxHealth;
 		int num = get_m_max_hp_base() + get_m_max_hp_add();
 		if (m_hero_id == 19)
 		{

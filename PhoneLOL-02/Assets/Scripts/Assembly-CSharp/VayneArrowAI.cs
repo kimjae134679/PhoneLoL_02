@@ -29,6 +29,7 @@ public class VayneArrowAI : TargetMissileAI
 	public override void Start()
 	{
 		base.Start();
+		if (!HasAttackTarget()) return;
 		KCDIHMHDGLK = DGBKMAGBJJF.get_m_target().GetCenterPosition() - get_m_actor().GetCenterPosition();
 		KCDIHMHDGLK.Normalize();
 	}
@@ -150,6 +151,7 @@ public class VayneArrowAI : TargetMissileAI
 
 	public override void Attack()
 	{
+		if (!HasAttackTarget()) return;
 		if (DGBKMAGBJJF.get_m_nextState() == StateMachine.OEOIIKMBGAG.Death)
 		{
 			return;

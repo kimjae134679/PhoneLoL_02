@@ -1,0 +1,20 @@
+{
+  "version": "1.7.1",
+  "versionCode": 198,
+  "apk": "C:\\Users\\user\\Desktop\\PhoneLOL-1.7.1\\PhoneLOL-1.7.1.apk",
+  "apkBytes": 143232790,
+  "apkSHA256": "1bf1ca1f4bbe67d9a076075c5284e8199d9b271379a2938c20a4435641838f9a",
+  "zip": "C:\\Users\\user\\Desktop\\PhoneLOL-1.7.1\\PhoneLOL-1.7.1.zip",
+  "zipBytes": 140611512,
+  "zipSHA256": "636853dff9f36016c6b60fbf233b58e594bd0098e08308c0d228521fc33c77c6",
+  "nativeLibraries": [
+    "lib/arm64-v8a/libc++_shared.so",
+    "lib/arm64-v8a/libgame.so",
+    "lib/arm64-v8a/libil2cpp.so",
+    "lib/arm64-v8a/libmain.so",
+    "lib/arm64-v8a/libswappywrapper.so",
+    "lib/arm64-v8a/libunity.so"
+  ],
+  "signatureVerified": true,
+  "zipCRCVerified": true
+}

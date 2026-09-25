@@ -44,6 +44,7 @@ public class TeemoAttackMissileAI : TargetMissileAI
 
 	public override void Attack()
 	{
+		if (!HasAttackTarget()) return;
 		if (DGBKMAGBJJF.get_m_nextState() != StateMachine.OEOIIKMBGAG.Death)
 		{
 			Actor target = DGBKMAGBJJF.get_m_target();

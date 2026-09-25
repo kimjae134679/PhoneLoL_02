@@ -12,11 +12,10 @@ public class ActorManager : MonoBehaviour
     {
         if (!EveUnityNetwork.get_Instance().IsMaster()) return;
         foreach (var actor in IAFBHOGKJBI)
-            if (actor != null && actor.m_team == team && actor.get_m_stateMachine() is PhoneLOLPracticeGuardSM) return;
+            if (actor != null && actor.get_m_stateMachine() is PhoneLOLPracticeGuardSM guard && guard.SpawnTeam == team) return;
         var game = GameManager.get_Instance();
         var spawn = game.GetTeamPos(team);
-        var away = spawn - game.GetTeamPos(1 - team); away.y = 0f;
-        var position = spawn + away.normalized * 2f;
+        var position = PhoneLOLPracticeGuardSM.GetSpawnPosition(spawn, game.GetTeamPos(1 - team), team);
         int id = EveUnityNetwork.get_Instance().AllocateSceneViewID();
         get_m_view().RPC("SpawnPracticeGuardRPC", DJJPAPENCLN.Others, team, position, id);
         SpawnPracticeGuardRPC(team, position, id);
@@ -30,12 +29,12 @@ public class ActorManager : MonoBehaviour
         if (prefab == null) throw new InvalidOperationException("Practice Alistar prefab is missing");
         var instance = UnityEngine.Object.Instantiate(prefab, position, Quaternion.identity);
         instance.GetComponent<EveView>().set_viewID(viewID);
+        instance.GetComponent<PhoneLOLPracticeGuardSM>().Configure(team);
         var actor = instance.GetComponent<Actor>();
-        actor.m_team = team;
         var info = new NEFBHKKAMJF(); info.FIGLEPBIEEJ(1);
         actor.SetInfo(info);
         actor.StageInit(position);
-        actor.m_hp = 100000;
+        actor.m_hp = PhoneLOLPracticeGuardSM.MaxHealth;
         if (actor.m_navMeshAgent != null) actor.m_navMeshAgent.enabled = false;
         instance.transform.rotation = Quaternion.LookRotation(GameManager.get_Instance().GetTeamPos(1 - team) - position);
     }
@@ -1026,6 +1025,12 @@ public class ActorManager : MonoBehaviour
 			linkedListNode = linkedListNode.Next;
 			if (!(value4 == null) && !(value4.get_m_view() == null) && value4.m_actorType == Actor.IJJMDPGJAEM.Monster && value4.get_m_view().IsMine())
 			{
+                var practice = value4.get_m_stateMachine() as PhoneLOLPracticeGuardSM;
+                if (practice != null) {
+                    get_m_view().RPC("SpawnPracticeGuardRPC", FDEJBCNGOEG, true, practice.SpawnTeam, value4.GetPosition(), value4.get_m_view().get_viewID());
+                    value4.CallRecoveryRpc(FDEJBCNGOEG);
+                    continue;
+                }
 				Vector3 vector = Vector3.zero;
 				MonsterAI component2 = value4.GetComponent<MonsterAI>();
 				if (component2 != null)

@@ -54,8 +54,8 @@ public static class PhoneLOLModeRules
             int slot = i;
             trigger.onPress.Clear();
             trigger.onPress.Add(new EventDelegate(() => UseItem(slot)));
-            t.localPosition = first + step * (i * 4f / 7f);
-            t.localScale *= 0.625f;
+            // Keep full-size touch targets in two rows instead of shrinking eight into five.
+            t.localPosition = first + new Vector3((i % 4) * 60f, (i / 4) * 50f, 0f);
         }
     }
     private static Transform FindClone(Transform clone, Transform root, Transform original)

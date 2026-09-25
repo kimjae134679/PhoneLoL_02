@@ -1,0 +1,5 @@
+Result: Succeeded
+Errors: 0
+Warnings: 761
+Output: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-1.7.1.apk
+Gameplay, legacy native host, and shader parity are not certified by a successful build.

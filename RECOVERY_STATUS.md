@@ -1,3 +1,35 @@
+# 1.7.2 / 199 - neutral Alistar target and bounty - 2026-09-25
+
+- Latest user instruction: finish changes, issue the build command, then end without waiting for completion or copying to Desktop.
+- Practice Alistar is now a neutral Monster (combat team2), with EveView scene-object authority. Both player teams can select and damage it. SpawnTeam separately records its location side and prevents duplicate spawns.
+- Rejoin recovery uses the practice-guard spawn RPC rather than looking for a Monster/Alistar resource.
+- Health20000; each lethal damage message awards exactly1000 gold to the killing hero (resolving projectile/summon owner), then immediately revives the guard at its home. Normal monster kill rewards/scoreboard events are bypassed.
+- Placement mirrors the user's uploaded sketch: bottom/blue spawn +X28; top/red spawn -X28. Straight map adds Z-8/+8 to separate from the center lane. Nearby NavMesh sampling is retained.
+- Level display was inspected ONLY: UIHeroDamageHUD.Update hides m_levelBack due to the earlier request to remove all overhead text. It was not restored.
+- Verification passed: both-team targeting and damage permission, actual OnAttackDamage HP20000 ->19959.39, three lethal applications each restoring20000 and awarding exactly1000, mirrored placement. See Recovery/V172PracticeVerification.txt.
+- Build command is the final action. Output target: PhoneLOL-02/Builds/PhoneLOL-1.7.2.apk. Consult Recovery/V172BuildJob.json and Builds/build-result.txt; do not claim build completion until they confirm it.
+- No Desktop1.7.2 folder, copy, ZIP or iOS export is requested. Existing Desktop1.7.1 APK/ZIP were already produced and tested by the user; preserve them.
+- All1.7.1 projectile/UI/logging changes remain. The Teemo/turret visual transition was not reproduced earlier and is not newly certified here.
+- No live server/account database change or public GitHub push. Preserve the independent UnityConnectSettings.asset modification.
+- Editor test fixture required a real offline PNDMCOBIODO client; the earlier empty-network fixture's GetDefaultGroup exception was a test setup issue. Final actual damage test passed.
+
+---
+
+# 1.7.1 / 198 - attack follow-up and larger combat controls - 2026-09-25
+
+- Delivered Android ARM64 APK and APK-only ZIP in C:\\Users\\user\\Desktop\\PhoneLOL-1.7.1. No text follows the version in either filename.
+- APK 143232790 bytes; SHA-256 1bf1ca1f4bbe67d9a076075c5284e8199d9b271379a2938c20a4435641838f9a. Package/version, signature, ARM64 ELF64, 16KB native segment alignment, copy hash and ZIP CRC/internal APK hash verified.
+- Missing projectile targets/owners now retire safely; flight lifetime advances. Missile creation resolves and validates its exact resource before pool allocation.
+- User's specific Teemo-to-turret transition was NOT reproduced in Editor. Do not claim its root cause is established or phone gameplay is verified. See Recovery/V171Investigation.md for evidence and limits.
+- Larger combat controls and touch areas on both maps; 8 active slots use full-size 4x2 layout. Enemy Alistar is selectable, positioned beside spawn (blue +Z4/red -Z4), HP100000 and immediate revival retained.
+- Startup server/log GUI hidden by default; developer console opens for Exception/Assert/unhandled exceptions. Ordinary logs continue in background.
+- Regression: 30 alternating Teemo/Nexus shots; 17 projectile-prefab checks; normal homing hit endpoint, missing-target/owner cleanup; enemy/friendly Alistar selection and 3 revivals; both-map enlarged touch edge/overlap checks. See V171AttackVerification.txt and V171UIVerification.txt.
+- No connected ADB device or phone play test. User should verify Teemo before/after enemy nexus fire, other ranged champions, Alistar and UI feel.
+- No live server/account DB change; no public GitHub push. Preserve user's UnityConnectSettings.asset edit.
+- iOS remains deferred to the friend's Mac. Existing 1.7.0 Xcode export was not rebuilt; future Mac work must build current source and sign it. No installable IPA provided here.
+
+---
+
 # 2026-09-25 — iOS tools installed and combined 1.7.0 ZIP delivered
 
 - User naming rule: no text after the version. Final archive PhoneLOL-1.7.0.zip; APK PhoneLOL-1.7.0.apk. Future builds use these names.

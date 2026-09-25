@@ -1,0 +1,4 @@
+PASS 30 alternating Teemo/Nexus shots: prefab AI, owner and target retained through pool reuse
+PASS 17 basic projectile prefabs: creation, normal hit delivery and missing-target cleanup (Tristana creation/cleanup only)
+PASS missing-owner cleanup
+PASS enemy Alistar selection, friendly exclusion, three immediate revivals

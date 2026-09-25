@@ -129,8 +129,20 @@ public class TargetMissileAI : AI
 		GAKCMCOOCAB = ICENKPDOHBK;
 	}
 
+	protected bool HasAttackTarget()
+	{
+		Actor target = DGBKMAGBJJF.get_m_target();
+		if (target == null || !target.gameObject.activeInHierarchy || DGBKMAGBJJF.get_m_owner() == null)
+		{
+			DGBKMAGBJJF.SetState(StateMachine.OEOIIKMBGAG.Death);
+			return false;
+		}
+		return DGBKMAGBJJF.get_m_nextState() != StateMachine.OEOIIKMBGAG.Death;
+	}
+
 	public virtual void Attack()
 	{
+		if (!HasAttackTarget()) return;
 		if (DGBKMAGBJJF.get_m_nextState() != StateMachine.OEOIIKMBGAG.Death)
 		{
 			Actor target = DGBKMAGBJJF.get_m_target();
@@ -170,6 +182,8 @@ public class TargetMissileAI : AI
 
 	protected virtual void AKMLBDILJIO(StateMachine.OEOIIKMBGAG EBILEBOJADB)
 	{
+		if (!HasAttackTarget()) return;
+		INMCDOIEJOC += get_m_actor().get_m_elapsedTime();
 		Actor target = DGBKMAGBJJF.get_m_target();
 		if (target != null)
 		{

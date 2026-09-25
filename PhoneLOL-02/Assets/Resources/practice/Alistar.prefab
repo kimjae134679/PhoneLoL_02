@@ -961,8 +961,8 @@ MonoBehaviour:
   m_hero_id: 1
   m_heroCostumeID: 0
   m_selfCreateHeroInfo: 0
-  m_team: 0
-  m_actorType: 64
+  m_team: 2
+  m_actorType: 4
   m_lifeTime: 3.4028234663852886e+38
   m_moveSpeed: 5.0
   m_dontDamage: 0
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_viewSyncType: 0
   m_viewID: 0
   m_ownerSessionKey: 0
-  m_isSceneObject: 0
+  m_isSceneObject: 1
   m_serializeComponent: {fileID: 11485712}
   m_serializeTransformOption: 0
   m_serializeRigidBodyOption: 0

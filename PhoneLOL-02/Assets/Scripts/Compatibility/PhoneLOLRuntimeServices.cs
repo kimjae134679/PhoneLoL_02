@@ -8,6 +8,8 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
     private static PhoneLOLRuntimeServices instance;
     private PhoneLOLLocalHost host;
     private bool panel;
+    [SerializeField] private bool showServerDiagnostics;
+    private static int criticalConsolePending;
     private string hostname, port, feedback = "";
     private float nextHeartbeat;
 
@@ -22,6 +24,9 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
     {
         if (instance != null) { Destroy(gameObject); return; }
         instance = this; DontDestroyOnLoad(gameObject);
+        criticalConsolePending = 0;
+        Debug.developerConsoleVisible = false;
+        Debug.developerConsoleEnabled = false;
         PhoneLOLServerSettings.Load();
         PhoneLOLRealtimeLog.Initialize(Application.persistentDataPath, Application.version);
         Application.logMessageReceivedThreaded += UnityLog;
@@ -53,11 +58,14 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
 
     private static void UnityLog(string message, string trace, LogType type)
     {
+        if (type == LogType.Exception || type == LogType.Assert)
+            System.Threading.Interlocked.Exchange(ref criticalConsolePending, 1);
         PhoneLOLRealtimeLog.Record("UNITY_" + type, message + (string.IsNullOrEmpty(trace) ? "" : "\n" + trace));
     }
 
     private static void Unhandled(object sender, UnhandledExceptionEventArgs e)
     {
+        System.Threading.Interlocked.Exchange(ref criticalConsolePending, 1);
         PhoneLOLRealtimeLog.Record("UNHANDLED", Convert.ToString(e.ExceptionObject));
         PhoneLOLRealtimeLog.Flush();
     }
@@ -70,6 +78,12 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
 
     private void Update()
     {
+        if (System.Threading.Interlocked.Exchange(ref criticalConsolePending, 0) != 0) {
+            Debug.developerConsoleEnabled = true;
+            Debug.developerConsoleVisible = true;
+        } else if (!Debug.developerConsoleVisible) {
+            Debug.developerConsoleEnabled = false;
+        }
         if (Time.realtimeSinceStartup < nextHeartbeat) return;
         nextHeartbeat = Time.realtimeSinceStartup + 15;
         PhoneLOLRealtimeLog.Record("HEARTBEAT", "scene=" + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name +
@@ -90,6 +104,7 @@ public sealed class PhoneLOLRuntimeServices : MonoBehaviour
 
     private void OnGUI()
     {
+        if (!showServerDiagnostics) return;
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Login") return;
         Matrix4x4 previous = GUI.matrix;
         int previousDepth = GUI.depth;

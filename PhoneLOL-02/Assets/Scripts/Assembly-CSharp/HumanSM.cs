@@ -1699,10 +1699,10 @@ public class HumanSM : StateMachine
 		{
 			return;
 		}
-		IAKBNJEFLAN(ActorManager.get_Instance().GetActorInAttackRange(get_m_actor(), get_m_actor().get_m_att_range(), 45f, false, true, (Actor.IJJMDPGJAEM)30));
+		IAKBNJEFLAN(ActorManager.get_Instance().GetActorInAttackRange(get_m_actor(), get_m_actor().get_m_att_range(), 45f, false, true, ((Actor.IJJMDPGJAEM)30 | Actor.IJJMDPGJAEM.SubHero)));
 		if (get_m_target() == null)
 		{
-			IAKBNJEFLAN(ActorManager.get_Instance().GetActorInRangeForHero(get_m_actor(), get_m_actor().get_m_att_range(), false, true, (Actor.IJJMDPGJAEM)28));
+			IAKBNJEFLAN(ActorManager.get_Instance().GetActorInRangeForHero(get_m_actor(), get_m_actor().get_m_att_range(), false, true, ((Actor.IJJMDPGJAEM)28 | Actor.IJJMDPGJAEM.SubHero)));
 			if (get_m_target() == null)
 			{
 				IAKBNJEFLAN(ActorManager.get_Instance().GetActorInRangeForHero(get_m_actor(), get_m_actor().get_m_att_range(), false, true, Actor.IJJMDPGJAEM.Hero));
