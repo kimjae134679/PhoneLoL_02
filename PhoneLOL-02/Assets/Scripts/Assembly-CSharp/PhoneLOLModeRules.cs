@@ -12,6 +12,17 @@ public static class PhoneLOLModeRules
             return room != null && (room.EHCPMLKEBME == 10 || room.EHCPMLKEBME == 103);
         }
     }
+    public static float AttackSpeed(float value) { return Enabled ? value : Mathf.Min(value, 2.5f); }
+    public static float LifeSteal(float value) { return Enabled ? value : Mathf.Min(value, 0.55f); }
+    public static float CooldownReduction(float value)
+    {
+        if (!Enabled) return Mathf.Min(value, 0.4f);
+        // Each complete 40 percentage points multiplies remaining cooldown by 0.6.
+        double points = Math.Max(0.0, (double)value * 100.0);
+        double blocks = Math.Floor(points / 40.0);
+        double remainder = points - blocks * 40.0;
+        return (float)(1.0 - Math.Pow(0.6, blocks) * (1.0 - remainder / 100.0));
+    }
     public static int ItemSlots { get { return Enabled ? 8 : 5; } }
     public static float Respawn(float seconds) { return Enabled ? seconds * 0.5f : seconds; }
     public static UIGameItem[] ExpandItems(UIGameItem[] items)

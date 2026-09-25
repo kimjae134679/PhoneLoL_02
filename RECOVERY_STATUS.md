@@ -1,3 +1,19 @@
+# 1.7.3 / 200 - multiplayer identity, mode stats and selection time - 2026-09-25
+
+- User authorized resuming all pending work, with attack-speed and both absorption caps removed only in the already modified mode rules (mode10 and mode103). Ranked/normal/mode1/mode2 keep original stat rules. Critical chance85% and spell absorption's existing0.8 factor were not changed.
+- AA.png on the user's Desktop specifies remaining=0.6^floor(x/40)*(1-(x%40)/100). Modified-mode cooldown reduction uses that formula after summing item/rune/buff percentage points. Examples:100 points leaves28.8%;200 leaves7.776%. Attack speed and both absorption stats have no explicit cap in those modes. Engine frame/animation timing still determines actual attack throughput.
+- Champion selection resets to99 seconds; display uses ceiling so it starts at99 rather than100. Existing all-ready early start remains.
+- Root cause of reported two-player battle disconnection: phone logs showed bounded roster owners8/9 but local Eve session153285354, COUNTDOWN valid=False, then client-initiated close. The transport HELLO session had not been replaced by the authenticated battle player session. Battle authentication now adopts the bounded Eve session before group creation and countdown. Native account transport is unchanged. No live-server restart or DB change is required.
+- Existing server matching compares group, mode, capacity and friend identity. Disposable checks verified seven ranked/normal/mode combinations are isolated and two real authenticated peers can start, load and relay within each.
+- Also repaired the logged UIGameMultiHeroInfo.SetItemInfo IndexOutOfRangeException: inactive rows could receive item updates before Awake expanded the slots. SetItemInfo now ensures expansion on demand, tested with inactive5/8-slot rows.
+- Verification: Unity compile errors0; actual client auth/group/countdown handlers passed for14 peer fixtures from a disposable server, all with a native transport ID different from their Eve ID. Original caps and modified values, all AA formula examples/monotonic progression, inactive scoreboard rows and timer checked. See Recovery/V173ClientVerification.txt and V173ServerVerification.txt. No phone installation/play validation of1.7.3 yet.
+- Version1.7.3/code200. Final action is the detached Android build command; output PhoneLOL-02/Builds/PhoneLOL-1.7.3.apk. Recovery/V173BuildJob.json and Builds/build-result.txt determine completion. Do not claim completed APK until confirmed.
+- All participants should update to1.7.3 for matching combat rules and the connection fix. No Desktop copy, ZIP, iOS export, new tool install or public GitHub push. Existing Alistar20000HP/1000gold/placement retained.
+- Preserve independent UnityConnectSettings.asset modification. Existing remote connection/server/accounts/backups remain. Source and hub commits are local.
+- Reproduce: Python -B Automation/Server/check_v173.py generates disposable packet fixtures, then Unity eval_file Automation/VerifyV173.cs. Transient fixtures/scripts are removed after verification. Current actual source remains this repository, not the hub index.
+
+---
+
 # 1.7.2 / 199 - neutral Alistar target and bounty - 2026-09-25
 
 - Latest user instruction: finish changes, issue the build command, then end without waiting for completion or copying to Desktop.

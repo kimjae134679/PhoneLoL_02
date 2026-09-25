@@ -129,6 +129,8 @@ public class UIGameMultiHeroInfo : MonoBehaviour
 
 	public void SetItemInfo(int BEPBPAPIEHE, ushort CDLJHFICDDI)
 	{
+        // Inactive scoreboard rows can receive data before their Awake callback.
+        m_items = PhoneLOLModeRules.ExpandResultItems(m_items);
 		m_items[BEPBPAPIEHE].set_spriteName(string.Format("{0}", CDLJHFICDDI));
 	}
 

@@ -507,7 +507,7 @@ public class UILobbyBattleReady : MonoBehaviour
 		m_oneDealerToggle.set_value(false);
 		m_supporterToggle.set_value(false);
 		m_junglerToggle.set_value(false);
-		JMHGGCGKCLE = 30f;
+		JMHGGCGKCLE = 99f;
 		ODFKHOOMAEL = 10f;
 		m_selectHeroWindow.SetActive(true);
 		m_selectSkinWindow.SetActive(false);
@@ -982,7 +982,7 @@ public class UILobbyBattleReady : MonoBehaviour
 						if (i == num)
 						{
 							m_timeoutLabel[i].gameObject.SetActive(true);
-							m_timeoutLabel[i].set_text(((int)((float)JMHGGCGKCLE + 1f)).ToString());
+							m_timeoutLabel[i].set_text(Mathf.CeilToInt((float)JMHGGCGKCLE).ToString());
 							if ((float)JMHGGCGKCLE > 10f)
 							{
 								m_timeoutLabel[i].set_color(new Color(1f, 1f, 1f));

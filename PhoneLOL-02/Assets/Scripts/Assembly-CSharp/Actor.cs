@@ -3001,11 +3001,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	public float get_m_life_steal()
 	{
 		float num = get_m_life_steal_base() + get_m_life_steal_add();
-		if (num > 0.55f)
-		{
-			num = 0.55f;
-		}
-		return num;
+		return PhoneLOLModeRules.LifeSteal(num);
 	}
 
 	[SpecialName]
@@ -3552,11 +3548,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	public float get_m_cooldown_percent()
 	{
 		float num = get_m_cooldown_percent_base() + get_m_cooldown_percent_add();
-		if (num > 0.4f)
-		{
-			num = 0.4f;
-		}
-		return num;
+		return PhoneLOLModeRules.CooldownReduction(num);
 	}
 
 	public void CreateMissileRPC(string NCADFOBAFJD, Vector3 HEPNHCEIFMO, Actor LPOAEBNAGCP)
@@ -3733,11 +3725,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 		float num2 = 0f;
 		num2 -= get_m_buffsInfo().KDPEHABNMFC(JGOOOBHDBCG.ACPICCBBPHF.SlowAttack);
 		num += num * num2;
-		if (num > 2.5f)
-		{
-			return 2.5f;
-		}
-		return num;
+		return PhoneLOLModeRules.AttackSpeed(num);
 	}
 
 	public ushort get_KillCount()
@@ -4250,11 +4238,7 @@ public class Actor : MonoBehaviour, OEKJBKLGNCE, KMDHFPLEMDD
 	public float get_m_mag_life_steal()
 	{
 		float num = get_m_mag_life_steal_base() + get_m_mag_life_steal_add();
-		if (num > 0.55f)
-		{
-			num = 0.55f;
-		}
-		return num;
+		return PhoneLOLModeRules.LifeSteal(num);
 	}
 
 	public void CallGameItemBuySellRPC(uint ANCDOGMDMKC, ushort CDLJHFICDDI, int DHNOPCIJDBO)

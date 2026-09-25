@@ -1,0 +1,16 @@
+PASS actual client auth/group/countdown case=0 peer=0 session=1
+PASS actual client auth/group/countdown case=0 peer=1 session=2
+PASS actual client auth/group/countdown case=1 peer=0 session=3
+PASS actual client auth/group/countdown case=1 peer=1 session=4
+PASS actual client auth/group/countdown case=2 peer=0 session=5
+PASS actual client auth/group/countdown case=2 peer=1 session=6
+PASS actual client auth/group/countdown case=3 peer=0 session=7
+PASS actual client auth/group/countdown case=3 peer=1 session=8
+PASS actual client auth/group/countdown case=4 peer=0 session=9
+PASS actual client auth/group/countdown case=4 peer=1 session=10
+PASS actual client auth/group/countdown case=5 peer=0 session=11
+PASS actual client auth/group/countdown case=5 peer=1 session=12
+PASS actual client auth/group/countdown case=6 peer=0 session=13
+PASS actual client auth/group/countdown case=6 peer=1 session=14
+PASS original-mode caps; modified-mode uncapped attack speed/absorption; all AA cooldown examples and progression; inactive scoreboard slots
+PASS selection timer reset to 99, ceil display starts at 99

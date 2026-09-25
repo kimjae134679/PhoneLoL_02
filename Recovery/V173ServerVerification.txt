@@ -1,0 +1,7 @@
+PASS mode=0 operation=0: isolated room, two-player start/load/relay, bounded self-first Eve sessions
+PASS mode=0 operation=1: isolated room, two-player start/load/relay, bounded self-first Eve sessions
+PASS mode=10 operation=0: isolated room, two-player start/load/relay, bounded self-first Eve sessions
+PASS mode=20 operation=0: isolated room, two-player start/load/relay, bounded self-first Eve sessions
+PASS mode=101 operation=3: isolated room, two-player start/load/relay, bounded self-first Eve sessions
+PASS mode=102 operation=3: isolated room, two-player start/load/relay, bounded self-first Eve sessions
+PASS mode=103 operation=3: isolated room, two-player start/load/relay, bounded self-first Eve sessions

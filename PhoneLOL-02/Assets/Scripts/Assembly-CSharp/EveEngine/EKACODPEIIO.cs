@@ -207,6 +207,14 @@ namespace EveEngine
 			return NMPLJHGLHBN;
 		}
 
+        protected void SetBattleSession(int session)
+        {
+            // Authenticated battle ownership uses bounded Eve IDs, not native transport keys.
+            if (session <= 0 || session > 2147481)
+                throw new InvalidOperationException("Invalid authenticated battle session.");
+            FFOLMIHPEOF(session);
+        }
+
 		private void FFOLMIHPEOF(int ICENKPDOHBK)
 		{
 			NMPLJHGLHBN = ICENKPDOHBK;
