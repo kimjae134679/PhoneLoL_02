@@ -10,3 +10,4 @@
 - 서버: 기존 SQLite와 실행 파일을 `recovery/04_runtime/backups/v1181_20260926_034738`에 백업 후 account_services 및 managed_results 두 파일을 운영 반영. 29000 listen, SQLite integrity ok, 기존 계정 21개 확인. 다른 사람이 실제 접속 중인 상태의 무중단 전환이나 4대 동시 폰 플레이를 검사했다고 간주하지 않는다.
 - 검증 소스: `Automation/VerifyV1181Practice.cs`, `VerifyV1181Lobby.cs`, `VerifyV1181Offline.cs`, `VerifyV1181OfflineSockets.cs`, `Automation/Server/check_v1181_records.py`. 기준 비교용 `Recovery/V1181OfflineProfileFixture.bin`. 기존 사용자 `UnityConnectSettings.asset` 변경은 제외한다.
 - 다음 실기기 확인: 네트워크 끈 상태에서 실행 → 안내창 '예' → 혼자 URF 선택·전투 시작·승패/종료 → 다시 온라인 실행. 채팅에서 중간 글자 선택/수정/엔터/보내기, 카타리나 이동 방향, 알리스타 첫 처치 뒤 재공격을 확인한다.
+- 1.18.2를 준비하며 같은 경로의 1.18.1 APK가 다시 생성되었다. 위 SHA-256은 1.18.1 최초 전달본의 기록이며 현재 디스크 파일 해시는 아니다. 차이와 현재 해시는 `Recovery/V1182NetworkMove.md` 참조.

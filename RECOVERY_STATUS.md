@@ -1,3 +1,8 @@
+# 1.18.2 / 206 - moved network, verified public tunnel - 2026-09-27 KST
+APK: PhoneLOL-02/Builds/PhoneLOL-1.18.2.apk. The configured public endpoint and game protocol were verified through the existing tunnel. Details, SHA-256, and device-testing limits: Recovery/V1182NetworkMove.md.
+
+---
+
 # 1.18.1 / 205 - offline solo mode and gameplay fixes - 2026-09-26
 APK: PhoneLOL-02/Builds/PhoneLOL-1.18.1.apk. Details and verification: Recovery/V1181Release.md. Phone device flow and iOS IPA are not verified.
 
