@@ -38,6 +38,7 @@ public static class PhoneLOLOfflineSession
         internal uint device; internal string nickname; internal byte mode = 10;
         internal ushort hero; internal byte skin, ready, lane, slot;
         internal ulong game = 118100001; internal int session = 1;
+        internal bool worldReady; internal DateTime startedUtc; internal byte[] result;
     }
     private static SoloPlayer Player(uint device) {
         lock (gate) {
@@ -121,6 +122,8 @@ public static class PhoneLOLOfflineSession
                     return Body(w => { w.Write((byte)0); WriteText(w, player.nickname);
                         w.Write(100000000L); w.Write(0L); });
                 case 3: return new byte[] { 0 };
+                case 27: return LookupResult(payload);
+                case 33: return Body(w => w.Write((ushort)0));
                 default: return new byte[] { 255 };
             }
         }
@@ -168,6 +171,21 @@ public static class PhoneLOLOfflineSession
                 for (int slot=0;slot<60;slot++) w.Write((ushort)0);
             });
         }
+        private byte[] LookupResult(byte[] payload) {
+            if (payload.Length != 19 || BitConverter.ToUInt64(payload, 0) != player.game ||
+                BitConverter.ToUInt16(payload, 8) != player.hero) return new byte[] { 255 };
+            lock (gate) return player.result ?? new byte[] { 255 };
+        }
+        private byte[] MatchResult() {
+            int seconds = (int)Math.Min(int.MaxValue, Math.Max(1, (DateTime.UtcNow - player.startedUtc).TotalSeconds));
+            return Body(w => {
+                w.Write(seconds); w.Write(0u); w.Write(0L); w.Write(0L); w.Write((byte)0);
+                w.Write((byte)99); w.Write(0u); w.Write(100000000L);
+                for (int i = 0; i < 4; i++) w.Write(0u);
+                for (int i = 0; i < 2; i++) { w.Write((byte)0); w.Write(0); w.Write(0u); }
+                w.Write(0); w.Write((byte)0); w.Write(DateTime.UtcNow.Ticks);
+            });
+        }
         private byte[] PlayerInfo() {
             return Body(w => {
                 w.Write(player.device); WriteText(w,player.nickname); w.Write((byte)99);
@@ -208,6 +226,8 @@ public static class PhoneLOLOfflineSession
                 w.Write((byte)(player.slot%2)); w.Write(player.lane); w.Write(roster); }));
         }
         private void StartBattle() {
+            player.startedUtc = DateTime.UtcNow; player.worldReady = false;
+            lock (gate) player.result = null;
             byte[] endpoint={127,0,0,1,0x22,0x4e}; // 20002 little endian
             Reply(60004,0,Body(w=>{w.Write(5001);w.Write(player.session);
                 w.Write(player.session); w.Write(endpoint);w.Write(endpoint);}));
@@ -246,8 +266,13 @@ public static class PhoneLOLOfflineSession
                     Reply(19,0,Body(w=>{w.Write(player.device);w.Write(data);}));
                     Reply(20,0,Body(w=>{w.Write(true);w.Write(player.game);}));
                     break;
-                case 21: break;
-                case 22: Reply(22,request,data); break;
+                case 21: player.worldReady = true; break;
+                case 22:
+                    if (!player.worldReady || data.Length < 9 || data[0] > 2) {
+                        Reply(22,request,new byte[]{255}); break;
+                    }
+                    lock (gate) player.result = MatchResult();
+                    Reply(22,request,data); break;
                 case 60019: break; // Eve handles the sole local player in IsLocalMode.
                 case 10: Reply(10,request,Body(w=>{w.Write((byte)0);
                     w.Write(player.device);w.Write(false);}));break;

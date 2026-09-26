@@ -1,3 +1,8 @@
+# 1.18.3 / 207 - offline solo end-of-match results - 2026-09-27 KST
+Android output: PhoneLOL-02/Builds/PhoneLOL-1.18.3.apk. Local sockets now cover battle completion and result lookup. Verification details: Recovery/V1183OfflineResult.md. A phone gameplay run remains unverified.
+
+---
+
 # 1.18.2 / 206 - moved network, verified public tunnel - 2026-09-27 KST
 APK: PhoneLOL-02/Builds/PhoneLOL-1.18.2.apk. The configured public endpoint and game protocol were verified through the existing tunnel. Details, SHA-256, and device-testing limits: Recovery/V1182NetworkMove.md.
 
