@@ -1,0 +1,51 @@
+RIGHT BottomRight (214.00, -165.06, 0.00)
+ child StartButton (14.00, -4.00, 0.00)
+ child ChallengeStartButton (-116.00, -5.00, 0.00)
+ child RankGameButton (141.00, -10.00, 0.00)
+ child SilverMatchButton (16.00, -5.00, 0.00)
+ child NormalGameButton (42.00, -19.00, 0.00)
+ child FriendshipButton (-131.00, -19.00, 0.00)
+WINDOW Lobby BattleReadyPanel
+BackButton pos=(-361.00, -177.00, 0.00) size=90,90
+Team0Window pos=(-317.00, 41.00, 0.00) size=178,326
+Title pos=(0.00, 161.00, 0.00) size=132,38
+InviteButton pos=(0.00, 0.00, 0.00) size=100,38
+InviteButton pos=(0.00, 0.00, 0.00) size=100,38
+InviteButton pos=(0.00, 0.00, 0.00) size=100,38
+Team1Window pos=(318.00, 41.00, 0.00) size=178,326
+Title pos=(0.00, 161.00, 0.00) size=132,38
+InviteButton pos=(0.00, 0.00, 0.00) size=100,38
+InviteButton pos=(0.00, 0.00, 0.00) size=100,38
+InviteButton pos=(0.00, 0.00, 0.00) size=100,38
+HeroTitle pos=(0.00, 150.00, 0.00) size=300,40
+RuneTitle pos=(0.00, 53.00, 0.00) size=90,40
+RunePage1Button pos=(-33.00, -7.00, 0.00) size=60,60
+RunePage2Button pos=(33.00, -7.00, 0.00) size=60,60
+PositionTitle pos=(0.00, 51.00, 0.00) size=138,40
+ReadyButton pos=(362.00, -175.00, 0.00) size=90,90
+AutoEnterButton pos=(283.00, -175.00, 0.00) size=90,90
+Back pos=(0.00, 38.00, 0.00) size=1024,768
+RIGHT BottomRight (377.00, -190.25, 0.00)
+ child AttackButton (-9.42, 8.00, 0.00)
+ child SpellButton (-183.00, 94.00, 0.00)
+ child Skill0Button (-98.93, 8.00, 0.00)
+ child Skill1Button (-10.00, 99.00, 0.00)
+ child Skill2Button (-99.00, 99.00, 0.00)
+ child Skill3Button (-188.00, 8.00, 0.00)
+ child ShopButton (-422.00, 30.00, 0.00)
+ child ItemUseButton (-89.00, 169.00, 0.00)
+WINDOW MultiGame GameInfoWindow
+WINDOW MultiGame MultiGameResultPanel
+Back pos=(1.00, 2.00, 0.00) size=854,640
+Button pos=(590.00, 0.00, 0.00) size=94,32
+Button pos=(590.00, 0.00, 0.00) size=94,32
+Button pos=(590.00, 0.00, 0.00) size=94,32
+Button pos=(590.00, 0.00, 0.00) size=94,32
+Button pos=(590.00, 0.00, 0.00) size=94,32
+Button pos=(590.00, 0.00, 0.00) size=94,32
+ExitButton pos=(376.00, -141.00, 0.00) size=100,86
+BoastButton pos=(376.00, -42.00, 0.00) size=100,86
+Back pos=(13.00, 0.00, 0.00) size=854,640
+TitleLabel pos=(0.00, 106.00, 0.00) size=402,26
+ReportButton pos=(122.00, -99.00, 0.00) size=112,40
+ExitButton pos=(201.00, 130.00, 0.00) size=50,50

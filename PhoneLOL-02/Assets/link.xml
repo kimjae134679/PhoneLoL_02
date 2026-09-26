@@ -1,0 +1,6 @@
+<linker>
+  <!-- Recovered game serializers and RPCs discover types/methods by reflection. -->
+  <assembly fullname="Assembly-CSharp" preserve="all" />
+  <assembly fullname="Assembly-CSharp-firstpass" preserve="all" />
+  <assembly fullname="System.Net.Json" preserve="all" />
+</linker>

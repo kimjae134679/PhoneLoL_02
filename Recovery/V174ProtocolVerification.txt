@@ -1,0 +1,9 @@
+PASS departure 0: offline flag, nickname/hero/device preserved, Eve master updated
+PASS departure 1: offline flag, nickname/hero/device preserved, Eve master updated
+PASS departure 2: offline flag, nickname/hero/device preserved, Eve master updated
+PASS departure 3: offline flag, nickname/hero/device preserved, Eve master updated
+PASS departure 4: offline flag, nickname/hero/device preserved, Eve master updated
+PASS departure 5: offline flag, nickname/hero/device preserved, Eve master updated
+PASS both game managers remain connected after a simulated 10000 seconds idle
+CONSOLE enabled=False visible=False captured=True
+PASS critical connection error emits Error log; native developer-console visibility requires Player verification

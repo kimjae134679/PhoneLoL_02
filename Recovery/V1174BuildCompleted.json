@@ -1,0 +1,16 @@
+{
+  "version": "1.17.4",
+  "versionCode": 202,
+  "package": "com.jcl.lmulti",
+  "result": "Succeeded",
+  "errors": 0,
+  "warnings": 762,
+  "bytes": 143245542,
+  "sha256": "68d1efa50f86faf7a7e570abe671c41a49398306ebfc9efd20e7f5171ef317a5",
+  "arm64_libraries": 6,
+  "zip_crc": "pass",
+  "job": "11da256dd71745beab82ba0258bead7e",
+  "completed_utc": "2026-09-25T09:25:18.9708773Z",
+  "source_commit": "4adc55c",
+  "phone_gameplay": "not_verified"
+}

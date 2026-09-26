@@ -1,0 +1,2 @@
+PASS MultiGame: 14 combat controls, four edge raycasts each, no attack/skill/item/upgrade overlap; 8 full-size active slots
+PASS MtmGame: 14 combat controls, four edge raycasts each, no attack/skill/item/upgrade overlap; 8 full-size active slots

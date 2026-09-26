@@ -1,0 +1,207 @@
+using System;
+using System.Runtime.CompilerServices;
+
+namespace EveEngine
+{
+	public class PFPNBBFDKMD : IDisposable
+	{
+		private static EveEngine.DFGJOKLEJPI<PFPNBBFDKMD> FDNEIEMLOAK = new EveEngine.DFGJOKLEJPI<PFPNBBFDKMD>(1);
+
+		public long CJBEAEENCAB;
+
+		public long GPMHFNBAIJF;
+
+		public int IBPFKIGGFGB;
+
+		private CMNIABEFLBJ KDILGCPIJAC;
+
+		public CMNIABEFLBJ LFPGIILPOMF
+		{
+			get
+			{
+				return HBPJMOFFKDL();
+			}
+			protected set
+			{
+				GLCOEJKBFBK(value);
+			}
+		}
+
+		public static PFPNBBFDKMD CMOFFDJFKFI(CMNIABEFLBJ EFDLFNPAKGO, long MBKMHBAGMHI)
+		{
+			PFPNBBFDKMD pFPNBBFDKMD = FDNEIEMLOAK.IBLGIEAPNEK();
+			pFPNBBFDKMD.FIGLEPBIEEJ(EFDLFNPAKGO, MBKMHBAGMHI);
+			return pFPNBBFDKMD;
+		}
+
+		[SpecialName]
+		public CMNIABEFLBJ LONAPCGBDDI()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public void HKACNLNCFBK()
+		{
+			if (AEPKCLDJFFN() != null)
+			{
+				HBPJMOFFKDL().CDPNLMMNNBD();
+				LNFLGMJAHPD(null);
+			}
+			CJBEAEENCAB = 0L;
+			GPMHFNBAIJF = 1L;
+			FDNEIEMLOAK.OPEDLOCDGLC(this);
+		}
+
+		[SpecialName]
+		public CMNIABEFLBJ OOLPICIGMOJ()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public void Dispose()
+		{
+			JDBENBMLFNP(true);
+			GC.SuppressFinalize(this);
+		}
+
+		protected void GLCOEJKBFBK(CMNIABEFLBJ ICENKPDOHBK)
+		{
+			KDILGCPIJAC = ICENKPDOHBK;
+		}
+
+		[SpecialName]
+		public CMNIABEFLBJ JDCGMMPJINN()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public void NIKMBMGDMDE()
+		{
+			if (JDCGMMPJINN() != null)
+			{
+				JDCGMMPJINN().CDPNLMMNNBD();
+				LNFLGMJAHPD(null);
+			}
+			CJBEAEENCAB = 1L;
+			GPMHFNBAIJF = 0L;
+			FDNEIEMLOAK.OPEDLOCDGLC(this);
+		}
+
+		public void FIGLEPBIEEJ(CMNIABEFLBJ EFDLFNPAKGO, long MBKMHBAGMHI)
+		{
+			GLCOEJKBFBK(EFDLFNPAKGO);
+			CJBEAEENCAB = MBKMHBAGMHI;
+			GPMHFNBAIJF = MBKMHBAGMHI;
+			IBPFKIGGFGB = 0;
+		}
+
+		public void NGFBCKPMPAE()
+		{
+			JDBENBMLFNP(false);
+			GC.SuppressFinalize(this);
+		}
+
+		public static PFPNBBFDKMD FCFGEKNJJJB(CMNIABEFLBJ EFDLFNPAKGO, long MBKMHBAGMHI)
+		{
+			PFPNBBFDKMD pFPNBBFDKMD = FDNEIEMLOAK.IBLGIEAPNEK();
+			pFPNBBFDKMD.FIGLEPBIEEJ(EFDLFNPAKGO, MBKMHBAGMHI);
+			return pFPNBBFDKMD;
+		}
+
+		[SpecialName]
+		public CMNIABEFLBJ NGIHEKLGOJG()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public static PFPNBBFDKMD PEFJOMFAOJI(CMNIABEFLBJ EFDLFNPAKGO, long MBKMHBAGMHI)
+		{
+			PFPNBBFDKMD pFPNBBFDKMD = FDNEIEMLOAK.IBLGIEAPNEK();
+			pFPNBBFDKMD.FIGLEPBIEEJ(EFDLFNPAKGO, MBKMHBAGMHI);
+			return pFPNBBFDKMD;
+		}
+
+		protected virtual void BKLMMEGGMNI(bool BPCKECGFJPA)
+		{
+			if (BPCKECGFJPA && JDCGMMPJINN() != null)
+			{
+				PPNDDCHACAB().Dispose();
+			}
+		}
+
+		public static PFPNBBFDKMD CGAMDEIHGOI(CMNIABEFLBJ EFDLFNPAKGO, long MBKMHBAGMHI)
+		{
+			PFPNBBFDKMD pFPNBBFDKMD = FDNEIEMLOAK.IBLGIEAPNEK();
+			pFPNBBFDKMD.FIGLEPBIEEJ(EFDLFNPAKGO, MBKMHBAGMHI);
+			return pFPNBBFDKMD;
+		}
+
+		[SpecialName]
+		public CMNIABEFLBJ PPNDDCHACAB()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public void CDPNLMMNNBD()
+		{
+			if (HBPJMOFFKDL() != null)
+			{
+				HBPJMOFFKDL().CDPNLMMNNBD();
+				GLCOEJKBFBK(null);
+			}
+			CJBEAEENCAB = 0L;
+			GPMHFNBAIJF = 0L;
+			FDNEIEMLOAK.OPEDLOCDGLC(this);
+		}
+
+		public void JBADKAADPBO()
+		{
+			if (HBPJMOFFKDL() != null)
+			{
+				PPNDDCHACAB().CDPNLMMNNBD();
+				GLCOEJKBFBK(null);
+			}
+			CJBEAEENCAB = 1L;
+			GPMHFNBAIJF = 0L;
+			FDNEIEMLOAK.OPEDLOCDGLC(this);
+		}
+
+		[SpecialName]
+		public CMNIABEFLBJ AEPKCLDJFFN()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public static PFPNBBFDKMD PEIDICMDANE(CMNIABEFLBJ EFDLFNPAKGO, long MBKMHBAGMHI)
+		{
+			PFPNBBFDKMD pFPNBBFDKMD = FDNEIEMLOAK.IBLGIEAPNEK();
+			pFPNBBFDKMD.FIGLEPBIEEJ(EFDLFNPAKGO, MBKMHBAGMHI);
+			return pFPNBBFDKMD;
+		}
+
+		[SpecialName]
+		protected void LNFLGMJAHPD(CMNIABEFLBJ ICENKPDOHBK)
+		{
+			KDILGCPIJAC = ICENKPDOHBK;
+		}
+
+		protected virtual void JDBENBMLFNP(bool BPCKECGFJPA)
+		{
+			if (BPCKECGFJPA && HBPJMOFFKDL() != null)
+			{
+				HBPJMOFFKDL().Dispose();
+			}
+		}
+
+		public CMNIABEFLBJ HBPJMOFFKDL()
+		{
+			return KDILGCPIJAC;
+		}
+
+		public void JGCPFKEPPOM()
+		{
+			BKLMMEGGMNI(true);
+			GC.SuppressFinalize(this);
+		}
+	}
+}

@@ -1,0 +1,5 @@
+PASS nickname change and reconnect profile
+PASS mode=101 capacity=10, balanced teams, roster/start/load/results, items=5
+PASS mode=102 capacity=10, balanced teams, roster/start/load/results, items=8
+PASS mode=103 capacity=10, balanced teams, roster/start/load/results, items=8
+PASS nickname persists after server restart with same database

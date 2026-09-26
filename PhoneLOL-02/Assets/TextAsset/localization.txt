@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<language>
+	<word key="로그인" kr="로그인" en="Login" tr="Oturum Aç" ch="登錄" jp="ログイン"/>
+	<word key="게임을 시작하시려면 로그인 버튼을 눌러주세요." kr="게임을 시작하시려면 로그인 버튼을 눌러주세요." en="Please push login button." tr="Giriş butonuna basınız." ch="請按登錄按鈕。" jp="ゲームを開始するには、ログインボタンを押してください。"/>
+	<word key="롤 막타의 신" kr="롤 막타의 신" en="LoL Last Attack" tr="LoL Last Attack" ch="LoL Last Attack" jp="LoL Last Attack"/>
+	<word key="최신버전을 설치해 주세요.&#xA;다운로드로 이동합니다." kr="최신버전을 설치해 주세요.&#xA;다운로드로 이동합니다." en="Please install the latest version from the Market.&#xA;Now, go to the market for download." tr="Market son sürümünü yükleyin.&#xA;Şimdi, indirmek için pazara gitmek." ch="請安裝最新版本的市場。&#xA;現在，去市場下載。" jp="最新バージョンをインストールしてください。&#xA;ダウンロードに移動します。"/>
+	<word key="종합랭킹" kr="종합랭킹" en="Total Rank" tr="kapsamlı Sıralaması" ch="總排行" jp="総合ランキング"/>
+	<word key="무료충전소" kr="무료충전소" en="Free Charge" tr="Ücretsiz Şarj İstasyonu" ch="免費" jp="無料充電ステーション"/>
+	<word key="미션" kr="미션" en="Mission" tr="misyon" ch="使命" jp="ミッション"/>
+	<word key="추천이벤트" kr="추천이벤트" en="Recommend Event" tr="Olay Öneriliyor" ch="推薦活動" jp="おすすめイベント"/>
+	<word key="게임시작" kr="게임시작" en="Game Start" tr="oyun Başlangıç" ch="遊戲開始" jp="ゲーム開始"/>
+	<word key="종합랭킹 {0}" kr="종합랭킹 {0}" en="Total Rank {0}" tr="Toplam Rank {0}" ch="總排行 {0}" jp="総合ランキング{0}"/>
+	<word key="{0}코인이 무료충전되었습니다!&#xA;&#xA;감사합니다^^" kr="{0}코인이 무료충전되었습니다!&#xA;&#xA;감사합니다^^" en="{0} coin has been charged!&#xA;&#xA;Thank you!" tr="{0} Coin suçlanıyor!&#xA;&#xA;Teşekkür ederim!" ch="{0} Coin 已被落案！&#xA;&#xA;謝謝！" jp="{0}コインが無料充電ました！&#xA;&#xA;ありがとうございます^^"/>
+	<word key="지금 무료뽑기가 가능해욥~&#xA;&#xA;무료뽑기로 이동할까요?" kr="지금 무료뽑기가 가능해욥~&#xA;&#xA;무료뽑기로 이동할까요?" en="I can use free random box&#xA;&#xA;Should go to the free random box?" tr="Ben özgür rastgele kutusunu kullanabilirsiniz&#xA;&#xA;Ücretsiz rastgele kutusuna gitmeli?" ch="我可以使用免費的隨機盒&#xA;&#xA;應該去免費隨機箱子？" jp="今すぐ無料抜くが可能です〜&#xA;&#xA;無料抜くことで移動したいですか？"/>
+	<word key="[BBFFBB]* 축하드려요 *[-]&#xA;&#xA;&#xA;지난시즌 랭킹 [BBBBFF]{0}[-]위로&#xA;&#xA;[FFFFBB]{1}[-]코인을 보상으로 획득하셨어요!" kr="[BBFFBB]* 축하드려요 *[-]&#xA;&#xA;&#xA;지난시즌 랭킹 [BBBBFF]{0}[-]위로&#xA;&#xA;[FFFFBB]{1}[-]코인을 보상으로 획득하셨어요!" en="[BBFFBB] * Congratulations * [-]&#xA;&#xA;&#xA;Last season, your ranking is [BBBBFF] {0} [-]&#xA;&#xA;Get [FFFFBB] {1} [-] coin reward!" tr="&quot;[BBFFBB] * Tebrikler * [-]&#xA;&#xA;&#xA;Geçen sezon, sizin sıralamasında [BBBBFF] {0} [-]&#xA;&#xA;ödülü [FFFFBB] {1} [-] coin alın!" ch="[BBFFBB] * 祝賀 *[-]&#xA;&#xA;&#xA;上個賽季，你的排名是[BBBBFF]{0}[-]&#xA;&#xA;獲取 [FFFFBB]{1}[-] Coin 獎勵！" jp="[BBFFBB]*おめでとうございます*[ - ]&#xA;&#xA;&#xA;昨シーズンランキング[BBBBFF]{0}[-]の上&#xA;&#xA;[FFFFBB]{1}[-]コインを報酬で獲得しました！"/>
+	<word key="룬 상점" kr="룬 상점" en="Rune Shop" tr="Rune Dükkanı" ch="符文店" jp="ルーン店"/>
+	<word key="룬" kr="룬" en="Rune" tr="Rune" ch="符文" jp="ルーン"/>
+	<word key="무료뽑기상자" kr="무료뽑기상자" en="Free Random Box" tr="Ücretsiz Rastgele Kutusu" ch="免費隨機盒" jp="無料抜くボックス"/>
+	<word key="100코인 무료충전" kr="100코인 무료충전" en="Free Charge 100 Coin" tr="Ücretsiz Şarj 100 Coin" ch="免費 100 Coin" jp="100コイン無料充電"/>
+	<word key="보상 수동 확인" kr="보상 수동 확인" en="Check delayed reward" tr="Gecikmiş ödül edin" ch="檢查延遲獎勵" jp="補償手動で確認する"/>
+	<word key="소환사 정보" kr="소환사 정보" en="Information" tr="bilgi" ch="信息" jp="召喚師情報"/>
+	<word key="코인" kr="코인" en="Coin" tr="Coin" ch="Coin" jp="コイン"/>
+	<word key="일부 보상은 지연될 수 있습니다&#xA;지연된 보상을 확인하시겠습니까?&#xA;&#xA;(일부는 많이 지연될 수 있습니다)" kr="일부 보상은 지연될 수 있습니다&#xA;지연된 보상을 확인하시겠습니까?&#xA;&#xA;(일부는 많이 지연될 수 있습니다)" en="Some compensation may be delayed&#xA;Do you want to deferred compensation?&#xA;&#xA;(Some of which may be delayed a lot)" tr="Bazı tazminat gecikebilir&#xA;Eğer ertelenmiş tazminat istiyor musunuz?&#xA;&#xA;(Bunlardan bazıları, bir çok gecikebilir)" ch="有些補償可能會延遲&#xA;你想延期補償？&#xA;&#xA;（其中一些可能會延遲很多）" jp="いくつかの補償は遅延が発生することがあります&#xA;遅延補償を確認しますか？&#xA;&#xA;（一部は多くの遅延が発生することがあります）"/>
+	<word key="컨텐츠가 준비되지 않았습니다&#xA;&#xA;잠시후에 다시 시도해 주세요" kr="컨텐츠가 준비되지 않았습니다&#xA;&#xA;잠시후에 다시 시도해 주세요" en="Content is not ready&#xA;&#xA;Please try again in a few seconds" tr="İçerik hazır değil&#xA;&#xA;Birkaç saniye içinde tekrar deneyin" ch="內容還沒有準備好&#xA;&#xA;請在幾秒鐘後重試" jp="コンテンツが用意されていない&#xA;&#xA;しばらくしてからもう一度お試しください"/>
+	<word key="더 자세한 정보를 보기 위해&#xA;&#xA;공식 카페로 이동하시겠습니까?" kr="더 자세한 정보를 보기 위해&#xA;&#xA;공식 카페로 이동하시겠습니까?" en="Do you want to go to the official Facebook to see more?" tr="Daha fazlasını görmek için resmi Facebook gitmek istiyor musun?" ch="你想去的官方Facebook看到更多？" jp="より詳細な情報を表示するために&#xA;&#xA;公式Facebookに移動しますか？"/>
+	<word key="오늘은 더 하실 수 없습니다" kr="오늘은 더 하실 수 없습니다" en="Today can not be more" tr="Bugün olamaz fazla" ch="今天不能更" jp="今日はよりすることができません"/>
+	<word key="게임을 종료하시겠습니까?" kr="게임을 종료하시겠습니까?" en="Do you want exit game?" tr="Eğer çıkış oyunu ister misiniz?" ch="你想退出遊戲？" jp="ゲームを終了しますか？"/>
+	<word key="랭킹 (상위30)" kr="랭킹 (상위30)" en="Rank (Top30)" tr="Sıra (Top30)" ch="排名（TOP30）" jp="ランキング（上位30）"/>
+	<word key="챔피언" kr="챔피언" en="Champion" tr="şampiyon" ch="冠軍" jp="チャンピオン"/>
+	<word key="게임준비" kr="게임준비" en="Game Ready" tr="oyun Hazır" ch="遊戲就緒" jp="ゲームの準備"/>
+	<word key="게임 준비" kr="게임 준비" en="Ready for game" tr="Oyun için hazır" ch="準備比賽" jp="ゲームの準備"/>
+	<word key="스펠" kr="스펠" en="Spell" tr="büyü" ch="拼" jp="スペル"/>
+	<word key="준비중" kr="준비중" en="Construction" tr="İnşaat" ch="施工" jp="準備中"/>
+	<word key="구매가능" kr="구매가능" en="Purchase" tr="satın alma" ch="購買" jp="購入可能"/>
+	<word key="{0}위 {1}" kr="{0}위 {1}" en="{0}. {1}" tr="{0}. {1}" ch="{0}. {1}" jp="{0}. {1}"/>
+	<word key="{0}를 구매하시겠습니까?&#xA;&#xA;구매코인 : {1}코인" kr="{0}를 구매하시겠습니까?&#xA;&#xA;구매코인 : {1}코인" en="Do you want to buy a {0}?&#xA;&#xA;Price : {1} Coin" tr="Eğer bir {0} satın almak istiyor musunuz?&#xA;&#xA;Fiyatı: {1} Coin" ch="你想購買一台 {0}？&#xA;&#xA;價格：{1} Coin" jp="{0}を購入しますか？&#xA;&#xA;購入コイン：{1}コイン"/>
+	<word key="내 랭킹 : {0}위&#xA;내 최고 기록 : {1}점" kr="내 랭킹 : {0}위&#xA;내 최고 기록 : {1}점" en="My rank : {0}&#xA;My Best Score : {1}" tr="Benim sıralaması: {0}&#xA;My Best Skor: {1}" ch="我的排名：{0}&#xA;我最好的分數：{1}" jp="私のランキング：{0}&#xA;私の最高記録：{1}"/>
+	<word key="구매에 성공하였습니다!&#xA;&#xA;멋진 컨트롤 기대할께요~" kr="구매에 성공하였습니다!&#xA;&#xA;멋진 컨트롤 기대할께요~" en="Succeeded to buy!&#xA;&#xA;I'll expect a nice control ~" tr="Satın başardı!&#xA;&#xA;Ben ~ güzel bir denetim bekliyoruz edeceğiz" ch="成功購買！&#xA;&#xA;我會想到一個很好的控制〜" jp="購入に成功しました！&#xA;&#xA;素敵なコントロールを期待しますよ〜"/>
+	<word key="코인이 부족합니다.&#xA;&#xA;미션이나 무료충전소를 통해서 코인을 획득하실 수 있습니다.&#xA;&#xA;지금 무료충전소로 이동하시겠습니까?" kr="코인이 부족합니다.&#xA;&#xA;미션이나 무료충전소를 통해서 코인을 획득하실 수 있습니다.&#xA;&#xA;지금 무료충전소로 이동하시겠습니까?" en="Not enough coin.&#xA;&#xA;You can obtain a coin through the missions or Free Charge.&#xA;&#xA;Do you want to go to a Free Charge?" tr="Yeterince Coin.&#xA;&#xA;Siz misyonlar veya serbest istasyonları aracılığıyla bir sikke elde edebilirsiniz.&#xA;&#xA;Eğer ücretsiz bir şarj istasyonuna gitmek ister misin?" ch="沒有足夠的 Coin。&#xA;&#xA;您可以獲取通過任務或無償硬幣。&#xA;&#xA;你想不想去一個免費充電？" jp="コインが不足しています。&#xA;&#xA;ミッションや無料充電ステーションを通ってコインを獲得することができます。&#xA;&#xA;今すぐ無料充電ステーションに移動しますか？"/>
+	<word key="알리스타" kr="알리스타" en="Alistar" tr="Alistar" ch="Alistar" jp="Alistar"/>
+	<word key="베인" kr="베인" en="Vayne" tr="Vayne" ch="Vayne" jp="Vayne"/>
+	<word key="제드" kr="제드" en="Zed" tr="Zed" ch="Zed" jp="Zed"/>
+	<word key="아리" kr="아리" en="Ahri" tr="Ahri" ch="Ahri" jp="Ahri"/>
+	<word key="카타리나" kr="카타리나" en="Katarina" tr="Katarina" ch="Katarina" jp="Katarina"/>
+	<word key="그레이브즈" kr="그레이브즈" en="Graves" tr="Graves" ch="Graves" jp="Graves"/>
+	<word key="이즈리얼" kr="이즈리얼" en="Ezreal" tr="Ezreal" ch="Ezreal" jp="Ezreal"/>
+	<word key="블리츠크랭크" kr="블리츠크랭크" en="Blitzcrank" tr="Blitzcrank" ch="Blitzcrank" jp="Blitzcrank"/>
+	<word key="레넥톤" kr="레넥톤" en="Renekton" tr="Renekton" ch="Renekton" jp="Renekton"/>
+	<word key="렝가" kr="렝가" en="Rengar" tr="Rengar" ch="Rengar" jp="Rengar"/>
+	<word key="리븐" kr="리븐" en="Riven" tr="Riven" ch="Riven" jp="Riven"/>
+	<word key="알리스타" kr="알리스타" en="Alistar" tr="Alistar" ch="Alistar" jp="Alistar"/>
+	<word key="마스터 이" kr="마스터 이" en="Master Yi" tr="Master Yi" ch="Master Yi" jp="Master Yi"/>
+	<word key="종합 랭킹" kr="종합 랭킹" en="Total Rank" tr="Toplam Derece" ch="總排行" jp="総合ランキング"/>
+	<word key="미  션" kr="미  션" en="Mission" tr="misyon" ch="使命" jp="ミッション"/>
+	<word key="여기를 눌러서 닉네임 설정" kr="여기를 눌러서 닉네임 설정" en="Set nickname by clicking here." tr="Buraya tıklayarak takma adı ayarlayın." ch="點擊這裡設置的暱稱。" jp="ここを押してニックネームの設定"/>
+	<word key="닉네임 입력경고" kr="위를 누르셔서 닉네임을 입력해주세요.&#xA;한번 입력된 닉네임은 변경이 불가능합니다." en="Press the up letting Please enter your nickname.&#xA;Nickname is entered once can not be changed." tr="Rumuzunuzu girin icar kadar basın.&#xA;Bir kez girilen adı değiştirilemez." ch="按上又讓請輸入你的暱稱。&#xA;暱稱輸入一次，不能更改。" jp="上記をクリックせるニックネームを入力してください。&#xA;一度入力されたニックネームは変更できません。"/>
+	<word key="확인" kr="확인" en="OK" tr="tamam" ch="行" jp="確認"/>
+	<word key="취소" kr="취소" en="Cancel" tr="iptal" ch="取消" jp="キャンセル"/>
+	<word key="추천 이벤트" kr="추천 이벤트" en="Recommend Event" tr="Olay Öneriliyor" ch="推薦活動" jp="おすすめイベント"/>
+	<word key="추천이벤트 설명 라벨" kr="딱 한명 추천을 할 수 있습니다.&#xA;(변경은 불가능해요)&#xA;추천하신 분과 추천을 받으신 분 두 분께는 500코인을 드린답니다.&#xA;&#xA;[AAFFAA]추천한 분[-] [FFFFAA]+500코인[-]&#xA;[AAFFAA]추천 받으신 분[-] [FFFFAA]+500코인[-]" en="You can recommend just one people.&#xA;(Changes are impossible.)&#xA;&#xA;[AAFFAA]Recommend[-] [FFFFAA]+500 Coin[-]&#xA;[AAFFAA]Receive Recommend[-] [FFFFAA]+500 Coin[-]" tr="Sen sadece bir kişiyi tavsiye ederim.&#xA;(Değişiklikler imkansız.)&#xA;&#xA;[AAFFAA] Tavsiye [-] [FFFFAA] 500 Coin [-]&#xA;[AAFFAA] Tavsiye al [-] [FFFFAA] 500 Coin [-]" ch="你可以推薦只是一個人。&#xA;（改變是不可能的。）&#xA;&#xA;[AAFFAA]推薦[-] [FFFFAA]500 Coin[-]&#xA;[AAFFAA]接收推薦[-] [FFFFAA]500 Coin[-]" jp="ぴったり一人の推薦をすることができます。&#xA;（変更はできませんよ）&#xA;おすすめされた方の推薦を受けた方両方の方には、500コインをいただいたんです。&#xA;&#xA;[AAFFAA]推薦された分[-] [FFFFAA]+ 500コイン[-]&#xA;[AAFFAA]オススメ受けた方[-] [FFFFAA]+ 500コイン[-]"/>
+	<word key="추천하기" kr="추천하기" en="Recommend" tr="tavsiye" ch="推薦" jp="おすすめする"/>
+	<word key="추천할 닉네임" kr="추천할 닉네임" en="Nickname" tr="rumuz" ch="綽號" jp="推薦するニックネーム"/>
+	<word key="여기를 눌러서 닉네임 설정" kr="여기를 눌러서 닉네임 설정" en="Set Nickname click here" tr="Set burada adı tıklayın" ch="設置暱稱，請點擊這裡" jp="ここを押してニックネームの設定"/>
+	<word key="추천이벤트 추천입력경고" kr="한번 추천을 하면 &#xA;다시 할 수 없으니&#xA;신중히 추천해 주세요." en="You can recommend just one people., please carefully recommended." tr="Sen sadece bir kişiyi tavsiye ederim., Dikkatlice tavsiye lütfen." ch="你可以推薦只是一個人。請仔細建議。" jp="一度推薦をする&#xA;再度行うことができないから&#xA;慎重にお勧めしてください。"/>
+	<word key="추천하기" kr="추천하기" en="Recommend" tr="tavsiye" ch="推薦" jp="おすすめする"/>
+	<word key="추천 받은 수" kr="추천 받은 수" en="Receive Recommend Count" tr="Sayısı tavsiye alın" ch="接收推薦計數" jp="推薦されたことが"/>
+	<word key="추천이벤트 제약 설명 라벨" kr="[AAFFAA]추천을 받으면[-] [FFFFAA]+500코인[-][AAFFAA]획득[-]&#xA;[AAFFAA](한명당 한번씩 해당)[-]&#xA;&#xA;[FFAAAA]하루에 10명에게만 추천받으실 수 있어요.&#xA;하루가 지나면 다시 10명이 가능하니 다음날 해주시면 된답니다.&#xA;&#xA;전체 최대 30명에게 추천을 받으실 수 있어요.&#xA;30명이 넘으면 더이상 추천받으실 수 없어요.[-]" en="+500 Coin per receive a recommendation&#xA;(Available once per one people)&#xA;You get only 10 people recommend a day.&#xA;After a day available again.&#xA;You can get a recommendation to the full up to 30 people.&#xA;You can not get more than 30 people no longer recommended." tr="Bir öneri almak başına 500 Coin&#xA;(Mevcut bir kez başına kişi)&#xA;Sadece 10 kişi bir gün tavsiye olsun.&#xA;Yeniden kullanılabilir bir günün ardından.&#xA;30 kişiye kadar tam bir öneri alabilirsiniz.&#xA;Birden fazla 30 kişi artık tavsiye alınamıyor." ch="+500 Coin 每收到一個推薦&#xA;（可每一次的人）&#xA;你只有10人推薦了一天。&#xA;全天後再次。&#xA;你可以得到一個建議，充分多達30人。&#xA;你不能超過30人不再推薦。" jp="[AAFFAA]オススメを受信すると、[-] [FFFFAA]+ 500コイン[-] [AAFFAA]獲得[-]&#xA;[AAFFAA]（一人につき一回のみ）[-]&#xA;&#xA;[FFAAAA]一日に10人だけにおすすめ受けることができます。&#xA;一日が経過すると、再び10人可能なので、次の日にいただければ良いと言います。&#xA;&#xA;最大数は30人におすすめを受けることができます。&#xA;30人を超えるともうお勧め受けることができません。[-]"/>
+	<word key="이미 추천하셨습니다.&#xA;&#xA;추천은 한번만 가능합니다." kr="이미 추천하셨습니다.&#xA;&#xA;추천은 한번만 가능합니다." en="Already recommended.&#xA;&#xA;Recommendation is possible only once." tr="Zaten tavsiye.&#xA;&#xA;Öneri sadece bir kez mümkündür." ch="已經建議。&#xA;&#xA;建議可能只有一次。" jp="既にお勧めされました。&#xA;&#xA;おすすめは、一度だけ可能です。"/>
+	<word key="닉네임은 최소 2자에서 최대 10자 사이입니다." kr="닉네임은 최소 2자에서 최대 10자 사이입니다." en="Nickname length is 2~10 characters." tr="Adı uzunluğu 2 ~ 10 karakterdir." ch="暱稱長度為2〜10個字符。" jp="ニックネームは、少なくとも2文字から最大10文字の間です。"/>
+	<word key="추천을 하였습니다!&#xA;&#xA;[BBFFBB]500코인을 획득하였습니다[-]&#xA;(상대 유저도 500코인 획득)" kr="추천을 하였습니다!&#xA;&#xA;[BBFFBB]500코인을 획득하였습니다[-]&#xA;(상대 유저도 500코인 획득)" en="Recommend succeed.&#xA;&#xA;[BBFFBB]Get 500 Coin[-]&#xA;(Obtained relative user also 500 Coin)" tr="Başarılı öneririz.&#xA;&#xA;[BBFFBB] Get 500 Coin [-]&#xA;(Elde göreli kullanıcı da 500 Coin)" ch="推薦成功。&#xA;&#xA;[BBFFBB]獲取500 Coin[ - ]&#xA;（獲得相對用戶還500 Coin）" jp="おすすめをしました！&#xA;&#xA;[BBFFBB]500コインを獲得しました[-]&#xA;（相手ユーザーも500コイン獲得）"/>
+	<word key="없는 닉네임입니다." kr="없는 닉네임입니다." en="Not exist nickname." tr="Takma ad yok." ch="不存在的暱稱。" jp="ないニックネームです。"/>
+	<word key="상대 유저가 오늘 가능한 모든 추천을 받았습니다.&#xA;&#xA;하루에 10번만 받을 수 있으니&#xA;내일 다시 추천해 주세요." kr="상대 유저가 오늘 가능한 모든 추천을 받았습니다.&#xA;&#xA;하루에 10번만 받을 수 있으니&#xA;내일 다시 추천해 주세요." en="For the user has received all recommended possible today.&#xA;&#xA;It may be only 10 times a day. &#xA;Please recommend again tomorrow." tr="Kullanıcı aldı tüm bugün mümkün önerilir.&#xA;&#xA;Sadece 10 günde bir kez olabilir.&#xA;Yarın yine tavsiye edin." ch="對於用戶已經收到的所有建議可能的今天。&#xA;&#xA;它可以是每天僅10次。&#xA;請再次推薦明天。" jp="相手ユーザが現在入手可能なすべての推奨を受けました。&#xA;&#xA;一日に10回受けることができますので、&#xA;明日またお勧めしてください。"/>
+	<word key="상대 유저가 가능한 추천을 모두 받았습니다.&#xA;&#xA;상대 유저는 더이상 추천을 받으실 수 없습니다.&#xA;&#xA;다른 유저를 추천해주세요." kr="상대 유저가 가능한 추천을 모두 받았습니다.&#xA;&#xA;상대 유저는 더이상 추천을 받으실 수 없습니다.&#xA;&#xA;다른 유저를 추천해주세요." en="Received all recommended possible that the user.&#xA;&#xA;For the user can not receive any more recommendations.&#xA;&#xA;Recommend to another user." tr="Alınan tüm kullanıcı mümkün önerilir.&#xA;&#xA;Kullanıcı için daha fazla öneriler alamazsınız.&#xA;&#xA;Başka bir kullanıcıya tavsiye ederiz." ch="收到的所有建議可能的用戶。&#xA;&#xA;對於用戶不能接收任何更多的建議。&#xA;&#xA;推薦給另一個用戶。" jp="相手ユーザが可能な推薦をすべて受けました。&#xA;&#xA;相手ユーザは、もはやお勧めを受けることができません。&#xA;&#xA;他のユーザーをお勧めしてください。"/>
+	<word key="[BBBBFF]{0}[-]님께서 추천을 해주셨어요&#xA;&#xA;[BBFFBB]500코인을 획득하였습니다[-]" kr="[BBBBFF]{0}[-]님께서 추천을 해주셨어요&#xA;&#xA;[BBFFBB]500코인을 획득하였습니다[-]" en="[BBBBFF]{0}[-] wrote a recommendation.&#xA;&#xA;[BBFFBB]Get 500 Coin[-]" tr="[BBBBFF] {0} [-] bir öneri yazdı.&#xA;&#xA;[BBFFBB] Get 500 Coin [-]" ch="[BBBBFF]{0}[ - ]寫了一個建議。&#xA;&#xA;[BBFFBB]獲取500 Coin[ - ]" jp="[BBBBFF]{0}[-]様がお勧めしてくれた&#xA;&#xA;[BBFFBB]500コインを獲得しました[-]"/>
+	<word key="쿠폰이벤트" kr="쿠폰이벤트" en="Coupon Event" tr="Kupon Etkinlik" ch="優惠券事件" jp="クーポンイベント"/>
+	<word key="쿠폰번호 입력" kr="쿠폰번호 입력" en="Input Coupon Number" tr="Giriş Kupon sayısı" ch="輸入優惠券號碼" jp="クーポン番号を入力"/>
+	<word key="기간이 지난 쿠폰입니다." kr="기간이 지난 쿠폰입니다." en="This coupon is expired" tr="Bu kupon süresi dolmuş" ch="此優惠券已過期" jp="期間が過ぎたクーポンです。"/>
+	<word key="이미 사용한 쿠폰입니다." kr="이미 사용한 쿠폰입니다." en="Already used coupon" tr="Zaten kullanılan kupon" ch="已經使用優惠券" jp="既に使用されたクーポンです。"/>
+	<word key="잘못된 쿠폰번호입니다." kr="잘못된 쿠폰번호입니다." en="Invalid coupon number" tr="Geçersiz kupon numarası" ch="無效的優惠券號碼" jp="不適切なクーポン番号です。"/>
+	<word key="[BBFFBB]{0}[-]코인을 획득하였습니다" kr="[BBFFBB]{0}[-]코인을 획득하였습니다" en="Get [BBFFBB]{0}[-] Coin." tr="[BBFFBB]{0}[-] Coin satın aldı." ch="獲取[BBFFBB]{0}[-]Coin" jp="[BBFFBB]{0}[-]コインを獲得しました"/>
+	<word key="옵션" kr="옵션" en="Option" tr="seçenek" ch="選項" jp="オプション"/>
+	<word key="배경음" kr="배경음" en="BGM" tr="fon müziği" ch="背景音" jp="背景音"/>
+	<word key="효과음" kr="효과음" en="Sound" tr="ses" ch="聲音" jp="効果音"/>
+	<word key="무료뽑기는 하루에 총 3번 가능합니다.&#xA;한번 뽑고 10분 뒤에 다시 뽑으실 수 있습니다." kr="무료뽑기는 하루에 총 3번 가능합니다.&#xA;한번 뽑고 10분 뒤에 다시 뽑으실 수 있습니다." en="Available open three times a day.&#xA;Once and can be again after 10 minutes." tr="Mevcut açık üç kez bir gün.&#xA;Bir kez ve 10 dakika sonra tekrar olabilir." ch="提供開放一日三次。&#xA;一次，就可以在10分鐘後再次。" jp="無料抜くは、一日に合計3回可能です。&#xA;一度抜いて10分後に再び抜きいただけます。"/>
+	<word key="무료" kr="무료" en="Free" tr="ücretsiz" ch="免費" jp="無料"/>
+	<word key="뽑기" kr="뽑기" en="Open" tr="açık" ch="開放" jp="抜く"/>
+	<word key="무료뽑기권" kr="무료뽑기권" en="Available" tr="mevcut" ch="可用的" jp="無料抜く巻"/>
+	<word key="오늘은 모두 사용하셨습니다&#xA;&#xA;내일 다시 사용해 주세요" kr="오늘은 모두 사용하셨습니다&#xA;&#xA;내일 다시 사용해 주세요" en="You have used all of today.&#xA;&#xA;Please try again tomorrow." tr="Sen bugün tüm kullandık.&#xA;&#xA;Yarın Lütfen tekrar deneyin." ch="你用今天所有的。&#xA;&#xA;請明天再試。" jp="今日はすべて使用されました&#xA;&#xA;明日また使用してください"/>
+	<word key="아직 사용하실 수 없습니다" kr="아직 사용하실 수 없습니다" en="Can not be used yet" tr="Henüz kullanılamaz Can" ch="還不能使用" jp="まだ使用することができません"/>
+	<word key="룬 타입" kr="룬 타입" en="Rune Type" tr="Rune Tipi" ch="符文類型" jp="ルーンタイプ"/>
+	<word key="표식" kr="표식" en="Mark" tr="Mark" ch="標" jp="標識"/>
+	<word key="인장" kr="인장" en="Seal" tr="Seal" ch="密封" jp="引張"/>
+	<word key="문양" kr="문양" en="Glyph" tr="Glyph" ch="雕文" jp="文様"/>
+	<word key="정수" kr="정수" en="Quintessence" tr="Quintessence" ch="精華" jp="整数"/>
+	<word key="룬 등급" kr="룬 등급" en="Rune Grade" tr="Rune Sınıf" ch="符文等級" jp="ルーン評価"/>
+	<word key="하급" kr="하급" en="Lesser" tr="Lesser" ch="下" jp="下級"/>
+	<word key="중급" kr="중급" en="Normal" tr="Normal" ch="中" jp="中級"/>
+	<word key="상급" kr="상급" en="Greater" tr="Greater" ch="上" jp="上級"/>
+	<word key="레벨{0} 이상만 가능합니다" kr="레벨{0} 이상만 가능합니다" en="You can only Level {0} or higher" tr="You can yalnızca Seviye {0} veya daha yüksek" ch="你只能級別{0}或更高版本" jp="レベル{0}以上のみ可能です"/>
+	<word key="{0}&#xA;{1} 코인&#xA;&#xA;룬을 구입하시겠습니까?" kr="{0}&#xA;{1} 코인&#xA;&#xA;룬을 구입하시겠습니까?" en="{0}&#xA;{1} Coin&#xA;&#xA;Would you like to buy a rune?" tr="{0}&#xA;{1} Coin&#xA;&#xA;Bir rune satın almak ister misiniz?" ch="{0}&#xA;{1} Coin&#xA;&#xA;你想購買一個符文？" jp="{0}&#xA;{1}コイン&#xA;&#xA;ルーンを購入しますか？"/>
+	<word key="구매에 성공하였습니다!" kr="구매에 성공하였습니다!" en="Succeeded to buy!" tr="Satın başardı!" ch="成功購買！" jp="購入に成功しました！"/>
+	<word key="구입 가능한 최대 개수를 초과하였습니다." kr="구입 가능한 최대 개수를 초과하였습니다." en="You have exceeded the maximum number available for purchase." tr="Sen satın alınabilir maksimum sayısını aştınız." ch="您已超過可購買的最大數量。" jp="購入可能な最大数を超えました。"/>
+	<word key="룬 페이지" kr="룬 페이지" en="Rune Page" tr="Rune Sayfası" ch="符文頁" jp="ルーンページ"/>
+	<word key="장착된 룬 능력" kr="장착된 룬 능력" en="Equipped Rune ability" tr="Donanımlı Rune yeteneği" ch="裝備符文的能力" jp="装着されたルーン能力"/>
+	<word key="초기화" kr="초기화" en="Initialize" tr="başlat" ch="初始化" jp="初期化"/>
+	<word key="장착&#xA;가능" kr="장착&#xA;가능" en="Available" tr="mevcut" ch="可用的" jp="装着&#xA;可能"/>
+	<word key="장착할 룬을 선택해 주세요" kr="장착할 룬을 선택해 주세요" en="Please select rune for equip" tr="Donatmak için rune seçiniz" ch="請選擇符文的裝備" jp="装着するルーンを選択してください"/>
+	<word key="장착 가능한 룬이 없습니다.&#xA;&#xA;룬은 룬 상점에서 구입이 가능합니다." kr="장착 가능한 룬이 없습니다.&#xA;&#xA;룬은 룬 상점에서 구입이 가능합니다." en="There is no mountable runes.&#xA;&#xA;Runes can be purchased at the rune shop." tr="Hiçbir monte rünler yoktur.&#xA;&#xA;Runes rün dükkanında satın alınabilir." ch="沒有安裝的符文。&#xA;&#xA;符文可以在符文店購買。" jp="装着可能なルーンはありません。&#xA;&#xA;ルーンはルーンの店で購入が可能です。"/>
+	<word key="정말 초기화하시겠습니까?" kr="정말 초기화하시겠습니까?" en="Are you sure initialize rune page?" tr="Emin rün sayfasını başlatmak mısınız?" ch="你肯定初始化符文頁？" jp="本当に初期化しますか？"/>
+	<word key="레벨{0} 이상이 되어야&#xA;장착이 가능합니다" kr="레벨{0} 이상이 되어야&#xA;장착이 가능합니다" en="{0} or higher level can be mounted" tr="{0} ya da daha yüksek düzeyde monte edilebilir" ch="{0}或更高級別可被安裝" jp="レベル{0}以上でなければ&#xA;装着が可能です"/>
+	<word key="로딩중 입니다... 잠시만 기다려 주세요." kr="로딩중 입니다... 잠시만 기다려 주세요." en="Now Loading… Please wait few seconds." tr="Şimdi yükleniyor ... birkaç saniye bekleyin." ch="現在正在加載...請等待幾秒鐘。" jp="読み込んでいます...しばらくお待ちください。"/>
+	<word key="공격모션 시 조이스틱을 반대로 움직이면 평타 캔슬이 됩니다." kr="공격모션 시 조이스틱을 반대로 움직이면 평타 캔슬이 됩니다." en="An attack upon a motion joystick moves the motion canceling the contrary." tr="Bir hareket joystick üzerine bir saldırı aykırı hareketi iptal taşır." ch="在運動操縱桿攻擊移動的議案取消恰恰相反。" jp="攻撃モーション時のジョイスティックを逆に動かすと、通常攻撃キャンセルになります。"/>
+	<word key="사거리 안에 미니언이 없으면 헛공격을 하게 됩니다." kr="사거리 안에 미니언이 없으면 헛공격을 하게 됩니다." en="If there are no minions within range will be a vain attack." tr="Varsa aralığında hiçbir kölelerinin boşuna saldırı olacak." ch="如果在某一範圍內無爪牙將是徒勞的進攻。" jp="交差点の中に手先がない場合は、ハットの攻撃をすることになります。"/>
+	<word key="카이팅" kr="카이팅" en="Kiting" tr="Kiting" ch="Kiting" jp="カイティング"/>
+	<word key="포인트" kr="포인트" en="Score" tr="Gol" ch="得分" jp="ポイント"/>
+	<word key="아래 스킬 클릭시 레벨업" kr="아래 스킬 클릭시 레벨업" en="Please level up skill" tr="Beceri yukarı seviyeye Lütfen" ch="請墊平技巧" jp="下のスキルクリックするレベルアップ"/>
+	<word key="상점열기" kr="상점열기" en="Shop" tr="mağaza" ch="店" jp="店オープン"/>
+	<word key="귀환" kr="귀환" en="Home" tr="ev" ch="家" jp="帰還"/>
+	<word key="게임 종료까지 {0}초 남았습니다." kr="게임 종료까지 {0}초 남았습니다." en="{0} seconds left until the end of the game." tr="{0} saniye oyunun sonuna kadar bıraktı." ch="{0}秒時，直到比賽結束。" jp="ゲーム終了まで{0}秒残りました。"/>
+	<word key="롤 막타의 신에 오신 것을 환영합니다." kr="롤 막타의 신에 오신 것을 환영합니다." en="Welcome to LOL Last Attack." tr="LoL Last Attack Hoşgeldiniz" ch="歡迎來到 LOL Last Attack." jp="ロール膜他意神ようこそ。"/>
+	<word key="우측 상단에서 나오는 미니언을 잡아&#xA;많은 점수를 획득하면 됩니다." kr="우측 상단에서 나오는 미니언을 잡아&#xA;많은 점수를 획득하면 됩니다." en="Kill the minions coming from the top right,&#xA;you can obtain as many score." tr=", Sağ üst gelen kölelerinin öldür&#xA;Eğer gibi birçok puan elde edebilirsiniz." ch="殺爪牙從右上方的到來，&#xA;你可以得到盡可能多的分數。" jp="右上から出てくるの手先をつかむ&#xA;多くのポイントを獲得できます。"/>
+	<word key="당신의 신들린 컨트롤을 보여주세요.&#xA;행운을 빕니다.!!" kr="당신의 신들린 컨트롤을 보여주세요.&#xA;행운을 빕니다.!!" en="Please show your possessed control.&#xA;Good luck!" tr="Senin sahip olunan kontrol gösteriniz.&#xA;Iyi şanslar!" ch="請出示您的附身控制。&#xA;祝好運！" jp="あなたの取り付かれたコントロールを見せてください。&#xA;幸運を祈ります。！"/>
+	<word key="{0}번째 웨이브 출현! (남은 웨이브{1})" kr="{0}번째 웨이브 출현! (남은 웨이브{1})" en="{0} wave appearance! (Remaining wave {1})" tr="{0} dalga görünümü! (Kalan dalga {1})" ch="{0}波的外觀！ （剩餘波{1}）" jp="{0}の波出現！ （残りのウェーブ{1}）"/>
+	<word key="{0}번째 웨이브 출현! (남은 웨이브{1}) (우리 미니언 없음)" kr="{0}번째 웨이브 출현! (남은 웨이브{1}) (우리 미니언 없음)" en="{0} wave appearance! (Remaining wave {1}) (Not on our minion)" tr="{0} dalga görünümü! (Kalan dalga {1}) (değil bizim kölelerinin üzerine)" ch="{0}波的外觀！（剩餘波{1}）（不能在我們的馬仔）" jp="{0}の波出現！（残りのウェーブ{1}）（私たちの手先なし）"/>
+	<word key="{0}번째 웨이브 출현! (남은 웨이브{1}) (적 미니언 없음)" kr="{0}번째 웨이브 출현! (남은 웨이브{1}) (적 미니언 없음)" en="{0} wave appearance! (Remaining wave {1}) (Not on enemy minion)" tr="{0} dalga görünümü! (Kalan dalga {1}) (değil düşman kölelerinin üzerine)" ch="{0}波的外觀！（剩餘波{1}）（而不是在敵人小兵）" jp="{0}の波出現！（残りのウェーブ{1}）（赤の手先なし）"/>
+	<word key="마지막 웨이브!" kr="마지막 웨이브!" en="The last wave!" tr="Son dalga!" ch="最後一波！" jp="最後の波！"/>
+	<word key="게임으로" kr="게임으로" en="Return to game" tr="Oyun dön" ch="回到遊戲" jp="ゲームで"/>
+	<word key="일시정지" kr="일시정지" en="Pause" tr="durma" ch="暫停" jp="一時停止"/>
+	<word key="미니언을 잡아 최대한 돈을 많이 버세요!" kr="미니언을 잡아 최대한 돈을 많이 버세요!" en="Earn a lot of money, as much as possible to kill a minion!" tr="Bir minion öldürmek için mümkün olduğunca, çok para kazanın!" ch="賺了很多錢，盡可能殺死一個奴才！" jp="手先を保持する限りたくさんのお金を稼ごう！"/>
+	<word key="아이템샵 (베타)" kr="아이템샵 (베타)" en="Item Shop (Beta)" tr="Ürün Dükkanı (Beta)" ch="道具商店(Beta)" jp="アイテムショップ（Beta）"/>
+	<word key="아이템 목록 [888888](구매하실 아이템을 선택하세요)[-]" kr="아이템 목록 [888888](구매하실 아이템을 선택하세요)[-]" en="Item List [888888](Please select an item for buy)[-]" tr="Ürün Listesi [888888](satın almak için bir öğe seçiniz)[-]" ch="項目列表[888888]（請選擇購買某件物品）[-]" jp="アイテムリスト[888888]（購入いただけるアイテムを選択してください）[-]"/>
+	<word key="아이템 설명" kr="아이템 설명" en="Item Description" tr="Ürün Açıklaması" ch="項目說明" jp="アイテム説明"/>
+	<word key="아이템 구입" kr="아이템 구입" en="Buy" tr="satın almak" ch="購買" jp="アイテムの購入"/>
+	<word key="나가기" kr="나가기" en="Exit" tr="Çıkış" ch="出口" jp="終了"/>
+	<word key="현재 테스트중이며 조합은 현재 불가능합니다. 계속적으로 아이템과 기능은 추가될 예정입니다." kr="현재 테스트중이며 조합은 현재 불가능합니다. 계속적으로 아이템과 기능은 추가될 예정입니다." en="Because they were currently being tested in combination is not possible. Continue to items and features will be added." tr="Şu anda kombinasyon halinde test edilmektedir Çünkü mümkün değildir. Öğeleri ve özellikleri devam eklenecektir." ch="因為它們是目前正在測試的組合是不可能的。繼續項和特徵將被添加。" jp="現在のテスト中の組み合わせは、現在できません。継続的にアイテムや機能は追加される予定です。"/>
+	<word key="정말 판매하시겠습니까?&#xA;&#xA;({0})    판매금액 {1}골드" kr="정말 판매하시겠습니까?&#xA;&#xA;({0})    판매금액 {1}골드" en="Do you really want to sell?&#xA;&#xA;({0})    Sell price {1}Gold" tr="Eğer gerçekten satmak mı istiyorsunuz?&#xA;&#xA;({0}) fiyat {1} Gold Satış" ch="你真的想賣？&#xA;&#xA;（{0}）售價{1}黃金" jp="本当に販売しますか？&#xA;&#xA;（{0}）販売金額{1}ゴールド"/>
+	<word key="구입할 아이템을 선택해 주세요." kr="구입할 아이템을 선택해 주세요." en="Please select an item for purchase." tr="Satın almak için bir öğe seçiniz." ch="請選擇購買項目。" jp="購入アイテムを選択してください。"/>
+	<word key="하나만 구입 가능한 아이템입니다." kr="하나만 구입 가능한 아이템입니다." en="Only one item is available for purchase." tr="Sadece bir öğe satın alınabilir." ch="只有一個項目可以轉讓。" jp="一つだけ購入可能なアイテムです。"/>
+	<word key="아이템 공간이 없습니다.&#xA;아이템을 판매해 주세요." kr="아이템 공간이 없습니다.&#xA;아이템을 판매해 주세요." en="There are no items spaces.&#xA;Please sell the item." tr="Hiçbir öğe boşluk vardır.&#xA;Madde satmak edin." ch="有沒有項目的空間。&#xA;請銷售的項目。" jp="アイテム空間がありません。&#xA;アイテムを販売してください。"/>
+	<word key="골드가 부족합니다." kr="골드가 부족합니다." en="Not enough gold." tr="Yeterince altın." ch="沒有足夠的黃金。" jp="ゴールドが不足しています。"/>
+	<word key="게임결과 수치명" kr="포인트&#xA;미니언 처치수&#xA;총 가한 피해량&#xA;카이팅&#xA;이번결과 랭킹" en="Score&#xA;Minion Count&#xA;Total Damage&#xA;Kiting&#xA;Rank at this game" tr="Gol&#xA;minion Sayısı&#xA;Toplam Hasar&#xA;kiting&#xA;Bu oyunu Derece" ch="得分&#xA;爪牙計數&#xA;總傷害&#xA;Kiting&#xA;排名在本場比賽" jp="ポイント&#xA;手先処置することができ&#xA;総加えたダメージ&#xA;カイティング&#xA;今回の結果のランキング"/>
+	<word key="현재 TOP3 유저" kr="현재 TOP3 유저" en="Current TOP3 Rank " tr="Güncel TOP3 Derece" ch="目前TOP3排名" jp="現在のTOP3ユーザー"/>
+	<word key="나도 한마디 적기 (여기를 클릭하세요)" kr="나도 한마디 적기 (여기를 클릭하세요)" en="I write a text (click here)" tr="Ben bir metin yazmak (tıklayınız)" ch="我寫的文字（點擊這裡）" jp="コメントが少ない（こちらをクリックしてください）"/>
+	<word key="자랑하기" kr="자랑하기" en="Boast" tr="etkileyici" ch="誇" jp="自慢する"/>
+	<word key="다시하기" kr="다시하기" en="Retry" tr="Tekrar dene" ch="重試" jp="やり直し"/>
+	<word key="나가기" kr="나가기" en="Exit" tr="Çıkış" ch="出口" jp="終了"/>
+	<word key="내 랭킹 {0}  (↑{1})" kr="내 랭킹 {0}  (↑{1})" en="My Rank {0}  (↑{1})" tr="Benim Rank {0} (↑ {1})" ch="我的等級{0}（↑{1}）" jp="私のランキング{0}（↑{1}）"/>
+	<word key="내 랭킹 {0}  (-)" kr="내 랭킹 {0}  (-)" en="My Rank {0}  (-)" tr="Benim Rank {0} (-)" ch="我的等級{0}（-）" jp="私のランキング{0}（-）"/>
+	<word key="{0}위 {1}({2}점)" kr="{0}위 {1}({2}점)" en="{0}. {1}({2})" tr="{0}. {1} ({2})" ch="{0}. {1}({2})" jp="{0}. {1}({2})"/>
+	<word key="점수가 있어야 채팅이 가능해요" kr="점수가 있어야 채팅이 가능해요" en="chat need over the 0 score." tr="0 puan üzerinden sohbet ihtiyaç." ch="聊天需要在0的比分。" jp="スコアが必要チャットが可能です"/>
+	<word key="결과 로딩중" kr="결과 로딩중" en="Loading results" tr="Yükleme sonuçları" ch="正在加載結果" jp="結果をロード中"/>
+	<word key="잠시만 기다려 주세요" kr="잠시만 기다려 주세요" en="Please wait" tr="lütfen bekleyin" ch="請稍候" jp="しばらくお待ちください"/>
+	<word key="미니언 처치수&#xA;총 가한 피해량&#xA;카이팅&#xA;이번 결과 랭킹" kr="미니언 처치수&#xA;총 가한 피해량&#xA;카이팅&#xA;이번 결과 랭킹" en="Minion Count&#xA;Total Damage&#xA;Kiting&#xA;Rank at this game" tr="minion Sayısı&#xA;Toplam Hasar&#xA;kiting&#xA;Bu oyunu Derece" ch="爪牙計數&#xA;總傷害&#xA;Kiting&#xA;排名在本場比賽" jp="手先処置することができ&#xA;総加えたダメージ&#xA;カイティング&#xA;今回の結果のランキング"/>
+	<word key="{0}위 (↑{1})" kr="{0}위 (↑{1})" en="Rank {0} (↑{1})" tr="Rank {0} (↑{1})" ch="秩{0}（↑{1}）" jp="{0}等（↑{1}）"/>
+	<word key="{0}위" kr="{0}위" en="Rank {0}" tr="Rank {0}" ch="排名{0}" jp="{0}等"/>
+	<word key="{0}점" kr="{0}점" en="{0} Point" tr="{0} Noktası" ch="{0}點" jp="{0}点"/>
+	<word key="로그인서버 연결에 실패하였습니다." kr="로그인서버 연결에 실패하였습니다." en="Can not connect to login server." tr="Sunucusuna giriş bağlanamıyor." ch="無法連接到登錄服務器。" jp="ログインサーバーの接続に失敗しました。"/>
+	<word key="챔피언을 선택해 주세요." kr="챔피언을 선택해 주세요." en="Please select a champion." tr="Bir şampiyon seçiniz." ch="請選擇一個冠軍。" jp="チャンピオンを選択してください。"/>
+	<word key="구입할 아이템을 선택해 주세요." kr="구입할 아이템을 선택해 주세요." en="Please select a item for buy." tr="Satın almak için bir öğe seçiniz." ch="請選擇一個團購項目。" jp="購入アイテムを選択してください。"/>
+	<word key="하나만 구입 가능한 아이템입니다." kr="하나만 구입 가능한 아이템입니다." en="Only one item is available for purchase." tr="Sadece bir öğe satın alınabilir." ch="只有一個項目可以轉讓。" jp="一つだけ購入可能なアイテムです。"/>
+	<word key="아이템 공간이 없습니다.\n아이템을 판매해 주세요." kr="아이템 공간이 없습니다.\n아이템을 판매해 주세요." en="There are no items spaces.&#xA;Please sell the item." tr="Hiçbir öğe boşluk vardır.&#xA;Madde satmak edin." ch="有沒有項目的空間。&#xA;請銷售的項目。" jp="アイテム空間がありません。&#xA;アイテムを販売してください。"/>
+	<word key="골드가 부족합니다." kr="골드가 부족합니다." en="Not enough gold." tr="Yeterince altın." ch="沒有足夠的黃金。" jp="ゴールドが不足しています。"/>
+	<word key="한판에 한마디씩만 남기실 수 있어요" kr="한판에 한마디씩만 남기실 수 있어요" en="The once available" tr="bir kez kullanılabilir" ch="曾經可用" jp="試合に一言ずつ残すことができ"/>
+	<word key="닉네임은 최소 2자 이상입니다." kr="닉네임은 최소 2자 이상입니다." en="The nickname is at least 2 characters." tr="Takma en az 2 karakter." ch="這個綽號是至少2個字符。" jp="ニックネームは、少なくとも2文字以上です。"/>
+	<word key="닉네임은 최대 10자 이하입니다." kr="닉네임은 최대 10자 이하입니다." en="Nickname is up to 10 characters or less." tr="Adı 10 karakter veya daha az kalmış." ch="綽號是最多10個字符以內。" jp="ニックネームは最大10文字以下です。"/>
+	<word key="특수문자는 사용하실 수 없습니다." kr="특수문자는 사용하실 수 없습니다." en="Special characters can not be used." tr="Özel karakterler kullanılamaz." ch="特殊字符不能使用。" jp="特殊文字は使用できません。"/>
+	<word key="중복되는 이름이 있습니다. 다른 이름을 입력해 주세요." kr="중복되는 이름이 있습니다. 다른 이름을 입력해 주세요." en="Already have the same nickname." tr="Zaten aynı takma adı var." ch="已經有相同的暱稱。" jp="重複する名前があります。別の名前を入力してください。"/>
+	<word key="알려지지 않은 오류입니다." kr="알려지지 않은 오류입니다." en="Unknown error" tr="bilinmeyen bir hata" ch="未知錯誤" jp="未知のエラーです。"/>
+	<word key="현재 개발중입니다.&#xA;추후 게임머니로 구입가능합니다." kr="현재 개발중입니다.&#xA;추후 게임머니로 구입가능합니다." en="Under the construction" tr="inşaat halinde" ch="根據建設" jp="現在開発中です。&#xA;今後のゲームマネーで購入可能です。"/>
+	<word key="준비중입니다." kr="준비중입니다." en="Under the construction" tr="inşaat halinde" ch="根據建設" jp="準備中です。"/>
+	<word key="서버에 접속할 수 없습니다.&#xA;다시 시도할까요?" kr="서버에 접속할 수 없습니다.&#xA;다시 시도할까요?" en="Can not connect to the server.&#xA;Please check the network Please sign in again." tr="Sunucuya bağlanamıyor.&#xA;Lütfen tekrar oturum açın ağı kontrol edin." ch="無法連接到服務器。&#xA;請檢查網絡，請重新登錄。" jp="サーバーに接続できません。&#xA;再試行のでしょう？"/>
+	<word key="버전 서버에 접속할 수 없습니다.&#xA;네트워크를 확인하시고&#xA;다시 로그인해 주세요.&#xA;&#xA;계속 안된다면 점검중일 수&#xA;있으니 잠시후에 접속해주세요." kr="버전 서버에 접속할 수 없습니다.&#xA;네트워크를 확인하시고&#xA;다시 로그인해 주세요.&#xA;&#xA;계속 안된다면 점검중일 수&#xA;있으니 잠시후에 접속해주세요." en="You can not connect to the server.&#xA;Please check the network Please sign in again." tr="Sunucuya bağlanamıyor.&#xA;Lütfen tekrar oturum açın ağı kontrol edin." ch="您無法連接到服務器。&#xA;請檢查網絡，請重新登錄。" jp="バージョンサーバーに接続できません。&#xA;ネットワークを確認して&#xA;再度ログインしてください。&#xA;&#xA;継続できないならチェックいる可能性が&#xA;ので、しばらく後に接続してください。"/>
+	<word key="버전이 다릅니다.&#xA;&#xA;마켓에서 최신버전을 설치하여&#xA;접속해 주세요." kr="버전이 다릅니다.&#xA;&#xA;마켓에서 최신버전을 설치하여&#xA;접속해 주세요." en="The different versions.&#xA;&#xA;Please log in to install the latest version from the Market." tr="Farklı versiyonları.&#xA;&#xA;Market en son sürümünü yüklemek için lütfen giriş yapınız." ch="的不同的版本。&#xA;&#xA;請登錄要安裝最新版本的市場。" jp="バージョンが異なります。&#xA;&#xA;マーケットでの最新バージョンをインストールして&#xA;接続してください。"/>
+	<word key="정상적이지 않은 아이디입니다." kr="정상적이지 않은 아이디입니다." en="Invalid ID" tr="Geçersiz kimlik" ch="無效的ID" jp="正常ではないIDです。"/>
+	<word key="이 계정은 정지되었습니다." kr="이 계정은 정지되었습니다." en="This account has been suspended." tr="Bu hesap askıya alındı." ch="此帳戶已被暫停。" jp="このアカウントは停止されました。"/>
+	<word key="게임은 재미있게 즐기셨나요?&#xA;게임 소감을 리뷰로 적으실 수 있답니다.&#xA;&#xA;지금 리뷰로 이동할까요?" kr="게임은 재미있게 즐기셨나요?&#xA;게임 소감을 리뷰로 적으실 수 있답니다.&#xA;&#xA;지금 리뷰로 이동할까요?" en="Did you enjoy the game fun?&#xA;&#xA;Now go to the review page?" tr="Eğer oyun keyfinize keyif mi?&#xA;&#xA;Şimdi Yorumla sayfasına gidin?" ch="你享受遊戲的樂趣？&#xA;&#xA;現在去檢討網頁？" jp="ゲームは、楽しく遊びましたか？&#xA;ゲームの感想をレビューに敵造らましょう。&#xA;&#xA;今レビューで移動したいですか？"/>
+	<word key="[CCFFCC]막타의신 공식카페가 만들어졌어욥!&#xA;방문하시려면 {여기}를 눌러주세욥![-]" kr="[CCFFCC]막타의신 공식카페가 만들어졌어욥!&#xA;방문하시려면 {여기}를 눌러주세욥![-]" en="[CCFFCC]To visit the official Facebook page, please click here.[-]" tr="Resmi Facebook sayfasını ziyaret etmek için, lütfen buraya tıklayınız." ch="[CCFFCC]訪問官方Facebook頁面，請點擊此處。[-]" jp="[CCFFCC]公式Facebookに訪問する場合は、&#xA;{ここ}を押してください！[-]"/>
+	<word key="매일" kr="매일" en="Daily" tr="günlük" ch="日報" jp="毎日"/>
+	<word key="보상 :" kr="보상 :" en="Reward :" tr="ödül:" ch="獎勵：" jp="報酬："/>
+	<word key="{0}코인" kr="{0}코인" en="{0}Coin" tr="{0}Coin" ch="{0}Coin" jp="{0}コイン"/>
+	<word key="{0}경험치" kr="{0}경험치" en="{0}Exp" tr="{0}Deneyim" ch="{0}經驗" jp="{0}経験値"/>
+	<word key="★ 레벨업하셨습니다 ★" kr="★ 레벨업하셨습니다 ★" en="★ Level Up ★" tr="★ Level Up ★" ch="★水平向上★" jp="★レベルアップしました★"/>
+	<word key="보상을 획득하셨습니다." kr="보상을 획득하셨습니다." en="Get a reward." tr="Bir ödül almak." ch="他獲得了獎勵。" jp="報酬を獲得しました。"/>
+	<word key="게임 하기!" kr="게임 하기!" en="Play game!" tr="Oyunu oyna!" ch="玩遊戲！" jp="プレイする！"/>
+	<word key="게임을 즐겁게 하시면 되요~" kr="게임을 즐겁게 하시면 되요~" en="Enjoy the game" tr="oyun keyfini çıkarın" ch="享受遊戲" jp="ゲームを楽しくば良い〜"/>
+	<word key="5웨이브까지 도달!" kr="5웨이브까지 도달!" en="5 wave reaches" tr="5 dalga ulaşır" ch="5波到達" jp="5波まで到達！"/>
+	<word key="10웨이브까지 도달!" kr="10웨이브까지 도달!" en="10 wave reaches" tr="10 dalga ulaşır" ch="10波到達" jp="10波まで到達！"/>
+	<word key="20웨이브까지 도달!" kr="20웨이브까지 도달!" en="20 wave reaches" tr="20 dalga ulaşır" ch="20波到達" jp="20波まで到達！"/>
+	<word key="게임에서 5웨이브까지 도달하세요~" kr="게임에서 5웨이브까지 도달하세요~" en="Reach the game up to 5 wave" tr="5 dalga oyun kadar Ulaşmak" ch="到達比賽多達5浪" jp="ゲームで5波まで到達してください〜"/>
+	<word key="게임에서 10웨이브까지 도달하세요~" kr="게임에서 10웨이브까지 도달하세요~" en="Reach the game up to 10 wave" tr="10 dalga oyun kadar Ulaşmak" ch="到達遊戲多達10波" jp="ゲームで10波まで到達してください〜"/>
+	<word key="게임에서 20웨이브까지 도달하세요~" kr="게임에서 20웨이브까지 도달하세요~" en="Reach the game up to 20 wave" tr="20 dalga oyun kadar Ulaşmak" ch="到達遊戲多達20波" jp="ゲームで20波まで到達してください〜"/>
+	<word key="카이팅 수치 100 넘기기" kr="카이팅 수치 100 넘기기" en="Kiting over 100" tr="100'ün üzerinde Kiting" ch="Kiting 100改過" jp="カイティング数値100を渡す"/>
+	<word key="카이팅 수치 200 넘기기" kr="카이팅 수치 200 넘기기" en="Kiting over 200" tr="200'ün üzerinde Kiting" ch="Kiting 200改過" jp="カイティング数値200を渡す"/>
+	<word key="카이팅 수치 300 넘기기" kr="카이팅 수치 300 넘기기" en="Kiting over 300" tr="300'ün üzerinde Kiting" ch="Kiting 300改過" jp="カイティング数値300を渡す"/>
+	<word key="적절한 거리를 유지하고 공격하여 카이팅 수치를 올리세요" kr="적절한 거리를 유지하고 공격하여 카이팅 수치를 올리세요" en="To maintain an appropriate distance to attack up Kiting figures" tr="Kiting rakamları kadar saldırmak için uygun bir mesafe korumak için" ch="要保持適當的距離，攻擊起來 Kiting 數字" jp="適切な距離を維持して攻撃してカイティング数値をあげてください"/>
+	<word key="게임결과에서 한마디 적기" kr="게임결과에서 한마디 적기" en="Write an text on the game results" tr="Oyun sonuçlarına bir metin yazmak" ch="寫在本場比賽結果的文本" jp="ゲームの結果で一言少ない"/>
+	<word key="한마디를 적으시면서 자랑을 하세요~" kr="한마디를 적으시면서 자랑을 하세요~" en="Write an text proud of you" tr="Seninle gurur bir metin yazmak" ch="寫文字為你驕傲" jp="一言を敵ばご立って自慢をしてください〜"/>
+	<word key="리자드엘더 처치!" kr="리자드엘더 처치!" en="Kill the Lizard elder." tr="Kertenkele Elder'la öldür." ch="殺死蜥蜴長老。" jp="リザードエルダー処置！"/>
+	<word key="리자드엘더(레드)를 신의 컨트롤로 처치하세요~" kr="리자드엘더(레드)를 신의 컨트롤로 처치하세요~" en="Kill the Lizard elder as god control." tr="Tanrı kontrol olarak Lizard Elder'la öldür." ch="殺死蜥蜴長老為上帝的控制。" jp="リザードエルダー（レッド）を神のコントロールに処置してください〜"/>
+	<word key="드래곤 처치!" kr="드래곤 처치!" en="Kill the Dragon." tr="Ejderha öldür." ch="殺死龍。" jp="ドラゴン退治！"/>
+	<word key="무시무시한 드래곤을 처치하세요~" kr="무시무시한 드래곤을 처치하세요~" en="Kill the powerful Dragon." tr="Güçlü Ejderha öldür." ch="殺死強大的龍。" jp="恐ろしいドラゴンを退治してください〜"/>
+	<word key="자랑하기!" kr="자랑하기!" en="Boast" tr="övünme" ch="誇" jp="自慢しよう！"/>
+	<word key="게임결과에서 자랑하기를 해보세요~" kr="게임결과에서 자랑하기를 해보세요~" en="Try to boast in-game results" tr="Oyun sonuçlarını övünme çalışın" ch="試圖擁有遊戲中的結果" jp="ゲームの結果で自慢することをみてください〜"/>
+	<word key="도란의 검" kr="도란의 검" en="Doran's Blade" tr="Doran's Blade" ch="Doran's Blade" jp="Doran's Blade"/>
+	<word key="곡괭이" kr="곡괭이" en="Pickaxe" tr="Pickaxe" ch="Pickaxe" jp="Pickaxe"/>
+	<word key="BF 대검" kr="BF 대검" en="B.F. Sword" tr="B.F. Sword" ch="B.F. Sword" jp="B.F. Sword"/>
+	<word key="단검" kr="단검" en="Dagger" tr="Dagger" ch="Dagger" jp="Dagger"/>
+	<word key="흡혈의 낫" kr="흡혈의 낫" en="Vampiric Scepter" tr="Vampiric Scepter" ch="Vampiric Scepter" jp="Vampiric Scepter"/>
+	<word key="야만의 몽둥이" kr="야만의 몽둥이" en="The Brutalizer" tr="The Brutalizer" ch="The Brutalizer" jp="The Brutalizer"/>
+	<word key="열정의 검" kr="열정의 검" en="Zeal" tr="Zeal" ch="Zeal" jp="Zeal"/>
+	<word key="몰락한 왕의 검" kr="몰락한 왕의 검" en="Blade of the Ruined King" tr="Blade of the Ruined King" ch="Blade of the Ruined King" jp="Blade of the Ruined King"/>
+	<word key="무한의 검" kr="무한의 검" en="Infinity Edge" tr="Infinity Edge" ch="Infinity Edge" jp="Infinity Edge"/>
+	<word key="피바라기" kr="피바라기" en="The Bloodthirster" tr="The Bloodthirster" ch="The Bloodthirster" jp="The Bloodthirster"/>
+	<word key="유령무희" kr="유령무희" en="Phantom Dancer" tr="Phantom Dancer" ch="Phantom Dancer" jp="Phantom Dancer"/>
+	<word key="도란의 링" kr="도란의 링" en="Doran's Ring" tr="Doran's Ring" ch="Doran's Ring" jp="Doran's Ring"/>
+	<word key="방출의 마법봉" kr="방출의 마법봉" en="Blasting Wand" tr="Blasting Wand" ch="Blasting Wand" jp="Blasting Wand"/>
+	<word key="쓸데없이 큰 지팡이" kr="쓸데없이 큰 지팡이" en="Needlessly Large Rod" tr="Needlessly Large Rod" ch="Needlessly Large Rod" jp="Needlessly Large Rod"/>
+	<word key="여신의 눈물" kr="여신의 눈물" en="Tear of the Goddess" tr="Tear of the Goddess" ch="Tear of the Goddess" jp="Tear of the Goddess"/>
+	<word key="악마의 마법서" kr="악마의 마법서" en="Fiendish Codex" tr="Fiendish Codex" ch="Fiendish Codex" jp="Fiendish Codex"/>
+	<word key="마법공학 리볼버" kr="마법공학 리볼버" en="Hextech Revolver" tr="Hextech Revolver" ch="Hextech Revolver" jp="Hextech Revolver"/>
+	<word key="기괴한 가면" kr="기괴한 가면" en="Haunting Guise" tr="Haunting Guise" ch="Haunting Guise" jp="Haunting Guise"/>
+	<word key="아테나의 부정한 성배" kr="아테나의 부정한 성배" en="Athene's Unholy Grail" tr="Athene's Unholy Grail" ch="Athene's Unholy Grail" jp="Athene's Unholy Grail"/>
+	<word key="라바돈의 죽음모자" kr="라바돈의 죽음모자" en="Rabadon's Deathcap" tr="Rabadon's Deathcap" ch="Rabadon's Deathcap" jp="Rabadon's Deathcap"/>
+	<word key="모렐로노미콘" kr="모렐로노미콘" en="Morellonomicon" tr="Morellonomicon" ch="Morellonomicon" jp="Morellonomicon"/>
+	<word key="고대인의 의지" kr="고대인의 의지" en="Will of the Ancients" tr="Will of the Ancients" ch="Will of the Ancients" jp="Will of the Ancients"/>
+	<word key="내셔의 이빨" kr="내셔의 이빨" en="Nashor's Tooth" tr="Nashor's Tooth" ch="Nashor's Tooth" jp="Nashor's Tooth"/>
+	<word key="도란의 방패" kr="도란의 방패" en="Doran's Shield" tr="Doran's Shield" ch="Doran's Shield" jp="Doran's Shield"/>
+	<word key="쇠사슬 조끼" kr="쇠사슬 조끼" en="Chain Vest" tr="Chain Vest" ch="Chain Vest" jp="Chain Vest"/>
+	<word key="거인의 허리띠" kr="거인의 허리띠" en="Giant's Belt" tr="Giant's Belt" ch="Giant's Belt" jp="Giant's Belt"/>
+	<word key="란두인의 예언" kr="란두인의 예언" en="Randuin's Omen" tr="Randuin's Omen" ch="Randuin's Omen" jp="Randuin's Omen"/>
+	<word key="삼위일체" kr="삼위일체" en="Trinity Force" tr="Trinity Force" ch="Trinity Force" jp="Trinity Force"/>
+	<word key="기본공격시 15 + 주문력의 15%에 해당하는 마법피해" kr="기본공격시 15 + 주문력의 15%에 해당하는 마법피해" en="Basic attack 15 + spell damage equal to 15% of Ability Power" tr="Temel saldırı 15 + Yetenek Gücü% 15 eşit zarar büyü" ch="基本攻擊15+法術傷害等於電源能力的15％" jp="基本攻撃時15+購入電力の15％に相当する魔法ダメージ"/>
+	<word key="챌린저" kr="챌린저" en="Challenger" tr="Challenger" ch="Challenger" jp="Challenger"/>
+	<word key="마스터" kr="마스터" en="Master" tr="Master" ch="Master" jp="Master"/>
+	<word key="다이아몬드" kr="다이아몬드" en="Diamond" tr="Diamond" ch="Diamond" jp="Diamond"/>
+	<word key="플래티넘" kr="플래티넘" en="Platinum" tr="Platinum" ch="Platinum" jp="Platinum"/>
+	<word key="골드" kr="골드" en="Gold" tr="Gold" ch="Gold" jp="Gold"/>
+	<word key="실버" kr="실버" en="Silver" tr="Silver" ch="Silver" jp="Silver"/>
+	<word key="브론즈" kr="브론즈" en="Bronze" tr="Bronze" ch="Bronze" jp="Bronze"/>
+</language>

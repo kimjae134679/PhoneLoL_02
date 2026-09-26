@@ -1,0 +1,4 @@
+PASS team=0 friendly target/basic/skill/replicated/summon damage and reward blocked; enemy actual attack accepted
+PASS team=0 three deaths: +1000 once, dead/untargetable for1 second, manager RPC revives at home HP10000; death animation and Alistar sound=Assets/AudioClip/OriginalActorAudio/eb8a31aaf062af463e3f29bf270f2210/death.mp3
+PASS team=1 friendly target/basic/skill/replicated/summon damage and reward blocked; enemy actual attack accepted
+PASS team=1 three deaths: +1000 once, dead/untargetable for1 second, manager RPC revives at home HP10000; death animation and Alistar sound=Assets/AudioClip/OriginalActorAudio/eb8a31aaf062af463e3f29bf270f2210/death.mp3

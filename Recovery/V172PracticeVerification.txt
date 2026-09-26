@@ -1,0 +1,5 @@
+PASS team 0 can select and damage neutral Monster Alistar
+PASS team 1 can select and damage neutral Monster Alistar
+PASS actual OnAttackDamage: 20000 -> 19959.39 damage=40.61211
+PASS three lethal damage applications: HP20000 revival and exactly +1000 gold per kill
+PASS mirrored distant placement: blue=(-9.00, 3.00, -37.00) red=(9.00, 3.00, 37.00)

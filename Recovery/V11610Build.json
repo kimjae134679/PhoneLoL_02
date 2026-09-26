@@ -1,0 +1,9 @@
+{
+  "version": "1.16.10",
+  "versionCode": 196,
+  "apk": "D:\\A_KJ\\AI\\PhoneLoL_02\\PhoneLOL-02\\Builds\\PhoneLOL-v1.16.10-arm64-candidate.apk",
+  "bytes": 143566248,
+  "sha256": "483fa84330eb119e1134a1bdd40f23c19a6df4b2aca476dcffbe46d35cba58e7",
+  "nativeLibraries": 6,
+  "allArm64Elf64": true
+}

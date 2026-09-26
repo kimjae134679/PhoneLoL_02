@@ -1,0 +1,6 @@
+PASS 1024 alternating Teemo/Nexus creation, actual hit and state-machine death/reuse cycles
+PASS stale reverse-ID mapping cannot contaminate projectile pool
+PASS delayed release cannot retire a reallocated projectile
+PASS spawned Alistar team=1 visibleRenderers=2 position=(9.00, 3.00, 37.00)
+PASS spawned Alistar team=0 visibleRenderers=2 position=(-9.00, 3.00, -37.00)
+PASS nexus warning entry/exit and friendly exclusion

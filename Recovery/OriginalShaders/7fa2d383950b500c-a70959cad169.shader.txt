@@ -1,0 +1,2796 @@
+Shader "ProjectT/DiffuseOpaque" {
+Properties {
+ _MainTex ("MainTex", 2D) = "white" {}
+ _Color ("Color", Color) = (1,1,1,1)
+[HideInInspector]  _Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
+}
+SubShader { 
+ Tags { "QUEUE"="AlphaTest" "RenderType"="TransparentCutout" }
+ Pass {
+  Name "FORWARDBASE"
+  Tags { "LIGHTMODE"="ForwardBase" "SHADOWSUPPORT"="true" "QUEUE"="AlphaTest" "RenderType"="TransparentCutout" }
+Program "vp" {
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "VERTEXLIGHT_ON" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "VERTEXLIGHT_ON" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  xlv_TEXCOORD1 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "VERTEXLIGHT_ON" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+#extension GL_EXT_shadow_samplers : enable
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+#extension GL_EXT_shadow_samplers : enable
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+out highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+#extension GL_EXT_shadow_samplers : enable
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+#extension GL_EXT_shadow_samplers : enable
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+out highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+#extension GL_EXT_shadow_samplers : enable
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+#extension GL_EXT_shadow_samplers : enable
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+out highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "VERTEXLIGHT_ON" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+#extension GL_EXT_shadow_samplers : enable
+attribute vec4 _glesVertex;
+attribute vec3 _glesNormal;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+#extension GL_EXT_shadow_samplers : enable
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+varying highp vec2 xlv_TEXCOORD0;
+varying highp vec4 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture2D (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" "VERTEXLIGHT_ON" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec3 _glesNormal;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+uniform highp mat4 _World2Object;
+out highp vec2 xlv_TEXCOORD0;
+out highp vec4 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+out highp vec4 xlv_TEXCOORD3;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  tmpvar_1.w = 0.0;
+  tmpvar_1.xyz = normalize(_glesNormal);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = _glesMultiTexCoord0.xy;
+  highp vec4 cse_2;
+  cse_2 = (_Object2World * _glesVertex);
+  xlv_TEXCOORD1 = cse_2;
+  xlv_TEXCOORD2 = (tmpvar_1 * _World2Object).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[0] * cse_2);
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec3 _WorldSpaceCameraPos;
+uniform lowp vec4 _WorldSpaceLightPos0;
+uniform highp vec4 _LightColor0;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+uniform highp vec4 _Color;
+in highp vec2 xlv_TEXCOORD0;
+in highp vec4 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec3 lightDirection_2;
+  highp vec4 node_2_3;
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((xlv_TEXCOORD0 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_4 = texture (_MainTex, P_5);
+  node_2_3 = tmpvar_4;
+  highp float x_6;
+  x_6 = (node_2_3.w - 0.5);
+  if ((x_6 < 0.0)) {
+    discard;
+  };
+  lowp vec3 tmpvar_7;
+  tmpvar_7 = normalize(_WorldSpaceLightPos0.xyz);
+  lightDirection_2 = tmpvar_7;
+  highp vec4 tmpvar_8;
+  tmpvar_8.w = 1.0;
+  tmpvar_8.xyz = (((
+    (vec3(0.5, 0.5, 0.5) * node_2_3.xyz)
+   + 
+    (((node_2_3.xyz * max (0.0, 
+      dot (xlv_TEXCOORD2, lightDirection_2)
+    )) * _LightColor0.xyz) * 2.0)
+  ) + (vec3(0.3, 0.3, 0.4) * 
+    pow ((1.0 - max (0.0, dot (xlv_TEXCOORD2, 
+      normalize((_WorldSpaceCameraPos - xlv_TEXCOORD1.xyz))
+    ))), 3.0)
+  )) * _Color.xyz);
+  tmpvar_1 = tmpvar_8;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+}
+Program "fp" {
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_OFF" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_OFF" "DIRLIGHTMAP_OFF" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_OFF" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "DIRECTIONAL" "SHADOWS_SCREEN" "SHADOWS_NATIVE" "LIGHTMAP_ON" "DIRLIGHTMAP_ON" }
+"!!GLES3"
+}
+}
+ }
+ Pass {
+  Name "SHADOWCOLLECTOR"
+  Tags { "LIGHTMODE"="SHADOWCOLLECTOR" "QUEUE"="AlphaTest" "RenderType"="TransparentCutout" }
+  Fog { Mode Off }
+Program "vp" {
+SubProgram "gles " {
+Keywords { "SHADOWS_NONATIVE" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 glstate_matrix_modelview0;
+uniform highp mat4 _Object2World;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 tmpvar_2;
+  tmpvar_2 = (_Object2World * _glesVertex);
+  tmpvar_1.xyz = tmpvar_2.xyz;
+  tmpvar_1.w = -((glstate_matrix_modelview0 * _glesVertex).z);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = (unity_World2Shadow[0] * tmpvar_2).xyz;
+  xlv_TEXCOORD1 = (unity_World2Shadow[1] * tmpvar_2).xyz;
+  xlv_TEXCOORD2 = (unity_World2Shadow[2] * tmpvar_2).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[3] * tmpvar_2).xyz;
+  xlv_TEXCOORD4 = tmpvar_1;
+  xlv_TEXCOORD5 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec4 _ProjectionParams;
+uniform highp vec4 _LightSplitsNear;
+uniform highp vec4 _LightSplitsFar;
+uniform highp vec4 _LightShadowData;
+uniform sampler2D _ShadowMapTexture;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 res_2;
+  highp vec4 zFar_3;
+  highp vec4 zNear_4;
+  highp vec4 node_2_5;
+  lowp vec4 tmpvar_6;
+  highp vec2 P_7;
+  P_7 = ((xlv_TEXCOORD5 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_6 = texture2D (_MainTex, P_7);
+  node_2_5 = tmpvar_6;
+  highp float x_8;
+  x_8 = (node_2_5.w - 0.5);
+  if ((x_8 < 0.0)) {
+    discard;
+  };
+  bvec4 tmpvar_9;
+  tmpvar_9 = greaterThanEqual (xlv_TEXCOORD4.wwww, _LightSplitsNear);
+  lowp vec4 tmpvar_10;
+  tmpvar_10 = vec4(tmpvar_9);
+  zNear_4 = tmpvar_10;
+  bvec4 tmpvar_11;
+  tmpvar_11 = lessThan (xlv_TEXCOORD4.wwww, _LightSplitsFar);
+  lowp vec4 tmpvar_12;
+  tmpvar_12 = vec4(tmpvar_11);
+  zFar_3 = tmpvar_12;
+  highp vec4 tmpvar_13;
+  tmpvar_13 = (zNear_4 * zFar_3);
+  highp float tmpvar_14;
+  tmpvar_14 = clamp (((xlv_TEXCOORD4.w * _LightShadowData.z) + _LightShadowData.w), 0.0, 1.0);
+  highp vec4 tmpvar_15;
+  tmpvar_15.w = 1.0;
+  tmpvar_15.xyz = (((
+    (xlv_TEXCOORD0 * tmpvar_13.x)
+   + 
+    (xlv_TEXCOORD1 * tmpvar_13.y)
+  ) + (xlv_TEXCOORD2 * tmpvar_13.z)) + (xlv_TEXCOORD3 * tmpvar_13.w));
+  lowp vec4 tmpvar_16;
+  tmpvar_16 = texture2D (_ShadowMapTexture, tmpvar_15.xy);
+  highp float tmpvar_17;
+  if ((tmpvar_16.x < tmpvar_15.z)) {
+    tmpvar_17 = _LightShadowData.x;
+  } else {
+    tmpvar_17 = 1.0;
+  };
+  res_2.x = clamp ((tmpvar_17 + tmpvar_14), 0.0, 1.0);
+  res_2.y = 1.0;
+  highp vec2 enc_18;
+  highp vec2 tmpvar_19;
+  tmpvar_19 = fract((vec2(1.0, 255.0) * (1.0 - 
+    (xlv_TEXCOORD4.w * _ProjectionParams.w)
+  )));
+  enc_18.y = tmpvar_19.y;
+  enc_18.x = (tmpvar_19.x - (tmpvar_19.y * 0.00392157));
+  res_2.zw = enc_18;
+  tmpvar_1 = res_2;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_NATIVE" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+#extension GL_EXT_shadow_samplers : enable
+attribute vec4 _glesVertex;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 glstate_matrix_modelview0;
+uniform highp mat4 _Object2World;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 tmpvar_2;
+  tmpvar_2 = (_Object2World * _glesVertex);
+  tmpvar_1.xyz = tmpvar_2.xyz;
+  tmpvar_1.w = -((glstate_matrix_modelview0 * _glesVertex).z);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = (unity_World2Shadow[0] * tmpvar_2).xyz;
+  xlv_TEXCOORD1 = (unity_World2Shadow[1] * tmpvar_2).xyz;
+  xlv_TEXCOORD2 = (unity_World2Shadow[2] * tmpvar_2).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[3] * tmpvar_2).xyz;
+  xlv_TEXCOORD4 = tmpvar_1;
+  xlv_TEXCOORD5 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+#extension GL_EXT_shadow_samplers : enable
+uniform highp vec4 _ProjectionParams;
+uniform highp vec4 _LightSplitsNear;
+uniform highp vec4 _LightSplitsFar;
+uniform highp vec4 _LightShadowData;
+uniform lowp sampler2DShadow _ShadowMapTexture;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 res_2;
+  mediump float shadow_3;
+  highp vec4 zFar_4;
+  highp vec4 zNear_5;
+  highp vec4 node_2_6;
+  lowp vec4 tmpvar_7;
+  highp vec2 P_8;
+  P_8 = ((xlv_TEXCOORD5 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_7 = texture2D (_MainTex, P_8);
+  node_2_6 = tmpvar_7;
+  highp float x_9;
+  x_9 = (node_2_6.w - 0.5);
+  if ((x_9 < 0.0)) {
+    discard;
+  };
+  bvec4 tmpvar_10;
+  tmpvar_10 = greaterThanEqual (xlv_TEXCOORD4.wwww, _LightSplitsNear);
+  lowp vec4 tmpvar_11;
+  tmpvar_11 = vec4(tmpvar_10);
+  zNear_5 = tmpvar_11;
+  bvec4 tmpvar_12;
+  tmpvar_12 = lessThan (xlv_TEXCOORD4.wwww, _LightSplitsFar);
+  lowp vec4 tmpvar_13;
+  tmpvar_13 = vec4(tmpvar_12);
+  zFar_4 = tmpvar_13;
+  highp vec4 tmpvar_14;
+  tmpvar_14 = (zNear_5 * zFar_4);
+  highp vec4 tmpvar_15;
+  tmpvar_15.w = 1.0;
+  tmpvar_15.xyz = (((
+    (xlv_TEXCOORD0 * tmpvar_14.x)
+   + 
+    (xlv_TEXCOORD1 * tmpvar_14.y)
+  ) + (xlv_TEXCOORD2 * tmpvar_14.z)) + (xlv_TEXCOORD3 * tmpvar_14.w));
+  lowp float tmpvar_16;
+  tmpvar_16 = shadow2DEXT (_ShadowMapTexture, tmpvar_15.xyz);
+  mediump float tmpvar_17;
+  tmpvar_17 = tmpvar_16;
+  highp float tmpvar_18;
+  tmpvar_18 = (_LightShadowData.x + (tmpvar_17 * (1.0 - _LightShadowData.x)));
+  shadow_3 = tmpvar_18;
+  res_2.x = clamp ((shadow_3 + clamp (
+    ((xlv_TEXCOORD4.w * _LightShadowData.z) + _LightShadowData.w)
+  , 0.0, 1.0)), 0.0, 1.0);
+  res_2.y = 1.0;
+  highp vec2 enc_19;
+  highp vec2 tmpvar_20;
+  tmpvar_20 = fract((vec2(1.0, 255.0) * (1.0 - 
+    (xlv_TEXCOORD4.w * _ProjectionParams.w)
+  )));
+  enc_19.y = tmpvar_20.y;
+  enc_19.x = (tmpvar_20.x - (tmpvar_20.y * 0.00392157));
+  res_2.zw = enc_19;
+  tmpvar_1 = res_2;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_NATIVE" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 glstate_matrix_modelview0;
+uniform highp mat4 _Object2World;
+out highp vec3 xlv_TEXCOORD0;
+out highp vec3 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+out highp vec3 xlv_TEXCOORD3;
+out highp vec4 xlv_TEXCOORD4;
+out highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 tmpvar_2;
+  tmpvar_2 = (_Object2World * _glesVertex);
+  tmpvar_1.xyz = tmpvar_2.xyz;
+  tmpvar_1.w = -((glstate_matrix_modelview0 * _glesVertex).z);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = (unity_World2Shadow[0] * tmpvar_2).xyz;
+  xlv_TEXCOORD1 = (unity_World2Shadow[1] * tmpvar_2).xyz;
+  xlv_TEXCOORD2 = (unity_World2Shadow[2] * tmpvar_2).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[3] * tmpvar_2).xyz;
+  xlv_TEXCOORD4 = tmpvar_1;
+  xlv_TEXCOORD5 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec4 _ProjectionParams;
+uniform highp vec4 _LightSplitsNear;
+uniform highp vec4 _LightSplitsFar;
+uniform highp vec4 _LightShadowData;
+uniform lowp sampler2DShadow _ShadowMapTexture;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+in highp vec3 xlv_TEXCOORD0;
+in highp vec3 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+in highp vec3 xlv_TEXCOORD3;
+in highp vec4 xlv_TEXCOORD4;
+in highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 res_2;
+  mediump float shadow_3;
+  highp vec4 zFar_4;
+  highp vec4 zNear_5;
+  highp vec4 node_2_6;
+  lowp vec4 tmpvar_7;
+  highp vec2 P_8;
+  P_8 = ((xlv_TEXCOORD5 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_7 = texture (_MainTex, P_8);
+  node_2_6 = tmpvar_7;
+  highp float x_9;
+  x_9 = (node_2_6.w - 0.5);
+  if ((x_9 < 0.0)) {
+    discard;
+  };
+  bvec4 tmpvar_10;
+  tmpvar_10 = greaterThanEqual (xlv_TEXCOORD4.wwww, _LightSplitsNear);
+  lowp vec4 tmpvar_11;
+  tmpvar_11 = vec4(tmpvar_10);
+  zNear_5 = tmpvar_11;
+  bvec4 tmpvar_12;
+  tmpvar_12 = lessThan (xlv_TEXCOORD4.wwww, _LightSplitsFar);
+  lowp vec4 tmpvar_13;
+  tmpvar_13 = vec4(tmpvar_12);
+  zFar_4 = tmpvar_13;
+  highp vec4 tmpvar_14;
+  tmpvar_14 = (zNear_5 * zFar_4);
+  highp vec4 tmpvar_15;
+  tmpvar_15.w = 1.0;
+  tmpvar_15.xyz = (((
+    (xlv_TEXCOORD0 * tmpvar_14.x)
+   + 
+    (xlv_TEXCOORD1 * tmpvar_14.y)
+  ) + (xlv_TEXCOORD2 * tmpvar_14.z)) + (xlv_TEXCOORD3 * tmpvar_14.w));
+  mediump float tmpvar_16;
+  tmpvar_16 = texture (_ShadowMapTexture, tmpvar_15.xyz);
+  highp float tmpvar_17;
+  tmpvar_17 = (_LightShadowData.x + (tmpvar_16 * (1.0 - _LightShadowData.x)));
+  shadow_3 = tmpvar_17;
+  res_2.x = clamp ((shadow_3 + clamp (
+    ((xlv_TEXCOORD4.w * _LightShadowData.z) + _LightShadowData.w)
+  , 0.0, 1.0)), 0.0, 1.0);
+  res_2.y = 1.0;
+  highp vec2 enc_18;
+  highp vec2 tmpvar_19;
+  tmpvar_19 = fract((vec2(1.0, 255.0) * (1.0 - 
+    (xlv_TEXCOORD4.w * _ProjectionParams.w)
+  )));
+  enc_18.y = tmpvar_19.y;
+  enc_18.x = (tmpvar_19.x - (tmpvar_19.y * 0.00392157));
+  res_2.zw = enc_18;
+  tmpvar_1 = res_2;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_SPLIT_SPHERES" "SHADOWS_NONATIVE" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 glstate_matrix_modelview0;
+uniform highp mat4 _Object2World;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 tmpvar_2;
+  tmpvar_2 = (_Object2World * _glesVertex);
+  tmpvar_1.xyz = tmpvar_2.xyz;
+  tmpvar_1.w = -((glstate_matrix_modelview0 * _glesVertex).z);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = (unity_World2Shadow[0] * tmpvar_2).xyz;
+  xlv_TEXCOORD1 = (unity_World2Shadow[1] * tmpvar_2).xyz;
+  xlv_TEXCOORD2 = (unity_World2Shadow[2] * tmpvar_2).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[3] * tmpvar_2).xyz;
+  xlv_TEXCOORD4 = tmpvar_1;
+  xlv_TEXCOORD5 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec4 _ProjectionParams;
+uniform highp vec4 unity_ShadowSplitSpheres[4];
+uniform highp vec4 unity_ShadowSplitSqRadii;
+uniform highp vec4 _LightShadowData;
+uniform highp vec4 unity_ShadowFadeCenterAndType;
+uniform sampler2D _ShadowMapTexture;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 res_2;
+  highp vec4 cascadeWeights_3;
+  highp vec4 node_2_4;
+  lowp vec4 tmpvar_5;
+  highp vec2 P_6;
+  P_6 = ((xlv_TEXCOORD5 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_5 = texture2D (_MainTex, P_6);
+  node_2_4 = tmpvar_5;
+  highp float x_7;
+  x_7 = (node_2_4.w - 0.5);
+  if ((x_7 < 0.0)) {
+    discard;
+  };
+  highp vec3 tmpvar_8;
+  tmpvar_8 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[0].xyz);
+  highp vec3 tmpvar_9;
+  tmpvar_9 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[1].xyz);
+  highp vec3 tmpvar_10;
+  tmpvar_10 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[2].xyz);
+  highp vec3 tmpvar_11;
+  tmpvar_11 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[3].xyz);
+  highp vec4 tmpvar_12;
+  tmpvar_12.x = dot (tmpvar_8, tmpvar_8);
+  tmpvar_12.y = dot (tmpvar_9, tmpvar_9);
+  tmpvar_12.z = dot (tmpvar_10, tmpvar_10);
+  tmpvar_12.w = dot (tmpvar_11, tmpvar_11);
+  bvec4 tmpvar_13;
+  tmpvar_13 = lessThan (tmpvar_12, unity_ShadowSplitSqRadii);
+  lowp vec4 tmpvar_14;
+  tmpvar_14 = vec4(tmpvar_13);
+  cascadeWeights_3 = tmpvar_14;
+  cascadeWeights_3.yzw = clamp ((cascadeWeights_3.yzw - cascadeWeights_3.xyz), 0.0, 1.0);
+  highp vec3 tmpvar_15;
+  tmpvar_15 = (xlv_TEXCOORD4.xyz - unity_ShadowFadeCenterAndType.xyz);
+  highp float tmpvar_16;
+  tmpvar_16 = clamp (((
+    sqrt(dot (tmpvar_15, tmpvar_15))
+   * _LightShadowData.z) + _LightShadowData.w), 0.0, 1.0);
+  highp vec4 tmpvar_17;
+  tmpvar_17.w = 1.0;
+  tmpvar_17.xyz = (((
+    (xlv_TEXCOORD0 * cascadeWeights_3.x)
+   + 
+    (xlv_TEXCOORD1 * cascadeWeights_3.y)
+  ) + (xlv_TEXCOORD2 * cascadeWeights_3.z)) + (xlv_TEXCOORD3 * cascadeWeights_3.w));
+  lowp vec4 tmpvar_18;
+  tmpvar_18 = texture2D (_ShadowMapTexture, tmpvar_17.xy);
+  highp float tmpvar_19;
+  if ((tmpvar_18.x < tmpvar_17.z)) {
+    tmpvar_19 = _LightShadowData.x;
+  } else {
+    tmpvar_19 = 1.0;
+  };
+  res_2.x = clamp ((tmpvar_19 + tmpvar_16), 0.0, 1.0);
+  res_2.y = 1.0;
+  highp vec2 enc_20;
+  highp vec2 tmpvar_21;
+  tmpvar_21 = fract((vec2(1.0, 255.0) * (1.0 - 
+    (xlv_TEXCOORD4.w * _ProjectionParams.w)
+  )));
+  enc_20.y = tmpvar_21.y;
+  enc_20.x = (tmpvar_21.x - (tmpvar_21.y * 0.00392157));
+  res_2.zw = enc_20;
+  tmpvar_1 = res_2;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_SPLIT_SPHERES" "SHADOWS_NATIVE" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+#extension GL_EXT_shadow_samplers : enable
+attribute vec4 _glesVertex;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 glstate_matrix_modelview0;
+uniform highp mat4 _Object2World;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 tmpvar_2;
+  tmpvar_2 = (_Object2World * _glesVertex);
+  tmpvar_1.xyz = tmpvar_2.xyz;
+  tmpvar_1.w = -((glstate_matrix_modelview0 * _glesVertex).z);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = (unity_World2Shadow[0] * tmpvar_2).xyz;
+  xlv_TEXCOORD1 = (unity_World2Shadow[1] * tmpvar_2).xyz;
+  xlv_TEXCOORD2 = (unity_World2Shadow[2] * tmpvar_2).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[3] * tmpvar_2).xyz;
+  xlv_TEXCOORD4 = tmpvar_1;
+  xlv_TEXCOORD5 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+#extension GL_EXT_shadow_samplers : enable
+uniform highp vec4 _ProjectionParams;
+uniform highp vec4 unity_ShadowSplitSpheres[4];
+uniform highp vec4 unity_ShadowSplitSqRadii;
+uniform highp vec4 _LightShadowData;
+uniform highp vec4 unity_ShadowFadeCenterAndType;
+uniform lowp sampler2DShadow _ShadowMapTexture;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec3 xlv_TEXCOORD1;
+varying highp vec3 xlv_TEXCOORD2;
+varying highp vec3 xlv_TEXCOORD3;
+varying highp vec4 xlv_TEXCOORD4;
+varying highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 res_2;
+  mediump float shadow_3;
+  highp vec4 cascadeWeights_4;
+  highp vec4 node_2_5;
+  lowp vec4 tmpvar_6;
+  highp vec2 P_7;
+  P_7 = ((xlv_TEXCOORD5 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_6 = texture2D (_MainTex, P_7);
+  node_2_5 = tmpvar_6;
+  highp float x_8;
+  x_8 = (node_2_5.w - 0.5);
+  if ((x_8 < 0.0)) {
+    discard;
+  };
+  highp vec3 tmpvar_9;
+  tmpvar_9 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[0].xyz);
+  highp vec3 tmpvar_10;
+  tmpvar_10 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[1].xyz);
+  highp vec3 tmpvar_11;
+  tmpvar_11 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[2].xyz);
+  highp vec3 tmpvar_12;
+  tmpvar_12 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[3].xyz);
+  highp vec4 tmpvar_13;
+  tmpvar_13.x = dot (tmpvar_9, tmpvar_9);
+  tmpvar_13.y = dot (tmpvar_10, tmpvar_10);
+  tmpvar_13.z = dot (tmpvar_11, tmpvar_11);
+  tmpvar_13.w = dot (tmpvar_12, tmpvar_12);
+  bvec4 tmpvar_14;
+  tmpvar_14 = lessThan (tmpvar_13, unity_ShadowSplitSqRadii);
+  lowp vec4 tmpvar_15;
+  tmpvar_15 = vec4(tmpvar_14);
+  cascadeWeights_4 = tmpvar_15;
+  cascadeWeights_4.yzw = clamp ((cascadeWeights_4.yzw - cascadeWeights_4.xyz), 0.0, 1.0);
+  highp vec3 tmpvar_16;
+  tmpvar_16 = (xlv_TEXCOORD4.xyz - unity_ShadowFadeCenterAndType.xyz);
+  highp vec4 tmpvar_17;
+  tmpvar_17.w = 1.0;
+  tmpvar_17.xyz = (((
+    (xlv_TEXCOORD0 * cascadeWeights_4.x)
+   + 
+    (xlv_TEXCOORD1 * cascadeWeights_4.y)
+  ) + (xlv_TEXCOORD2 * cascadeWeights_4.z)) + (xlv_TEXCOORD3 * cascadeWeights_4.w));
+  lowp float tmpvar_18;
+  tmpvar_18 = shadow2DEXT (_ShadowMapTexture, tmpvar_17.xyz);
+  mediump float tmpvar_19;
+  tmpvar_19 = tmpvar_18;
+  highp float tmpvar_20;
+  tmpvar_20 = (_LightShadowData.x + (tmpvar_19 * (1.0 - _LightShadowData.x)));
+  shadow_3 = tmpvar_20;
+  res_2.x = clamp ((shadow_3 + clamp (
+    ((sqrt(dot (tmpvar_16, tmpvar_16)) * _LightShadowData.z) + _LightShadowData.w)
+  , 0.0, 1.0)), 0.0, 1.0);
+  res_2.y = 1.0;
+  highp vec2 enc_21;
+  highp vec2 tmpvar_22;
+  tmpvar_22 = fract((vec2(1.0, 255.0) * (1.0 - 
+    (xlv_TEXCOORD4.w * _ProjectionParams.w)
+  )));
+  enc_21.y = tmpvar_22.y;
+  enc_21.x = (tmpvar_22.x - (tmpvar_22.y * 0.00392157));
+  res_2.zw = enc_21;
+  tmpvar_1 = res_2;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_SPLIT_SPHERES" "SHADOWS_NATIVE" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec4 _glesMultiTexCoord0;
+uniform highp mat4 unity_World2Shadow[4];
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 glstate_matrix_modelview0;
+uniform highp mat4 _Object2World;
+out highp vec3 xlv_TEXCOORD0;
+out highp vec3 xlv_TEXCOORD1;
+out highp vec3 xlv_TEXCOORD2;
+out highp vec3 xlv_TEXCOORD3;
+out highp vec4 xlv_TEXCOORD4;
+out highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 tmpvar_2;
+  tmpvar_2 = (_Object2World * _glesVertex);
+  tmpvar_1.xyz = tmpvar_2.xyz;
+  tmpvar_1.w = -((glstate_matrix_modelview0 * _glesVertex).z);
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = (unity_World2Shadow[0] * tmpvar_2).xyz;
+  xlv_TEXCOORD1 = (unity_World2Shadow[1] * tmpvar_2).xyz;
+  xlv_TEXCOORD2 = (unity_World2Shadow[2] * tmpvar_2).xyz;
+  xlv_TEXCOORD3 = (unity_World2Shadow[3] * tmpvar_2).xyz;
+  xlv_TEXCOORD4 = tmpvar_1;
+  xlv_TEXCOORD5 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec4 _ProjectionParams;
+uniform highp vec4 unity_ShadowSplitSpheres[4];
+uniform highp vec4 unity_ShadowSplitSqRadii;
+uniform highp vec4 _LightShadowData;
+uniform highp vec4 unity_ShadowFadeCenterAndType;
+uniform lowp sampler2DShadow _ShadowMapTexture;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+in highp vec3 xlv_TEXCOORD0;
+in highp vec3 xlv_TEXCOORD1;
+in highp vec3 xlv_TEXCOORD2;
+in highp vec3 xlv_TEXCOORD3;
+in highp vec4 xlv_TEXCOORD4;
+in highp vec2 xlv_TEXCOORD5;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 res_2;
+  mediump float shadow_3;
+  highp vec4 cascadeWeights_4;
+  highp vec4 node_2_5;
+  lowp vec4 tmpvar_6;
+  highp vec2 P_7;
+  P_7 = ((xlv_TEXCOORD5 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_6 = texture (_MainTex, P_7);
+  node_2_5 = tmpvar_6;
+  highp float x_8;
+  x_8 = (node_2_5.w - 0.5);
+  if ((x_8 < 0.0)) {
+    discard;
+  };
+  highp vec3 tmpvar_9;
+  tmpvar_9 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[0].xyz);
+  highp vec3 tmpvar_10;
+  tmpvar_10 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[1].xyz);
+  highp vec3 tmpvar_11;
+  tmpvar_11 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[2].xyz);
+  highp vec3 tmpvar_12;
+  tmpvar_12 = (xlv_TEXCOORD4.xyz - unity_ShadowSplitSpheres[3].xyz);
+  highp vec4 tmpvar_13;
+  tmpvar_13.x = dot (tmpvar_9, tmpvar_9);
+  tmpvar_13.y = dot (tmpvar_10, tmpvar_10);
+  tmpvar_13.z = dot (tmpvar_11, tmpvar_11);
+  tmpvar_13.w = dot (tmpvar_12, tmpvar_12);
+  bvec4 tmpvar_14;
+  tmpvar_14 = lessThan (tmpvar_13, unity_ShadowSplitSqRadii);
+  lowp vec4 tmpvar_15;
+  tmpvar_15 = vec4(tmpvar_14);
+  cascadeWeights_4 = tmpvar_15;
+  cascadeWeights_4.yzw = clamp ((cascadeWeights_4.yzw - cascadeWeights_4.xyz), 0.0, 1.0);
+  highp vec3 tmpvar_16;
+  tmpvar_16 = (xlv_TEXCOORD4.xyz - unity_ShadowFadeCenterAndType.xyz);
+  highp vec4 tmpvar_17;
+  tmpvar_17.w = 1.0;
+  tmpvar_17.xyz = (((
+    (xlv_TEXCOORD0 * cascadeWeights_4.x)
+   + 
+    (xlv_TEXCOORD1 * cascadeWeights_4.y)
+  ) + (xlv_TEXCOORD2 * cascadeWeights_4.z)) + (xlv_TEXCOORD3 * cascadeWeights_4.w));
+  mediump float tmpvar_18;
+  tmpvar_18 = texture (_ShadowMapTexture, tmpvar_17.xyz);
+  highp float tmpvar_19;
+  tmpvar_19 = (_LightShadowData.x + (tmpvar_18 * (1.0 - _LightShadowData.x)));
+  shadow_3 = tmpvar_19;
+  res_2.x = clamp ((shadow_3 + clamp (
+    ((sqrt(dot (tmpvar_16, tmpvar_16)) * _LightShadowData.z) + _LightShadowData.w)
+  , 0.0, 1.0)), 0.0, 1.0);
+  res_2.y = 1.0;
+  highp vec2 enc_20;
+  highp vec2 tmpvar_21;
+  tmpvar_21 = fract((vec2(1.0, 255.0) * (1.0 - 
+    (xlv_TEXCOORD4.w * _ProjectionParams.w)
+  )));
+  enc_20.y = tmpvar_21.y;
+  enc_20.x = (tmpvar_21.x - (tmpvar_21.y * 0.00392157));
+  res_2.zw = enc_20;
+  tmpvar_1 = res_2;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+}
+Program "fp" {
+SubProgram "gles " {
+Keywords { "SHADOWS_NONATIVE" }
+"!!GLES"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_NATIVE" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_NATIVE" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_SPLIT_SPHERES" "SHADOWS_NONATIVE" }
+"!!GLES"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_SPLIT_SPHERES" "SHADOWS_NATIVE" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_SPLIT_SPHERES" "SHADOWS_NATIVE" }
+"!!GLES3"
+}
+}
+ }
+ Pass {
+  Name "SHADOWCASTER"
+  Tags { "LIGHTMODE"="SHADOWCASTER" "SHADOWSUPPORT"="true" "QUEUE"="AlphaTest" "RenderType"="TransparentCutout" }
+  Cull Off
+  Fog { Mode Off }
+  Offset 1, 1
+Program "vp" {
+SubProgram "gles " {
+Keywords { "SHADOWS_DEPTH" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp vec4 unity_LightShadowBias;
+uniform highp mat4 glstate_matrix_mvp;
+varying highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 cse_2;
+  cse_2 = (glstate_matrix_mvp * _glesVertex);
+  tmpvar_1.xyw = cse_2.xyw;
+  tmpvar_1.z = (cse_2.z + unity_LightShadowBias.x);
+  tmpvar_1.z = mix (tmpvar_1.z, max (tmpvar_1.z, -(cse_2.w)), unity_LightShadowBias.y);
+  gl_Position = tmpvar_1;
+  xlv_TEXCOORD1 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+varying highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  highp vec4 node_2_1;
+  lowp vec4 tmpvar_2;
+  highp vec2 P_3;
+  P_3 = ((xlv_TEXCOORD1 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_2 = texture2D (_MainTex, P_3);
+  node_2_1 = tmpvar_2;
+  highp float x_4;
+  x_4 = (node_2_1.w - 0.5);
+  if ((x_4 < 0.0)) {
+    discard;
+  };
+  gl_FragData[0] = vec4(0.0, 0.0, 0.0, 0.0);
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_DEPTH" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec4 _glesMultiTexCoord0;
+uniform highp vec4 unity_LightShadowBias;
+uniform highp mat4 glstate_matrix_mvp;
+out highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  highp vec4 tmpvar_1;
+  highp vec4 cse_2;
+  cse_2 = (glstate_matrix_mvp * _glesVertex);
+  tmpvar_1.xyw = cse_2.xyw;
+  tmpvar_1.z = (cse_2.z + unity_LightShadowBias.x);
+  tmpvar_1.z = mix (tmpvar_1.z, max (tmpvar_1.z, -(cse_2.w)), unity_LightShadowBias.y);
+  gl_Position = tmpvar_1;
+  xlv_TEXCOORD1 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+in highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  highp vec4 node_2_1;
+  lowp vec4 tmpvar_2;
+  highp vec2 P_3;
+  P_3 = ((xlv_TEXCOORD1 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_2 = texture (_MainTex, P_3);
+  node_2_1 = tmpvar_2;
+  highp float x_4;
+  x_4 = (node_2_1.w - 0.5);
+  if ((x_4 < 0.0)) {
+    discard;
+  };
+  _glesFragData[0] = vec4(0.0, 0.0, 0.0, 0.0);
+}
+
+
+
+#endif"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_CUBE" }
+"!!GLES
+
+
+#ifdef VERTEX
+
+attribute vec4 _glesVertex;
+attribute vec4 _glesMultiTexCoord0;
+uniform highp vec4 _LightPositionRange;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = ((_Object2World * _glesVertex).xyz - _LightPositionRange.xyz);
+  xlv_TEXCOORD1 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+uniform highp vec4 _LightPositionRange;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+varying highp vec3 xlv_TEXCOORD0;
+varying highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 node_2_2;
+  lowp vec4 tmpvar_3;
+  highp vec2 P_4;
+  P_4 = ((xlv_TEXCOORD1 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_3 = texture2D (_MainTex, P_4);
+  node_2_2 = tmpvar_3;
+  highp float x_5;
+  x_5 = (node_2_2.w - 0.5);
+  if ((x_5 < 0.0)) {
+    discard;
+  };
+  highp vec4 tmpvar_6;
+  tmpvar_6 = fract((vec4(1.0, 255.0, 65025.0, 1.65814e+07) * min (
+    (sqrt(dot (xlv_TEXCOORD0, xlv_TEXCOORD0)) * _LightPositionRange.w)
+  , 0.999)));
+  highp vec4 tmpvar_7;
+  tmpvar_7 = (tmpvar_6 - (tmpvar_6.yzww * 0.00392157));
+  tmpvar_1 = tmpvar_7;
+  gl_FragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_CUBE" }
+"!!GLES3#version 300 es
+
+
+#ifdef VERTEX
+
+
+in vec4 _glesVertex;
+in vec4 _glesMultiTexCoord0;
+uniform highp vec4 _LightPositionRange;
+uniform highp mat4 glstate_matrix_mvp;
+uniform highp mat4 _Object2World;
+out highp vec3 xlv_TEXCOORD0;
+out highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  gl_Position = (glstate_matrix_mvp * _glesVertex);
+  xlv_TEXCOORD0 = ((_Object2World * _glesVertex).xyz - _LightPositionRange.xyz);
+  xlv_TEXCOORD1 = _glesMultiTexCoord0.xy;
+}
+
+
+
+#endif
+#ifdef FRAGMENT
+
+
+layout(location=0) out mediump vec4 _glesFragData[4];
+uniform highp vec4 _LightPositionRange;
+uniform sampler2D _MainTex;
+uniform highp vec4 _MainTex_ST;
+in highp vec3 xlv_TEXCOORD0;
+in highp vec2 xlv_TEXCOORD1;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  highp vec4 node_2_2;
+  lowp vec4 tmpvar_3;
+  highp vec2 P_4;
+  P_4 = ((xlv_TEXCOORD1 * _MainTex_ST.xy) + _MainTex_ST.zw);
+  tmpvar_3 = texture (_MainTex, P_4);
+  node_2_2 = tmpvar_3;
+  highp float x_5;
+  x_5 = (node_2_2.w - 0.5);
+  if ((x_5 < 0.0)) {
+    discard;
+  };
+  highp vec4 tmpvar_6;
+  tmpvar_6 = fract((vec4(1.0, 255.0, 65025.0, 1.65814e+07) * min (
+    (sqrt(dot (xlv_TEXCOORD0, xlv_TEXCOORD0)) * _LightPositionRange.w)
+  , 0.999)));
+  highp vec4 tmpvar_7;
+  tmpvar_7 = (tmpvar_6 - (tmpvar_6.yzww * 0.00392157));
+  tmpvar_1 = tmpvar_7;
+  _glesFragData[0] = tmpvar_1;
+}
+
+
+
+#endif"
+}
+}
+Program "fp" {
+SubProgram "gles " {
+Keywords { "SHADOWS_DEPTH" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_DEPTH" }
+"!!GLES3"
+}
+SubProgram "gles " {
+Keywords { "SHADOWS_CUBE" }
+"!!GLES"
+}
+SubProgram "gles3 " {
+Keywords { "SHADOWS_CUBE" }
+"!!GLES3"
+}
+}
+ }
+}
+Fallback "Diffuse"
+}

@@ -1,0 +1,12 @@
+{
+  "version": "1.17.5",
+  "versionCode": 203,
+  "result": "Succeeded",
+  "build_report": "Result: Succeeded\nErrors: 0\nWarnings: 762\nOutput: D:\\A_KJ\\AI\\PhoneLoL_02\\PhoneLOL-02\\Builds\\PhoneLOL-1.17.5.apk\nGameplay, legacy native host, and shader parity are not certified by a successful build.",
+  "bytes": 143243610,
+  "sha256": "d86cf70e0a779f0d7bac98ab58c2151d4cec8a30e4d76bd59e3a09ecf6ec69fa",
+  "arm64_libraries": 6,
+  "zip_crc": "pass",
+  "source_commit": "1250cb8",
+  "phone_gameplay": "not_verified"
+}

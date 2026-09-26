@@ -1,0 +1,10 @@
+mode=0 slots=5 inventory roundtrip=OK
+mode=10 slots=8 inventory roundtrip=OK
+mode=20 slots=5 inventory roundtrip=OK
+mode=101 slots=5 inventory roundtrip=OK
+mode=102 slots=5 inventory roundtrip=OK
+MultiGame lightmaps=2 bindings=296
+MultiGame shop/HUD/use/result UI=8, navigation=OK
+MtmGame lightmaps=2 bindings=638
+MtmGame shop/HUD/use/result UI=8, navigation=OK
+controllers=45 states=316 transitions=178 null motions=0

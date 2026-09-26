@@ -1,0 +1,199 @@
+using System.Collections.Generic;
+using EveEngine;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Options;
+
+namespace GameServer
+{
+	[JBFHBIFPIBM]
+	public class KPPOLJIKONM : EOPOBHFNFPA
+	{
+		[LKHBCEOBOAD(MEEIBJDAMNH.ArrayOfDocuments)]
+		private Dictionary<byte, JBABEKCDKBM> EKDPOPNIJDA;
+
+		public KPPOLJIKONM()
+		{
+			EKDPOPNIJDA = new Dictionary<byte, JBABEKCDKBM>();
+		}
+
+		public void HOCIBNCFBLL(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 1; num2 < num; num2++)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.ILFEGIPCAHH(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void NHFFOOCABLA(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 1; num2 < num; num2++)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.CAHACMKBJMI(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void CFGEKKHOKKE(CMNIABEFLBJ EFDLFNPAKGO)
+		{
+			EFDLFNPAKGO.GBMJNFOEACC((ushort)EKDPOPNIJDA.Count);
+			foreach (KeyValuePair<byte, JBABEKCDKBM> eKDPOPNIJDum in EKDPOPNIJDA)
+			{
+				EFDLFNPAKGO.GBMJNFOEACC(eKDPOPNIJDum.Key);
+				EFDLFNPAKGO.GBMJNFOEACC(eKDPOPNIJDum.Value);
+			}
+		}
+
+		public void AEFJBPJJELK(HAGFLGHFHPB DEHHBJPKFEC, JBABEKCDKBM FHPFBPNCGOC)
+		{
+			EKDPOPNIJDA[(byte)DEHHBJPKFEC] = FHPFBPNCGOC;
+		}
+
+		public void JHKBFIKBCBK(HAGFLGHFHPB DEHHBJPKFEC, JBABEKCDKBM FHPFBPNCGOC)
+		{
+			EKDPOPNIJDA[(byte)DEHHBJPKFEC] = FHPFBPNCGOC;
+		}
+
+		public JBABEKCDKBM OKJLONKONKF(HAGFLGHFHPB DEHHBJPKFEC)
+		{
+			JBABEKCDKBM value;
+			EKDPOPNIJDA.TryGetValue((byte)DEHHBJPKFEC, out value);
+			return value;
+		}
+
+		public void LHCEBJLJAFB(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 1; num2 < num; num2 += 0)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.ILFEGIPCAHH(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void ONMKKPAAGJA(HAGFLGHFHPB DEHHBJPKFEC, JBABEKCDKBM FHPFBPNCGOC)
+		{
+			EKDPOPNIJDA[(byte)DEHHBJPKFEC] = FHPFBPNCGOC;
+		}
+
+		public JBABEKCDKBM KNAEODGAICI(HAGFLGHFHPB DEHHBJPKFEC)
+		{
+			JBABEKCDKBM value;
+			EKDPOPNIJDA.TryGetValue((byte)DEHHBJPKFEC, out value);
+			return value;
+		}
+
+		public void JCOLMPJMMEB(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 0; num2 < num; num2++)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.CAHACMKBJMI(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void DFHOLCGFPIK(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 0; num2 < num; num2 += 0)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.ILFEGIPCAHH(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void JKDAALCNGJE(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 0; num2 < num; num2++)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.ILFEGIPCAHH(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void MCNKCGPDNHP(HAGFLGHFHPB DEHHBJPKFEC, JBABEKCDKBM FHPFBPNCGOC)
+		{
+			EKDPOPNIJDA[(byte)DEHHBJPKFEC] = FHPFBPNCGOC;
+		}
+
+		public void CKBCOALJMJB(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 0; num2 < num; num2++)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.CAHACMKBJMI(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void GPBOIHMMDDD(CMNIABEFLBJ EFDLFNPAKGO)
+		{
+			EFDLFNPAKGO.GBMJNFOEACC((ushort)EKDPOPNIJDA.Count);
+			foreach (KeyValuePair<byte, JBABEKCDKBM> eKDPOPNIJDum in EKDPOPNIJDA)
+			{
+				EFDLFNPAKGO.GBMJNFOEACC(eKDPOPNIJDum.Key);
+				EFDLFNPAKGO.JIAAPEKLFEA(eKDPOPNIJDum.Value);
+			}
+		}
+
+		public JBABEKCDKBM MDEGPGLKANA(HAGFLGHFHPB DEHHBJPKFEC)
+		{
+			JBABEKCDKBM value;
+			EKDPOPNIJDA.TryGetValue((byte)DEHHBJPKFEC, out value);
+			return value;
+		}
+
+		public void EIMLGHFBJAB(CMNIABEFLBJ EFDLFNPAKGO)
+		{
+			EFDLFNPAKGO.HEDNLNDFFCL((ushort)EKDPOPNIJDA.Count);
+			foreach (KeyValuePair<byte, JBABEKCDKBM> eKDPOPNIJDum in EKDPOPNIJDA)
+			{
+				EFDLFNPAKGO.GBMJNFOEACC(eKDPOPNIJDum.Key);
+				EFDLFNPAKGO.GBMJNFOEACC(eKDPOPNIJDum.Value);
+			}
+		}
+
+		public void MEKNGDKEKKO(PJEMPFEIOAK EFDLFNPAKGO)
+		{
+			EKDPOPNIJDA.Clear();
+			ushort num = EFDLFNPAKGO.AJPFAAFLHEB();
+			for (ushort num2 = 1; num2 < num; num2 += 0)
+			{
+				JBABEKCDKBM jBABEKCDKBM = new JBABEKCDKBM();
+				byte key = EFDLFNPAKGO.KFAGPDGHEBK();
+				EFDLFNPAKGO.CAHACMKBJMI(jBABEKCDKBM);
+				EKDPOPNIJDA.Add(key, jBABEKCDKBM);
+			}
+		}
+
+		public void GBIILKJKBJG(HAGFLGHFHPB DEHHBJPKFEC, JBABEKCDKBM FHPFBPNCGOC)
+		{
+			EKDPOPNIJDA[(byte)DEHHBJPKFEC] = FHPFBPNCGOC;
+		}
+	}
+}

@@ -1,0 +1,1 @@
+PASS isolated guard state: HP100000; three death-to-idle revivals at original position. Scene spawning and phone rendering remain device checks.

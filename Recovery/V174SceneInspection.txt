@@ -1,0 +1,18 @@
+Assets/Scenes/MultiGame.unity
+BottomRight id=2105 parent=GamePanel pos=(351.00, -190.25, 0.00) scale=(1.22, 1.22, 1.00) width=100 collider=
+AttackButton id=2804 parent=BottomRight pos=(-9.42, 8.00, 0.00) scale=(1.00, 1.00, 1.00) width=70 collider=(70.00, 70.00, 0.00)
+AttackIcon id=2555 parent=AttackButton pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00) width=70 collider=
+SkillPlus id=1824 parent=TopRight pos=(125.00, -75.00, 0.00) scale=(1.15, 1.15, 1.00) width=100 collider=
+GUARD 0 pos=(1.35, 2.05, -33.30) nav=True nearest=(1.35, 2.03, -33.30)
+GROUND Terrain pos=(1.35, 2.00, -33.30)
+GUARD 1 pos=(-1.93, 2.05, 33.50) nav=True nearest=(-1.93, 2.04, 33.50)
+GROUND Terrain pos=(-1.92, 2.00, 33.50)
+Assets/Scenes/MtmGame.unity
+BottomRight id=1839 parent=GamePanel pos=(351.00, -190.23, 0.00) scale=(1.22, 1.22, 1.00) width=100 collider=
+AttackButton id=1476 parent=BottomRight pos=(-9.42, 8.00, 0.00) scale=(1.00, 1.00, 1.00) width=70 collider=(70.00, 70.00, 0.00)
+AttackIcon id=1339 parent=AttackButton pos=(0.00, 0.00, 0.00) scale=(1.00, 1.00, 1.00) width=70 collider=
+SkillPlus id=2503 parent=TopRight pos=(125.00, -75.00, 0.00) scale=(1.15, 1.15, 1.00) width=100 collider=
+GUARD 0 pos=(-9.10, 0.05, -6.10) nav=True nearest=(-9.10, 0.03, -6.10)
+GROUND Terrain pos=(-9.10, 0.00, -6.10)
+GUARD 1 pos=(9.08, 0.33, 6.60) nav=True nearest=(9.08, 0.33, 6.60)
+GROUND Terrain pos=(9.08, 0.00, 6.60)

@@ -1,0 +1,18 @@
+{
+  "version": "1.7.0",
+  "build": "197",
+  "unity": "6000.3.14f1",
+  "errors": 0,
+  "warnings": 35,
+  "xcode_export": "D:\\A_KJ\\AI\\PhoneLoL_02\\PhoneLOL-02\\Builds\\iOS\\PhoneLOL-1.7.0",
+  "delivered_zip": "C:\\Users\\user\\Documents\\MultiGod\\PhoneLOL_LocalRuntime\\00_PHONELOL_TEST_HERE\\PhoneLOL-1.7.0.zip",
+  "zip_bytes": 648469575,
+  "sha256": "d0307a14902138020384cf92f72eaa0b7d7f9e111bdc0b116ecf9c3014750522",
+  "xcode_build": "not run: no connected Mac",
+  "signing": "not performed",
+  "ipa": "not produced",
+  "contents": [
+    "Android/PhoneLOL-1.7.0.apk",
+    "iOS/PhoneLOL-1.7.0/"
+  ]
+}

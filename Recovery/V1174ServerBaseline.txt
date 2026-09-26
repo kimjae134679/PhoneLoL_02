@@ -1,0 +1,4 @@
+FAIL loading guest: TimeoutError timed out
+FAIL loading host: TimeoutError timed out
+PASS stale retired object address cannot reject a live connection
+FAIL injected blocked writer: outbound overflow stopped its FIFO but peer remained online for >5 seconds until reader resumed; healthy recipient still received4000 frames.

@@ -1,0 +1,6 @@
+Assets/Scenes/MultiGame.unity spawn0=(-37.00, 3.00, -37.00) spawn1=(37.00, 3.00, 37.00)
+PASS team=0 target=(-25.00, 3.05, -37.00) spawnDistance=12.0001 edgeClearance=2.813471 completePath=True
+PASS team=1 target=(25.00, 3.05, 37.00) spawnDistance=12.0001 edgeClearance=3.174999 completePath=True
+Assets/Scenes/MtmGame.unity spawn0=(-37.00, 0.00, 0.00) spawn1=(37.00, 0.00, 0.00)
+PASS team=0 target=(-27.00, 0.05, -4.00) spawnDistance=10.77045 edgeClearance=1.711175 completePath=True
+PASS team=1 target=(27.00, 0.21, 4.00) spawnDistance=10.77238 edgeClearance=2.300001 completePath=True

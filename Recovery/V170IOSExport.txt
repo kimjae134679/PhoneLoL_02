@@ -1,0 +1,6 @@
+Result: Succeeded
+Errors: 0
+Warnings: 35
+Output: D:\A_KJ\AI\PhoneLoL_02\PhoneLOL-02\Builds\PhoneLOL-v1.7.0-iOS-Xcode
+Xcode project present: True
+An Xcode project must be built and signed on macOS before installation.

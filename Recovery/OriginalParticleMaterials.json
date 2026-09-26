@@ -1,0 +1,2441 @@
+[
+  {
+    "asset": "PhoneLOL-02/Assets/GameObject/attack 12.prefab",
+    "component": 2669143,
+    "materials": [
+      "e9c06b4747890ac4ab8dcf1e5cd8ce1d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Ahri_0.prefab",
+    "component": 2618571,
+    "materials": [
+      "55edb284d01d1fb449f9da04e2bf0585",
+      "1d74d8d1964c1e8459241d33a1b421b9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Ahri_1.prefab",
+    "component": 2627792,
+    "materials": [
+      "55edb284d01d1fb449f9da04e2bf0585",
+      "1d74d8d1964c1e8459241d33a1b421b9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Ahri_2.prefab",
+    "component": 2618571,
+    "materials": [
+      "55edb284d01d1fb449f9da04e2bf0585",
+      "1d74d8d1964c1e8459241d33a1b421b9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Blitzcrank_0.prefab",
+    "component": 2681936,
+    "materials": [
+      "93c1290ecfae6db43b311a54e53a0237"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Blitzcrank_0.prefab",
+    "component": 2664471,
+    "materials": [
+      "93c1290ecfae6db43b311a54e53a0237"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_0.prefab",
+    "component": 2691429,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_0.prefab",
+    "component": 2620819,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_0.prefab",
+    "component": 2626796,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_0.prefab",
+    "component": 2636241,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_0.prefab",
+    "component": 2652113,
+    "materials": [
+      "0fc3c65de68861e4a8ab6faf1d750c00"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_1.prefab",
+    "component": 2678679,
+    "materials": [
+      "0fc3c65de68861e4a8ab6faf1d750c00"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_1.prefab",
+    "component": 2634459,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_1.prefab",
+    "component": 2623785,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_1.prefab",
+    "component": 2621846,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_1.prefab",
+    "component": 2641818,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_2.prefab",
+    "component": 2678679,
+    "materials": [
+      "0fc3c65de68861e4a8ab6faf1d750c00"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_2.prefab",
+    "component": 2634459,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_2.prefab",
+    "component": 2623785,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_2.prefab",
+    "component": 2621846,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Darius_2.prefab",
+    "component": 2641818,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Jax_0.prefab",
+    "component": 2698932,
+    "materials": [
+      "e58c5bb83ba01e44e8a95435588f117e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Jax_1.prefab",
+    "component": 2604338,
+    "materials": [
+      "e58c5bb83ba01e44e8a95435588f117e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Jax_2.prefab",
+    "component": 2698932,
+    "materials": [
+      "e58c5bb83ba01e44e8a95435588f117e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Renekton_0.prefab",
+    "component": 2685106,
+    "materials": [
+      "ecfeba67ddc6e4e4cbb4b7223336b54f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Renekton_1.prefab",
+    "component": 2630575,
+    "materials": [
+      "ecfeba67ddc6e4e4cbb4b7223336b54f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Sivir_0.prefab",
+    "component": 2665029,
+    "materials": [
+      "3054bc5c1ba984d44a45a64bb2271ba1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Sivir_1.prefab",
+    "component": 2665029,
+    "materials": [
+      "3054bc5c1ba984d44a45a64bb2271ba1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Sivir_2.prefab",
+    "component": 2665029,
+    "materials": [
+      "3054bc5c1ba984d44a45a64bb2271ba1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_0.prefab",
+    "component": 2694303,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_0.prefab",
+    "component": 2681733,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_0.prefab",
+    "component": 2655025,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_0.prefab",
+    "component": 2626796,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_1.prefab",
+    "component": 2694303,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_1.prefab",
+    "component": 2681733,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_1.prefab",
+    "component": 2655025,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_1.prefab",
+    "component": 2626796,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_2.prefab",
+    "component": 2694303,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_2.prefab",
+    "component": 2681733,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_2.prefab",
+    "component": 2655025,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Talon_2.prefab",
+    "component": 2626796,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Tryndamere_0.prefab",
+    "component": 2614133,
+    "materials": [
+      "a085365a4fd32464fb23b87ffdebf9c2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Tryndamere_1.prefab",
+    "component": 2633933,
+    "materials": [
+      "a085365a4fd32464fb23b87ffdebf9c2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Tryndamere_2.prefab",
+    "component": 2633933,
+    "materials": [
+      "a085365a4fd32464fb23b87ffdebf9c2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Vladimir_0.prefab",
+    "component": 2692654,
+    "materials": [
+      "1a4e9bd4753f43444af74a38b967f61a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Vladimir_1.prefab",
+    "component": 2692654,
+    "materials": [
+      "1a4e9bd4753f43444af74a38b967f61a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Yasuo_0.prefab",
+    "component": 2669857,
+    "materials": [
+      "83528e2f3b4229b42adc7fa44327a402"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/hero/Yasuo_1.prefab",
+    "component": 2669857,
+    "materials": [
+      "83528e2f3b4229b42adc7fa44327a402"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Damage1.prefab",
+    "component": 2677035,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Damage1.prefab",
+    "component": 2624449,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Damage1.prefab",
+    "component": 2634467,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Damage1.prefab",
+    "component": 2655190,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2603859,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2691323,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2672700,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2696729,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2651504,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2652907,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/EarthSpike.prefab",
+    "component": 2625385,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Heal.prefab",
+    "component": 2670521,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Heal.prefab",
+    "component": 2669566,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Heal.prefab",
+    "component": 2634467,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Heal.prefab",
+    "component": 2655190,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ManaRegeneration.prefab",
+    "component": 2677035,
+    "materials": [
+      "8b0279fb47ba0974aa00d3f91cc509c5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ManaRegeneration.prefab",
+    "component": 2624449,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ManaRegeneration.prefab",
+    "component": 2634467,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ManaRegeneration.prefab",
+    "component": 2676054,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ManaRegeneration.prefab",
+    "component": 2665029,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ManaRegeneration.prefab",
+    "component": 2607524,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Shield.prefab",
+    "component": 2670521,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Shield.prefab",
+    "component": 2669566,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Shield.prefab",
+    "component": 2669143,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Shield.prefab",
+    "component": 2669857,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Sleep.prefab",
+    "component": 2684216,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Tornado.prefab",
+    "component": 2677035,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Tornado.prefab",
+    "component": 2691323,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Tornado.prefab",
+    "component": 2655190,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/Tornado.prefab",
+    "component": 2651504,
+    "materials": []
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/attack_missile.prefab",
+    "component": 2603859,
+    "materials": [
+      "80610f5f11e94b844990757a38c71743"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/attack_missile.prefab",
+    "component": 2669143,
+    "materials": [
+      "240d49bad2c66ef43923b8232a926e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/attack_missile_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "0d62942b9134ec6459a5433e0ec478d7"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/attack_missile_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "1f4ff4f90cd78764d8671cdcc66fc9c8"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill0_missile.prefab",
+    "component": 2669566,
+    "materials": [
+      "80610f5f11e94b844990757a38c71743"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill0_missile.prefab",
+    "component": 2659786,
+    "materials": [
+      "240d49bad2c66ef43923b8232a926e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill0_missile.prefab",
+    "component": 2676054,
+    "materials": [
+      "8646755225e2a8b4aae30bcd094ef4bd",
+      "1d74d8d1964c1e8459241d33a1b421b9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill0_missile_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "f4a235e540d9f9b4f9256b7cbdadb81a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill1.prefab",
+    "component": 2643158,
+    "materials": [
+      "0d62942b9134ec6459a5433e0ec478d7"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill1_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "31f9b83108bbcff4c9e6fbf643707054"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill1_missile.prefab",
+    "component": 2634467,
+    "materials": [
+      "2e1473f34bf189742be19688168eb8f0"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill2_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "e18c9996516585e4db311c78946e5c10"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill2_missile.prefab",
+    "component": 2676054,
+    "materials": [
+      "40a46fe5850f3c747ad2fdd13216e9ec"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill2_missile_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "d91f3c4c8d340f640a26eff7a34e5d45"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3.prefab",
+    "component": 2669566,
+    "materials": [
+      "02ad242062baf6e4380167625dca4578"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3.prefab",
+    "component": 2659786,
+    "materials": [
+      "02ad242062baf6e4380167625dca4578"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3.prefab",
+    "component": 2655190,
+    "materials": [
+      "51a75667bf60cce459c04cf30f749f3f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3.prefab",
+    "component": 2665029,
+    "materials": [
+      "bf8575522ee05d9418ad5fb09906d8c5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3_missile.prefab",
+    "component": 2669566,
+    "materials": [
+      "80610f5f11e94b844990757a38c71743"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3_missile.prefab",
+    "component": 2659786,
+    "materials": [
+      "240d49bad2c66ef43923b8232a926e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ahri/skill3_missile.prefab",
+    "component": 2655190,
+    "materials": [
+      "8646755225e2a8b4aae30bcd094ef4bd",
+      "1d74d8d1964c1e8459241d33a1b421b9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/alistar/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/alistar/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/alistar/skill0.prefab",
+    "component": 2669143,
+    "materials": [
+      "d695630c94a046e46a1e9afa369dc3ca"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/alistar/skill1_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "76f61227ad663914ba701641d733540f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/alistar/skill2_heal.prefab",
+    "component": 2677035,
+    "materials": [
+      "dc6055cf2de4eac44bbb76128c258fc1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ancientgolem/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "878f22540245e5747b545df31f9f2859"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ancientgolem/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "d46ef5cf28b3f4448b81ff454087d3bd"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/baron/attack_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "113c8911a78b6ea4db0d60bad1e7950d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/baron/attack_missile.prefab",
+    "component": 2672700,
+    "materials": [
+      "acac0fa22a8b6d447b9a767ceb0c8000"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/baron/attack_missile_hit.prefab",
+    "component": 2603859,
+    "materials": [
+      "fb60a4c4cd4e41e478e6c179669e0c63"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blitzcrank/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blitzcrank/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blitzcrank/lightning_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "0947b9e48a6e2f44b8706afa8ae771e5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blitzcrank/skill3_passive.prefab",
+    "component": 2684216,
+    "materials": [
+      "89e635b8fd322b94f89d192ae7a71946"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blueminioncannon/attack_missile.prefab",
+    "component": 2691323,
+    "materials": [
+      "978e97773a89c814b88d1215a16e20f1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blueminioncannon/attack_missile_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blueminionwizard/attack_missile.prefab",
+    "component": 2603859,
+    "materials": [
+      "80610f5f11e94b844990757a38c71743"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blueminionwizard/attack_missile.prefab",
+    "component": 2669143,
+    "materials": [
+      "240d49bad2c66ef43923b8232a926e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blueminionwizard/attack_missile_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "0d62942b9134ec6459a5433e0ec478d7"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/blueminionwizard/attack_missile_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "1f4ff4f90cd78764d8671cdcc66fc9c8"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "0cbec69b3b91a7e409ff5dd5eb2de6d6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/passive_ex.prefab",
+    "component": 2669566,
+    "materials": [
+      "0cbec69b3b91a7e409ff5dd5eb2de6d6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill0_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "0c1905f2414538841944fc08db594754"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill0_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill0_missile.prefab",
+    "component": 2677035,
+    "materials": [
+      "978e97773a89c814b88d1215a16e20f1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill0_missile.prefab",
+    "component": 2691323,
+    "materials": [
+      "c589409f7b223454e9f7bb82c8d57dc3"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill1_ex.prefab",
+    "component": 2691323,
+    "materials": [
+      "d27e9768fbdab254086a98bce2f5ffc1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill1_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "0cbec69b3b91a7e409ff5dd5eb2de6d6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill2_hit.prefab",
+    "component": 2603859,
+    "materials": [
+      "0cbec69b3b91a7e409ff5dd5eb2de6d6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill3_hit.prefab",
+    "component": 2603859,
+    "materials": [
+      "0cbec69b3b91a7e409ff5dd5eb2de6d6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill3_missile.prefab",
+    "component": 2634467,
+    "materials": [
+      "3fb3291edf4a40e45babe841c5f9465c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/brand/skill3_missile.prefab",
+    "component": 2676054,
+    "materials": [
+      "f65f214b950425a4180380b9de5142ad"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/ahri_skill2.prefab",
+    "component": 2643158,
+    "materials": [
+      "75523d13d7137a84a8e83fe43c72f17a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/ahri_skill2.prefab",
+    "component": 2603859,
+    "materials": [
+      "aa218f019deaee0489e786e10f3aa089"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/alistar_passive.prefab",
+    "component": 2684216,
+    "materials": [
+      "6f17006686b0c8a438764240ed2d3b2e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/baron.prefab",
+    "component": 2677035,
+    "materials": [
+      "322a737ddd8fd4e45812f80686e8ab03"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/baron.prefab",
+    "component": 2691323,
+    "materials": [
+      "0f9355bdd19d5534a88a24fb725531fc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/baron.prefab",
+    "component": 2696729,
+    "materials": [
+      "322a737ddd8fd4e45812f80686e8ab03"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/blitzcrank_skill1.prefab",
+    "component": 2684216,
+    "materials": [
+      "f54c7f427e208834db95dcb0689a8cc5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/blue.prefab",
+    "component": 2684216,
+    "materials": [
+      "1ec31e77e3413d84fbd86d60bc94594f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/darius_passive.prefab",
+    "component": 2625385,
+    "materials": [
+      "dcebd72af5375d144b8ed48c1d99b798"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/dragon.prefab",
+    "component": 2696012,
+    "materials": [
+      "322a737ddd8fd4e45812f80686e8ab03"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/dragon.prefab",
+    "component": 2624449,
+    "materials": [
+      "0f9355bdd19d5534a88a24fb725531fc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/dragon.prefab",
+    "component": 2672700,
+    "materials": [
+      "8108135b6523db74eb140d52e8b38241"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/garen_skill0.prefab",
+    "component": 2603859,
+    "materials": [
+      "a7597f9da6566754ab3d4982236b2331"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/garen_skill1.prefab",
+    "component": 2631434,
+    "materials": [
+      "cf620189190e5e14e94ed762aa9e6fd2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/heal.prefab",
+    "component": 2631434,
+    "materials": [
+      "176cdd9e0cc683f42bd5b5c3dfa1cdb8"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/heal.prefab",
+    "component": 2669566,
+    "materials": [
+      "6ae33d9bbe3269248b03f791a8c2beee"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/katarina_skill0.prefab",
+    "component": 2669566,
+    "materials": [
+      "475e09964514b8a4b9683b8cd0c46dd2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/lucian_skill1.prefab",
+    "component": 2684216,
+    "materials": [
+      "c456fefca4c8b474b86225980b4ad81b"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/lucian_skill1_speedup.prefab",
+    "component": 2643158,
+    "materials": [
+      "f54c7f427e208834db95dcb0689a8cc5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/masteryi_skill3.prefab",
+    "component": 2684216,
+    "materials": [
+      "e6c3b32602e29db4f91443e54275c25a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/red.prefab",
+    "component": 2684216,
+    "materials": [
+      "9c24f521add9da148a379d9a14575061"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/red_debuff.prefab",
+    "component": 2684216,
+    "materials": [
+      "720645b5ee7040f4bb24b9c88a5e8bc2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/renekton_skill3.prefab",
+    "component": 2665029,
+    "materials": [
+      "e7ba1253737620346a0a8a723aa055c9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/riven_skill2_c1.prefab",
+    "component": 2670521,
+    "materials": [
+      "b2f5c0a8d32a4d74ca2afa0ef8fa097f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/sivir_skill3.prefab",
+    "component": 2670521,
+    "materials": [
+      "f54c7f427e208834db95dcb0689a8cc5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/sivir_skill3.prefab",
+    "component": 2672700,
+    "materials": [
+      "50437bab8e2c6ce48a1f89223865d597"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/sivir_skill3.prefab",
+    "component": 2696729,
+    "materials": [
+      "f4a235e540d9f9b4f9256b7cbdadb81a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/spawn_super_minion.prefab",
+    "component": 2677035,
+    "materials": [
+      "322a737ddd8fd4e45812f80686e8ab03"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/spawn_super_minion.prefab",
+    "component": 2691323,
+    "materials": [
+      "0f9355bdd19d5534a88a24fb725531fc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/spawn_super_minion.prefab",
+    "component": 2676054,
+    "materials": [
+      "322a737ddd8fd4e45812f80686e8ab03"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/teemo_skill0_blind.prefab",
+    "component": 2684216,
+    "materials": [
+      "2681258be4cc585439d4bdc68cbfab53"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/teemo_skill1.prefab",
+    "component": 2643158,
+    "materials": [
+      "25f5e7af4d457624a9ac90c919fefb78"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/teemo_skill1.prefab",
+    "component": 2603859,
+    "materials": [
+      "7334f757078c18d41942054d15a33755"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/teemo_skill3_poison.prefab",
+    "component": 2670521,
+    "materials": [
+      "1a4e9bd4753f43444af74a38b967f61a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/teemo_skill3_poison.prefab",
+    "component": 2688124,
+    "materials": [
+      "0f5f3ac1522c5d44198da75946b41ad5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/temptation.prefab",
+    "component": 2684216,
+    "materials": [
+      "75523d13d7137a84a8e83fe43c72f17a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/tryndamere_skill1.prefab",
+    "component": 2670521,
+    "materials": [
+      "313d3ccb8f531d441b051fd555897378"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/tryndamere_skill3.prefab",
+    "component": 2643158,
+    "materials": [
+      "6043cff16d3611447a2cf7b064892a6d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/tryndamere_skill3.prefab",
+    "component": 2603859,
+    "materials": [
+      "2dbac18249dbab64d993cc72c6ab56e1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/vayne_skill3.prefab",
+    "component": 2677035,
+    "materials": [
+      "d476b31af1f141c4c89498d913e7623d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/vayne_skill3.prefab",
+    "component": 2669143,
+    "materials": [
+      "e649733ba060d2e44b4679f06de503d8"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/vladimir_skill0.prefab",
+    "component": 2688124,
+    "materials": [
+      "1a4e9bd4753f43444af74a38b967f61a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/vladimir_skill3.prefab",
+    "component": 2696012,
+    "materials": [
+      "672f80f6eb919884aa33cc69ac00164e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/vladimir_skill3.prefab",
+    "component": 2624449,
+    "materials": [
+      "5d3a816cdf971484f9cf1ef705ee1eb5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/buff/zed_skill3.prefab",
+    "component": 2684216,
+    "materials": [
+      "333d607d0148a5745bb875e704c6aa0e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/common/return_home.prefab",
+    "component": 2624449,
+    "materials": [
+      "9bc5c156ebfb1a84aa70aa625da64a92"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/common/return_home.prefab",
+    "component": 2672700,
+    "materials": [
+      "4aa168f4f4d978b429fb137d06c084b8"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/passive_ex_body.prefab",
+    "component": 2619550,
+    "materials": [
+      "0fc3c65de68861e4a8ab6faf1d750c00"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/passive_ex_hand.prefab",
+    "component": 2619550,
+    "materials": [
+      "6de7f1cc2eabf57428123b08afabccfd"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/skill1_passive.prefab",
+    "component": 2677035,
+    "materials": [
+      "91812b27855ee244f9b8a96d052b019d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/skill1_passive.prefab",
+    "component": 2691323,
+    "materials": [
+      "378b4950e97f50640b328b6ada8ad660"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/skill2_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "2085bd632b9ee6241aee27152c77cea3"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/skill2_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "b195558e4ec1a1d4291b62460f2c93f0"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/darius/skill3_hit.prefab",
+    "component": 2688124,
+    "materials": [
+      "bcf3e1734fa08764d95fcf409f393f18"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/dragon/hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/attack_missile.prefab",
+    "component": 2677035,
+    "materials": [
+      "3a87dd6990e55bc49aaffe461919abd2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "89e635b8fd322b94f89d192ae7a71946"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/missile_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "b6b8ab3fddc68d7498b474f99c4082d6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/missile_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "5e93d19844111ef478b7d4cdfe54d1df"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill0_missile.prefab",
+    "component": 2677035,
+    "materials": [
+      "8a74e8fe9dd852a4caad71e973889c35"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill1_missile.prefab",
+    "component": 2677035,
+    "materials": [
+      "4e4b6e4c7907cb141bcb34076a0a0c12"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2.prefab",
+    "component": 2670521,
+    "materials": [
+      "1e8ea552bdecb3144939e1c5ea601b0f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2.prefab",
+    "component": 2688124,
+    "materials": [
+      "0cd2ea0df172de54cae266119d4c6176"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "31f9b83108bbcff4c9e6fbf643707054"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2_missile.prefab",
+    "component": 2672700,
+    "materials": [
+      "2e1473f34bf189742be19688168eb8f0"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2_spawn.prefab",
+    "component": 2688124,
+    "materials": [
+      "1e8ea552bdecb3144939e1c5ea601b0f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2_spawn.prefab",
+    "component": 2634467,
+    "materials": [
+      "1e8ea552bdecb3144939e1c5ea601b0f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill2_spawn.prefab",
+    "component": 2655190,
+    "materials": [
+      "4e6f74548130ecc4cbf0b72ce2f04fe9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill3_missile.prefab",
+    "component": 2624449,
+    "materials": [
+      "4e4b6e4c7907cb141bcb34076a0a0c12"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill3_missile.prefab",
+    "component": 2672700,
+    "materials": [
+      "4e4b6e4c7907cb141bcb34076a0a0c12"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill3_missile.prefab",
+    "component": 2696729,
+    "materials": [
+      "4e4b6e4c7907cb141bcb34076a0a0c12"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill3_missile.prefab",
+    "component": 2651504,
+    "materials": [
+      "4e4b6e4c7907cb141bcb34076a0a0c12"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ezreal/skill3_missile.prefab",
+    "component": 2634916,
+    "materials": [
+      "4e4b6e4c7907cb141bcb34076a0a0c12"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/garen/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "5e26f27fd44ba7f4da297ae45a2af3c6"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/garen/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "57c681ddf7e474e439f81d1285664475"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/garen/passive.prefab",
+    "component": 2684216,
+    "materials": [
+      "b9a23faf62a6850409a911ad66c7c1cc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/garen/skill3.prefab",
+    "component": 2644804,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/attack_missile.prefab",
+    "component": 2691323,
+    "materials": [
+      "8746fed97b210cc4085114c96ccd1d14"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/attack_missile.prefab",
+    "component": 2669857,
+    "materials": [
+      "c40452670bea6b945bf8f1057e8ff526"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "e9c06b4747890ac4ab8dcf1e5cd8ce1d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill0_missile.prefab",
+    "component": 2691323,
+    "materials": [
+      "8746fed97b210cc4085114c96ccd1d14"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill0_missile.prefab",
+    "component": 2669857,
+    "materials": [
+      "c40452670bea6b945bf8f1057e8ff526"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill1_ex.prefab",
+    "component": 2684216,
+    "materials": [
+      "d695630c94a046e46a1e9afa369dc3ca"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill1_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "ca1a694f456b5494cb2625dd90286617"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill1_missile.prefab",
+    "component": 2672700,
+    "materials": [
+      "26ed2addbbed87248a1e902520ed9503"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2644804,
+    "materials": [
+      "978e97773a89c814b88d1215a16e20f1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2692514,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2652907,
+    "materials": [
+      "e9c06b4747890ac4ab8dcf1e5cd8ce1d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2605055,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2635660,
+    "materials": [
+      "e9c06b4747890ac4ab8dcf1e5cd8ce1d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2663426,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/graves/skill3_shot.prefab",
+    "component": 2600463,
+    "materials": [
+      "e9c06b4747890ac4ab8dcf1e5cd8ce1d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/jax/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "41d7715d60e023449a7ca117cd09cbe4"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/jax/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/jax/skill0_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "41d7715d60e023449a7ca117cd09cbe4"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/jax/skill0_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "63ebd93b662cd3341b0eb8d401771620"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/jax/skill3_hit.prefab",
+    "component": 2672700,
+    "materials": [
+      "d0ab923e948c9da45888d1c6b81666df"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/jax/skill3_hit.prefab",
+    "component": 2696729,
+    "materials": [
+      "e4c4ddc349c972d4b9c98f414fbd886c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill0.prefab",
+    "component": 2643158,
+    "materials": [
+      "740e91c802fe8894b889d0dd31017f47"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill0_buff_hit.prefab",
+    "component": 2691323,
+    "materials": [
+      "d31aabb53cae39541b887e4bbf60f23b"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill0_missile.prefab",
+    "component": 2634467,
+    "materials": [
+      "2a6e45ebb917f2d44bff7019e11cf73c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill1_hit.prefab",
+    "component": 2677035,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill1_hit.prefab",
+    "component": 2669857,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill2.prefab",
+    "component": 2669566,
+    "materials": [
+      "e26b2de3ed191744c9e7ea90d85cdfad"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill2_spawn.prefab",
+    "component": 2688124,
+    "materials": [
+      "37c7a4e4d9d079845acc2091a85cced0"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill3.prefab",
+    "component": 2669566,
+    "materials": [
+      "9dd6c64c4ca14d14f8b62cdbdbf5d4f5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/katarina/skill3.prefab",
+    "component": 2659786,
+    "materials": [
+      "90c0393ab59029346b1f9e69f038ce08"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/lizardelder/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "76f61227ad663914ba701641d733540f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/lizardelder/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "41d7715d60e023449a7ca117cd09cbe4"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/lucian/skill1_missile.prefab",
+    "component": 2692819,
+    "materials": [
+      "b58e660b17880bc41a36fc046dc17f95"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/lucian/skill1_missile_ex.prefab",
+    "component": 2651504,
+    "materials": [
+      "b58e660b17880bc41a36fc046dc17f95"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/masteryi/hit_default.prefab",
+    "component": 2669566,
+    "materials": [
+      "2e9826347920fc6458af09d05093f837"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/masteryi/skill0_hit.prefab",
+    "component": 2688124,
+    "materials": [
+      "d35adcf819f6f31428934eccd8ab3b13"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/masteryi/skill3.prefab",
+    "component": 2631434,
+    "materials": [
+      "0d62942b9134ec6459a5433e0ec478d7"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/masteryi/skill3_c3.prefab",
+    "component": 2631434,
+    "materials": [
+      "0d62942b9134ec6459a5433e0ec478d7"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/redminioncannon/attack_missile.prefab",
+    "component": 2691323,
+    "materials": [
+      "978e97773a89c814b88d1215a16e20f1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/redminioncannon/attack_missile_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/redminionwizard/attack_missile.prefab",
+    "component": 2603859,
+    "materials": [
+      "80610f5f11e94b844990757a38c71743"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/redminionwizard/attack_missile.prefab",
+    "component": 2669143,
+    "materials": [
+      "240d49bad2c66ef43923b8232a926e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/redminionwizard/attack_missile_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "0d62942b9134ec6459a5433e0ec478d7"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/redminionwizard/attack_missile_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "1f4ff4f90cd78764d8671cdcc66fc9c8"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/renekton/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/renekton/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/renekton/passive_hand.prefab",
+    "component": 2619550,
+    "materials": [
+      "ecfeba67ddc6e4e4cbb4b7223336b54f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "2332c52cb8c7e534789bd8b066530950"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "86851887348eeb84c96320ff71d2b978"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/hit_c1.prefab",
+    "component": 2670521,
+    "materials": [
+      "d3b0c79d828f7104ebd26a7b8c4ed9f0"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/hit_c1.prefab",
+    "component": 2634467,
+    "materials": [
+      "ee420299b82cdef43943103acb049f80"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill3_1_missile.prefab",
+    "component": 2669143,
+    "materials": [
+      "b1c5d47ca8a8d8d4d926803eb0b8aa2a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill3_1_missile_c1.prefab",
+    "component": 2669143,
+    "materials": [
+      "751f7489db2840a4bad96476a6875946"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill_hit.prefab",
+    "component": 2603859,
+    "materials": [
+      "f5d1434d61c283a449c2e2a662cd345a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill_hit.prefab",
+    "component": 2669143,
+    "materials": [
+      "86851887348eeb84c96320ff71d2b978"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill_hit.prefab",
+    "component": 2644804,
+    "materials": [
+      "41d7715d60e023449a7ca117cd09cbe4"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/riven/skill_hit.prefab",
+    "component": 2692514,
+    "materials": [
+      "d0ab923e948c9da45888d1c6b81666df"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/skill0_missile.prefab",
+    "component": 2659786,
+    "materials": [
+      "23a1867f4dfba474484cbb978996434e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/sivir/skill1_missile.prefab",
+    "component": 2672700,
+    "materials": [
+      "23a1867f4dfba474484cbb978996434e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/soraka/skill3_heal.prefab",
+    "component": 2659786,
+    "materials": [
+      "21cebb28a1154e74db417043eccdd638"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/spell/flash.prefab",
+    "component": 2684216,
+    "materials": [
+      "dc5f78624a4c2ba408c637803b6183a5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/states/sleep.prefab",
+    "component": 2684216,
+    "materials": [
+      "2b8d2160e717e9b489733ac245113c6d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/states/stun.prefab",
+    "component": 2684216,
+    "materials": [
+      "e8bcf35b40643af4e9b0b444e6399a64"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "508988121ed9e0f449e7b300c90b53aa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/hit2.prefab",
+    "component": 2670521,
+    "materials": [
+      "9057e1c0ebfcf3c48856110a71c7b04c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/hit2.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill0_passive.prefab",
+    "component": 2677035,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill0_passive.prefab",
+    "component": 2691323,
+    "materials": [
+      "2a7288ffed7599a4482a9d0e36172e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill1_missile.prefab",
+    "component": 2634467,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill1_missile.prefab",
+    "component": 2676054,
+    "materials": [
+      "095245a731173cc45936e801310dcc62"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill2.prefab",
+    "component": 2669566,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill3_missile.prefab",
+    "component": 2634467,
+    "materials": [
+      "3cf5e0460e58b8c438cacc132b6cecbb"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/talon/skill3_missile.prefab",
+    "component": 2676054,
+    "materials": [
+      "095245a731173cc45936e801310dcc62"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/attack.prefab",
+    "component": 2643158,
+    "materials": [
+      "ca1a694f456b5494cb2625dd90286617"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/attack_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "0a90884823bb3ed45882f277ca3e60a9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "88a05f13a80f8da4d8426da85b7c955e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "04a296bcc0c51b444a5d9b3ce0f24720"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/skill0_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "2ab48315426ac57468fc74f02c08522c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/skill3_hit.prefab",
+    "component": 2659786,
+    "materials": [
+      "2ab48315426ac57468fc74f02c08522c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/teemo/skill3_hit.prefab",
+    "component": 2655190,
+    "materials": [
+      "2602e57a1cec80f42a3a9e7be6f5380e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/tryndamere/hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "5dfea1b452029a04da560d456a97c821"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/tryndamere/skill0.prefab",
+    "component": 2677035,
+    "materials": [
+      "dc6055cf2de4eac44bbb76128c258fc1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/turret/attack_missile.prefab",
+    "component": 2688124,
+    "materials": [
+      "446f429d09369294cbd23dbfbb949eb5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/turret/attack_missile.prefab",
+    "component": 2634467,
+    "materials": [
+      "2e1473f34bf189742be19688168eb8f0"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/turret/attack_missile_hit.prefab",
+    "component": 2684216,
+    "materials": [
+      "446f429d09369294cbd23dbfbb949eb5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ui/HeroGet.prefab",
+    "component": 2677035,
+    "materials": [
+      "9bc5c156ebfb1a84aa70aa625da64a92"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ui/HeroGet.prefab",
+    "component": 2669857,
+    "materials": [
+      "322a737ddd8fd4e45812f80686e8ab03"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ui/HeroGet.prefab",
+    "component": 2633324,
+    "materials": [
+      "0f9355bdd19d5534a88a24fb725531fc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ui/HeroStarUpgrade.prefab",
+    "component": 2688124,
+    "materials": [
+      "0947b9e48a6e2f44b8706afa8ae771e5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/ui/HeroStarUpgrade.prefab",
+    "component": 2676054,
+    "materials": [
+      "0947b9e48a6e2f44b8706afa8ae771e5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/attack_missile.prefab",
+    "component": 2624449,
+    "materials": [
+      "240d49bad2c66ef43923b8232a926e27"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/attack_missile_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "5e93d19844111ef478b7d4cdfe54d1df"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/attack_missile_hit2.prefab",
+    "component": 2631434,
+    "materials": [
+      "f54c7f427e208834db95dcb0689a8cc5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/attack_missile_hit2.prefab",
+    "component": 2669566,
+    "materials": [
+      "5d8efb3bf0f60c4438839e831bafc078"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/skill2_missile_hit.prefab",
+    "component": 2631434,
+    "materials": [
+      "f54c7f427e208834db95dcb0689a8cc5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/skill2_missile_hit.prefab",
+    "component": 2669566,
+    "materials": [
+      "3bd1ffe071bca384eaa1aa6c57e61f46"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vayne/skill2_missile_hit2.prefab",
+    "component": 2603859,
+    "materials": [
+      "97e0658159253f0488202da42c0f8a31"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/attack_missile.prefab",
+    "component": 2677035,
+    "materials": [
+      "604f4a60b645e6041bacb5626b791528"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/attack_missile.prefab",
+    "component": 2691323,
+    "materials": [
+      "604f4a60b645e6041bacb5626b791528"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/hand_ball.prefab",
+    "component": 2619550,
+    "materials": [
+      "1a4e9bd4753f43444af74a38b967f61a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "cca0549f0e0b80b47b604f8180bd679d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/skill0.prefab",
+    "component": 2631434,
+    "materials": [
+      "76f61227ad663914ba701641d733540f"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/skill0.prefab",
+    "component": 2669566,
+    "materials": [
+      "2811cd5427684f8478e97ded8ca858d1"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/skill1.prefab",
+    "component": 2696012,
+    "materials": [
+      "f9536b4952f144a4399cd93e23d0c3e5"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/skill3.prefab",
+    "component": 2696012,
+    "materials": [
+      "6796638e9f3ea624b93afbb449e2a7e4"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/vladimir/skill3_ex.prefab",
+    "component": 2643158,
+    "materials": [
+      "d25385bc50a89f845b6db31da0d4016b"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "b52f30301fc3a6841a989224503da0ad"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "219cdac4895d0d14b840253f6d5c4072"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill0_active.prefab",
+    "component": 2619550,
+    "materials": [
+      "83528e2f3b4229b42adc7fa44327a402"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill1_missile.prefab",
+    "component": 2603859,
+    "materials": [
+      "59bd77d3d990f28408bd75471194e370"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill1_missile_hit.prefab",
+    "component": 2643158,
+    "materials": [
+      "4a6fb0cfba3ef5245812defb2959b47a"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill2.prefab",
+    "component": 2696012,
+    "materials": [
+      "851caaf2c20255444a5108d768141323"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill2_c2.prefab",
+    "component": 2670521,
+    "materials": [
+      "851caaf2c20255444a5108d768141323"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/yasuo/skill2_c3.prefab",
+    "component": 2670521,
+    "materials": [
+      "851caaf2c20255444a5108d768141323"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/hit.prefab",
+    "component": 2688124,
+    "materials": [
+      "af22b306d68348c48baf8b06f9636ea9"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/hit.prefab",
+    "component": 2634467,
+    "materials": [
+      "2e9826347920fc6458af09d05093f837"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill0_missile.prefab",
+    "component": 2665029,
+    "materials": [
+      "eda57d729b87179449079c40f32a2fef"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill0_missile.prefab",
+    "component": 2607524,
+    "materials": [
+      "eda57d729b87179449079c40f32a2fef"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill0_missile_c1.prefab",
+    "component": 2692819,
+    "materials": [
+      "299cf01d795cafa4a859a14c0519541c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_missile.prefab",
+    "component": 2603859,
+    "materials": [
+      "dcd2b37eccc747e4ebca47c658bca5a2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_missile.prefab",
+    "component": 2669143,
+    "materials": [
+      "795bf7253eefdbc4aa8ce32790807ed2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_shadow.prefab",
+    "component": 2620344,
+    "materials": [
+      "470693d3d895efa41ac015d14fca4bfa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_shadow_c1.prefab",
+    "component": 2676772,
+    "materials": [
+      "470693d3d895efa41ac015d14fca4bfa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_shadow_c1.prefab",
+    "component": 2685106,
+    "materials": [
+      "299cf01d795cafa4a859a14c0519541c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_spawn.prefab",
+    "component": 2669566,
+    "materials": [
+      "a77ebc427d0e56a49bd016c332529a2d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_spawn_c1.prefab",
+    "component": 2688124,
+    "materials": [
+      "a77ebc427d0e56a49bd016c332529a2d"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill1_spawn_c1.prefab",
+    "component": 2634467,
+    "materials": [
+      "299cf01d795cafa4a859a14c0519541c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill2.prefab",
+    "component": 2624449,
+    "materials": [
+      "db4742c02ac0f6a47883a99954eb0bcc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill2_c1.prefab",
+    "component": 2634467,
+    "materials": [
+      "db4742c02ac0f6a47883a99954eb0bcc"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill2_c1.prefab",
+    "component": 2633324,
+    "materials": [
+      "299cf01d795cafa4a859a14c0519541c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill3_hit.prefab",
+    "component": 2670521,
+    "materials": [
+      "9c11ff31daf4bef46b041b79f4dad348"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill3_shadow.prefab",
+    "component": 2620344,
+    "materials": [
+      "470693d3d895efa41ac015d14fca4bfa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill3_shadow_c1.prefab",
+    "component": 2676772,
+    "materials": [
+      "470693d3d895efa41ac015d14fca4bfa"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/skill3_shadow_c1.prefab",
+    "component": 2685106,
+    "materials": [
+      "299cf01d795cafa4a859a14c0519541c"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/swap.prefab",
+    "component": 2631434,
+    "materials": [
+      "9c24f521add9da148a379d9a14575061"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Resources/particle/zed/swap.prefab",
+    "component": 2669566,
+    "materials": [
+      "1c152dacbebac8b489fa5499a83f8b64"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+    "component": 3212,
+    "materials": [
+      "0a98dffe70af28740a85d91e662c591e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+    "component": 3213,
+    "materials": [
+      "0a98dffe70af28740a85d91e662c591e"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+    "component": 3214,
+    "materials": [
+      "3cb0f2f44b31b47428e46efe3cfb1ed2"
+    ]
+  },
+  {
+    "asset": "PhoneLOL-02/Assets/Scenes/MultiGame.unity",
+    "component": 3215,
+    "materials": [
+      "3cb0f2f44b31b47428e46efe3cfb1ed2"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+Build completed 2026-09-25T07:54:54Z
+Job: 1ba19fcd47164855abcad60b7bdcd2a9
+Result: Succeeded
+Errors: 0
+Warnings: 762
+Actual version: 1.7.4
+Android versionCode: 201
+Output: PhoneLOL-02/Builds/PhoneLOL-1.7.4.apk
+Bytes: 143247790
+SHA256: b3470e62b324ca67050263de3746c7a2f1fbbc4dcae08da1c2a354367d9dcd63
+Source gameplay commit: 4aac295
+Phone install/gameplay: not verified
+Following build defaults: 1.17.4 / 202; not built during wrap-up.

@@ -1,0 +1,8 @@
+PASS real client decoder mode=101 seats=2 slots=5
+PASS both maps: ready/scoreboard/results and scaled skill hit areas mode=101
+PASS real client decoder mode=102 seats=10 slots=5
+PASS both maps: ready/scoreboard/results and scaled skill hit areas mode=102
+PASS real client decoder mode=103 seats=10 slots=8
+PASS both maps: ready/scoreboard/results and scaled skill hit areas mode=103
+PASS practice prefab and nexus projectile/stat bindings; turret range=6.5 damage=170 speed=0.83
+iOS module available=False
