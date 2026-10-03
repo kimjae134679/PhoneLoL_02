@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "enabled": true,
+  "notices": [],
+  "status": {
+    "enabled": true,
+    "title": "",
+    "body": "",
+    "delaySeconds": 0,
+    "buttons": "confirm",
+    "declineAction": "dismiss"
+  },
+  "update": {
+    "enabled": true,
+    "title": "",
+    "body": "",
+    "delaySeconds": 0,
+    "buttons": "yesNo",
+    "declineAction": "dismiss"
+  }
+}

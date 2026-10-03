@@ -1,2 +1,9 @@
-# PhoneLoL_02-Distribution
-PhoneLOL APK releases and public notice configuration only; no development source or server credentials.
+# PhoneLOL
+
+비공식 추억 체험용 앱의 배포 저장소입니다. 개발 소스는 별도 비공개 저장소에서 관리합니다.
+
+- [최신 APK 다운로드](https://github.com/kimjae134679/PhoneLoL_02/releases/latest)
+- [시작 공지 설정](Config/startup-notices.json)
+- [공지 설정 방법](Docs/STARTUP_NOTICES.md)
+
+기존 0.22.1 APK·iOS Xcode 파일을 보존했습니다. 이후 릴리스도 삭제하지 않습니다.
