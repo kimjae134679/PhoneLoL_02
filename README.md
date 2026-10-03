@@ -6,4 +6,4 @@
 - [시작 공지 설정](Config/startup-notices.json)
 - [공지 설정 방법](Docs/STARTUP_NOTICES.md)
 
-Android 0.22.4/build244는 혼자 경기 시작·안내창 수정판입니다. iOS는 기존0.22.1이며 이전 릴리스도 삭제하지 않습니다.
+Android 0.22.5/build245는 연결 안내의 전적 문구를 뺀 수정판입니다. iOS는 기존0.22.1이며 이전 릴리스도 삭제하지 않습니다.
