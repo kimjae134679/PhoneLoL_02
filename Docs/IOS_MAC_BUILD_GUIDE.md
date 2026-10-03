@@ -1,10 +1,10 @@
 # PhoneLOL: Mac에서 iPhone 설치·IPA 준비
 
-**0.22.8/build248 Xcode ZIP의 내보내기·무결성·실행 권한·업로드 크기/digest 확인 완료.** [v0.22.8 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.22.8)에서 `PhoneLOL-0.22.8-iOS-Xcode.zip`을 내려받으세요. 기존 Android248 APK와 이전241 자산도 보존합니다.
+**0.22.9/build249 Xcode ZIP의 내보내기·무결성·실행 권한·업로드 크기/digest 확인 완료.** [v0.22.9 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.22.9)에서 `PhoneLOL-0.22.9-iOS-Xcode.zip`을 내려받으세요. 기존 Android249 APK와 이전241 자산도 보존합니다.
 
 이 준비물은 서명된 IPA가 아닙니다. **Mac에서 실제 링크·서명·IPA 생성·iPhone 설치는 아직 검증하지 않았습니다.**
 
-다운로드 검증: ZIP **346,261,785바이트**, SHA256 `621581A915F577355B4C98FB1073B114181D25EB89ACBBC3DD0BE7AFF66D7CF9`. 로컬 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다.
+다운로드 검증: ZIP **346,266,300바이트**, SHA256 `5DDD191B0A2B3364F6113413A3D86C5553AD84773F4F7E47065DA89D6E878CDC`. 로컬 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다.
 
 ## iPhone에서 직접 실행
 
@@ -32,8 +32,8 @@
 
 ## 개발 소스에서 다시 내보내기
 
-Unity **6000.3.14f1 + iOS Build Support**와 비공개 소스 접근 권한이 필요합니다. `v0.22.8` 소스 태그의 `PhoneLOL-02`를 열어 **PhoneLOL → Export 0.22.8 iOS Xcode project**를 실행합니다. 로컬 출력은 `D:/A_KJ/AI/PhoneLoL_02/PhoneLOL-02/Builds/iOS/PhoneLOL-0.22.8`입니다.
+Unity **6000.3.14f1 + iOS Build Support**와 비공개 소스 접근 권한이 필요합니다. `v0.22.9` 소스 태그의 `PhoneLOL-02`를 열어 **PhoneLOL → Export 0.22.9 iOS Xcode project**를 실행합니다. 로컬 출력은 `D:/A_KJ/AI/PhoneLoL_02/PhoneLOL-02/Builds/iOS/PhoneLOL-0.22.9`입니다.
 
-현재 Windows export는 종료0/Succeeded/오류0/경고760 및 실제0.22.8/248 확인 상태입니다. ZIP CRC·실행 도구17개 Unix0755·크기/SHA256 및 알려진 자격정보 패턴 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다. 게임 코드·버전·아티팩트 태그는 변경하지 않고 같은248 릴리스에 준비물만 추가합니다. 다음 변경은0.22.9/build249입니다. [현재 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.22.8).
+현재 Windows export는 종료0/Succeeded/오류0/경고760 및 실제0.22.9/249 확인 상태입니다. ZIP CRC·실행 도구17개 Unix0755·크기/SHA256 및 알려진 자격정보 패턴 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다. 게임 코드·버전·아티팩트 태그는 변경하지 않고 같은249 릴리스에 준비물만 추가합니다. 다음 변경은0.23.0/build250입니다. [현재 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.22.9).
 
-기존241의 ZIP/권한 검증은 과거 증거이며 새248의 Mac 링크·설치 성공을 뜻하지 않습니다. 과거 `GADU*` 링크 오류나 새 Xcode 오류도 실제 Mac 빌드에서 별도로 확인해야 합니다.
+기존241의 ZIP/권한 검증은 과거 증거이며 새249의 Mac 링크·설치 성공을 뜻하지 않습니다. 과거 `GADU*` 링크 오류나 새 Xcode 오류도 실제 Mac 빌드에서 별도로 확인해야 합니다.
