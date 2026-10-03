@@ -6,6 +6,6 @@
 - [시작 공지 설정](Config/startup-notices.json)
 - [공지 설정 방법](Docs/STARTUP_NOTICES.md)
 
-Android 0.22.8/build248: FPS·체력바·발광·티모 음성·허수아비 경험치를 개선하고, URF 피즈 궁/라일라이 중첩과 경기 종료 후 새 방 오류3을 수정했습니다. APK를 먼저 공개하며 Xcode248은 이후 같은 릴리스에 추가합니다. 기존247 Xcode와 이전 릴리스는 유지합니다. [Mac 설치·IPA 준비 안내](Docs/IOS_MAC_BUILD_GUIDE.md).
+Android 0.22.8/build248: FPS·체력바·발광·티모 음성·허수아비 경험치를 개선하고, URF 피즈 궁/라일라이 중첩과 경기 종료 후 새 방 오류3을 수정했습니다. APK를 먼저 공개한 뒤 Xcode248도 같은 릴리스에 추가했습니다. 내보내기·ZIP 검사·업로드 크기/digest 확인 완료, 기존247 Xcode와 이전 릴리스는 유지합니다. [Mac 설치·IPA 준비 안내](Docs/IOS_MAC_BUILD_GUIDE.md).
 
 Xcode 준비물은 서명된 IPA가 아닙니다. Mac 실제 링크·서명·IPA 생성·실기기 설치는 미검증입니다.
