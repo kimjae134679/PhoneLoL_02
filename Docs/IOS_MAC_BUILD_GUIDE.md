@@ -34,6 +34,6 @@
 
 Unity **6000.3.14f1 + iOS Build Support**와 비공개 소스 접근 권한이 필요합니다. `v0.23.0` 소스 태그의 `PhoneLOL-02`를 열어 **PhoneLOL → Export 0.23.0 iOS Xcode project**를 실행합니다. 로컬 출력은 `D:/A_KJ/AI/PhoneLoL_02/PhoneLOL-02/Builds/iOS/PhoneLOL-0.23.0`입니다.
 
-현재 Windows export는 종료0/Succeeded/오류0/경고760 및 실제0.23.0/250 확인 상태입니다. ZIP CRC·실행 도구17개 Unix0755·크기/SHA256 및 알려진 자격정보 패턴 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다. 게임 코드·버전·아티팩트 태그는 변경하지 않고 같은250 릴리스에 준비물만 추가합니다. 다음 변경은0.23.1/build251입니다. [현재 인수인계](../HANDOFF.md).
+현재 Windows export는 종료0/Succeeded/오류0/경고760 및 실제0.23.0/250 확인 상태입니다. ZIP CRC·실행 도구17개 Unix0755·크기/SHA256 및 알려진 자격정보 패턴 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다. 게임 코드·버전·아티팩트 태그는 변경하지 않고 같은250 릴리스에 준비물만 추가합니다. 다음 변경은0.23.1/build251입니다. [현재 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.23.0).
 
 기존241의 ZIP/권한 검증은 과거 증거이며 새250의 Mac 링크·설치 성공을 뜻하지 않습니다. 과거 `GADU*` 링크 오류나 새 Xcode 오류도 실제 Mac 빌드에서 별도로 확인해야 합니다.
