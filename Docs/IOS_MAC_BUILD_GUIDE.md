@@ -1,10 +1,10 @@
 # PhoneLOL: Mac에서 iPhone 설치·IPA 준비
 
-**0.23.1/build251 Xcode ZIP의 내보내기·무결성·실행 권한·업로드 크기/digest 확인 완료.** [v0.23.1 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.23.1)에서 `PhoneLOL-0.23.1-iOS-Xcode.zip`을 내려받으세요. 기존 Android251 APK와 이전241 자산도 보존합니다.
+**0.23.2/build252 Xcode ZIP 내보내기·CRC·크기/digest·실행 권한 확인 완료.** [v0.23.2 릴리스](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.23.2)에서 `PhoneLOL-0.23.2-iOS-Xcode.zip`을 내려받으세요.
 
-이 준비물은 서명된 IPA가 아닙니다. **Mac에서 실제 링크·서명·IPA 생성·iPhone 설치는 아직 검증하지 않았습니다.**
+서명된 IPA가 아닙니다. **Mac 실제 링크·서명·IPA 생성·iPhone 설치는 미검증입니다.**
 
-다운로드 검증: ZIP **346,552,694바이트**, SHA256 `2F13121E071B49E0D6FD08549DA19023461A509812CFE3DA584467E7A347C8EA`. 로컬 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다.
+ZIP 346576172바이트/SHA256 `79fb8ae29113981a993697dc6acd774b7b68f25fa579167bc0687a00b216bc5c`; 파일3007/텍스트2288/Unix0755도구17개. 실제 export Succeeded/Errors0/Warnings762.
 
 ## iPhone에서 직접 실행
 
@@ -32,8 +32,14 @@
 
 ## 개발 소스에서 다시 내보내기
 
-Unity **6000.3.14f1 + iOS Build Support**와 비공개 소스 접근 권한이 필요합니다. `v0.23.1` 소스 태그의 `PhoneLOL-02`를 열어 **PhoneLOL → Export 0.23.1 iOS Xcode project**를 실행합니다. 로컬 출력은 `D:/A_KJ/AI/PhoneLoL_02/PhoneLOL-02/Builds/iOS/PhoneLOL-0.23.1`입니다.
+Unity **6000.3.14f1 + iOS Build Support**와 비공개 소스 접근 권한이 필요합니다. `v0.23.2` 소스 태그의 `PhoneLOL-02`를 열어 **PhoneLOL → Export 0.23.2 iOS Xcode project**를 실행합니다. 로컬 출력은 `D:/A_KJ/AI/PhoneLoL_02/PhoneLOL-02/Builds/iOS/PhoneLOL-0.23.2`입니다.
 
-현재 Windows export는 종료0/Succeeded/오류0/경고762 및 실제0.23.1/251 확인 상태입니다. ZIP CRC·실행 도구17개 Unix0755·크기/SHA256 및 알려진 자격정보 패턴 검사와 GitHub uploaded 크기·digest 일치 확인을 완료했습니다. 게임 코드·버전·아티팩트 태그는 변경하지 않고 같은250 릴리스에 준비물만 추가합니다. 다음 변경은0.23.1/build251입니다. [현재 인수인계](../HANDOFF.md).
+제한된 알려진 자격정보 패턴 검사는 보안 보장이 아닙니다. Mac의 `GADU*` 링크 오류나 다른 Xcode 오류는 실제 Mac 빌드에서 별도 확인해야 합니다.
 
-기존241의 ZIP/권한 검증은 과거 증거이며 새250의 Mac 링크·설치 성공을 뜻하지 않습니다. 과거 `GADU*` 링크 오류나 새 Xcode 오류도 실제 Mac 빌드에서 별도로 확인해야 합니다.
+## 이전 준비물 보존
+
+기존0.23.1/build251 Xcode와 이전241·그 밖의 기존 릴리스 자산은 삭제·교체하지 않았습니다. 과거 ZIP/실행 권한 검사도 Mac 설치 성공을 뜻하지 않습니다.
+
+## 252 APK 정식 공개 확인
+
+Release 402936588 / APK asset609511319 / Source `b2337fcc37df0d55b85d0875736d68a5f7794786`. [v0.23.2 다운로드](https://github.com/kimjae134679/PhoneLoL_02/releases/tag/v0.23.2). 익명 latest 정식 v0.23.2, uploaded 113938141바이트/SHA256 `1108969ef06c41ac14721b68050d1cd609cd05d9faa0c1575e5ff50dc67e1fad` 일치. 이전 11릴리스/17자산 ID·이름·크기·digest 보존. 소스 artifact 태그 이동 없음. 같은 릴리스 Xcode252 asset609517418 uploaded 346576172바이트/SHA256 `79fb8ae29113981a993697dc6acd774b7b68f25fa579167bc0687a00b216bc5c` 일치. 파일3007/텍스트2288/Unix0755도구17개/CRC pass. 실제 export Succeeded/Errors0/Warnings762. Mac 링크·서명·IPA·실폰 미검증. receipt review disabled/unmanaged.
